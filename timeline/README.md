@@ -344,3 +344,105 @@ wandb:
 wandb: Synced bc/expert: https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/396bgoaw
 $ PYTHON_RETURN=1!!! Start Over!!!$
 ```
+4/21/2022 10:43:42 PM: use prints to find the line that causes the error
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh 
+run/data_collect_bc_NeilBranch0.sh: 47: run/data_collect_bc_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+run/data_collect_bc_NeilBranch0.sh: 59: [: 1: unexpected operator
+Neil start here 1
+Neil start here 2
+/opt/carla-simulator/CarlaUE4.sh: line 2: 89010 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+[2022-04-21 22:45:13,011][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 2
+CarlaUE4-Linux: no process found
+[2022-04-21 22:45:14,025][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-21 22:45:14,025][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+[2022-04-21 22:45:19,317][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-04-21 22:45:20,300][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-04-21 22:45:21,758][__main__][INFO] - Start from env_idx: 0, task_idx 0
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run bc/expert
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/il_leaderboard_roach
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/16nriyyx
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-21/22-45-11/wandb/run-20220421_224522-16nriyyx
+wandb: Run `wandb offline` to turn off syncing.
+
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+[2022-04-21 22:45:27,368][__main__][INFO] - Start episode 0000, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [80, 160], 'num_zombie_walkers': [80, 160], 'weather_group': 'train'}}
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "data_collect_NeilBranch0.py", line 285, in main
+    cfg.alpha_coach, cfg.remove_final_steps)
+  File "data_collect_NeilBranch0.py", line 49, in collect_single
+    obs = env.reset()
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 74, in reset
+    ev_spawn_locations = self._ev_handler.reset(self._task['ego_vehicles'])
+  File "/home/nsambhu/github/carla-roach/carla_gym/core/task_actor/ego_vehicle/ego_vehicle_handler.py", line 35, in reset
+    blueprint = np.random.choice(self._world.get_blueprint_library().filter(bp_filter))
+  File "mtrand.pyx", line 908, in numpy.random.mtrand.RandomState.choice
+ValueError: 'a' cannot be empty unless no samples are taken
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "data_collect_NeilBranch0.py", line 379, in <module>
+    main()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/main.py", line 37, in decorated_main
+    strict=strict,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 347, in _run_hydra
+    lambda: hydra.run(
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 237, in run_and_report
+    assert mdl is not None
+AssertionError
+
+wandb: Waiting for W&B process to finish, PID 91388
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-21/22-45-11/wandb/run-20220421_224522-16nriyyx/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-21/22-45-11/wandb/run-20220421_224522-16nriyyx/logs/debug-internal.log
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)
+wandb: 
+wandb: Synced bc/expert: https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/16nriyyx
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```
+4/21/2022 11:14:46 PM: error at data_collect_NeilBranch0.py:
+```
+            valid, list_debug_render, list_data_render, ep_stat_dict, ep_event_dict, timestamp = collect_single(
+                run_name, env, data_writer, driver_dict, driver_log_dir,
+                coach_dict, coach_log_dir, cfg.dagger_thresholds, cfg.log_video, noise_lon, noise_lat,
+                cfg.alpha_coach, cfg.remove_final_steps)
+```

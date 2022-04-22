@@ -138,17 +138,27 @@ def collect_single(run_name, env, data_writer, driver_dict, driver_log_dir, coac
 
     return valid, list_debug_render, list_data_render, ep_stat_dict, ep_event_dict, timestamp
 
-
+bVerbose = True
 @ hydra.main(config_path='config', config_name='data_collect')
 def main(cfg: DictConfig):
+    if bVerbose:
+        print("Neil start here 2")
     if cfg.host == 'localhost' and cfg.kill_running:
         server_utils.kill_carla()
     log.setLevel(getattr(logging, cfg.log_level.upper()))
+    if bVerbose:
+        print("Neil left here 2")
 
+    if bVerbose:
+        print("Neil start here 3")
     # start carla servers
     server_manager = server_utils.CarlaServerManager(cfg.carla_sh_path, port=cfg.port)
     server_manager.start()
+    if bVerbose:
+        print("Neil left here 3")
 
+    if bVerbose:
+        print("Neil start here 4")
     # single actor, place holder for multi actors
     driver_dict = {}
     coach_dict = {}
@@ -181,10 +191,18 @@ def main(cfg: DictConfig):
         # get obs_configs from agent
         reward_configs[ev_id] = OmegaConf.to_container(ev_cfg.reward)
         terminal_configs[ev_id] = OmegaConf.to_container(ev_cfg.terminal)
+    if bVerbose:
+        print("Neil left here 4")
 
+    if bVerbose:
+        print("Neil start here 5")
     # check h5 birdview maps have been generated
     config_utils.check_h5_maps(cfg.test_suites, obs_configs, cfg.carla_sh_path)
+    if bVerbose:
+        print("Neil left here 5")
 
+    if bVerbose:
+        print("Neil start here 6")
     # resume env_idx from checkpoint.txt
     last_checkpoint_path = f'{hydra.utils.get_original_cwd()}/outputs/checkpoint.txt'
     if cfg.resume and os.path.isfile(last_checkpoint_path):
@@ -192,7 +210,11 @@ def main(cfg: DictConfig):
             env_idx = int(f.read())
     else:
         env_idx = 0
+    if bVerbose:
+        print("Neil left here 6")
 
+    if bVerbose:
+        print("Neil start here 7")
     # resume task_idx from ep_stat_buffer_{env_idx}.json
     ep_state_buffer_json = f'{hydra.utils.get_original_cwd()}/outputs/ep_stat_buffer_{env_idx}.json'
     if cfg.resume and os.path.isfile(ep_state_buffer_json):
@@ -203,7 +225,11 @@ def main(cfg: DictConfig):
         ep_stat_buffer = {}
         for actor_id in driver_dict.keys():
             ep_stat_buffer[actor_id] = []
+    if bVerbose:
+        print("Neil left here 7")
 
+    if bVerbose:
+        print("Neil start here 8")
     # resume wandb run
     wb_checkpoint_path = f'{hydra.utils.get_original_cwd()}/outputs/wb_run_id.txt'
     if cfg.resume and os.path.isfile(wb_checkpoint_path):
@@ -211,9 +237,17 @@ def main(cfg: DictConfig):
             wb_run_id = f.read()
     else:
         wb_run_id = None
+    if bVerbose:
+        print("Neil left here 8")
 
+    if bVerbose:
+        print("Neil start here 9")
     log.info(f'Start from env_idx: {env_idx}, task_idx {ckpt_task_idx}')
+    if bVerbose:
+        print("Neil left here 9")
 
+    if bVerbose:
+        print("Neil start here 10")
     # make directories
     dataset_root = Path(cfg.dataset_root)
     dataset_root.mkdir(parents=True, exist_ok=True)
@@ -228,7 +262,11 @@ def main(cfg: DictConfig):
     else:
         dataset_name = 'expert'
         wb_run_name = f'{dataset_root.name}/{dataset_name}'
+    if bVerbose:
+        print("Neil left here 10")
 
+    if bVerbose:
+        print("Neil start here 11")
     dataset_dir = Path(cfg.dataset_root) / dataset_name
     dataset_dir.mkdir(parents=True, exist_ok=True)
 
@@ -248,13 +286,21 @@ def main(cfg: DictConfig):
     wandb.save('./config_agent.yaml')
     with open(wb_checkpoint_path, 'w') as f:
         f.write(wandb.run.id)
+    if bVerbose:
+        print("Neil left here 11")
 
+    if bVerbose:
+        print("Neil start here 12")
     if env_idx >= len(cfg.test_suites):
         log.info(f'Finished! env_idx: {env_idx}, resave to wandb')
         if cfg.save_to_wandb:
             wandb.save(f'{dataset_dir.as_posix()}/*.h5', base_path=cfg.dataset_root)
         return
+    if bVerbose:
+        print("Neil left here 12")
 
+    if bVerbose:
+        print("Neil start here 13")
     # make env
     env_setup = OmegaConf.to_container(cfg.test_suites[env_idx])
     env = gym.make(env_setup['env_id'], obs_configs=obs_configs, reward_configs=reward_configs,
@@ -263,10 +309,15 @@ def main(cfg: DictConfig):
 
     # main loop
     n_episodes_per_env = math.ceil(cfg.n_episodes/len(cfg.test_suites))
-
+    if bVerbose:
+        print("Neil left here 13")
     for task_idx in range(ckpt_task_idx, n_episodes_per_env):
+        if bVerbose:
+            print("Neil start here 14")
         idx_episode = task_idx + n_episodes_per_env * env_idx
         run_name = f'{idx_episode:04}'
+        if bVerbose:
+            print("Neil left here 14")
 
         while True:
             env.set_task_idx(np.random.choice(env.num_tasks))
@@ -277,10 +328,14 @@ def main(cfg: DictConfig):
             noise_lat = cfg.inject_noise and np.random.randint(101) < 20
 
             log.info(f'Start episode {run_name}, noise_lon={noise_lon}, noise_lat={noise_lat}, {env_setup}')
+            if bVerbose:
+                print("Neil start here 15")
             valid, list_debug_render, list_data_render, ep_stat_dict, ep_event_dict, timestamp = collect_single(
                 run_name, env, data_writer, driver_dict, driver_log_dir,
                 coach_dict, coach_log_dir, cfg.dagger_thresholds, cfg.log_video, noise_lon, noise_lat,
                 cfg.alpha_coach, cfg.remove_final_steps)
+            if bVerbose:
+                print("Neil left here 15")
             if valid:
                 break
 
@@ -342,6 +397,7 @@ def main(cfg: DictConfig):
     env = None
     server_manager.stop()
 
+
     # log after all episodes are completed
     table_data = []
     ep_stat_keys = None
@@ -373,7 +429,9 @@ def main(cfg: DictConfig):
 
 
 if __name__ == '__main__':
-    print("Neil start here 1")
+    if bVerbose:
+        print("Neil start here 1")
     main()
-    print("Neil left here 1")
+    if bVerbose:
+        print("Neil left here 1")
     log.info("data_collect.py DONE!")

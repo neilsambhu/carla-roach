@@ -32,7 +32,17 @@ class EgoVehicleHandler(object):
         ev_spawn_locations = []
         for ev_id in actor_config:
             bp_filter = actor_config[ev_id]['model']
-            blueprint = np.random.choice(self._world.get_blueprint_library().filter(bp_filter))
+            bVerbose = False
+            if bVerbose:
+                print('self._world',self._world)
+                print('bp_filter',bp_filter,", type:",type(bp_filter)) # 4/22/2022 11:30:44 AM: bp_filter needs to change from "vehicle.lincoln.mkz2017" to "vehicle.lincoln.mkz_2017"
+                # print('change bp_filter hardcoded')
+                # bp_filter = "vehicle.lincoln.mkz_2017"
+                # print('bp_filter',bp_filter,", type:",type(bp_filter))
+                # print('self._world.get_blueprint_library()',self._world.get_blueprint_library())
+                print('self._world.get_blueprint_library().filter(bp_filter)',
+                    self._world.get_blueprint_library().filter(bp_filter))
+            blueprint = np.random.choice(self._world.get_blueprint_library().filter(bp_filter)) # 4/22/2022 11:12:05 AM: error line
             blueprint.set_attribute('role_name', ev_id)
 
             if len(route_config[ev_id]) == 0:

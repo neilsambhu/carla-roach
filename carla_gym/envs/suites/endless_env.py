@@ -1,10 +1,12 @@
 from carla_gym.carla_multi_agent_env import CarlaMultiAgentEnv
 
-
+bVerbose = False
 class EndlessEnv(CarlaMultiAgentEnv):
     def __init__(self, carla_map, host, port, seed, no_rendering, obs_configs, reward_configs, terminal_configs,
                  num_zombie_vehicles, num_zombie_walkers, weather_group):
         all_tasks = self.build_all_tasks(num_zombie_vehicles, num_zombie_walkers, weather_group)
+        if bVerbose:
+            pass
         super().__init__(carla_map, host, port, seed, no_rendering,
                          obs_configs, reward_configs, terminal_configs, all_tasks)
 
@@ -23,7 +25,7 @@ class EndlessEnv(CarlaMultiAgentEnv):
 
         actor_configs_dict = {
             'ego_vehicles': {
-                'hero': {'model': 'vehicle.lincoln.mkz2017'}
+                'hero': {'model': 'vehicle.lincoln.mkz_2017'}
             }
         }
         route_descriptions_dict = {

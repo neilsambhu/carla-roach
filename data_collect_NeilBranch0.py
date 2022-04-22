@@ -22,31 +22,52 @@ from agents.rl_birdview.utils.wandb_callback import WandbCallback
 
 log = logging.getLogger(__name__)
 
+bVerbose = True
 
 def collect_single(run_name, env, data_writer, driver_dict, driver_log_dir, coach_dict, coach_log_dir,
                    dagger_thresholds, log_video, noise_lon=False, noise_lat=False, alpha_coach=None,
                    remove_final_steps=True):
-
+    if bVerbose:
+        print("Neil start here 16")
     list_debug_render = []
     list_data_render = []
     ep_stat_dict = {}
     ep_event_dict = {}
+    if bVerbose:
+        print("Neil left here 16")
+
+    if bVerbose:
+        print("Neil start here 17")
     for actor_id, driver in driver_dict.items():
         log_dir = driver_log_dir / actor_id
         log_dir.mkdir(parents=True, exist_ok=True)
         driver.reset(log_dir / f'{run_name}.log')
+    if bVerbose:
+        print("Neil left here 17")
 
+    if bVerbose:
+        print("Neil start here 18")
     for actor_id, coach in coach_dict.items():
         log_dir = coach_log_dir / actor_id
         log_dir.mkdir(parents=True, exist_ok=True)
         coach.reset(log_dir / f'{run_name}.log')
+    if bVerbose:
+        print("Neil left here 18")
 
+    if bVerbose:
+        print("Neil start here 19")
     longitudinal_noiser = ExpertNoiser('Throttle', frequency=15, intensity=10, min_noise_time_amount=2.0) \
         if noise_lon else None
     lateral_noiser = ExpertNoiser('Spike', frequency=25, intensity=4, min_noise_time_amount=0.5) \
         if noise_lat else None
+    if bVerbose:
+        print("Neil left here 19")
 
+    if bVerbose:
+        print("Neil start here 20")
     obs = env.reset()
+    if bVerbose:
+        print("Neil left here 20")
     timestamp = env.timestamp
     done = {'__all__': False}
     valid = True
@@ -138,7 +159,6 @@ def collect_single(run_name, env, data_writer, driver_dict, driver_log_dir, coac
 
     return valid, list_debug_render, list_data_render, ep_stat_dict, ep_event_dict, timestamp
 
-bVerbose = True
 @ hydra.main(config_path='config', config_name='data_collect')
 def main(cfg: DictConfig):
     if bVerbose:
@@ -302,13 +322,44 @@ def main(cfg: DictConfig):
     if bVerbose:
         print("Neil start here 13")
     # make env
+    if bVerbose and False:
+        print("13.1:start: may be call to CarlaMultiAgentEnv__init__")
     env_setup = OmegaConf.to_container(cfg.test_suites[env_idx])
+    if bVerbose and False:
+        print("13.1:end: may be call to CarlaMultiAgentEnv__init__")
+    if bVerbose and False:
+        print('env_setup',env_setup)
+        print('gym.make parameters:',end='\n\t')
+        print(
+            'env_setup[\'env_id\']', env_setup['env_id'],
+            'obs_configs=obs_configs', obs_configs,
+            'reward_configs=reward_configs', reward_configs,
+            'terminal_configs=terminal_configs', terminal_configs, 
+            'host=cfg.host', cfg.host, 
+            'port=cfg.port', cfg.port,
+            'seed=cfg.seed', cfg.seed,
+            'no_rendering=cfg.no_rendering', cfg.no_rendering,
+            '**env_setup[\'env_configs\']', env_setup['env_configs']
+        )
+        pass
+    if bVerbose and False:
+        print("13.2:start: may be call to CarlaMultiAgentEnv__init__")
+    if bVerbose and False:
+        print("type(gym)",type(gym))
     env = gym.make(env_setup['env_id'], obs_configs=obs_configs, reward_configs=reward_configs,
                    terminal_configs=terminal_configs, host=cfg.host, port=cfg.port,
                    seed=cfg.seed, no_rendering=cfg.no_rendering, **env_setup['env_configs'])
+    if bVerbose and False:
+        print("type(env)",type(env))
+    if bVerbose and False:
+        print("13.2:end: may be call to CarlaMultiAgentEnv__init__")
 
     # main loop
+    if bVerbose and False:
+        print("13.3:start: may be call to CarlaMultiAgentEnv__init__")
     n_episodes_per_env = math.ceil(cfg.n_episodes/len(cfg.test_suites))
+    if bVerbose and False:
+        print("13.3:end: may be call to CarlaMultiAgentEnv__init__")
     if bVerbose:
         print("Neil left here 13")
     for task_idx in range(ckpt_task_idx, n_episodes_per_env):
@@ -320,6 +371,8 @@ def main(cfg: DictConfig):
             print("Neil left here 14")
 
         while True:
+            if bVerbose:
+                print("env.num_tasks",env.num_tasks)
             env.set_task_idx(np.random.choice(env.num_tasks))
 
             data_writer = saving_utils.DataWriter(dataset_dir/f'{run_name}.h5', cfg.ev_id, im_stack_idx)

@@ -14,10 +14,14 @@ from stable_baselines3.common.utils import set_random_seed
 
 logger = logging.getLogger(__name__)
 
+bVerbose = False
 
 class CarlaMultiAgentEnv(gym.Env):
     def __init__(self, carla_map, host, port, seed, no_rendering,
                  obs_configs, reward_configs, terminal_configs, all_tasks):
+        if bVerbose:
+            print("CarlaMultiAgentEnv > __init__")
+            print('all_tasks',all_tasks)
         self._all_tasks = all_tasks
         self._obs_configs = obs_configs
         self._carla_map = carla_map
@@ -50,9 +54,14 @@ class CarlaMultiAgentEnv(gym.Env):
         self._task = self._all_tasks[self._task_idx].copy()
 
     def set_task_idx(self, task_idx):
+        if bVerbose:
+            print("calling set_task_idx")
+            print('self._all_tasks',self._all_tasks)
         self._task_idx = task_idx
         self._shuffle_task = False
         self._task = self._all_tasks[self._task_idx].copy()
+        if bVerbose:
+            print('self._all_tasks',self._all_tasks)
 
     @property
     def num_tasks(self):
@@ -71,7 +80,9 @@ class CarlaMultiAgentEnv(gym.Env):
         self._wt_handler.reset(self._task['weather'])
         logger.debug("_wt_handler reset done!!")
 
-        ev_spawn_locations = self._ev_handler.reset(self._task['ego_vehicles'])
+        if bVerbose:
+            print("self._task['ego_vehicles']",self._task['ego_vehicles'])
+        ev_spawn_locations = self._ev_handler.reset(self._task['ego_vehicles']) # 4/22/2022 11:09:04 AM: error line
         logger.debug("_ev_handler reset done!!")
 
         self._sa_handler.reset(self._task['scenario_actors'], self._ev_handler.ego_vehicles)

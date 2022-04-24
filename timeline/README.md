@@ -3538,4 +3538,4 @@ $ PYTHON_RETURN=1!!! Start Over!!!$
 
 4/24/2022 12:23:28 AM: data collection is working, but shell script data_collect_bc_NeilBranch0.sh is not terminating as designed.
 
-4/24/2022: fixed "data_collect_bc_NeilBranch0.sh" from having infinite loop
+4/24/2022 6:25:13 PM: fixed "data_collect_bc_NeilBranch0.sh" from having infinite loop

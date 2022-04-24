@@ -22,7 +22,7 @@ from agents.rl_birdview.utils.wandb_callback import WandbCallback
 
 log = logging.getLogger(__name__)
 
-bVerbose = True
+bVerbose = False
 
 def collect_single(run_name, env, data_writer, driver_dict, driver_log_dir, coach_dict, coach_log_dir,
                    dagger_thresholds, log_video, noise_lon=False, noise_lat=False, alpha_coach=None,

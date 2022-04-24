@@ -2122,3 +2122,289 @@ $ PYTHON_RETURN=1!!! Start Over!!!$
 ```
 grep -r --include=*.py "Town01.h5"
 ```
+4/23/2022 8:42:54 PM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --include=*.py "Town01.h5"
+```
+4/23/2022 8:45:57 PM: create directory "/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh 
+run/data_collect_bc_NeilBranch0.sh: 47: run/data_collect_bc_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+run/data_collect_bc_NeilBranch0.sh: 59: [: 1: unexpected operator
+Neil start here 1
+Neil start here 2
+CarlaUE4-Linux: no process found
+[2022-04-23 20:46:46,032][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 2
+Neil start here 3
+CarlaUE4-Linux: no process found
+[2022-04-23 20:46:47,046][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-23 20:46:47,047][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Neil left here 3
+Neil start here 4
+[2022-04-23 20:46:52,381][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-04-23 20:46:53,561][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+Neil left here 4
+Neil start here 5
+Traceback (most recent call last):
+  File "data_collect_NeilBranch0.py", line 220, in main
+    config_utils.check_h5_maps(cfg.test_suites, obs_configs, cfg.carla_sh_path)
+  File "/home/nsambhu/github/carla-roach/carla_gym/utils/config_utils.py", line 48, in check_h5_maps
+    assert file_exists and pixels_per_meter_match, txt_assert + txt_command
+AssertionError: /home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Town01.h5 does not exists. Please run map generation script from project root directory. 
+python -m carla_gym.utils.birdview_map --save_dir /home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps --pixels_per_meter 5.00 --carla_sh_path /opt/carla-simulator/CarlaUE4.sh
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[2022-04-23 20:46:55,100][wandb.sdk.internal.internal][INFO] - Internal process exited
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```
+4/23/2022 8:50:40 PM: duplicate the Town0\*.h5 files in the "maps" and "maps/Carla/Maps" directories.
+
+4/23/2022 8:57:56 PM: search for Town0\*.h5 files including non-python files:
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r "Town01.h5"
+timeline/README.md:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+timeline/README.md:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+timeline/README.md:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+timeline/README.md:4/22/2022 2:31:56 PM: TODO: find "Town01.h5" in \*.py
+timeline/README.md:grep -r --include=*.py "Town01.h5"
+timeline/README.md:(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --include=*.py "Town01.h5"
+timeline/README.md:AssertionError: /home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Town01.h5 does not exists. Please run map generation script from project root directory. 
+Binary file outputs/2022-04-22/11-36-45/wandb/run-20220422_113655-3jzwryke/run-3jzwryke.wandb matches
+outputs/2022-04-22/11-36-45/wandb/run-20220422_113655-3jzwryke/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/14-26-26/wandb/run-20220422_142635-s0u0ps1i/run-s0u0ps1i.wandb matches
+outputs/2022-04-22/14-26-26/wandb/run-20220422_142635-s0u0ps1i/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/11-34-09/wandb/run-20220422_113419-1aaenocr/run-1aaenocr.wandb matches
+outputs/2022-04-22/11-34-09/wandb/run-20220422_113419-1aaenocr/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/14-15-57/wandb/run-20220422_141607-371p5ay9/run-371p5ay9.wandb matches
+outputs/2022-04-22/14-15-57/wandb/run-20220422_141607-371p5ay9/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/11-38-28/wandb/run-20220422_113838-3txghvu7/run-3txghvu7.wandb matches
+outputs/2022-04-22/11-38-28/wandb/run-20220422_113838-3txghvu7/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+outputs/2022-04-22/11-35-30/wandb/run-20220422_113540-2bxsvppi/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/11-35-30/wandb/run-20220422_113540-2bxsvppi/run-2bxsvppi.wandb matches
+Binary file .git/index matches
+```
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude=*README.md "Town01.h5"
+Binary file outputs/2022-04-22/11-36-45/wandb/run-20220422_113655-3jzwryke/run-3jzwryke.wandb matches
+outputs/2022-04-22/11-36-45/wandb/run-20220422_113655-3jzwryke/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/14-26-26/wandb/run-20220422_142635-s0u0ps1i/run-s0u0ps1i.wandb matches
+outputs/2022-04-22/14-26-26/wandb/run-20220422_142635-s0u0ps1i/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/11-34-09/wandb/run-20220422_113419-1aaenocr/run-1aaenocr.wandb matches
+outputs/2022-04-22/11-34-09/wandb/run-20220422_113419-1aaenocr/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/14-15-57/wandb/run-20220422_141607-371p5ay9/run-371p5ay9.wandb matches
+outputs/2022-04-22/14-15-57/wandb/run-20220422_141607-371p5ay9/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/11-38-28/wandb/run-20220422_113838-3txghvu7/run-3txghvu7.wandb matches
+outputs/2022-04-22/11-38-28/wandb/run-20220422_113838-3txghvu7/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+outputs/2022-04-22/11-35-30/wandb/run-20220422_113540-2bxsvppi/files/output.log:OSError: Unable to open file (unable to open file: name = '/home/nsambhu/github/carla-roach/carla_gym/core/obs_manager/birdview/maps/Carla/Maps/Town01.h5', errno = 2, error message = 'No such file or directory', flags = 40, o_flags = 0)
+Binary file outputs/2022-04-22/11-35-30/wandb/run-20220422_113540-2bxsvppi/run-2bxsvppi.wandb matches
+Binary file .git/index matches
+```
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude=*README.md --exclude=*.log "Town01.h5"
+Binary file outputs/2022-04-22/11-36-45/wandb/run-20220422_113655-3jzwryke/run-3jzwryke.wandb matches
+Binary file outputs/2022-04-22/14-26-26/wandb/run-20220422_142635-s0u0ps1i/run-s0u0ps1i.wandb matches
+Binary file outputs/2022-04-22/11-34-09/wandb/run-20220422_113419-1aaenocr/run-1aaenocr.wandb matches
+Binary file outputs/2022-04-22/14-15-57/wandb/run-20220422_141607-371p5ay9/run-371p5ay9.wandb matches
+Binary file outputs/2022-04-22/11-38-28/wandb/run-20220422_113838-3txghvu7/run-3txghvu7.wandb matches
+Binary file outputs/2022-04-22/11-35-30/wandb/run-20220422_113540-2bxsvppi/run-2bxsvppi.wandb matches
+Binary file .git/index matches
+```
+4/23/2022 9:02:45 PM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh 
+run/data_collect_bc_NeilBranch0.sh: 47: run/data_collect_bc_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/wb_run_id.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+run/data_collect_bc_NeilBranch0.sh: 59: [: 1: unexpected operator
+Neil start here 1
+Neil start here 2
+CarlaUE4-Linux: no process found
+[2022-04-23 20:53:20,989][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 2
+Neil start here 3
+CarlaUE4-Linux: no process found
+[2022-04-23 20:53:22,002][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-23 20:53:22,002][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Neil left here 3
+Neil start here 4
+[2022-04-23 20:53:27,321][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-04-23 20:53:28,195][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6
+Neil left here 6
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+Neil start here 9
+[2022-04-23 20:53:29,476][__main__][INFO] - Start from env_idx: 0, task_idx 0
+Neil left here 9
+Neil start here 10
+Neil left here 10
+Neil start here 11
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run bc/expert
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/il_leaderboard_roach
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/2hmoy8mh
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-23/20-53-19/wandb/run-20220423_205329-2hmoy8mh
+wandb: Run `wandb offline` to turn off syncing.
+
+Neil left here 11
+Neil start here 12
+Neil left here 12
+Neil start here 13
+calling registration.py > make(id, **kwargs)
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+Neil left here 13
+Neil start here 14
+Neil left here 14
+env.num_tasks 4
+[2022-04-23 20:53:35,020][__main__][INFO] - Start episode 0000, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [80, 160], 'num_zombie_walkers': [80, 160], 'weather_group': 'train'}}
+Neil start here 15
+Neil start here 16
+Neil left here 16
+Neil start here 17
+Neil left here 17
+Neil start here 18
+Neil left here 18
+Neil start here 19
+Neil left here 19
+Neil start here 20
+Neil left here 20
+[2022-04-23 20:58:39,782][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-04-23 20:58:39,791][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0000.h5, data_len=3000, save_len=3000
+[2022-04-23 20:59:29,692][__main__][INFO] - Episode 0000 done, valid=True
+Neil left here 15
+wandb: WARNING Symlinked 1 file into the W&B run directory, call wandb.save again to sync new files.
+wandb: WARNING Symlinked 0 file into the W&B run directory, call wandb.save again to sync new files.
+[2022-04-23 20:59:29,895][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 1 episodes, 3000 saved frames=0.08 hours, 3000 critical frames=0.08 hours
+[2022-04-23 20:59:29,957][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 1.1G
+/opt/carla-simulator/CarlaUE4.sh: line 2: 56593 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+[2022-04-23 20:59:31,289][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-23 20:59:36,294][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-23 20:59:36,298][__main__][INFO] - Finished data collection env_idx 0, Endless-v0.
+[2022-04-23 20:59:36,298][__main__][INFO] - Not finished, 1/4
+
+wandb: Waiting for W&B process to finish, PID 56849
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-23/20-53-19/wandb/run-20220423_205329-2hmoy8mh/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-23/20-53-19/wandb/run-20220423_205329-2hmoy8mh/logs/debug-internal.log
+wandb: Run summary:
+wandb:                   time/total_step 3000
+wandb:                          time/fps 9.87796
+wandb:                  hero/score_route 0.86507
+wandb:                hero/score_penalty 1.0
+wandb:               hero/score_composed 0.86507
+wandb:                       hero/length 3001
+wandb:                       hero/reward 1722.67033
+wandb:                      hero/timeout 1.0
+wandb:           hero/is_route_completed 0.0
+wandb:   hero/is_route_completed_nocrash 0.0
+wandb:        hero/route_completed_in_km 0.86507
+wandb:           hero/route_length_in_km 1.04966
+wandb:      hero/percentage_outside_lane 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:            hero/collisions_others 0.0
+wandb:                    hero/red_light 0.0
+wandb:                 hero/light_passed 5
+wandb:              hero/encounter_light 5
+wandb:              hero/stop_infraction 0.0
+wandb:                  hero/stop_passed 0
+wandb:               hero/encounter_stop 0
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:                             _step 0
+wandb:                          _runtime 367
+wandb:                        _timestamp 1650761976
+wandb: Run history:
+wandb:                   time/total_step ▁
+wandb:                          time/fps ▁
+wandb:                  hero/score_route ▁
+wandb:                hero/score_penalty ▁
+wandb:               hero/score_composed ▁
+wandb:                       hero/length ▁
+wandb:                       hero/reward ▁
+wandb:                      hero/timeout ▁
+wandb:           hero/is_route_completed ▁
+wandb:   hero/is_route_completed_nocrash ▁
+wandb:        hero/route_completed_in_km ▁
+wandb:           hero/route_length_in_km ▁
+wandb:      hero/percentage_outside_lane ▁
+wandb:        hero/percentage_wrong_lane ▁
+wandb:            hero/collisions_layout ▁
+wandb:           hero/collisions_vehicle ▁
+wandb:        hero/collisions_pedestrian ▁
+wandb:            hero/collisions_others ▁
+wandb:                    hero/red_light ▁
+wandb:                 hero/light_passed ▁
+wandb:              hero/encounter_light ▁
+wandb:              hero/stop_infraction ▁
+wandb:                  hero/stop_passed ▁
+wandb:               hero/encounter_stop ▁
+wandb:                    hero/route_dev ▁
+wandb:              hero/vehicle_blocked ▁
+wandb:                             _step ▁
+wandb:                          _runtime ▁
+wandb:                        _timestamp ▁
+wandb: 
+wandb: Synced 5 W&B file(s), 1 media file(s), 0 artifact file(s) and 2 other file(s)
+wandb: 
+wandb: Synced bc/expert: https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/2hmoy8mh
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```

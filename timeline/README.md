@@ -3537,3 +3537,5 @@ $ PYTHON_RETURN=1!!! Start Over!!!$
 4/23/2022 11:17:16 PM: implement idea from 4/23/2022 10:31:48 PM: "data_collect_bc_NeilBranch0.sh" > comment "exit 0". Change data_collect_bc_NeilBranch0.sh:n_episodes to 1. Monitor "env_idx+1" and "len(cfg.test_suites)".
 
 4/24/2022 12:23:28 AM: data collection is working, but shell script data_collect_bc_NeilBranch0.sh is not terminating as designed.
+
+4/24/2022: fixed "data_collect_bc_NeilBranch0.sh" from having infinite loop

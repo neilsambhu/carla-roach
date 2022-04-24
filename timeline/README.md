@@ -3539,3 +3539,699 @@ $ PYTHON_RETURN=1!!! Start Over!!!$
 4/24/2022 12:23:28 AM: data collection is working, but shell script data_collect_bc_NeilBranch0.sh is not terminating as designed.
 
 4/24/2022 6:25:13 PM: fixed "data_collect_bc_NeilBranch0.sh" from having infinite loop
+
+4/24/2022 6:53:41 PM: 
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh 
+run/data_collect_bc_NeilBranch0.sh: 47: run/data_collect_bc_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/wb_run_id.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+Neil start here 1
+Neil start here 2
+CarlaUE4-Linux: no process found
+[2022-04-24 18:21:25,602][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 2
+Neil start here 3
+CarlaUE4-Linux: no process found
+[2022-04-24 18:21:26,618][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:21:26,618][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Neil left here 3
+Neil start here 4
+[2022-04-24 18:21:31,948][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-04-24 18:21:33,069][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6
+Neil left here 6
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+Neil start here 9
+[2022-04-24 18:21:34,620][__main__][INFO] - Start from env_idx: 0, task_idx 0
+Neil left here 9
+Neil start here 10
+Neil left here 10
+Neil start here 11
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run bc/expert
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/il_leaderboard_roach
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-21-24/wandb/run-20220424_182135-3wpf1l8y
+wandb: Run `wandb offline` to turn off syncing.
+
+Neil left here 11
+Neil start here 12
+Neil left here 12
+Neil start here 13
+calling registration.py > make(id, **kwargs)
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+Neil left here 13
+Neil start here 14
+Neil left here 14
+env.num_tasks 4
+[2022-04-24 18:21:40,781][__main__][INFO] - Start episode 0000, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [80, 160], 'num_zombie_walkers': [80, 160], 'weather_group': 'train'}}
+Neil start here 15
+Neil start here 16
+Neil left here 16
+Neil start here 17
+Neil left here 17
+Neil start here 18
+Neil left here 18
+Neil start here 19
+Neil left here 19
+Neil start here 20
+Neil left here 20
+[2022-04-24 18:26:55,386][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-04-24 18:26:55,395][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0000.h5, data_len=3000, save_len=3000
+[2022-04-24 18:27:45,163][__main__][INFO] - Episode 0000 done, valid=True
+Neil left here 15
+Neil start here 21
+Neil left here 21
+Neil start here 22
+Neil left here 22
+Neil start here 23
+wandb: WARNING Symlinked 1 file into the W&B run directory, call wandb.save again to sync new files.
+Neil left here 23wandb: WARNING Symlinked 0 file into the W&B run directory, call wandb.save again to sync new files.
+
+Neil start here 24
+Neil left here 24
+Neil start here 25
+Neil left here 25
+Neil start here 26
+Neil left here 26
+Neil start here 27
+Neil left here 27
+Neil start here 28
+[2022-04-24 18:27:45,970][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 12000 saved frames=0.33 hours, 12000 critical frames=0.33 hours
+[2022-04-24 18:27:46,042][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 3.8G
+Neil left here 28
+/opt/carla-simulator/CarlaUE4.sh: line 2: 115910 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+[2022-04-24 18:27:47,465][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:27:52,469][utils.server_utils][INFO] - Kill Carla Servers!
+Neil start here 29
+env_idx+1 1
+len(cfg.test_suites) 4
+[2022-04-24 18:27:52,473][__main__][INFO] - Finished data collection env_idx 0, Endless-v0.
+[2022-04-24 18:27:52,474][__main__][INFO] - Not finished, 1/4
+
+wandb: Waiting for W&B process to finish, PID 116169
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-21-24/wandb/run-20220424_182135-3wpf1l8y/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-21-24/wandb/run-20220424_182135-3wpf1l8y/logs/debug-internal.log
+wandb: Run summary:
+wandb:                   time/total_step 3000
+wandb:                          time/fps 9.56513
+wandb:                  hero/score_route 0.91207
+wandb:                hero/score_penalty 1.0
+wandb:               hero/score_composed 0.91207
+wandb:                       hero/length 3001
+wandb:                       hero/reward 2228.20011
+wandb:                      hero/timeout 1.0
+wandb:           hero/is_route_completed 0.0
+wandb:   hero/is_route_completed_nocrash 0.0
+wandb:        hero/route_completed_in_km 0.91207
+wandb:           hero/route_length_in_km 1.04966
+wandb:      hero/percentage_outside_lane 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:            hero/collisions_others 0.0
+wandb:                    hero/red_light 0.0
+wandb:                 hero/light_passed 5
+wandb:              hero/encounter_light 5
+wandb:              hero/stop_infraction 0.0
+wandb:                  hero/stop_passed 0
+wandb:               hero/encounter_stop 0
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:                             _step 0
+wandb:                          _runtime 377
+wandb:                        _timestamp 1650839272
+wandb: Run history:
+wandb:                   time/total_step ▁
+wandb:                          time/fps ▁
+wandb:                  hero/score_route ▁
+wandb:                hero/score_penalty ▁
+wandb:               hero/score_composed ▁
+wandb:                       hero/length ▁
+wandb:                       hero/reward ▁
+wandb:                      hero/timeout ▁
+wandb:           hero/is_route_completed ▁
+wandb:   hero/is_route_completed_nocrash ▁
+wandb:        hero/route_completed_in_km ▁
+wandb:           hero/route_length_in_km ▁
+wandb:      hero/percentage_outside_lane ▁
+wandb:        hero/percentage_wrong_lane ▁
+wandb:            hero/collisions_layout ▁
+wandb:           hero/collisions_vehicle ▁
+wandb:        hero/collisions_pedestrian ▁
+wandb:            hero/collisions_others ▁
+wandb:                    hero/red_light ▁
+wandb:                 hero/light_passed ▁
+wandb:              hero/encounter_light ▁
+wandb:              hero/stop_infraction ▁
+wandb:                  hero/stop_passed ▁
+wandb:               hero/encounter_stop ▁
+wandb:                    hero/route_dev ▁
+wandb:              hero/vehicle_blocked ▁
+wandb:                             _step ▁
+wandb:                          _runtime ▁
+wandb:                        _timestamp ▁
+wandb: 
+wandb: Synced 5 W&B file(s), 1 media file(s), 0 artifact file(s) and 2 other file(s)
+wandb: 
+wandb: Synced bc/expert: https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+$ PYTHON_RETURN=1!!! Start Over!!!$
+Neil start here 1
+Neil start here 2
+CarlaUE4-Linux: no process found
+[2022-04-24 18:28:00,698][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 2
+Neil start here 3
+CarlaUE4-Linux: no process found
+[2022-04-24 18:28:01,714][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:28:01,714][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Neil left here 3
+Neil start here 4
+[2022-04-24 18:28:07,014][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-04-24 18:28:07,907][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6
+Neil left here 6
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+Neil start here 9
+[2022-04-24 18:28:09,238][__main__][INFO] - Start from env_idx: 1, task_idx 0
+Neil left here 9
+Neil start here 10
+Neil left here 10
+Neil start here 11
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Resuming run bc/expert
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/il_leaderboard_roach
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-27-59/wandb/run-20220424_182809-3wpf1l8y
+wandb: Run `wandb offline` to turn off syncing.
+
+Neil left here 11
+Neil start here 12
+Neil left here 12
+Neil start here 13
+calling registration.py > make(id, **kwargs)
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+Neil left here 13
+Neil start here 14
+Neil left here 14
+env.num_tasks 4
+[2022-04-24 18:28:16,034][__main__][INFO] - Start episode 0001, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'num_zombie_vehicles': [40, 100], 'num_zombie_walkers': [40, 100], 'weather_group': 'train'}}
+Neil start here 15
+Neil start here 16
+Neil left here 16
+Neil start here 17
+Neil left here 17
+Neil start here 18
+Neil left here 18
+Neil start here 19
+Neil left here 19
+Neil start here 20
+Neil left here 20
+[2022-04-24 18:32:01,812][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-04-24 18:32:01,820][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0001.h5, data_len=3000, save_len=3000
+[2022-04-24 18:32:51,735][__main__][INFO] - Episode 0001 done, valid=True
+Neil left here 15
+Neil start here 21
+Neil left here 21
+Neil start here 22
+Neil left here 22
+Neil start here 23
+wandb: WARNING Symlinked 1 file into the W&B run directory, call wandb.save again to sync new files.
+wandb: WARNING Symlinked 0 file into the W&B run directory, call wandb.save again to sync new files.
+Neil left here 23
+Neil start here 24
+Neil left here 24
+Neil start here 25
+Neil left here 25
+Neil start here 26
+Neil left here 26
+Neil start here 27
+Neil left here 27
+Neil start here 28
+[2022-04-24 18:32:52,570][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 12000 saved frames=0.33 hours, 12000 critical frames=0.33 hours
+[2022-04-24 18:32:52,638][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 3.8G
+Neil left here 28
+/opt/carla-simulator/CarlaUE4.sh: line 2: 117052 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+[2022-04-24 18:32:54,015][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:32:59,020][utils.server_utils][INFO] - Kill Carla Servers!
+Neil start here 29
+env_idx+1 2
+len(cfg.test_suites) 4
+[2022-04-24 18:32:59,024][__main__][INFO] - Finished data collection env_idx 1, Endless-v0.
+[2022-04-24 18:32:59,024][__main__][INFO] - Not finished, 2/4
+
+wandb: Waiting for W&B process to finish, PID 117304
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-27-59/wandb/run-20220424_182809-3wpf1l8y/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-27-59/wandb/run-20220424_182809-3wpf1l8y/logs/debug-internal.log
+wandb: Run summary:
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:                  hero/stop_passed 0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:        hero/route_completed_in_km 0.7759
+wandb:                       hero/length 3001
+wandb:                    hero/red_light 0.0
+wandb:               hero/encounter_stop 0
+wandb:      hero/percentage_outside_lane 0.0
+wandb:                       hero/reward 2271.58023
+wandb:               hero/score_composed 0.7759
+wandb:   hero/is_route_completed_nocrash 0.0
+wandb:                             _step 1
+wandb:                          _runtime 667
+wandb:                          time/fps 13.33424
+wandb:                 hero/light_passed 6
+wandb:                        _timestamp 1650839579
+wandb:                  hero/score_route 0.7759
+wandb:              hero/stop_infraction 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/is_route_completed 0.0
+wandb:                      hero/timeout 1.0
+wandb:                   time/total_step 3000
+wandb:                hero/score_penalty 1.0
+wandb:              hero/encounter_light 6
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:            hero/collisions_others 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:           hero/route_length_in_km 1.02928
+wandb: Run history:
+wandb:                   time/total_step ▁
+wandb:                          time/fps ▁
+wandb:                  hero/score_route ▁
+wandb:                hero/score_penalty ▁
+wandb:               hero/score_composed ▁
+wandb:                       hero/length ▁
+wandb:                       hero/reward ▁
+wandb:                      hero/timeout ▁
+wandb:           hero/is_route_completed ▁
+wandb:   hero/is_route_completed_nocrash ▁
+wandb:        hero/route_completed_in_km ▁
+wandb:           hero/route_length_in_km ▁
+wandb:      hero/percentage_outside_lane ▁
+wandb:        hero/percentage_wrong_lane ▁
+wandb:            hero/collisions_layout ▁
+wandb:           hero/collisions_vehicle ▁
+wandb:        hero/collisions_pedestrian ▁
+wandb:            hero/collisions_others ▁
+wandb:                    hero/red_light ▁
+wandb:                 hero/light_passed ▁
+wandb:              hero/encounter_light ▁
+wandb:              hero/stop_infraction ▁
+wandb:                  hero/stop_passed ▁
+wandb:               hero/encounter_stop ▁
+wandb:                    hero/route_dev ▁
+wandb:              hero/vehicle_blocked ▁
+wandb:                             _step ▁
+wandb:                          _runtime ▁
+wandb:                        _timestamp ▁
+wandb: 
+wandb: Synced 5 W&B file(s), 1 media file(s), 0 artifact file(s) and 2 other file(s)
+wandb: 
+wandb: Synced bc/expert: https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+$ PYTHON_RETURN=1!!! Start Over!!!$
+Neil start here 1
+Neil start here 2
+CarlaUE4-Linux: no process found
+[2022-04-24 18:33:07,248][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 2
+Neil start here 3
+CarlaUE4-Linux: no process found
+[2022-04-24 18:33:08,264][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:33:08,264][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Neil left here 3
+Neil start here 4
+[2022-04-24 18:33:13,559][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-04-24 18:33:14,399][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6
+Neil left here 6
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+Neil start here 9
+[2022-04-24 18:33:15,718][__main__][INFO] - Start from env_idx: 2, task_idx 0
+Neil left here 9
+Neil start here 10
+Neil left here 10
+Neil start here 11
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Resuming run bc/expert
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/il_leaderboard_roach
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-33-06/wandb/run-20220424_183315-3wpf1l8y
+wandb: Run `wandb offline` to turn off syncing.
+
+Neil left here 11
+Neil start here 12
+Neil left here 12
+Neil start here 13
+calling registration.py > make(id, **kwargs)
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+Neil left here 13
+Neil start here 14
+Neil left here 14
+env.num_tasks 4
+[2022-04-24 18:33:21,543][__main__][INFO] - Start episode 0002, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town04', 'num_zombie_vehicles': [100, 200], 'num_zombie_walkers': [40, 120], 'weather_group': 'train'}}
+Neil start here 15
+Neil start here 16
+Neil left here 16
+Neil start here 17
+Neil left here 17
+Neil start here 18
+Neil left here 18
+Neil start here 19
+Neil left here 19
+Neil start here 20
+Neil left here 20
+[2022-04-24 18:39:11,536][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-04-24 18:39:11,549][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0002.h5, data_len=3000, save_len=3000
+[2022-04-24 18:40:00,813][__main__][INFO] - Episode 0002 done, valid=True
+Neil left here 15
+Neil start here 21
+Neil left here 21
+Neil start here 22
+Neil left here 22
+Neil start here 23
+wandb: WARNING Symlinked 1 file into the W&B run directory, call wandb.save again to sync new files.
+wandb: WARNING Symlinked 0 file into the W&B run directory, call wandb.save again to sync new files.
+Neil left here 23
+Neil start here 24
+Neil left here 24
+Neil start here 25
+Neil left here 25
+Neil start here 26
+Neil left here 26
+Neil start here 27
+Neil left here 27
+Neil start here 28
+[2022-04-24 18:40:01,625][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 12000 saved frames=0.33 hours, 12000 critical frames=0.33 hours
+[2022-04-24 18:40:01,696][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 3.8G
+Neil left here 28
+/opt/carla-simulator/CarlaUE4.sh: line 2: 117928 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+[2022-04-24 18:40:03,032][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:40:08,037][utils.server_utils][INFO] - Kill Carla Servers!
+Neil start here 29
+env_idx+1 3
+len(cfg.test_suites) 4
+[2022-04-24 18:40:08,041][__main__][INFO] - Finished data collection env_idx 2, Endless-v0.
+[2022-04-24 18:40:08,041][__main__][INFO] - Not finished, 3/4
+
+wandb: Waiting for W&B process to finish, PID 118176
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-33-06/wandb/run-20220424_183315-3wpf1l8y/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-33-06/wandb/run-20220424_183315-3wpf1l8y/logs/debug-internal.log
+wandb: Run summary:
+wandb:               hero/encounter_stop 0
+wandb:              hero/vehicle_blocked 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:                       hero/reward 2430.17312
+wandb:                    hero/route_dev 0.0
+wandb:                   time/total_step 3000
+wandb:   hero/is_route_completed_nocrash 0.0
+wandb:                    hero/red_light 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/is_route_completed 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:                          time/fps 8.60291
+wandb:        hero/route_completed_in_km 1.73821
+wandb:      hero/percentage_outside_lane 0.0
+wandb:              hero/encounter_light 1
+wandb:              hero/stop_infraction 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:                             _step 2
+wandb:                  hero/score_route 1.73821
+wandb:            hero/collisions_others 0.0
+wandb:                       hero/length 3001
+wandb:                  hero/stop_passed 0
+wandb:                hero/score_penalty 1.0
+wandb:                          _runtime 1079
+wandb:                      hero/timeout 1.0
+wandb:                 hero/light_passed 1
+wandb:               hero/score_composed 1.73821
+wandb:           hero/route_length_in_km 3.8286
+wandb:                        _timestamp 1650840008
+wandb: Run history:
+wandb:                   time/total_step ▁
+wandb:                          time/fps ▁
+wandb:                  hero/score_route ▁
+wandb:                hero/score_penalty ▁
+wandb:               hero/score_composed ▁
+wandb:                       hero/length ▁
+wandb:                       hero/reward ▁
+wandb:                      hero/timeout ▁
+wandb:           hero/is_route_completed ▁
+wandb:   hero/is_route_completed_nocrash ▁
+wandb:        hero/route_completed_in_km ▁
+wandb:           hero/route_length_in_km ▁
+wandb:      hero/percentage_outside_lane ▁
+wandb:        hero/percentage_wrong_lane ▁
+wandb:            hero/collisions_layout ▁
+wandb:           hero/collisions_vehicle ▁
+wandb:        hero/collisions_pedestrian ▁
+wandb:            hero/collisions_others ▁
+wandb:                    hero/red_light ▁
+wandb:                 hero/light_passed ▁
+wandb:              hero/encounter_light ▁
+wandb:              hero/stop_infraction ▁
+wandb:                  hero/stop_passed ▁
+wandb:               hero/encounter_stop ▁
+wandb:                    hero/route_dev ▁
+wandb:              hero/vehicle_blocked ▁
+wandb:                             _step ▁
+wandb:                          _runtime ▁
+wandb:                        _timestamp ▁
+wandb: 
+wandb: Synced 5 W&B file(s), 1 media file(s), 0 artifact file(s) and 2 other file(s)
+wandb: 
+wandb: Synced bc/expert: https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+$ PYTHON_RETURN=1!!! Start Over!!!$
+Neil start here 1
+Neil start here 2
+CarlaUE4-Linux: no process found
+[2022-04-24 18:40:16,275][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 2
+Neil start here 3
+CarlaUE4-Linux: no process found
+[2022-04-24 18:40:17,291][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:40:17,291][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Neil left here 3
+Neil start here 4
+[2022-04-24 18:40:22,918][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-04-24 18:40:23,741][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6
+Neil left here 6
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+Neil start here 9
+[2022-04-24 18:40:25,184][__main__][INFO] - Start from env_idx: 3, task_idx 0
+Neil left here 9
+Neil start here 10
+Neil left here 10
+Neil start here 11
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Resuming run bc/expert
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/il_leaderboard_roach
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-40-15/wandb/run-20220424_184025-3wpf1l8y
+wandb: Run `wandb offline` to turn off syncing.
+
+Neil left here 11
+Neil start here 12
+Neil left here 12
+Neil start here 13
+calling registration.py > make(id, **kwargs)
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+Neil left here 13
+Neil start here 14
+Neil left here 14
+env.num_tasks 4
+[2022-04-24 18:40:30,561][__main__][INFO] - Start episode 0003, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town06', 'num_zombie_vehicles': [80, 160], 'num_zombie_walkers': [40, 120], 'weather_group': 'train'}}
+Neil start here 15
+Neil start here 16
+Neil left here 16
+Neil start here 17
+Neil left here 17
+Neil start here 18
+Neil left here 18
+Neil start here 19
+Neil left here 19
+Neil start here 20
+Neil left here 20
+[2022-04-24 18:46:26,375][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-04-24 18:46:26,383][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0003.h5, data_len=3000, save_len=3000
+[2022-04-24 18:47:15,265][__main__][INFO] - Episode 0003 done, valid=True
+Neil left here 15
+Neil start here 21
+Neil left here 21
+Neil start here 22
+Neil left here 22
+Neil start here 23
+wandb: WARNING Symlinked 1 file into the W&B run directory, call wandb.save again to sync new files.
+wandb: WARNING Symlinked 0 file into the W&B run directory, call wandb.save again to sync new files.
+Neil left here 23
+Neil start here 24
+Neil left here 24
+Neil start here 25
+Neil left here 25
+Neil start here 26
+Neil left here 26
+Neil start here 27
+Neil left here 27
+Neil start here 28
+[2022-04-24 18:47:16,066][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 12000 saved frames=0.33 hours, 12000 critical frames=0.33 hours
+[2022-04-24 18:47:16,139][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 3.8G
+Neil left here 28
+/opt/carla-simulator/CarlaUE4.sh: line 2: 118985 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+[2022-04-24 18:47:17,535][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 18:47:22,541][utils.server_utils][INFO] - Kill Carla Servers!
+Neil start here 29
+env_idx+1 4
+len(cfg.test_suites) 4
+[2022-04-24 18:47:22,544][__main__][INFO] - Finished data collection env_idx 3, Endless-v0.
+wandb: WARNING Symlinked 4 files into the W&B run directory, call wandb.save again to sync new files.
+[2022-04-24 18:47:22,546][__main__][INFO] - Finished, 4/4
+Neil left here 1
+[2022-04-24 18:47:22,547][__main__][INFO] - data_collect.py DONE!
+
+wandb: Waiting for W&B process to finish, PID 119237
+wandb: Program ended successfully.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-40-15/wandb/run-20220424_184025-3wpf1l8y/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/18-40-15/wandb/run-20220424_184025-3wpf1l8y/logs/debug-internal.log
+wandb: Run summary:
+wandb:            hero/collisions_others 0.0
+wandb:                          time/fps 8.45988
+wandb:                       hero/length 3001
+wandb:                    hero/route_dev 0.0
+wandb:               hero/score_composed 0.92375
+wandb:              hero/encounter_light 4
+wandb:   hero/is_route_completed_nocrash 0.0
+wandb:           hero/route_length_in_km 1.60785
+wandb:        hero/route_completed_in_km 0.92375
+wandb:      hero/percentage_outside_lane 0.0
+wandb:                          _runtime 1496
+wandb:                        _timestamp 1650840442
+wandb:                   time/total_step 3000
+wandb:            hero/collisions_layout 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:                  hero/score_route 0.92375
+wandb:                 hero/light_passed 4
+wandb:                hero/score_penalty 1.0
+wandb:               hero/encounter_stop 0
+wandb:              hero/vehicle_blocked 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:                  hero/stop_passed 0
+wandb:                       hero/reward 2238.54958
+wandb:                      hero/timeout 1.0
+wandb:                    hero/red_light 0.0
+wandb:              hero/stop_infraction 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:                             _step 3
+wandb:           hero/is_route_completed 0.0
+wandb: Run history:
+wandb:                   time/total_step ▁
+wandb:                          time/fps ▁
+wandb:                  hero/score_route ▁
+wandb:                hero/score_penalty ▁
+wandb:               hero/score_composed ▁
+wandb:                       hero/length ▁
+wandb:                       hero/reward ▁
+wandb:                      hero/timeout ▁
+wandb:           hero/is_route_completed ▁
+wandb:   hero/is_route_completed_nocrash ▁
+wandb:        hero/route_completed_in_km ▁
+wandb:           hero/route_length_in_km ▁
+wandb:      hero/percentage_outside_lane ▁
+wandb:        hero/percentage_wrong_lane ▁
+wandb:            hero/collisions_layout ▁
+wandb:           hero/collisions_vehicle ▁
+wandb:        hero/collisions_pedestrian ▁
+wandb:            hero/collisions_others ▁
+wandb:                    hero/red_light ▁
+wandb:                 hero/light_passed ▁
+wandb:              hero/encounter_light ▁
+wandb:              hero/stop_infraction ▁
+wandb:                  hero/stop_passed ▁
+wandb:               hero/encounter_stop ▁
+wandb:                    hero/route_dev ▁
+wandb:              hero/vehicle_blocked ▁
+wandb:                             _step ▁
+wandb:                          _runtime ▁
+wandb:                        _timestamp ▁
+wandb: 
+wandb: Synced 5 W&B file(s), 1 media file(s), 0 artifact file(s) and 6 other file(s)
+wandb: 
+wandb: Synced bc/expert: https://wandb.ai/neilsambhu/il_leaderboard_roach/runs/3wpf1l8y
+CarlaUE4-Linux: no process found
+Bash script done.
+```

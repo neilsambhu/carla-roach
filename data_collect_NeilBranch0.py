@@ -391,7 +391,9 @@ def main(cfg: DictConfig):
                 print("Neil left here 15")
             if valid:
                 break
-
+        
+        if bVerbose:
+            print("Neil start here 21")
         # log videos
         if cfg.log_video:
             debug_video_path = (video_dir / f'debug_{run_name}.mp4').as_posix()
@@ -408,22 +410,38 @@ def main(cfg: DictConfig):
                 encoder.close()
                 wandb.log({f'video/data_{run_name}': wandb.Video(data_video_path)}, step=idx_episode)
             encoder = None
+        if bVerbose:
+            print("Neil left here 21")
 
+        if bVerbose:
+            print("Neil start here 22")
         # dump events
         diags_json_path = (diags_dir / f'{run_name}.json').as_posix()
         with open(diags_json_path, 'w') as fd:
             json.dump(ep_event_dict, fd, indent=4, sort_keys=False)
+        if bVerbose:
+            print("Neil left here 22")
 
+        if bVerbose:
+            print("Neil start here 23")
         # save diags and agents_log
         wandb.save(diags_json_path)
         wandb.save(f'{driver_log_dir.as_posix()}/*/*')
         wandb.save(f'{coach_log_dir.as_posix()}/*/*')
+        if bVerbose:
+            print("Neil left here 23")
 
+        if bVerbose:
+            print("Neil start here 24")
         # save time
         wandb.log({'time/total_step': timestamp['step'],
                    'time/fps':  timestamp['step'] / timestamp['relative_wall_time']
                    }, step=idx_episode)
+        if bVerbose:
+            print("Neil left here 24")
 
+        if bVerbose:
+            print("Neil start here 25")
         # save statistics
         for actor_id, ep_stat in ep_stat_dict.items():
             ep_stat_buffer[actor_id].append(ep_stat)
@@ -432,18 +450,33 @@ def main(cfg: DictConfig):
                 k_actor = f'{actor_id}/{k}'
                 log_dict[k_actor] = v
             wandb.log(log_dict, step=idx_episode)
+        if bVerbose:
+            print("Neil left here 25")
 
+        if bVerbose:
+            print("Neil start here 26")
         with open(ep_state_buffer_json, 'w') as fd:
             json.dump(ep_stat_buffer, fd, indent=4, sort_keys=True)
+        if bVerbose:
+            print("Neil left here 26")
+
+        if bVerbose:
+            print("Neil start here 27")
         # clean up
         list_debug_render.clear()
         list_data_render.clear()
         ep_stat_dict = None
         ep_event_dict = None
+        if bVerbose:
+            print("Neil left here 27")
 
+        if bVerbose:
+            print("Neil start here 28")
         saving_utils.report_dataset_size(dataset_dir)
         dataset_size = subprocess.check_output(['du', '-sh', dataset_dir]).split()[0].decode('utf-8')
         log.warning(f'{dataset_dir}: dataset_size {dataset_size}')
+        if bVerbose:
+            print("Neil left here 28")
 
     # close env
     env.close()
@@ -468,6 +501,11 @@ def main(cfg: DictConfig):
     with open(last_checkpoint_path, 'w') as f:
         f.write(f'{env_idx+1}')
 
+    if bVerbose:
+        print("Neil start here 29")
+    if bVerbose:
+        print('env_idx+1',str(env_idx+1))
+        print('len(cfg.test_suites)',str(len(cfg.test_suites)))
     log.info(f"Finished data collection env_idx {env_idx}, {env_setup['env_id']}.")
     if env_idx+1 == len(cfg.test_suites):
         if cfg.save_to_wandb:
@@ -477,7 +515,8 @@ def main(cfg: DictConfig):
     else:
         log.info(f"Not finished, {env_idx+1}/{len(cfg.test_suites)}")
         sys.exit(1)
-
+    if bVerbose:
+        print("Neil start here 29")
     return
 
 

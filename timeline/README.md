@@ -4244,4 +4244,251 @@ Bash script done.
 ##### Benchmark 5
 ###### Benchmark 6
 ####### Benchmark 7
+
 4/24/2022 6:57:46 PM: Benchmark
+```
+screen -L -Logfile ~/screen.log -d -m run/benchmark.sh
+```
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ screen -r
+```
+```
+run/benchmark.sh: line 54: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+CarlaUE4-Linux: no process found
+[2022-04-21 13:22:31,751][utils.server_utils][INFO] - Kill Carla Servers!
+CarlaUE4-Linux: no process found
+[2022-04-21 13:22:32,765][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-21 13:22:32,765][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+[2022-04-21 13:22:37,805][__main__][INFO] - Start new env from task_idx 0
+[2022-04-21 13:22:37,806][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: roaming_NoCrash-v2_Town01_lbc_train_eval
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+[34m[1mwandb[0m: Currently logged in as: [33mneilsambhu[0m (use `wandb login --relogin` to force relogin)
+[34m[1mwandb[0m: wandb version 0.12.15 is available!  To upgrade, please run:
+[34m[1mwandb[0m:  $ pip install wandb --upgrade
+[34m[1mwandb[0m: Tracking run with wandb version 0.10.12
+[34m[1mwandb[0m: Syncing run [33mroaming_NoCrash-v2_Town01_lbc_train_eval[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://wandb.ai/neilsambhu/iccv21-roach-benchmark[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3gq9oqnt[0m
+[34m[1mwandb[0m: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-21/13-22-30/wandb/run-20220421_132246-3gq9oqnt
+[34m[1mwandb[0m: Run `wandb offline` to turn off syncing.
+
+[2022-04-21 13:22:46,968][__main__][INFO] - Start Benchmarking WetNoon_00.
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "benchmark.py", line 150, in main
+    run_name, env, agents_dict, agents_log_dir, cfg.log_video)
+  File "benchmark.py", line 31, in run_single
+    obs = env.reset()
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 74, in reset
+    ev_spawn_locations = self._ev_handler.reset(self._task['ego_vehicles'])
+  File "/home/nsambhu/github/carla-roach/carla_gym/core/task_actor/ego_vehicle/ego_vehicle_handler.py", line 35, in reset
+    blueprint = np.random.choice(self._world.get_blueprint_library().filter(bp_filter))
+  File "mtrand.pyx", line 908, in numpy.random.mtrand.RandomState.choice
+ValueError: 'a' cannot be empty unless no samples are taken
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark.py", line 223, in <module>
+    main()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/main.py", line 37, in decorated_main
+    strict=strict,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 347, in _run_hydra
+    lambda: hydra.run(
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 237, in run_and_report
+    assert mdl is not None
+AssertionError
+
+[34m[1mwandb[0m: Waiting for W&B process to finish, PID 27939
+[34m[1mwandb[0m: Program failed with code 1.  Press ctrl-c to abort syncing.
+[34m[1mwandb[0m: - 0.00MB of 0.00MB uploaded (0.00MB deduped)
+[34m[1mwandb[0m: \ 0.01MB of 0.01MB uploaded (0.00MB deduped)
+[34m[1mwandb[0m:                                                                                
+[34m[1mwandb[0m: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-21/13-22-30/wandb/run-20220421_132246-3gq9oqnt/logs/debug.log
+[34m[1mwandb[0m: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-21/13-22-30/wandb/run-20220421_132246-3gq9oqnt/logs/debug-internal.log
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Synced [33mroaming_NoCrash-v2_Town01_lbc_train_eval[0m: [34mhttps://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3gq9oqnt[0m
+[0;31m PYTHON_RETURN=1!!! Start Over!!!
+```
+4/24/2022 7:12:47 PM: created "benchmark_NeilBranch0.sh"; forced 1 iteration of loop by adding "exit 0"
+
+4/24/2022 7:15:41 PM: created "benchmark_NeilBranch0.py"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/benchmark_NeilBranch0.sh 
+run/benchmark_NeilBranch0.sh: 54: run/benchmark_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/wb_run_id.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+/opt/carla-simulator/CarlaUE4.sh: line 2: 124054 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+[2022-04-24 19:17:01,610][utils.server_utils][INFO] - Kill Carla Servers!
+CarlaUE4-Linux: no process found
+[2022-04-24 19:17:02,624][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 19:17:02,624][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+[2022-04-24 19:17:07,652][__main__][INFO] - Start new env from task_idx 0
+[2022-04-24 19:17:07,653][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: roaming_NoCrash-v2_Town01_lbc_train_eval
+calling registration.py > make(id, **kwargs)
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 137, in main
+    seed=cfg.seed, no_rendering=cfg.no_rendering, **env_setup['env_configs'])
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 148, in make
+    return registry.make(id, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 90, in make
+    env = spec.make(**kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 60, in make
+    env = cls(**_kwargs)
+  File "/home/nsambhu/github/carla-roach/carla_gym/envs/suites/nocrash_env.py", line 12, in __init__
+    obs_configs, reward_configs, terminal_configs, all_tasks)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 32, in __init__
+    self._init_client(carla_map, host, port, seed=seed, no_rendering=no_rendering)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 162, in _init_client
+    self._world = client.load_world(carla_map)
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2000
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[2022-04-24 19:18:07,879][wandb.sdk.internal.internal][INFO] - Internal process exited
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```
+4/24/2022 7:22:00 PM: tried not minimizing simulator window:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/benchmark_NeilBranch0.sh 
+run/benchmark_NeilBranch0.sh: 54: run/benchmark_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/wb_run_id.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+[2022-04-24 19:20:36,515][utils.server_utils][INFO] - Kill Carla Servers!
+CarlaUE4-Linux: no process found
+[2022-04-24 19:20:37,529][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-04-24 19:20:37,529][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+[2022-04-24 19:20:42,568][__main__][INFO] - Start new env from task_idx 0
+[2022-04-24 19:20:42,569][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: roaming_NoCrash-v2_Town01_lbc_train_eval
+calling registration.py > make(id, **kwargs)
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run roaming_NoCrash-v2_Town01_lbc_train_eval
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3kbwqpj9
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-04-24/19-20-35/wandb/run-20220424_192051-3kbwqpj9
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-04-24 19:20:51,789][__main__][INFO] - Start Benchmarking WetNoon_00.
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "benchmark_NeilBranch0.py", line 150, in main
+    run_name, env, agents_dict, agents_log_dir, cfg.log_video)
+  File "benchmark_NeilBranch0.py", line 31, in run_single
+    obs = env.reset()
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 85, in reset
+    ev_spawn_locations = self._ev_handler.reset(self._task['ego_vehicles']) # 4/22/2022 11:09:04 AM: error line
+  File "/home/nsambhu/github/carla-roach/carla_gym/core/task_actor/ego_vehicle/ego_vehicle_handler.py", line 45, in reset
+    blueprint = np.random.choice(self._world.get_blueprint_library().filter(bp_filter)) # 4/22/2022 11:12:05 AM: error line
+  File "mtrand.pyx", line 908, in numpy.random.mtrand.RandomState.choice
+ValueError: 'a' cannot be empty unless no samples are taken
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 223, in <module>
+    main()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/main.py", line 37, in decorated_main
+    strict=strict,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 347, in _run_hydra
+    lambda: hydra.run(
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 237, in run_and_report
+    assert mdl is not None
+AssertionError
+
+wandb: Waiting for W&B process to finish, PID 125400
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/19-20-35/wandb/run-20220424_192051-3kbwqpj9/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-04-24/19-20-35/wandb/run-20220424_192051-3kbwqpj9/logs/debug-internal.log
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)
+wandb: 
+wandb: Synced roaming_NoCrash-v2_Town01_lbc_train_eval: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3kbwqpj9
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```

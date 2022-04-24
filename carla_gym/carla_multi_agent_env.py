@@ -14,7 +14,7 @@ from stable_baselines3.common.utils import set_random_seed
 
 logger = logging.getLogger(__name__)
 
-bVerbose = False
+bVerbose = True
 
 class CarlaMultiAgentEnv(gym.Env):
     def __init__(self, carla_map, host, port, seed, no_rendering,

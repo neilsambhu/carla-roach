@@ -68,7 +68,7 @@ until [ $PYTHON_RETURN -eq 0 ]; do
   benchmark
   PYTHON_RETURN=$?
   echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
-  exit 0 # 4/24/2022 7:11:51 PM: Neil added
+  # exit 0 # 4/24/2022 7:11:51 PM: Neil added
   sleep 2
 done
 

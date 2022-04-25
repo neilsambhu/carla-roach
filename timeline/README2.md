@@ -792,4 +792,3 @@ self._task['ego_vehicles'] {'routes': {'hero': [<carla.libcarla.Transform object
 [2022-04-25 00:50:05,542][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: roaming_NoCrash-v2_Town01_lbc_train_eval
 [2022-04-25 00:50:05,543][__main__][INFO] - Not finished, 1/4
 ```
-4/25/2022 7:31:17 AM: "benchmark_NeilBranch0.sh" > comment "exit 0"

@@ -56,19 +56,35 @@ def main(cfg: DictConfig):
         print("Neil left here 5")
 
     # single agent
+    if bVerbose:
+        print("Neil start here 6")
     AgentClass = config_utils.load_entry_point(cfg.agent[agent_name].entry_point)
+    if bVerbose:
+        print("Neil 6.1")
     agent = AgentClass('config_agent.yaml')
+    if bVerbose:
+        print("Neil 6.2")
     cfg_agent = OmegaConf.load('config_agent.yaml')
+    if bVerbose:
+        print("Neil left here 6")
 
+    if bVerbose:
+        print("Neil start here 7")
     obs_configs = {cfg.ev_id: OmegaConf.to_container(cfg_agent.obs_configs)}
     reward_configs = {cfg.ev_id: OmegaConf.to_container(cfg.actors[cfg.ev_id].reward)}
     terminal_configs = {cfg.ev_id: OmegaConf.to_container(cfg.actors[cfg.ev_id].terminal)}
+    if bVerbose:
+        print("Neil left here 7")
 
+    if bVerbose:
+        print("Neil start here 8")
     # env wrapper
     EnvWrapper = config_utils.load_entry_point(cfg_agent.env_wrapper.entry_point)
     wrapper_kargs = cfg_agent.env_wrapper.kwargs
 
     config_utils.check_h5_maps(cfg.train_envs, obs_configs, cfg.carla_sh_path)
+    if bVerbose:
+        print("Neil left here 8")
 
     def env_maker(config):
         log.info(f'making port {config["port"]}')

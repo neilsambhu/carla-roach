@@ -754,3 +754,68 @@ wandb: Synced roaming_NoCrash-v2_Town02_lbc_new: https://wandb.ai/neilsambhu/icc
 $ PYTHON_RETURN=0!!! Start Over!!!$
 CarlaUE4-Linux: no process found
 ```
+# Train RL Experts
+4/26/2022 12:36:54 PM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/train_rl_NeilBranch0.sh>out.txt
+run/train_rl_NeilBranch0.sh: 19: run/train_rl_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+run/train_rl_NeilBranch0.sh: 26: [: 1: unexpected operator
+CarlaUE4-Linux: no process found
+CarlaUE4-Linux: no process found
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/public.py", line 458, in run
+    self._runs[path] = Run(self.client, entity, project, run)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/public.py", line 849, in __init__
+    self.load(force=not attrs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/public.py", line 949, in load
+    raise ValueError("Could not find run %s" % self)
+ValueError: Could not find run <Run neilsambhu/4/4 (not found)>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train_rl.py", line 40, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 15, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 23, in setup
+    run = api.run(cfg.wb_run_path)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    six.reraise(CommError, CommError(message, err), sys.exc_info()[2])
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/six.py", line 702, in reraise
+    raise value.with_traceback(tb)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/public.py", line 458, in run
+    self._runs[path] = Run(self.client, entity, project, run)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/public.py", line 849, in __init__
+    self.load(force=not attrs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/public.py", line 949, in load
+    raise ValueError("Could not find run %s" % self)
+wandb.errors.error.CommError: Could not find run <Run neilsambhu/4/4 (not found)>
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```
+4/26/2022 12:45:33 PM: train_rl_NeilBranch0.py > find line that raises error:

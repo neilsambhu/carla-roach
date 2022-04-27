@@ -821,3 +821,9 @@ $ PYTHON_RETURN=1!!! Start Over!!!$
 4/26/2022 12:45:33 PM: "train_rl_NeilBranch0.py" > find line that raises error
 
 4/26/2022 2:16:59 PM: "train_rl_NeilBranch0.py" > "agent = AgentClass('config_agent.yaml')"
+
+4/27/2022 3:19:02 PM: "train_rl_NeilBranch0.py" > find definition of type of "AgentClass"
+```
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+```

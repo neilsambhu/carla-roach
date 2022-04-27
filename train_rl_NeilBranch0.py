@@ -57,16 +57,22 @@ def main(cfg: DictConfig):
 
     # single agent
     if bVerbose:
-        print("Neil start here 6")
+        print("Neil start here 6.0")
+        print("cfg.agent[agent_name]",cfg.agent[agent_name])
+        print("cfg.agent[agent_name].entry_point",cfg.agent[agent_name].entry_point)
     AgentClass = config_utils.load_entry_point(cfg.agent[agent_name].entry_point)
     if bVerbose:
         print("Neil 6.1")
-    agent = AgentClass('config_agent.yaml')
+        print("type(AgentClass)",type(AgentClass))
+        print("AgentClass",AgentClass)
     if bVerbose:
         print("Neil 6.2")
+    agent = AgentClass('config_agent.yaml')
+    if bVerbose:
+        print("Neil 6.3")
     cfg_agent = OmegaConf.load('config_agent.yaml')
     if bVerbose:
-        print("Neil left here 6")
+        print("Neil left here 6.0")
 
     if bVerbose:
         print("Neil start here 7")

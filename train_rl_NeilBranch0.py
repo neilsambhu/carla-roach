@@ -68,6 +68,8 @@ def main(cfg: DictConfig):
     if bVerbose:
         print("Neil 6.2")
     agent = AgentClass('config_agent.yaml')
+    # sPathConfigAgent = "./outputs/2022-04-25/21-22-07/config_agent.yaml"
+    # agent = AgentClass(sPathConfigAgent)
     if bVerbose:
         print("Neil 6.3")
     cfg_agent = OmegaConf.load('config_agent.yaml')

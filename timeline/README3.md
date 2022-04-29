@@ -827,3 +827,78 @@ $ PYTHON_RETURN=1!!! Start Over!!!$
 type(AgentClass) <class 'type'>
 AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
 ```
+4/29/2022 8:48:52 AM: type(AgentClass) > "rl_birdview_agent.py"
+
+4/29/2022 8:54:25 AM: find directory of "config_agent.yaml"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ find . -name "config_agent.yaml">out.txt
+./outputs/2022-04-27/15-02-10/config_agent.yaml
+./outputs/2022-04-27/15-04-38/config_agent.yaml
+./outputs/2022-04-27/15-07-28/config_agent.yaml
+./outputs/2022-04-27/13-01-29/config_agent.yaml
+./outputs/2022-04-27/12-52-03/config_agent.yaml
+./outputs/2022-04-27/12-58-11/config_agent.yaml
+./outputs/2022-04-29/08-49-37/config_agent.yaml
+./outputs/2022-04-29/08-47-46/config_agent.yaml
+./outputs/2022-04-26/12-55-45/config_agent.yaml
+./outputs/2022-04-26/14-15-32/config_agent.yaml
+./outputs/2022-04-26/12-31-56/config_agent.yaml
+./outputs/2022-04-26/12-31-33/config_agent.yaml
+./outputs/2022-04-26/12-45-11/config_agent.yaml
+./outputs/2022-04-26/12-31-09/config_agent.yaml
+./outputs/2022-04-26/12-31-45/config_agent.yaml
+./outputs/2022-04-26/12-49-08/config_agent.yaml
+./outputs/2022-04-26/12-51-16/config_agent.yaml
+./outputs/2022-04-26/12-31-21/config_agent.yaml
+./outputs/2022-04-26/14-13-43/config_agent.yaml
+./outputs/2022-04-24/19-33-44/wandb/run-20220424_193400-d3wnyhg5/files/config_agent.yaml
+./outputs/2022-04-24/19-33-44/config_agent.yaml
+./outputs/2022-04-24/19-05-33/config_agent.yaml
+./outputs/2022-04-24/19-15-47/config_agent.yaml
+./outputs/2022-04-24/19-58-35/wandb/run-20220424_195851-102ny03l/files/config_agent.yaml
+./outputs/2022-04-24/19-58-35/config_agent.yaml
+./outputs/2022-04-24/19-04-22/config_agent.yaml
+./outputs/2022-04-24/19-34-30/wandb/run-20220424_193445-20uj9zb8/files/config_agent.yaml
+./outputs/2022-04-24/19-34-30/config_agent.yaml
+./outputs/2022-04-24/19-02-24/wandb/run-20220424_190239-23wi8xoy/files/config_agent.yaml
+./outputs/2022-04-24/19-02-24/config_agent.yaml
+./outputs/2022-04-24/18-21-24/wandb/run-20220424_182135-3wpf1l8y/files/config_agent.yaml
+./outputs/2022-04-24/18-21-24/config_agent.yaml
+./outputs/2022-04-24/19-03-58/wandb/run-20220424_190415-221amd3i/files/config_agent.yaml
+./outputs/2022-04-24/19-03-58/config_agent.yaml
+./outputs/2022-04-24/19-17-00/config_agent.yaml
+./outputs/2022-04-24/20-09-33/wandb/run-20220424_200949-33grz5xd/files/config_agent.yaml
+./outputs/2022-04-24/20-09-33/config_agent.yaml
+./outputs/2022-04-24/18-40-15/wandb/run-20220424_184025-3wpf1l8y/files/config_agent.yaml
+./outputs/2022-04-24/18-40-15/config_agent.yaml
+./outputs/2022-04-24/19-02-47/config_agent.yaml
+./outputs/2022-04-24/19-20-35/wandb/run-20220424_192051-3kbwqpj9/files/config_agent.yaml
+./outputs/2022-04-24/19-20-35/config_agent.yaml
+./outputs/2022-04-24/20-14-22/wandb/run-20220424_201438-2ftk5l9v/files/config_agent.yaml
+./outputs/2022-04-24/20-14-22/config_agent.yaml
+./outputs/2022-04-24/19-11-33/config_agent.yaml
+./outputs/2022-04-24/18-27-59/wandb/run-20220424_182809-3wpf1l8y/files/config_agent.yaml
+./outputs/2022-04-24/18-27-59/config_agent.yaml
+./outputs/2022-04-24/18-33-06/wandb/run-20220424_183315-3wpf1l8y/files/config_agent.yaml
+./outputs/2022-04-24/18-33-06/config_agent.yaml
+./outputs/2022-04-25/11-36-44/wandb/run-20220425_113700-33sfa6v8/files/config_agent.yaml
+./outputs/2022-04-25/11-36-44/config_agent.yaml
+./outputs/2022-04-25/07-34-54/wandb/run-20220425_073510-p3mq3g88/files/config_agent.yaml
+./outputs/2022-04-25/07-34-54/config_agent.yaml
+./outputs/2022-04-25/07-32-32/config_agent.yaml
+./outputs/2022-04-25/07-33-43/config_agent.yaml
+./outputs/2022-04-25/12-50-23/wandb/run-20220425_125039-2u6zhcv8/files/config_agent.yaml
+./outputs/2022-04-25/12-50-23/config_agent.yaml
+./outputs/2022-04-25/20-12-54/wandb/run-20220425_201310-c9z76hqr/files/config_agent.yaml
+./outputs/2022-04-25/20-12-54/config_agent.yaml
+./outputs/2022-04-25/17-25-05/wandb/run-20220425_172521-pwvfbn1v/files/config_agent.yaml
+./outputs/2022-04-25/17-25-05/config_agent.yaml
+./outputs/2022-04-25/11-35-33/config_agent.yaml
+./outputs/2022-04-25/21-22-07/wandb/run-20220425_212223-kvbbr3b8/files/config_agent.yaml
+./outputs/2022-04-25/21-22-07/config_agent.yaml
+```
+4/29/2022 9:00:08 AM: choose "./outputs/2022-04-25/21-22-07/config_agent.yaml"
+
+4/29/2022 10:01:16 AM: go back to "config_agent.yaml"
+
+4/29/2022 10:01:34 AM: error at "rl_birdview_agent.py" > "run = api.run(cfg.wb_run_path)"

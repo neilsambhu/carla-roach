@@ -6,22 +6,54 @@ import copy
 
 from carla_gym.utils.config_utils import load_entry_point
 
-
+bVerbose = True
 class RlBirdviewAgent():
     def __init__(self, path_to_conf_file='config_agent.yaml'):
+        if bVerbose:
+            print('Neil 6.2.1')
+            print('rl_birdview_agent.py > __init__')
         self._logger = logging.getLogger(__name__)
+        if bVerbose:
+            print('Neil 6.2.2')
         self._render_dict = None
+        if bVerbose:
+            print('Neil 6.2.3')
         self.supervision_dict = None
+        if bVerbose:
+            print('Neil 6.2.4')
+            print('path_to_conf_file',path_to_conf_file)
+            from os.path import exists
+            print('exists(path_to_conf_file)',exists(path_to_conf_file))
+            import os
+            print('os.getcwd()',os.getcwd())
+        if bVerbose:
+            print('Neil 6.2.5')
         self.setup(path_to_conf_file)
+        if bVerbose:
+            print('Neil 6.2.6')
 
     def setup(self, path_to_conf_file):
+        if bVerbose:
+            print('Neil 6.2.5.1')
         cfg = OmegaConf.load(path_to_conf_file)
+        if bVerbose:
+            print('Neil 6.2.5.2')
 
         # load checkpoint from wandb
         if cfg.wb_run_path is not None:
+            if bVerbose:
+                print('Neil 6.2.5.3')
             api = wandb.Api()
+            if bVerbose:
+                print('Neil 6.2.5.4')
+                print('cfg',cfg)
+                print('cfg.wb_run_path',cfg.wb_run_path)
             run = api.run(cfg.wb_run_path)
+            if bVerbose:
+                print('Neil 6.2.5.5')
             all_ckpts = [f for f in run.files() if 'ckpt' in f.name]
+            if bVerbose:
+                print('Neil 6.2.5.6')
 
             if cfg.wb_ckpt_step is None:
                 f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
@@ -37,7 +69,8 @@ class RlBirdviewAgent():
             self._ckpt = f.name
         else:
             self._ckpt = None
-
+        if bVerbose:
+            print('Neil 6.2.5.100')
         cfg = OmegaConf.to_container(cfg)
 
         self._obs_configs = cfg['obs_configs']

@@ -954,6 +954,5 @@ Bash script done.
 5/1/2022 2:56:04 PM: find write to "config_agent.yaml" > "wb_run_path"
 ```
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt "wb_run_path">outgrep.txt
-```
 train_rl_NeilBranch0.py:            cfg.agent[agent_name].wb_run_path = f.read()
 ```

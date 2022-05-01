@@ -956,3 +956,9 @@ Bash script done.
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt "wb_run_path">outgrep.txt
 train_rl_NeilBranch0.py:            cfg.agent[agent_name].wb_run_path = f.read()
 ```
+5/1/2022 3:01:22 PM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt "wb_run_path =">outgrep.txt
+train_rl.py:            cfg.agent[agent_name].wb_run_path = f.read()
+train_rl_NeilBranch0.py:            cfg.agent[agent_name].wb_run_path = f.read()
+```

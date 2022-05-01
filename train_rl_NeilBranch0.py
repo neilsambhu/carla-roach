@@ -44,8 +44,25 @@ def main(cfg: DictConfig):
         print("Neil start here 4")
     last_checkpoint_path = Path(hydra.utils.get_original_cwd()) / 'outputs' / 'checkpoint.txt'
     if last_checkpoint_path.exists():
+        if bVerbose:
+            print("Neil 4.100")
+            print("last_checkpoint_path",last_checkpoint_path)
+            print("Neil 4.101")
         with open(last_checkpoint_path, 'r') as f:
+            if bVerbose:
+                print("Neil 4.200")
+                print("type(f)",type(f))
+                print("type(f.read())",type(f.read()))
+                print("str(f.read())",str(f.read()))
+                print("Neil 4.201")
             cfg.agent[agent_name].wb_run_path = f.read()
+            if bVerbose:
+                print("Neil 4.202")
+                print("type(cfg.agent[agent_name].wb_run_path)",type(cfg.agent[agent_name].wb_run_path))
+                print("str(cfg.agent[agent_name].wb_run_path)",str(cfg.agent[agent_name].wb_run_path))
+                print("cfg.agent[agent_name].wb_run_path",cfg.agent[agent_name].wb_run_path)
+                print("Neil 4.203")
+
     if bVerbose:
         print("Neil left here 4")
 

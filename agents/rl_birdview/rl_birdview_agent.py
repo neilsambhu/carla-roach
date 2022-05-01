@@ -34,7 +34,9 @@ class RlBirdviewAgent():
 
     def setup(self, path_to_conf_file):
         if bVerbose:
-            print('Neil 6.2.5.1')
+            print('Neil 6.2.5.100')
+            print('path_to_conf_file',path_to_conf_file)
+            print('Neil 6.2.5.101')
         cfg = OmegaConf.load(path_to_conf_file)
         if bVerbose:
             print('Neil 6.2.5.2')
@@ -48,9 +50,22 @@ class RlBirdviewAgent():
                 print('Neil 6.2.5.4')
                 print('cfg',cfg)
                 print('cfg.wb_run_path',cfg.wb_run_path)
-            run = api.run(cfg.wb_run_path)
+            # run = api.run(cfg.wb_run_path) # 4/29/2022 1 PM: Neil removed
+            run = wandb.init() # 4/29/2022 1 PM: Neil added
             if bVerbose:
-                print('Neil 6.2.5.5')
+                print('Neil 6.2.5.500')
+                assert wandb.run is not None
+                print('Neil 6.2.5.501')
+                # print('type(run.files())',type(run.files()))
+                print('Neil 6.2.5.502')
+                # print('run.files()',run.files())
+                print('Neil 6.2.5.503')
+                import os
+                print('os.getcwd()',os.getcwd())
+                print('Neil 6.2.5.504')
+            # 4/29/2022 1:07 PM: Neil added
+
+
             all_ckpts = [f for f in run.files() if 'ckpt' in f.name]
             if bVerbose:
                 print('Neil 6.2.5.6')

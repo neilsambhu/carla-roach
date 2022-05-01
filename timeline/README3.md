@@ -902,3 +902,42 @@ AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
 4/29/2022 10:01:16 AM: go back to "config_agent.yaml"
 
 4/29/2022 10:01:34 AM: error at "rl_birdview_agent.py" > "run = api.run(cfg.wb_run_path)"
+
+4/29/2022 11:56 AM: find source code of rl_birdview_agent.py > "wandb.Api()"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt "Api(">out.txt
+```
+4/29/2022 12:03 PM: find source code of "rl_birdview_agent.py" > "api.run("
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt "api.run(">out.txt
+```
+4/29/2022 12:19 PM: https://docs.wandb.ai/ref/python/run
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/train_rl_NeilBranch0.sh>out.txt
+```
+Neil 6.2.5.500
+
+4/29/2022 12:28 PM: Neil 6.2.5.501
+
+4/29/2022 12:52 PM: "rl_birdview_agent.py" > find "cfg.wb_run_path" equivalent; start search in https://docs.wandb.ai/ref/python/run
+may be at "restore"
+
+4/29/2022 1:02 PM: search for "run_path"
+
+4/29/2022 1:03 PM: https://docs.wandb.ai/ref/python/run#restore > "restore" is the only method with "run_path"
+
+4/29/2022 1:20 PM: find write to "cfg.wb_run_path"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt "wb_run_path">out.txt
+```
+
+4/29/2022 1:25 PM: "rl_birdview_agent.py" > "path_to_conf_file"
+
+\~/github/carla-roach/outputs/2022-04-29/13-24-10/wandb/config_agent.yaml
+
+change "config_agent.yaml" > "wb_run_path": "4" to "latest-run"
+
+4/29/2022 1:38 PM: find write to "config_agent.yaml"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt "config_agent.yaml">outgrep.txt
+```

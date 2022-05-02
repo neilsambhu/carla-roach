@@ -1008,3 +1008,207 @@ data_collect_NeilBranch0.py:    with open(last_checkpoint_path, 'w') as f:
 
 (7) check ./outputs/checkpoint.txt;
 
+5/2/2022 3:23:04 PM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh>out.txt
+[2022-05-02 15:11:43,097][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-02 15:11:44,113][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-02 15:11:44,113][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_driver.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-11-41
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_driver.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.3
+Neil 6.2.5.4
+cfg {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.wb_run_path iccv21-roach/trained-models/1929isj0
+
+Neil 6.2.5.500
+Neil 6.2.5.501
+Neil 6.2.5.502
+Neil 6.2.5.503
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-11-41
+Neil 6.2.5.504
+```
+5/2/2022 3:26:10 PM: find "Neil 6.2.5.504"
+```
+grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log "Neil 6.2.5.504">outgrep.txt
+agents/rl_birdview/rl_birdview_agent.py:                print('Neil 6.2.5.504')
+```
+5/2/2022 3:31:09 PM: find changes I made to "rl_birdview_agent.py"
+
+5/2/2022 3:40:21 PM: changes to "rl_birdview_agent.py" were not the issue. TODO: Get wandb working.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh>out.txt
+Traceback (most recent call last):
+  File "data_collect_NeilBranch0.py", line 193, in main
+    driver_dict[ev_id] = DriverAgentClass('config_driver.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 57, in setup
+    assert wandb.run is not None
+AssertionError
+```
+```
+[2022-05-02 15:37:17,461][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-02 15:37:18,476][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-02 15:37:18,481][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_driver.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-37-16
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_driver.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.3
+Neil 6.2.5.4
+cfg {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.wb_run_path iccv21-roach/trained-models/1929isj0
+Neil 6.2.5.500
+[2022-05-02 15:37:23,810][wandb.sdk.internal.internal][INFO] - Internal process exited
+```
+5/2/2022 3:50:17 PM: see if wandb initialization works with new command
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh>out.txt
+run/data_collect_bc_NeilBranch0.sh: 47: run/data_collect_bc_NeilBranch0.sh: source: not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
+rm: cannot remove 'outputs/wb_run_id.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
+CarlaUE4-Linux: no process found
+CarlaUE4-Linux: no process found
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.15 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run grateful-totem-1
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-05-02_15-47-41
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-05-02_15-47-41/runs/250xn9sn
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-47-41/wandb/run-20220502_154748-250xn9sn
+wandb: Run `wandb offline` to turn off syncing.
+Traceback (most recent call last):
+  File "data_collect_NeilBranch0.py", line 193, in main
+    driver_dict[ev_id] = DriverAgentClass('config_driver.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 69, in setup
+    all_ckpts = [f for f in run.files() if 'ckpt' in f.name]
+AttributeError: 'Run' object has no attribute 'files'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+wandb: Waiting for W&B process to finish, PID 100616
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-47-41/wandb/run-20220502_154748-250xn9sn/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-47-41/wandb/run-20220502_154748-250xn9sn/logs/debug-internal.log
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: 
+wandb: Synced grateful-totem-1: https://wandb.ai/neilsambhu/carla-roach-outputs_2022-05-02_15-47-41/runs/250xn9sn
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```
+```
+[2022-05-02 15:47:42,604][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-02 15:47:43,618][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-02 15:47:43,618][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_driver.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-47-41
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_driver.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.3
+Neil 6.2.5.4
+cfg {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.wb_run_path iccv21-roach/trained-models/1929isj0
+
+Neil 6.2.5.500
+Neil 6.2.5.501
+Neil 6.2.5.502
+Neil 6.2.5.503
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-02/15-47-41
+Neil 6.2.5.504
+```
+5/2/2022 4:04:07 PM: upgrade wandb
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ conda list wandb
+# packages in environment at /home/nsambhu/anaconda3/envs/carla:
+#
+# Name                    Version                   Build  Channel
+wandb                     0.10.12                  pypi_0    pypi
+```
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ pip install wandb --upgrade
+```
+5/2/2022 4:21:22 PM: original wandb start line not working
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh>out.txt
+/opt/carla-simulator/CarlaUE4.sh: line 2: 101976 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+CarlaUE4-Linux: no process found
+Traceback (most recent call last):
+  File "data_collect_NeilBranch0.py", line 193, in main
+    driver_dict[ev_id] = DriverAgentClass('config_driver.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 59, in setup
+    assert wandb.run is not None
+AssertionError
+```
+5/2/2022 4:22:55 PM: new wandb initialization line not working

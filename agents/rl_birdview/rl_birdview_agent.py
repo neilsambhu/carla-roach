@@ -50,8 +50,10 @@ class RlBirdviewAgent():
                 print('Neil 6.2.5.4')
                 print('cfg',cfg)
                 print('cfg.wb_run_path',cfg.wb_run_path)
-            # run = api.run(cfg.wb_run_path) # 4/29/2022 1 PM: Neil removed
-            run = wandb.init() # 4/29/2022 1 PM: Neil added
+            # original line
+            # run = api.run(cfg.wb_run_path) # 4/29/2022 1 PM: Neil removed. 5/2/2022 3:37:10 PM: added. 5/2/2022 3:47:33 PM: removed.
+            # new line
+            run = wandb.init() # 4/29/2022 1 PM: Neil added. 5/2/2022 3:37:23 PM: removed. 5/2/2022 3:47:39 PM: added.
             if bVerbose:
                 print('Neil 6.2.5.500')
                 assert wandb.run is not None

@@ -968,4 +968,35 @@ last_checkpoint_path /home/nsambhu/github/carla-roach/outputs/checkpoint.txt
 ```
 5/2/2022 12:33:39 PM: 
 1. train_rl_NeilBranch0.py:last_checkpoint_path
-2. 
+2. rl_birdview_agent.py:cfg.wb_run_path
+
+5/2/2022 1:55:52 PM: find write to "last_checkpoint_path"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt "last_checkpoint_path">outgrep.txt
+train_rl_NeilBranch0.py:    last_checkpoint_path = Path(hydra.utils.get_original_cwd()) / 'outputs' / 'checkpoint.txt'
+train_rl_NeilBranch0.py:    if last_checkpoint_path.exists():
+train_rl_NeilBranch0.py:            print("last_checkpoint_path",last_checkpoint_path)
+train_rl_NeilBranch0.py:        with open(last_checkpoint_path, 'r') as f:
+train_rl_NeilBranch0.py:    with open(last_checkpoint_path, 'w') as f:
+benchmark_NeilBranch0.py:    last_checkpoint_path = f'{hydra.utils.get_original_cwd()}/outputs/checkpoint.txt'
+benchmark_NeilBranch0.py:    if cfg.resume and os.path.isfile(last_checkpoint_path):
+benchmark_NeilBranch0.py:        with open(last_checkpoint_path, 'r') as f:
+benchmark_NeilBranch0.py:    with open(last_checkpoint_path, 'w') as f:
+data_collect_NeilBranch0.py:    last_checkpoint_path = f'{hydra.utils.get_original_cwd()}/outputs/checkpoint.txt'
+data_collect_NeilBranch0.py:    if cfg.resume and os.path.isfile(last_checkpoint_path):
+data_collect_NeilBranch0.py:        with open(last_checkpoint_path, 'r') as f:
+data_collect_NeilBranch0.py:    with open(last_checkpoint_path, 'w') as f:
+```
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ cat /home/nsambhu/github/carla-roach/outputs/checkpoint.txt
+4
+```
+# Troubleshoot checkpoint.txt
+5/2/2022 2:49:39 PM: TODO: 
+(1) clear ./outputs/ directory; 
+(2) run/data_collect_bc_NeilBranch0.sh;
+(3) check ./outputs/checkpoint.txt;
+(4) (maybe) run/benchmark_NeilBranch0.sh;
+(5) (maybe) check ./outputs/checkpoint.txt;
+(6) run/train_rl_NeilBranch0.sh;
+(7) check ./outputs/checkpoint.txt;

@@ -962,3 +962,10 @@ train_rl_NeilBranch0.py:            cfg.agent[agent_name].wb_run_path = f.read()
 train_rl.py:            cfg.agent[agent_name].wb_run_path = f.read()
 train_rl_NeilBranch0.py:            cfg.agent[agent_name].wb_run_path = f.read()
 ```
+5/2/2022 12:32:25 PM: train_rl_NeilBranch0.py (Neil 4.100)
+```
+last_checkpoint_path /home/nsambhu/github/carla-roach/outputs/checkpoint.txt
+```
+5/2/2022 12:33:39 PM: 
+1. train_rl_NeilBranch0.py:last_checkpoint_path
+2. 

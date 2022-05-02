@@ -993,10 +993,18 @@ data_collect_NeilBranch0.py:    with open(last_checkpoint_path, 'w') as f:
 ```
 # Troubleshoot checkpoint.txt
 5/2/2022 2:49:39 PM: TODO: 
+
 (1) clear ./outputs/ directory; 
+
 (2) run/data_collect_bc_NeilBranch0.sh;
+
 (3) check ./outputs/checkpoint.txt;
+
 (4) (maybe) run/benchmark_NeilBranch0.sh;
+
 (5) (maybe) check ./outputs/checkpoint.txt;
+
 (6) run/train_rl_NeilBranch0.sh;
+
 (7) check ./outputs/checkpoint.txt;
+

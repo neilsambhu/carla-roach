@@ -996,15 +996,15 @@ data_collect_NeilBranch0.py:    with open(last_checkpoint_path, 'w') as f:
 
 (1) clear ./outputs/ directory; 
 
-(2) run/data_collect_bc_NeilBranch0.sh;
+(2) run/data_collect_bc_NeilBranch0.sh with save_to_wandb=true;
 
 (3) check ./outputs/checkpoint.txt;
 
-(4) (maybe) run/benchmark_NeilBranch0.sh;
+(4) (maybe) run/benchmark_NeilBranch0.sh with save_to_wandb=true;
 
 (5) (maybe) check ./outputs/checkpoint.txt;
 
-(6) run/train_rl_NeilBranch0.sh;
+(6) run/train_rl_NeilBranch0.sh with save_to_wandb=true;
 
 (7) check ./outputs/checkpoint.txt;
 

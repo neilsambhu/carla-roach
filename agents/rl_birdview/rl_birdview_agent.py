@@ -53,14 +53,20 @@ class RlBirdviewAgent():
             # original line
             # run = api.run(cfg.wb_run_path) # 4/29/2022 1 PM: Neil removed. 5/2/2022 3:37:10 PM: added. 5/2/2022 3:47:33 PM: removed.
             # new line
-            run = wandb.init() # 4/29/2022 1 PM: Neil added. 5/2/2022 3:37:23 PM: removed. 5/2/2022 3:47:39 PM: added.
+            # run = wandb.init(config=cfg) # 4/29/2022 1 PM: Neil added. 5/2/2022 3:37:23 PM: removed. 5/2/2022 3:47:39 PM: added.
+            run = wandb.init()
+            wandb.init(config=cfg)
             if bVerbose:
                 print('Neil 6.2.5.500')
+                print('type(run)',type(run))
+                print('run',run)
+                print('type(wandb.config)',type(wandb.config))
+                print('wandb.config',wandb.config)
                 assert wandb.run is not None
                 print('Neil 6.2.5.501')
-                # print('type(run.files())',type(run.files()))
+                print('type(run.files())',type(run.files()))
                 print('Neil 6.2.5.502')
-                # print('run.files()',run.files())
+                print('run.files()',run.files())
                 print('Neil 6.2.5.503')
                 import os
                 print('os.getcwd()',os.getcwd())

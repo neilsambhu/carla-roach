@@ -1212,3 +1212,19 @@ Traceback (most recent call last):
 AssertionError
 ```
 5/2/2022 4:22:55 PM: new wandb initialization line not working
+
+5/2/2022 8:19:54 PM: data_collect_bc_NeilBranch0.sh > comment out loop
+
+5/8/2022 3:21:07 PM: "cfg.wb_run_path" is "iccv21-roach/trained-models/1929isj0"; I will try to download this
+
+5/8/2022 3:32:04 PM: find "iccv21-roach/trained-models/1929isj0":
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log "iccv21-roach/trained-models/1929isj0">outgrep.txt
+run/data_collect_bc.sh:  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+run/data_collect_dagger.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+run/benchmark.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+run/data_collect_bc_NeilBranch0.sh:  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+run/train_il.sh:# agent.cilrs.rl_run_path=iccv21-roach/trained-models/1929isj0 agent.cilrs.rl_ckpt_step=11833344 \
+run/benchmark_NeilBranch0.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+```
+5/8/2022 3:39:02 PM: no need to download "iccv21-roach/trained-models/1929isj0"

@@ -1228,3 +1228,5 @@ run/train_il.sh:# agent.cilrs.rl_run_path=iccv21-roach/trained-models/1929isj0 a
 run/benchmark_NeilBranch0.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
 ```
 5/8/2022 3:39:02 PM: no need to download "iccv21-roach/trained-models/1929isj0"
+
+5/9/2022 11:50:44 AM: TODO: try to initialize each field in wandb manually

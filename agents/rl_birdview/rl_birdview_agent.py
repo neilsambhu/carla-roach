@@ -78,14 +78,30 @@ class RlBirdviewAgent():
             # 5/10/2022 4:37:00 PM: troubleshooting
             # run = wandb.init(config={"epochs": 4, "batch_size": 32})
             # 5/10/2022 4:48:06 PM: start
+            # cfg2 = None
+            # import yaml
+            # with open(path_to_conf_file, "r") as stream:
+            #     cfg2 = yaml.safe_load(stream)
+            # print("type(cfg2)",type(cfg2))
+            # print("cfg2",cfg2)
+            # run = wandb.init(config=cfg2)
+            # 5/10/2022 4:48:06 PM: end
+            # 5/10/2022 5:48:29 PM: start
             cfg2 = None
             import yaml
             with open(path_to_conf_file, "r") as stream:
                 cfg2 = yaml.safe_load(stream)
             print("type(cfg2)",type(cfg2))
             print("cfg2",cfg2)
-            run = wandb.init(config=cfg2)
-            # 5/10/2022 4:48:06 PM: end
+            # add "<entity>/<project>/<run_id>" to init
+            entity = "neilsambhu"
+            project = "carla-roach"
+            import random, string
+            letters = string.ascii_lowercase
+            run_id = ''.join(random.choice(letters) for i in range(10))
+            print("entity",entity,"\nproject",project,"\nrun_id",run_id)
+            run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
+            # 5/10/2022 5:48:29 PM: end
             if bVerbose:
                 print('Neil 6.2.5.500')
                 print('type(run)',type(run))
@@ -113,7 +129,13 @@ class RlBirdviewAgent():
             api = wandb.Api()
             if bVerbose:
                 print('Neil 6.2.5.601')
-            run = api.run("<entity>/<project>/<run_id>")
+            # template
+            # run = api.run("<entity>/<project>/<run_id>")
+            # sParametersApiRun = f"<{entity}>/<{project}>/<{run_id}>"
+            # remove angle brackets from sParametersApiRun
+            sParametersApiRun = f"{entity}/{project}/{run_id}"
+            print("sParametersApiRun",sParametersApiRun)
+            run = api.run(sParametersApiRun)
             if bVerbose:
                 print('Neil 6.2.5.602')
             for file in run.files():

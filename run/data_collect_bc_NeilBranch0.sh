@@ -87,6 +87,7 @@ if [ $PYTHON_RETURN -eq $ZERO ]; then
   # sleep 10
   # sudo shutdown -h now
 else
+  killall -9 -r CarlaUE4-Linux
   echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
   # exit 0 # 4/21/2022 8:58:24 PM: Neil added
   sleep 2

@@ -1238,3 +1238,9 @@ run/benchmark_NeilBranch0.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-mode
 5/10/2022 4:02:11 PM: wandb still not working
 
 5/10/2022 4:56:13 PM: wandb.config is working
+
+5/10/2022 5:04:43 PM: find wandb run.files()
+
+5/10/2022 5:19:25 PM: read https://docs.wandb.ai/guides/track/public-api-guide#download-all-files-from-a-run
+
+5/10/2022 5:29:50 PM: TODO: complete the following fields: "<entity>/<project>/<run_id>"

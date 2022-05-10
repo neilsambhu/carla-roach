@@ -77,13 +77,15 @@ class RlBirdviewAgent():
             # wandb.config.update("config_driver.yaml")
             # 5/10/2022 4:37:00 PM: troubleshooting
             # run = wandb.init(config={"epochs": 4, "batch_size": 32})
-            # 5/10/2022 4:48:06 PM 
-            run = None
+            # 5/10/2022 4:48:06 PM: start
+            cfg2 = None
             import yaml
             with open(path_to_conf_file, "r") as stream:
                 cfg2 = yaml.safe_load(stream)
-                print("cfg2",cfg2)
-                run = wandb.init(config=cfg2)
+            print("type(cfg2)",type(cfg2))
+            print("cfg2",cfg2)
+            run = wandb.init(config=cfg2)
+            # 5/10/2022 4:48:06 PM: end
             if bVerbose:
                 print('Neil 6.2.5.500')
                 print('type(run)',type(run))
@@ -92,19 +94,37 @@ class RlBirdviewAgent():
                 print('wandb.config',wandb.config)
                 assert wandb.run is not None
                 print('Neil 6.2.5.501')
-                print('type(run.files())',type(run.files()))
+                # print('type(run.files())',type(run.files()))
                 print('Neil 6.2.5.502')
-                print('run.files()',run.files())
+                # print('run.files()',run.files())
                 print('Neil 6.2.5.503')
-                import os
-                print('os.getcwd()',os.getcwd())
+                # import os
+                # print('os.getcwd()',os.getcwd())
                 print('Neil 6.2.5.504')
-            # 4/29/2022 1:07 PM: Neil added
-
-
+                # print("type(f.name)",type(f.name))
+                # print("f.name",f.name)
+                print('Neil 6.2.5.505')
+                print("wandb.apis.public.Files",wandb.apis.public.Files)
+                # print("wandb.apis.public.Files.Files()",wandb.apis.public.Files.Files())
+                print('Neil 6.2.5.506')
+            # 5/10/2022 5:21:24 PM: start
+            if bVerbose:
+                print('Neil 6.2.5.600')
+            api = wandb.Api()
+            if bVerbose:
+                print('Neil 6.2.5.601')
+            run = api.run("<entity>/<project>/<run_id>")
+            if bVerbose:
+                print('Neil 6.2.5.602')
+            for file in run.files():
+                file.download()
+            if bVerbose:
+                print('Neil 6.2.5.603')
+            # 5/10/2022 5:21:24 PM: end
+            
             all_ckpts = [f for f in run.files() if 'ckpt' in f.name]
             if bVerbose:
-                print('Neil 6.2.5.6')
+                print('Neil 6.2.5.900')
 
             if cfg.wb_ckpt_step is None:
                 f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
@@ -121,7 +141,7 @@ class RlBirdviewAgent():
         else:
             self._ckpt = None
         if bVerbose:
-            print('Neil 6.2.5.100')
+            print('Neil 6.2.5.1000')
         cfg = OmegaConf.to_container(cfg)
 
         self._obs_configs = cfg['obs_configs']

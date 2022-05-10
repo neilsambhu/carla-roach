@@ -73,8 +73,16 @@ class RlBirdviewAgent():
             # run = wandb.init()
             # wandb.config.update(cfg)
             # 5/10/2022 3:58:48 PM 
-            run = wandb.init()
-            wandb.config.update("config_driver.yaml")
+            # run = wandb.init()
+            # wandb.config.update("config_driver.yaml")
+            # 5/10/2022 4:37:00 PM: troubleshooting
+            # run = wandb.init(config={"epochs": 4, "batch_size": 32})
+            # 5/10/2022 4:48:06 PM 
+            import yaml
+            with open(path_to_conf_file, "r") as stream:
+                cfg2 = yaml.safe_load(stream)
+                print("cfg2",cfg2)
+                run = wandb.init(config=cfg2)
             if bVerbose:
                 print('Neil 6.2.5.500')
                 print('type(run)',type(run))

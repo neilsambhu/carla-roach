@@ -1236,3 +1236,5 @@ run/benchmark_NeilBranch0.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-mode
 5/10/2022 12:44:48 PM: read https://docs.wandb.ai/guides/track/config#file-based-configs
 
 5/10/2022 4:02:11 PM: wandb still not working
+
+5/10/2022 4:56:13 PM: wandb.config is working

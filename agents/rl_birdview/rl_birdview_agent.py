@@ -78,6 +78,7 @@ class RlBirdviewAgent():
             # 5/10/2022 4:37:00 PM: troubleshooting
             # run = wandb.init(config={"epochs": 4, "batch_size": 32})
             # 5/10/2022 4:48:06 PM 
+            run = None
             import yaml
             with open(path_to_conf_file, "r") as stream:
                 cfg2 = yaml.safe_load(stream)

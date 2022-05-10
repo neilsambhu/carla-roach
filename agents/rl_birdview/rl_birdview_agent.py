@@ -143,18 +143,36 @@ class RlBirdviewAgent():
             if bVerbose:
                 print('Neil 6.2.5.603')
             # 5/10/2022 5:21:24 PM: end
+            if bVerbose:
+                print('Neil 6.2.5.604')
+                print('type(run.files())',type(run.files()))
+                print('Neil 6.2.5.605')
+                print('run.files()',run.files())
+                print('Neil 6.2.5.606')
             
             all_ckpts = [f for f in run.files() if 'ckpt' in f.name]
             if bVerbose:
-                print('Neil 6.2.5.900')
+                print('Neil 6.2.5.607')
+                print("type(all_ckpts)",type(all_ckpts))
+                print("all_ckpts",all_ckpts)
+                print('Neil 6.2.5.608')
 
+            if bVerbose:
+                print('Neil 6.2.5.700')
             if cfg.wb_ckpt_step is None:
+                if bVerbose:
+                    print('Neil 6.2.5.701')
                 f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+                if bVerbose:
+                    print('Neil 6.2.5.702')
                 self._logger.info(f'Resume checkpoint latest {f.name}')
+                if bVerbose:
+                    print('Neil 6.2.5.703')
             else:
                 wb_ckpt_step = int(cfg.wb_ckpt_step)
                 f = min(all_ckpts, key=lambda x: abs(int(x.name.split('_')[1].split('.')[0]) - wb_ckpt_step))
                 self._logger.info(f'Resume checkpoint closest to step {wb_ckpt_step}: {f.name}')
+            
 
             f.download(replace=True)
             run.file('config_agent.yaml').download(replace=True)

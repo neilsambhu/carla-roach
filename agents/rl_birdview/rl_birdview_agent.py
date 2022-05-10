@@ -48,14 +48,33 @@ class RlBirdviewAgent():
             api = wandb.Api()
             if bVerbose:
                 print('Neil 6.2.5.4')
+                print('type(cfg)',type(cfg))
                 print('cfg',cfg)
                 print('cfg.wb_run_path',cfg.wb_run_path)
             # original line
             # run = api.run(cfg.wb_run_path) # 4/29/2022 1 PM: Neil removed. 5/2/2022 3:37:10 PM: added. 5/2/2022 3:47:33 PM: removed.
             # new line
             # run = wandb.init(config=cfg) # 4/29/2022 1 PM: Neil added. 5/2/2022 3:37:23 PM: removed. 5/2/2022 3:47:39 PM: added.
+            # run = wandb.init()
+            # wandb.init(config=cfg)
+            # 5/10/2022 12:20:06 PM 
+            # run = wandb.init(config=path_to_conf_file)
+            # 5/10/2022 12:27:41 PM 
+            # import os
+            # full_path_to_conf_file = os.path.join(os.getcwd(),path_to_conf_file)
+            # if bVerbose:
+            #     print("type(full_path_to_conf_file)",type(full_path_to_conf_file))
+            #     print("full_path_to_conf_file",full_path_to_conf_file)
+            #     print("os.path.exists(full_path_to_conf_file)",os.path.exists(full_path_to_conf_file))
+            # run = wandb.init(config=full_path_to_conf_file)
+            # 5/10/2022 3:40:09 PM 
+            # run = wandb.init(config="config_driver.yaml")
+            # 5/10/2022 3:52:54 PM 
+            # run = wandb.init()
+            # wandb.config.update(cfg)
+            # 5/10/2022 3:58:48 PM 
             run = wandb.init()
-            wandb.init(config=cfg)
+            wandb.config.update("config_driver.yaml")
             if bVerbose:
                 print('Neil 6.2.5.500')
                 print('type(run)',type(run))

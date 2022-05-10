@@ -1230,3 +1230,9 @@ run/benchmark_NeilBranch0.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-mode
 5/8/2022 3:39:02 PM: no need to download "iccv21-roach/trained-models/1929isj0"
 
 5/9/2022 11:50:44 AM: TODO: try to initialize each field in wandb manually
+
+5/10/2022 11:58:05 AM: check "cfg" datatype
+
+5/10/2022 12:44:48 PM: read https://docs.wandb.ai/guides/track/config#file-based-configs
+
+5/10/2022 4:02:11 PM: wandb still not working

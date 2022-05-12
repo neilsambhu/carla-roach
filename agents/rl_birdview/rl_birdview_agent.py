@@ -139,7 +139,8 @@ class RlBirdviewAgent():
             if bVerbose:
                 print('Neil 6.2.5.602')
             for file in run.files():
-                file.download()
+                # file.download()
+                print("file.download()",file.download())
             if bVerbose:
                 print('Neil 6.2.5.603')
             # 5/10/2022 5:21:24 PM: end

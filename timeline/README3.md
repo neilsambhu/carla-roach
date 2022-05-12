@@ -1250,3 +1250,5 @@ run/benchmark_NeilBranch0.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-mode
 5/10/2022 6:15:28 PM: not sure whether to download files as listed in https://docs.wandb.ai/guides/track/public-api-guide#download-all-files-from-a-run
 
 5/10/2022 6:20:29 PM: TODO: find how to setup "all_ckpts"
+
+5/11/2022 6:50:07 PM: try running train_rl_NeilBranch0.sh

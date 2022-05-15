@@ -103,7 +103,8 @@ class RlBirdviewAgent():
             # run_id = "roach"
             run_id = "fg8y4a2n"
             print("entity",entity,"\nproject",project,"\nrun_id",run_id)
-            run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
+            # run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
+            run = wandb.init(config=cfg2, entity=entity, project=project, resume=run_id)
             # 5/10/2022 5:48:29 PM: end
             if bVerbose:
                 print('Neil 6.2.5.500')
@@ -141,9 +142,9 @@ class RlBirdviewAgent():
             run = api.run(sParametersApiRun)
             if bVerbose:
                 print('Neil 6.2.5.602')
-            for file in run.files():
-                # file.download()
-                print("file.download()",file.download())
+            # for file in run.files():
+            #     # file.download()
+            #     print("file.download()",file.download())
             if bVerbose:
                 print('Neil 6.2.5.603')
             # 5/10/2022 5:21:24 PM: end

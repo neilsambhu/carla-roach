@@ -1434,3 +1434,116 @@ data_collect_NeilBranch0.py:        wandb.save(f'{driver_log_dir.as_posix()}/*/*
 data_collect_NeilBranch0.py:        wandb.save(f'{coach_log_dir.as_posix()}/*/*')
 data_collect_NeilBranch0.py:            wandb.save(f'{dataset_dir.as_posix()}/*.h5', base_path=cfg.dataset_root)
 ```
+5/15/2022 4:34:28 AM: config_driver.yaml:
+```
+wb_ckpt_step: null
+```
+5/15/2022 4:39:25 AM: change rl_birdview_agenty.py to wand.init with resume.
+
+5/15/2022 4:46:10 AM: got all_ckpts to load
+```
+[2022-05-15 04:40:33,642][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-15 04:40:34,659][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-15 04:40:34,660][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_driver.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-15/04-40-32
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_driver.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.3
+Neil 6.2.5.4
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.wb_run_path iccv21-roach/trained-models/1929isj0
+type(cfg2) <class 'dict'>
+cfg2 {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+entity neilsambhu 
+project train_rl_experts 
+run_id fg8y4a2n
+Neil 6.2.5.500
+type(run) <class 'wandb.sdk.wandb_run.Run'>
+run <wandb.sdk.wandb_run.Run object at 0x7f026f06bbd0>
+type(wandb.config) <class 'wandb.sdk.wandb_config.Config'>
+wandb.config {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+Neil 6.2.5.501
+Neil 6.2.5.502
+Neil 6.2.5.503
+Neil 6.2.5.504
+Neil 6.2.5.505
+wandb.apis.public.Files <class 'wandb.apis.public.Files'>
+Neil 6.2.5.506
+Neil 6.2.5.600
+Neil 6.2.5.601
+sParametersApiRun neilsambhu/train_rl_experts/fg8y4a2n
+Neil 6.2.5.602
+Neil 6.2.5.603
+Neil 6.2.5.604
+type(run.files()) <class 'wandb.apis.public.Files'>
+Neil 6.2.5.605
+run.files() <Files neilsambhu/train_rl_experts/fg8y4a2n (23)>
+Neil 6.2.5.606
+Neil 6.2.5.607
+type(all_ckpts) <class 'list'>
+all_ckpts [<File ckpt/ckpt_110592.pth () 8.5MiB>, <File ckpt/ckpt_221184.pth () 8.5MiB>, <File ckpt/ckpt_331776.pth () 8.5MiB>, <File ckpt/ckpt_442368.pth () 8.5MiB>]
+Neil 6.2.5.608
+Neil 6.2.5.700
+Neil 6.2.5.701
+Neil 6.2.5.702
+[2022-05-15 04:40:41,898][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+Neil 6.2.5.703
+Neil 6.2.5.1000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+[2022-05-15 04:40:42,764][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.6
+[2022-05-15 04:40:44,234][__main__][INFO] - Start from env_idx: 0, task_idx 0
+calling registration.py > make(id, **kwargs)
+[2022-05-15 04:40:48,445][__main__][INFO] - Start episode 0000, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [80, 160], 'num_zombie_walkers': [80, 160], 'weather_group': 'train'}}
+[2022-05-15 04:42:22,795][utils.saving_utils][INFO] - Episode finished, len=901
+[2022-05-15 04:42:22,797][utils.saving_utils][WARNING] - blocked, valid=True, len=301
+[2022-05-15 04:42:22,798][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0000.h5, data_len=301, save_len=301
+[2022-05-15 04:42:27,824][__main__][INFO] - Episode 0000 done, valid=True
+[2022-05-15 04:42:30,034][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 9301 saved frames=0.26 hours, 9301 critical frames=0.26 hours
+[2022-05-15 04:42:30,087][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 2.9G
+[2022-05-15 04:42:31,248][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-15 04:42:36,253][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-15 04:42:36,529][__main__][INFO] - Finished data collection env_idx 0, Endless-v0.
+[2022-05-15 04:42:36,529][__main__][INFO] - Not finished, 1/4
+```
+5/15/2022 4:48:11 AM: try running train_rl_NeilBranch0.sh with loop

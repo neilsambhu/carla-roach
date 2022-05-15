@@ -1403,3 +1403,34 @@ Bash script done.
 ```
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh>out.txt
 ```
+5/15/2022 4:25:08 AM: I can't resume the train_rl_NeilBranch0.sh from data_collect_bc_NeilBranch0.sh. Try to find "wandb.save("
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log "wandb.save(">outgrep.txt
+train_il_NeilBranch0.py:    wandb.save('.hydra/*')
+train_il_NeilBranch0.py:    wandb.save('config_agent.yaml')
+agents/rl_birdview/utils/wandb_callback.py:        wandb.save('./config_agent.yaml')
+agents/rl_birdview/utils/wandb_callback.py:        wandb.save('.hydra/*')
+agents/rl_birdview/utils/wandb_callback.py:            # wandb.save(eval_json_path)
+agents/rl_birdview/utils/wandb_callback.py:            wandb.save(f'./{ckpt_path}')
+agents/rl_birdview/utils/wandb_callback.py:            # wandb.save(path_str)
+agents/cilrs/models/trainer.py:            #     wandb.save(ckpt_path)
+agents/cilrs/models/trainer.py:        wandb.save(ckpt_path)
+train_il.py:    wandb.save('.hydra/*')
+train_il.py:    wandb.save('config_agent.yaml')
+benchmark_NeilBranch0.py:    wandb.save('./config_agent.yaml')
+benchmark_NeilBranch0.py:        wandb.save(diags_json_path)
+benchmark.py:    wandb.save('./config_agent.yaml')
+benchmark.py:        wandb.save(diags_json_path)
+data_collect.py:    wandb.save('./config_agent.yaml')
+data_collect.py:            wandb.save(f'{dataset_dir.as_posix()}/*.h5', base_path=cfg.dataset_root)
+data_collect.py:        wandb.save(diags_json_path)
+data_collect.py:        wandb.save(f'{driver_log_dir.as_posix()}/*/*')
+data_collect.py:        wandb.save(f'{coach_log_dir.as_posix()}/*/*')
+data_collect.py:            wandb.save(f'{dataset_dir.as_posix()}/*.h5', base_path=cfg.dataset_root)
+data_collect_NeilBranch0.py:    wandb.save('./config_agent.yaml')
+data_collect_NeilBranch0.py:            wandb.save(f'{dataset_dir.as_posix()}/*.h5', base_path=cfg.dataset_root)
+data_collect_NeilBranch0.py:        wandb.save(diags_json_path)
+data_collect_NeilBranch0.py:        wandb.save(f'{driver_log_dir.as_posix()}/*/*')
+data_collect_NeilBranch0.py:        wandb.save(f'{coach_log_dir.as_posix()}/*/*')
+data_collect_NeilBranch0.py:            wandb.save(f'{dataset_dir.as_posix()}/*.h5', base_path=cfg.dataset_root)
+```

@@ -100,7 +100,8 @@ class RlBirdviewAgent():
             import random, string
             letters = string.ascii_lowercase
             # run_id = ''.join(random.choice(letters) for i in range(10))
-            run_id = "roach"
+            # run_id = "roach"
+            run_id = "fg8y4a2n"
             print("entity",entity,"\nproject",project,"\nrun_id",run_id)
             run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
             # 5/10/2022 5:48:29 PM: end

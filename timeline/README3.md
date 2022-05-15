@@ -1547,3 +1547,5 @@ calling registration.py > make(id, **kwargs)
 [2022-05-15 04:42:36,529][__main__][INFO] - Not finished, 1/4
 ```
 5/15/2022 4:48:11 AM: try running train_rl_NeilBranch0.sh with loop
+
+5/15/2022 4:57:44 AM: find "fg8y4a2n"

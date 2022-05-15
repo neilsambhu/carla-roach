@@ -1252,3 +1252,154 @@ run/benchmark_NeilBranch0.sh:#   agent.ppo.wb_run_path=iccv21-roach/trained-mode
 5/10/2022 6:20:29 PM: TODO: find how to setup "all_ckpts"
 
 5/11/2022 6:50:07 PM: try running train_rl_NeilBranch0.sh
+
+5/15/2022 4:06:33 AM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/train_rl_NeilBranch0.sh>out.txt
+Neil start here 1
+Neil start here 1
+[2022-05-11 18:48:52,572][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+Neil start here 2
+[2022-05-11 18:48:53,593][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-11 18:48:53,594][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-05-11 18:48:53,604][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-05-11 18:48:53,612][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-05-11 18:48:53,621][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-05-11 18:48:53,629][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+[2022-05-11 18:48:53,638][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2025
+Neil left here 2
+Neil start here 3
+Neil left here 3
+Neil start here 4
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6.0
+cfg.agent[agent_name] {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.agent[agent_name].entry_point agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.1
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+Neil 6.2
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_agent.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-11/18-48-51
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_agent.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.1000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.6
+Neil 6.3
+Neil left here 6.0
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil left here 8
+Neil start here 100
+Neil left here 100
+Neil start here 200
+Neil left here 200
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+trainable parameters: 1.53M
+n_epoch: 0, num_timesteps: 12288
+n_epoch: 1, num_timesteps: 24576
+n_epoch: 2, num_timesteps: 36864
+n_epoch: 3, num_timesteps: 49152
+n_epoch: 4, num_timesteps: 61440
+n_epoch: 5, num_timesteps: 73728
+n_epoch: 6, num_timesteps: 86016
+n_epoch: 7, num_timesteps: 98304
+n_epoch: 8, num_timesteps: 110592
+n_epoch: 9, num_timesteps: 122880
+n_epoch: 10, num_timesteps: 135168
+n_epoch: 11, num_timesteps: 147456
+n_epoch: 12, num_timesteps: 159744
+n_epoch: 13, num_timesteps: 172032
+n_epoch: 14, num_timesteps: 184320
+n_epoch: 15, num_timesteps: 196608
+n_epoch: 16, num_timesteps: 208896
+n_epoch: 17, num_timesteps: 221184
+n_epoch: 18, num_timesteps: 233472
+n_epoch: 19, num_timesteps: 245760
+n_epoch: 20, num_timesteps: 258048
+n_epoch: 21, num_timesteps: 270336
+n_epoch: 22, num_timesteps: 282624
+n_epoch: 23, num_timesteps: 294912
+n_epoch: 24, num_timesteps: 307200
+n_epoch: 25, num_timesteps: 319488
+n_epoch: 26, num_timesteps: 331776
+n_epoch: 27, num_timesteps: 344064
+n_epoch: 28, num_timesteps: 356352
+n_epoch: 29, num_timesteps: 368640
+n_epoch: 30, num_timesteps: 380928
+n_epoch: 31, num_timesteps: 393216
+n_epoch: 32, num_timesteps: 405504
+n_epoch: 33, num_timesteps: 417792
+n_epoch: 34, num_timesteps: 430080
+n_epoch: 35, num_timesteps: 442368
+n_epoch: 36, num_timesteps: 454656
+n_epoch: 37, num_timesteps: 466944
+n_epoch: 38, num_timesteps: 479232
+n_epoch: 39, num_timesteps: 491520
+n_epoch: 40, num_timesteps: 503808
+n_epoch: 41, num_timesteps: 516096
+n_epoch: 42, num_timesteps: 528384
+n_epoch: 43, num_timesteps: 540672
+n_epoch: 44, num_timesteps: 552960
+Bash script done.
+```
+5/15/2022 4:07:22 AM: try to change "<entity>/<project>/<run_id>" in rl_birdview_agent.py based on train_rl_NeilBranch0.sh
+
+5/15/2022 4:10:15 AM: 
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/data_collect_bc_NeilBranch0.sh>out.txt
+```

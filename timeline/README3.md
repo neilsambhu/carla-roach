@@ -1554,7 +1554,7 @@ calling registration.py > make(id, **kwargs)
 ```
 grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log "fg8y4a2n">outgrep.txt
 ```
->1700 entries
+\>1700 entries
 5/16/2022 11:46:58 PM:
 ```
 grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "fg8y4a2n">outgrep.txt

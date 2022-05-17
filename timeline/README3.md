@@ -1549,3 +1549,15 @@ calling registration.py > make(id, **kwargs)
 5/15/2022 4:48:11 AM: try running train_rl_NeilBranch0.sh with loop
 
 5/15/2022 4:57:44 AM: find "fg8y4a2n"
+
+5/16/2022 11:38:02 PM: 
+```
+grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log "fg8y4a2n">outgrep.txt
+```
+>1700 entries
+5/16/2022 11:46:58 PM:
+```
+grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "fg8y4a2n">outgrep.txt
+outputs/wb_run_id.txt:fg8y4a2n
+agents/rl_birdview/rl_birdview_agent.py:            run_id = "fg8y4a2n"
+```

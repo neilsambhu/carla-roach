@@ -1562,3 +1562,161 @@ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude 
 outputs/wb_run_id.txt:fg8y4a2n
 agents/rl_birdview/rl_birdview_agent.py:            run_id = "fg8y4a2n"
 ```
+5/18/2022 8:50:46 PM: train_rl_NeilBranch0.sh did not terminate. 
+```
+run/train_rl_NeilBranch0.sh: 26: [: 1: unexpected operator
+/opt/carla-simulator/CarlaUE4.sh: line 2: 79417 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 79429 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 79423 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 79414 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.16 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.15
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-05-18/20-44-24/wandb/run-20220518_204432-fg8y4a2n
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run roach
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+Process ForkServerProcess-2:
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 13, in _worker
+    env = env_fn_wrapper.var()
+  File "train_rl_NeilBranch0.py", line 125, in <lambda>
+    env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
+  File "train_rl_NeilBranch0.py", line 118, in env_maker
+    seed=cfg.seed, no_rendering=True, **config['env_configs'])
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 148, in make
+    return registry.make(id, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 90, in make
+    env = spec.make(**kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 60, in make
+    env = cls(**_kwargs)
+  File "/home/nsambhu/github/carla-roach/carla_gym/envs/suites/endless_env.py", line 11, in __init__
+    obs_configs, reward_configs, terminal_configs, all_tasks)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 32, in __init__
+    self._init_client(carla_map, host, port, seed=seed, no_rendering=no_rendering)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 163, in _init_client
+    self._tm = client.get_trafficmanager(port+6000)
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2000
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 125, in main
+    env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 98, in __init__
+    observation_space, action_space = self.remotes[0].recv()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+LowLevelFatalError [File:Unknown] [Line: 1214] 
+GameThread timed out waiting for RenderThread after 60.00 secs
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Process ForkServerProcess-4:
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 13, in _worker
+    env = env_fn_wrapper.var()
+  File "train_rl_NeilBranch0.py", line 125, in <lambda>
+    env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
+  File "train_rl_NeilBranch0.py", line 118, in env_maker
+    seed=cfg.seed, no_rendering=True, **config['env_configs'])
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 148, in make
+    return registry.make(id, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 90, in make
+    env = spec.make(**kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 60, in make
+    env = cls(**_kwargs)
+  File "/home/nsambhu/github/carla-roach/carla_gym/envs/suites/endless_env.py", line 11, in __init__
+    obs_configs, reward_configs, terminal_configs, all_tasks)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 32, in __init__
+    self._init_client(carla_map, host, port, seed=seed, no_rendering=no_rendering)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 163, in _init_client
+    self._tm = client.get_trafficmanager(port+6000)
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2010
+Process ForkServerProcess-7:
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 13, in _worker
+    env = env_fn_wrapper.var()
+  File "train_rl_NeilBranch0.py", line 125, in <lambda>
+    env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
+  File "train_rl_NeilBranch0.py", line 118, in env_maker
+    seed=cfg.seed, no_rendering=True, **config['env_configs'])
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 148, in make
+    return registry.make(id, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 90, in make
+    env = spec.make(**kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 60, in make
+    env = cls(**_kwargs)
+  File "/home/nsambhu/github/carla-roach/carla_gym/envs/suites/endless_env.py", line 11, in __init__
+    obs_configs, reward_configs, terminal_configs, all_tasks)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 32, in __init__
+    self._init_client(carla_map, host, port, seed=seed, no_rendering=no_rendering)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 163, in _init_client
+    self._tm = client.get_trafficmanager(port+6000)
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2025
+LowLevelFatalError [File:Unknown] [Line: 1214] 
+GameThread timed out waiting for RenderThread after 60.00 secs
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+Malloc Size=131160 LargeMemoryPoolOffset=196744  deduped)
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+LowLevelFatalError [File:Unknown] [Line: 1214] 
+GameThread timed out waiting for RenderThread after 60.00 secs
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+LowLevelFatalError [File:Unknown] [Line: 1214] B deduped)
+GameThread timed out waiting for RenderThread after 60.00 secs
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+LowLevelFatalError [File:Unknown] [Line: 1214] 
+GameThread timed out waiting for RenderThread after 60.00 secs
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+LowLevelFatalError [File:Unknown] [Line: 1214] B deduped)
+GameThread timed out waiting for RenderThread after 60.00 secs
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744  deduped)
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+wandb:                                                                                
+/opt/carla-simulator/CarlaUE4.sh: line 2: 81527 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 81536 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 81521 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./outputs/2022-05-18/20-44-24/wandb/run-20220518_204432-fg8y4a2n/logs
+/opt/carla-simulator/CarlaUE4.sh: line 2: 81533 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 81524 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 81530 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```
+5/18/2022 8:54:24 PM: Try killing all GPU processes and restarting script.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/train_rl_NeilBranch0.sh>out.txt
+```

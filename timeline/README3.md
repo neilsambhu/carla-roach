@@ -2246,7 +2246,12 @@ calling registration.py > make(id, **kwargs)
 Bash script done.
 ```
 # Benchmark RL Experts
-5/19/2022 9:34:37 PM: 
+5/19/2022 9:34:37 PM: try benchmarking 'iccv21-roach/trained-models/1929isj0' (no loop)
 ```
 sh run/benchmark_NeilBranch0.sh>out.txt
 ```
+5/19/2022 10:04:31 PM: use print statements to find error of benchmark_NeilBranch0.sh
+
+5/19/2022 10:23:50 PM: turn off rl_birdview_agent.py:bVerbose config_utils.py:bVerbose
+
+5/19/2022 11:52:47 PM: TODO: benchmark_NeilBranch0.py:find path for cfg

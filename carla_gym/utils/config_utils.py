@@ -47,7 +47,7 @@ def check_h5_maps(env_configs, obs_configs, carla_sh_path):
 
         assert file_exists and pixels_per_meter_match, txt_assert + txt_command
 
-bVerbose = True
+bVerbose = False
 def load_entry_point(name):
     if bVerbose:
         print("Neil 6.0.1")

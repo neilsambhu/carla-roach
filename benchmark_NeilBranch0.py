@@ -16,7 +16,8 @@ from utils import server_utils
 from agents.rl_birdview.utils.wandb_callback import WandbCallback
 
 log = logging.getLogger(__name__)
-
+from inspect import currentframe, getframeinfo
+bVerbose = True
 
 def run_single(run_name, env, agents_dict, agents_log_dir, log_video, max_step=None):
     list_render = []
@@ -60,6 +61,22 @@ def run_single(run_name, env, agents_dict, agents_log_dir, log_video, max_step=N
 
 @hydra.main(config_path='config', config_name='benchmark')
 def main(cfg: DictConfig):
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+        print('cfg',cfg)
+        print('DictConfig',DictConfig)
+        # print('config_path',config_path)
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+    cfg2 = None
+    import yaml
+    with open(config_path, "r") as stream:
+        cfg2 = yaml.safe_load(stream)
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+        print("type(cfg2)",type(cfg2))
+        print("cfg2",cfg2)
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+    
     log.setLevel(getattr(logging, cfg.log_level.upper()))
     if cfg.kill_running:
         server_utils.kill_carla()
@@ -67,6 +84,9 @@ def main(cfg: DictConfig):
     # start carla servers
     server_manager = server_utils.CarlaServerManager(cfg.carla_sh_path, port=cfg.port)
     server_manager.start()
+
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
     # single actor, place holder for multi actors
     agents_dict = {}
@@ -86,6 +106,9 @@ def main(cfg: DictConfig):
         reward_configs[ev_id] = OmegaConf.to_container(ev_cfg.reward)
         terminal_configs[ev_id] = OmegaConf.to_container(ev_cfg.terminal)
 
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+
     # check h5 birdview maps have been generated
     config_utils.check_h5_maps(cfg.test_suites, obs_configs, cfg.carla_sh_path)
 
@@ -97,7 +120,10 @@ def main(cfg: DictConfig):
         log.info(f'Resume from env_idx {env_idx}')
     else:
         env_idx = 0
-
+    
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+    
     if env_idx >= len(cfg.test_suites):
         log.info(f'Finished! env_idx: {env_idx}')
         return
@@ -114,12 +140,18 @@ def main(cfg: DictConfig):
         for actor_id in agents_dict.keys():
             ep_stat_buffer[actor_id] = []
         log.info(f'Start new env from task_idx {ckpt_task_idx}')
-
+    
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+    
     # compose suite_name
     env_setup = OmegaConf.to_container(cfg.test_suites[env_idx])
     suite_name = '-'.join(agent_names) + '_' + env_setup['env_id']
     for k in sorted(env_setup['env_configs']):
         suite_name = suite_name + '_' + str(env_setup['env_configs'][k])
+
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
     log.info(f"Start Benchmarking! env_idx: {env_idx}, suite_name: {suite_name}")
 
@@ -136,10 +168,20 @@ def main(cfg: DictConfig):
                    terminal_configs=terminal_configs, host=cfg.host, port=cfg.port,
                    seed=cfg.seed, no_rendering=cfg.no_rendering, **env_setup['env_configs'])
 
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+
     # init wandb
     wandb.init(project=cfg.wb_project, name=suite_name, group=cfg.wb_group, notes=cfg.wb_notes, tags=cfg.wb_tags)
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     wandb.config.update(OmegaConf.to_container(cfg))
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     wandb.save('./config_agent.yaml')
+    
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
     # loop through each route
     for task_idx in range(ckpt_task_idx, env.num_tasks):
@@ -187,6 +229,9 @@ def main(cfg: DictConfig):
         list_render.clear()
         ep_stat_dict = None
         ep_event_dict = None
+    
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
     # close env
     env.close()
@@ -220,5 +265,9 @@ def main(cfg: DictConfig):
 
 
 if __name__ == '__main__':
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     main()
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     log.info("data_collect.py DONE!")

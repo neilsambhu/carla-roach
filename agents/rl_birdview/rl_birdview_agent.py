@@ -6,7 +6,7 @@ import copy
 
 from carla_gym.utils.config_utils import load_entry_point
 
-bVerbose = True
+bVerbose = False
 class RlBirdviewAgent():
     def __init__(self, path_to_conf_file='config_agent.yaml'):
         if bVerbose:

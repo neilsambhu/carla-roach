@@ -91,8 +91,9 @@ class RlBirdviewAgent():
             import yaml
             with open(path_to_conf_file, "r") as stream:
                 cfg2 = yaml.safe_load(stream)
-            print("type(cfg2)",type(cfg2))
-            print("cfg2",cfg2)
+            if bVerbose:
+                print("type(cfg2)",type(cfg2))
+                print("cfg2",cfg2)
             # add "<entity>/<project>/<run_id>" to init
             entity = "neilsambhu"
             # project = "carla-roach"
@@ -102,7 +103,8 @@ class RlBirdviewAgent():
             # run_id = ''.join(random.choice(letters) for i in range(10))
             # run_id = "roach"
             run_id = "fg8y4a2n"
-            print("entity",entity,"\nproject",project,"\nrun_id",run_id)
+            if bVerbose:
+                print("entity",entity,"\nproject",project,"\nrun_id",run_id)
             # run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
             run = wandb.init(config=cfg2, entity=entity, project=project, resume=run_id)
             # 5/10/2022 5:48:29 PM: end
@@ -138,7 +140,8 @@ class RlBirdviewAgent():
             # sParametersApiRun = f"<{entity}>/<{project}>/<{run_id}>"
             # remove angle brackets from sParametersApiRun
             sParametersApiRun = f"{entity}/{project}/{run_id}"
-            print("sParametersApiRun",sParametersApiRun)
+            if bVerbose:
+                print("sParametersApiRun",sParametersApiRun)
             run = api.run(sParametersApiRun)
             if bVerbose:
                 print('Neil 6.2.5.602')

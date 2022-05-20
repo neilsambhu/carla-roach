@@ -2255,3 +2255,5 @@ sh run/benchmark_NeilBranch0.sh>out.txt
 5/19/2022 10:23:50 PM: turn off rl_birdview_agent.py:bVerbose config_utils.py:bVerbose
 
 5/19/2022 11:52:47 PM: TODO: benchmark_NeilBranch0.py:find path for cfg
+
+5/20/2022 12:40:58 PM: see which data type wandb.config.update accepts for parameter.

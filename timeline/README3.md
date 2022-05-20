@@ -1723,3 +1723,109 @@ $ PYTHON_RETURN=1!!! Start Over!!!$
 5/19/2022 3:03:29 PM: no additional reports from running train_rl_NeilBranch0.sh
 
 5/19/2022 3:05:30 PM: try data_collect_NeilBranch0.sh again (no loop)
+```
+[2022-05-19 15:11:50,605][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-19 15:11:51,621][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-19 15:11:51,622][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_driver.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-19/15-11-49
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_driver.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.3
+Neil 6.2.5.4
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.wb_run_path iccv21-roach/trained-models/1929isj0
+type(cfg2) <class 'dict'>
+cfg2 {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+entity neilsambhu 
+project train_rl_experts 
+run_id fg8y4a2n
+Neil 6.2.5.500
+type(run) <class 'wandb.sdk.wandb_run.Run'>
+run <wandb.sdk.wandb_run.Run object at 0x7efe875cfd90>
+type(wandb.config) <class 'wandb.sdk.wandb_config.Config'>
+wandb.config {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}, 'host': 'localhost', 'port': 2000, 'seed': 2021, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'env_wrapper': {'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}, 'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper'}, 'obs_configs': {'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'birdview': {'module': 'birdview.chauffeurnet', 'scale_bbox': True, 'history_idx': [-16, -11, -6, -1], 'scale_mask_col': 1, 'width_in_pixels': 192, 'pixels_per_meter': 5, 'pixels_ev_to_bottom': 40}, 'velocity': {'module': 'actor_state.velocity'}}, 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None}, 'cilrs': {'ckpt': None, 'entry_point': 'agents.cilrs.cilrs_agent:CilrsAgent', 'env_wrapper': {'kwargs': {'im_std': [0.229, 0.224, 0.225], 'im_mean': [0.485, 0.456, 0.406], 'im_stack_idx': [-1], 'input_states': ['speed'], 'value_factor': 1, 'acc_as_action': True, 'view_augmentation': False, 'action_distribution': None, 'value_as_supervision': False, 'dim_features_supervision': 0}, 'entry_point': 'agents.cilrs.cilrs_wrapper:CilrsWrapper'}, 'obs_configs': {'gnss': {'module': 'navigation.gnss'}, 'speed': {'module': 'actor_state.speed'}, 'birdview': {'module': 'birdview.chauffeurnet', 'scale_bbox': False, 'history_idx': [-16, -11, -6, -1], 'width_in_pixels': 192, 'pixels_per_meter': 5, 'pixels_ev_to_bottom': 40}, 'route_plan': {'steps': 20, 'module': 'navigation.waypoint_plan'}, 'central_rgb': {'fov': 100, 'width': 900, 'height': 256, 'module': 'camera.rgb', 'location': [-1.5, 0, 2], 'rotation': [0, 0, 0]}}, 'rl_run_path': None, 'wb_run_path': None, 'rl_ckpt_step': None, 'wb_ckpt_step': None}, 'roaming': {'resolution': 1, 'entry_point': 'agents.expert.lbc_roaming_agent:LbcRoamingAgent', 'obs_configs': {'gnss': {'module': 'navigation.gnss'}, 'speed': {'module': 'actor_state.speed'}, 'birdview': {'module': 'birdview.chauffeurnet', 'scale_bbox': False, 'history_idx': [-16, -11, -6, -1], 'width_in_pixels': 192, 'pixels_per_meter': 5, 'pixels_ev_to_bottom': 40}, 'stop_sign': {'module': 'object_finder.stop_sign', 'distance_threshold': 10}, 'route_plan': {'steps': 20, 'module': 'navigation.waypoint_plan'}, 'ego_vehicle': {'module': 'object_finder.ego'}, 'traffic_light': {'module': 'object_finder.traffic_light_new'}, 'surrounding_vehicles': {'module': 'object_finder.vehicle', 'distance_threshold': 20, 'max_detection_number': 20}, 'surrounding_pedestrians': {'module': 'object_finder.pedestrian', 'distance_threshold': 15, 'max_detection_number': 20}}, 'target_speed': 6, 'hack_throttle': True, 'threshold_after': 5, 'threshold_before': 7.5, 'lateral_pid_params': [0.75, 0.05, 0], 'longitudinal_pid_params': [0.5, 0.025, 0.1]}}, 'ev_id': 'hero', 'actors': {'hero': {'coach': None, 'driver': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction'}, 'terminal': {'kwargs': {'max_time': 300, 'no_run_rl': False, 'no_run_stop': False, 'no_collision': True}, 'entry_point': 'terminal.leaderboard_dagger:LeaderboardDagger'}}}, 'policy': {'kwargs': {'value_head_arch': [256, 256], 'policy_head_arch': [256, 256], 'distribution_kwargs': {'dist_init': None}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN'}, 'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy'}, 'resume': True, 'wb_tags': None, 'training': {'kwargs': {'gamma': 0.99, 'vf_coef': 0.5, 'ent_coef': 0.01, 'n_epochs': 20, 'target_kl': 0.01, 'batch_size': 256, 'clip_range': 0.2, 'gae_lambda': 0.9, 'update_adv': False, 'explore_coef': 0.05, 'clip_range_vf': None, 'learning_rate': 1e-05, 'max_grad_norm': 0.5, 'n_steps_total': 12288, 'lr_schedule_step': 8}, 'entry_point': 'agents.rl_birdview.models.ppo:PPO'}, 'wb_group': 'bc_data', 'wb_notes': None, 'log_level': 'INFO', 'log_video': False, 'n_episodes': 1, 'wb_project': 'il_leaderboard_roach', 'alpha_coach': None, 'test_suites': [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'weather_group': 'train', 'num_zombie_walkers': [80, 160], 'num_zombie_vehicles': [80, 160]}}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'weather_group': 'train', 'num_zombie_walkers': [40, 100], 'num_zombie_vehicles': [40, 100]}}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town04', 'weather_group': 'train', 'num_zombie_walkers': [40, 120], 'num_zombie_vehicles': [100, 200]}}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town06', 'weather_group': 'train', 'num_zombie_walkers': [40, 120], 'num_zombie_vehicles': [80, 160]}}], 'dataset_root': '/home/ubuntu/dataset/bc', 'inject_noise': True, 'kill_running': True, 'no_rendering': False, 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'save_to_wandb': True, 'dagger_thresholds': {'acc': None, 'brake': None, 'steer': None, 'throttle': None}, 'remove_final_steps': True}
+Neil 6.2.5.501
+Neil 6.2.5.502
+Neil 6.2.5.503
+Neil 6.2.5.504
+Neil 6.2.5.505
+wandb.apis.public.Files <class 'wandb.apis.public.Files'>
+Neil 6.2.5.506
+Neil 6.2.5.600
+Neil 6.2.5.601
+sParametersApiRun neilsambhu/train_rl_experts/fg8y4a2n
+Neil 6.2.5.602
+Neil 6.2.5.603
+Neil 6.2.5.604
+type(run.files()) <class 'wandb.apis.public.Files'>
+Neil 6.2.5.605
+run.files() <Files neilsambhu/train_rl_experts/fg8y4a2n (26)>
+Neil 6.2.5.606
+Neil 6.2.5.607
+type(all_ckpts) <class 'list'>
+all_ckpts [<File ckpt/ckpt_110592.pth () 8.5MiB>, <File ckpt/ckpt_221184.pth () 8.5MiB>, <File ckpt/ckpt_331776.pth () 8.5MiB>, <File ckpt/ckpt_442368.pth () 8.5MiB>]
+Neil 6.2.5.608
+Neil 6.2.5.700
+Neil 6.2.5.701
+Neil 6.2.5.702
+[2022-05-19 15:11:58,975][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+Neil 6.2.5.703
+Neil 6.2.5.1000
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+[2022-05-19 15:11:59,709][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.0.1
+Neil 6.0.2
+Neil 6.0.3
+Neil 6.0.4
+type(fn) <class 'type'>
+Neil 6.0.5
+Neil 6.2.6
+[2022-05-19 15:12:01,244][__main__][INFO] - Start from env_idx: 0, task_idx 0
+calling registration.py > make(id, **kwargs)
+[2022-05-19 15:12:05,559][__main__][INFO] - Start episode 0000, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [80, 160], 'num_zombie_walkers': [80, 160], 'weather_group': 'train'}}
+[2022-05-19 15:13:38,523][utils.saving_utils][INFO] - Episode finished, len=901
+[2022-05-19 15:13:38,525][utils.saving_utils][WARNING] - blocked, valid=True, len=301
+[2022-05-19 15:13:38,526][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0000.h5, data_len=301, save_len=301
+[2022-05-19 15:13:43,587][__main__][INFO] - Episode 0000 done, valid=True
+[2022-05-19 15:13:46,327][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 9301 saved frames=0.26 hours, 9301 critical frames=0.26 hours
+[2022-05-19 15:13:46,402][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 2.9G
+[2022-05-19 15:13:47,597][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-19 15:13:52,602][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-19 15:13:52,920][__main__][INFO] - Finished data collection env_idx 0, Endless-v0.
+[2022-05-19 15:13:52,920][__main__][INFO] - Not finished, 1/4
+```
+5/19/2022 9:00:15 PM: try data_collect_NeilBranch0.sh again (loop)

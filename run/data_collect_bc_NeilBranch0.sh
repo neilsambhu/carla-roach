@@ -55,40 +55,40 @@ rm outputs/ep_stat_buffer_*.json
 # resume benchmark in case carla is crashed.
 RED=$'\e[0;31m'
 NC=$'\e[0m'
-# PYTHON_RETURN=1
-# ZERO=0
-# until [ $PYTHON_RETURN -eq $ZERO ]; do
-#   data_collect
-#   PYTHON_RETURN=$?
-#   if [ $PYTHON_RETURN -eq $ZERO ]; then
-#     killall -9 -r CarlaUE4-Linux
-#     echo "Bash script done."
-
-#     # To shut down the aws instance after the script is finished
-#     # sleep 10
-#     # sudo shutdown -h now
-#   else
-#     echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
-#     # exit 0 # 4/21/2022 8:58:24 PM: Neil added
-#     sleep 2
-#   fi
-# done
-
-ZERO=0
 PYTHON_RETURN=1
-echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}${NC}" >&2
-data_collect
-PYTHON_RETURN=$?
-if [ $PYTHON_RETURN -eq $ZERO ]; then
-  killall -9 -r CarlaUE4-Linux
-  echo "Bash script done."
+ZERO=0
+until [ $PYTHON_RETURN -eq $ZERO ]; do
+  data_collect
+  PYTHON_RETURN=$?
+  if [ $PYTHON_RETURN -eq $ZERO ]; then
+    killall -9 -r CarlaUE4-Linux
+    echo "Bash script done."
 
-  # To shut down the aws instance after the script is finished
-  # sleep 10
-  # sudo shutdown -h now
-else
-  killall -9 -r CarlaUE4-Linux
-  echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
-  # exit 0 # 4/21/2022 8:58:24 PM: Neil added
-  sleep 2
-fi
+    # To shut down the aws instance after the script is finished
+    # sleep 10
+    # sudo shutdown -h now
+  else
+    echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
+    # exit 0 # 4/21/2022 8:58:24 PM: Neil added
+    sleep 2
+  fi
+done
+
+# ZERO=0
+# PYTHON_RETURN=1
+# echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}${NC}" >&2
+# data_collect
+# PYTHON_RETURN=$?
+# if [ $PYTHON_RETURN -eq $ZERO ]; then
+#   killall -9 -r CarlaUE4-Linux
+#   echo "Bash script done."
+
+#   # To shut down the aws instance after the script is finished
+#   # sleep 10
+#   # sudo shutdown -h now
+# else
+#   killall -9 -r CarlaUE4-Linux
+#   echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
+#   # exit 0 # 4/21/2022 8:58:24 PM: Neil added
+#   sleep 2
+# fi

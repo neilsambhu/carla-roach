@@ -2245,3 +2245,8 @@ calling registration.py > make(id, **kwargs)
 [2022-05-19 21:12:42,348][__main__][INFO] - data_collect.py DONE!
 Bash script done.
 ```
+# Benchmark RL Experts
+5/19/2022 9:34:37 PM: 
+```
+sh run/benchmark_NeilBranch0.sh>out.txt
+```

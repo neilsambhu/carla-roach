@@ -2257,3 +2257,7 @@ sh run/benchmark_NeilBranch0.sh>out.txt
 5/19/2022 11:52:47 PM: TODO: benchmark_NeilBranch0.py:find path for cfg
 
 5/20/2022 12:40:58 PM: see which data type wandb.config.update accepts for parameter.
+
+5/22/2022 9:06:02 AM: benchmarking RL experts started; TODO: check for end of benchmark_NeilBranch0.py:main()
+
+5/22/2022 10:49:22 AM: add more print statements: find problem line in benchmark_NeilBranch0.py.

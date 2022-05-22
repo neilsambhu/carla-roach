@@ -61,14 +61,23 @@ def run_single(run_name, env, agents_dict, agents_log_dir, log_video, max_step=N
 
 @hydra.main(config_path='config', config_name='benchmark')
 def main(cfg: DictConfig):
-    cfg2 = list(OmegaConf.to_container(cfg))
+    # cfg2 = list(OmegaConf.to_container(cfg))
+    # cfg2 = dict(OmegaConf.to_container(cfg))
+    # cfg2 = dict(cfg)
+    cfg2 = None
+    import yaml
+    with open(".hydra/config.yaml", "r") as stream:
+        cfg2 = yaml.safe_load(stream)
     if bVerbose:
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+        import os
+        print('os.getcwd()',os.getcwd())
         print('type(cfg)',type(cfg))
         print('cfg',cfg)
         print('type(cfg2)',type(cfg2))
         print('cfg2',cfg2)
         # print('config_path',config_path)
+        # print('config_name',config_name)
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     
     log.setLevel(getattr(logging, cfg.log_level.upper()))
@@ -170,7 +179,8 @@ def main(cfg: DictConfig):
     if bVerbose:
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     # wandb.config.update(OmegaConf.to_container(cfg))
-    wandb.config.update(cfg2)
+    # wandb.config.update(cfg2)
+    wandb.config.update(cfg)
     if bVerbose:
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     wandb.save('./config_agent.yaml')
@@ -180,6 +190,9 @@ def main(cfg: DictConfig):
 
     # loop through each route
     for task_idx in range(ckpt_task_idx, env.num_tasks):
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+
         env.set_task_idx(task_idx)
         run_name = f"{env.task['weather']}_{env.task['route_id']:02d}"
 
@@ -200,6 +213,9 @@ def main(cfg: DictConfig):
         diags_json_path = (diags_dir / f'{task_idx:03}_{run_name}.json').as_posix()
         with open(diags_json_path, 'w') as fd:
             json.dump(ep_event_dict, fd, indent=4, sort_keys=False)
+
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
         # save diags and agents_log
         wandb.save(diags_json_path)

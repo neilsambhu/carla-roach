@@ -2453,3 +2453,1629 @@ Neil benchmark_NeilBranch0.py:195
 Bash script done.
 ```
 5/24/2022 11:38:42 PM: benchmark_NeilBranch0.sh > add loop
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/benchmark_NeilBranch0.sh>out.txt
+Neil benchmark_NeilBranch0.py:305
+[2022-05-24 23:41:10,760][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-24 23:41:11,775][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-24 23:41:11,775][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-24 23:41:20,388][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-24 23:41:21,508][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+Neil benchmark_NeilBranch0.py:128
+[2022-05-24 23:41:23,373][__main__][INFO] - Start new env from task_idx 0
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-24 23:41:23,378][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-24 23:41:28,243][__main__][INFO] - Start Benchmarking WetNoon_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-24 23:43:30,134][__main__][INFO] - Start Benchmarking WetNoon_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-24 23:46:02,688][__main__][INFO] - Start Benchmarking WetNoon_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-24 23:51:24,745][__main__][INFO] - Start Benchmarking WetNoon_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-24 23:53:28,455][__main__][INFO] - Start Benchmarking WetNoon_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-24 23:55:37,335][__main__][INFO] - Start Benchmarking WetNoon_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-24 23:57:28,566][__main__][INFO] - Start Benchmarking WetNoon_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:00:11,310][__main__][INFO] - Start Benchmarking WetNoon_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:02:29,822][__main__][INFO] - Start Benchmarking WetNoon_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:04:36,585][__main__][INFO] - Start Benchmarking WetNoon_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:06:54,784][__main__][INFO] - Start Benchmarking WetNoon_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:08:48,430][__main__][INFO] - Start Benchmarking WetNoon_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:11:57,097][__main__][INFO] - Start Benchmarking WetNoon_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:14:12,175][__main__][INFO] - Start Benchmarking WetNoon_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:17:02,489][__main__][INFO] - Start Benchmarking WetNoon_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:19:23,149][__main__][INFO] - Start Benchmarking WetNoon_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:21:24,948][__main__][INFO] - Start Benchmarking WetNoon_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:23:16,063][__main__][INFO] - Start Benchmarking WetNoon_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:25:23,313][__main__][INFO] - Start Benchmarking WetNoon_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:27:53,510][__main__][INFO] - Start Benchmarking WetNoon_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:30:03,209][__main__][INFO] - Start Benchmarking WetNoon_20.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:31:57,407][__main__][INFO] - Start Benchmarking WetNoon_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:33:53,224][__main__][INFO] - Start Benchmarking WetNoon_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:36:18,114][__main__][INFO] - Start Benchmarking WetNoon_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:38:10,254][__main__][INFO] - Start Benchmarking WetNoon_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:40:10,480][__main__][INFO] - Start Benchmarking ClearSunset_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:42:18,248][__main__][INFO] - Start Benchmarking ClearSunset_01.
+Neil benchmark_NeilBranch0.py:305
+[2022-05-25 00:42:25,401][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 00:42:26,417][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 00:42:26,418][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-25 00:42:36,309][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-25 00:42:37,175][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+Neil benchmark_NeilBranch0.py:128
+[2022-05-25 00:42:39,089][__main__][INFO] - Resume from task_idx 26
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-25 00:42:39,093][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:42:43,387][__main__][INFO] - Start Benchmarking ClearSunset_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:44:53,423][__main__][INFO] - Start Benchmarking ClearSunset_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:47:58,651][__main__][INFO] - Start Benchmarking ClearSunset_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:50:03,307][__main__][INFO] - Start Benchmarking ClearSunset_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:52:11,276][__main__][INFO] - Start Benchmarking ClearSunset_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:54:05,929][__main__][INFO] - Start Benchmarking ClearSunset_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:56:04,715][__main__][INFO] - Start Benchmarking ClearSunset_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 00:58:19,132][__main__][INFO] - Start Benchmarking ClearSunset_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:00:23,737][__main__][INFO] - Start Benchmarking ClearSunset_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:02:34,072][__main__][INFO] - Start Benchmarking ClearSunset_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:04:29,455][__main__][INFO] - Start Benchmarking ClearSunset_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:06:46,088][__main__][INFO] - Start Benchmarking ClearSunset_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:09:04,333][__main__][INFO] - Start Benchmarking ClearSunset_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:11:21,501][__main__][INFO] - Start Benchmarking ClearSunset_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:13:38,288][__main__][INFO] - Start Benchmarking ClearSunset_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:15:42,022][__main__][INFO] - Start Benchmarking ClearSunset_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:17:34,670][__main__][INFO] - Start Benchmarking ClearSunset_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:19:40,201][__main__][INFO] - Start Benchmarking ClearSunset_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:22:07,066][__main__][INFO] - Start Benchmarking ClearSunset_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:24:32,537][__main__][INFO] - Start Benchmarking ClearSunset_20.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:26:26,603][__main__][INFO] - Start Benchmarking ClearSunset_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:28:21,245][__main__][INFO] - Start Benchmarking ClearSunset_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:30:36,525][__main__][INFO] - Start Benchmarking ClearSunset_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:32:29,995][__main__][INFO] - Start Benchmarking ClearSunset_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:258
+[2022-05-25 01:34:33,926][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 01:34:38,931][utils.server_utils][INFO] - Kill Carla Servers!
+Neil benchmark_NeilBranch0.py:266
+Neil benchmark_NeilBranch0.py:280
+Neil benchmark_NeilBranch0.py:286
+Neil benchmark_NeilBranch0.py:292
+[2022-05-25 01:34:39,247][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+[2022-05-25 01:34:39,247][__main__][INFO] - Not finished, 1/4
+Neil benchmark_NeilBranch0.py:305
+[2022-05-25 01:34:49,977][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 01:34:50,992][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 01:34:50,992][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-25 01:34:58,759][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-25 01:34:59,623][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+[2022-05-25 01:35:01,373][__main__][INFO] - Resume from env_idx 1
+Neil benchmark_NeilBranch0.py:128
+[2022-05-25 01:35:01,376][__main__][INFO] - Start new env from task_idx 0
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-25 01:35:01,381][__main__][INFO] - Start Benchmarking! env_idx: 1, suite_name: ppo_NoCrash-v2_Town01_lbc_new
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:35:05,726][__main__][INFO] - Start Benchmarking SoftRainSunset_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:37:07,739][__main__][INFO] - Start Benchmarking SoftRainSunset_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:39:13,447][__main__][INFO] - Start Benchmarking SoftRainSunset_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:41:15,017][__main__][INFO] - Start Benchmarking SoftRainSunset_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:43:31,498][__main__][INFO] - Start Benchmarking SoftRainSunset_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:45:42,950][__main__][INFO] - Start Benchmarking SoftRainSunset_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:47:35,449][__main__][INFO] - Start Benchmarking SoftRainSunset_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:49:47,955][__main__][INFO] - Start Benchmarking SoftRainSunset_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:52:09,583][__main__][INFO] - Start Benchmarking SoftRainSunset_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:54:32,336][__main__][INFO] - Start Benchmarking SoftRainSunset_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:56:47,757][__main__][INFO] - Start Benchmarking SoftRainSunset_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:58:42,973][__main__][INFO] - Start Benchmarking SoftRainSunset_11.
+Neil benchmark_NeilBranch0.py:305
+[2022-05-25 01:58:48,674][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 01:58:49,690][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 01:58:49,690][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-25 01:58:57,552][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-25 01:58:58,365][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+[2022-05-25 01:58:59,905][__main__][INFO] - Resume from env_idx 1
+Neil benchmark_NeilBranch0.py:128
+[2022-05-25 01:58:59,907][__main__][INFO] - Resume from task_idx 11
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-25 01:58:59,912][__main__][INFO] - Start Benchmarking! env_idx: 1, suite_name: ppo_NoCrash-v2_Town01_lbc_new
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 01:59:04,247][__main__][INFO] - Start Benchmarking SoftRainSunset_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:01:09,983][__main__][INFO] - Start Benchmarking SoftRainSunset_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:03:29,100][__main__][INFO] - Start Benchmarking SoftRainSunset_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:05:42,329][__main__][INFO] - Start Benchmarking SoftRainSunset_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:07:58,467][__main__][INFO] - Start Benchmarking SoftRainSunset_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:09:57,893][__main__][INFO] - Start Benchmarking SoftRainSunset_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:11:47,490][__main__][INFO] - Start Benchmarking SoftRainSunset_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:13:50,942][__main__][INFO] - Start Benchmarking SoftRainSunset_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:20:51,756][__main__][INFO] - Start Benchmarking SoftRainSunset_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:23:01,190][__main__][INFO] - Start Benchmarking SoftRainSunset_20.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:24:53,063][__main__][INFO] - Start Benchmarking SoftRainSunset_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:26:47,821][__main__][INFO] - Start Benchmarking SoftRainSunset_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:29:03,257][__main__][INFO] - Start Benchmarking SoftRainSunset_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:30:54,550][__main__][INFO] - Start Benchmarking SoftRainSunset_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:32:55,469][__main__][INFO] - Start Benchmarking WetSunset_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:34:58,050][__main__][INFO] - Start Benchmarking WetSunset_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:37:20,377][__main__][INFO] - Start Benchmarking WetSunset_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:39:42,917][__main__][INFO] - Start Benchmarking WetSunset_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:42:30,443][__main__][INFO] - Start Benchmarking WetSunset_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:44:47,464][__main__][INFO] - Start Benchmarking WetSunset_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:46:44,101][__main__][INFO] - Start Benchmarking WetSunset_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:48:58,778][__main__][INFO] - Start Benchmarking WetSunset_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:51:17,504][__main__][INFO] - Start Benchmarking WetSunset_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:54:01,823][__main__][INFO] - Start Benchmarking WetSunset_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:56:11,052][__main__][INFO] - Start Benchmarking WetSunset_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 02:58:08,052][__main__][INFO] - Start Benchmarking WetSunset_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:00:24,125][__main__][INFO] - Start Benchmarking WetSunset_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:02:46,900][__main__][INFO] - Start Benchmarking WetSunset_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:05:08,259][__main__][INFO] - Start Benchmarking WetSunset_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:07:31,973][__main__][INFO] - Start Benchmarking WetSunset_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:09:33,749][__main__][INFO] - Start Benchmarking WetSunset_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:11:27,240][__main__][INFO] - Start Benchmarking WetSunset_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:13:35,404][__main__][INFO] - Start Benchmarking WetSunset_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:15:46,093][__main__][INFO] - Start Benchmarking WetSunset_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:17:56,043][__main__][INFO] - Start Benchmarking WetSunset_20.
+[2022-05-25 03:17:56,900][carla_gym.core.zombie_walker.zombie_walker_handler][WARNING] - Carla/Maps/Town01: Spawning zombie walkers max trial 10 reached! spawned/to_spawn: 249/250
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:19:50,034][__main__][INFO] - Start Benchmarking WetSunset_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:21:44,585][__main__][INFO] - Start Benchmarking WetSunset_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:24:03,048][__main__][INFO] - Start Benchmarking WetSunset_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:25:57,172][__main__][INFO] - Start Benchmarking WetSunset_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:258
+[2022-05-25 03:28:03,194][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 03:28:08,200][utils.server_utils][INFO] - Kill Carla Servers!
+Neil benchmark_NeilBranch0.py:266
+Neil benchmark_NeilBranch0.py:280
+Neil benchmark_NeilBranch0.py:286
+Neil benchmark_NeilBranch0.py:292
+[2022-05-25 03:28:08,513][__main__][INFO] - Finished Benchmarking env_idx 1, suite_name: ppo_NoCrash-v2_Town01_lbc_new
+[2022-05-25 03:28:08,514][__main__][INFO] - Not finished, 2/4
+Neil benchmark_NeilBranch0.py:305
+[2022-05-25 03:28:19,295][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 03:28:20,310][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 03:28:20,310][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-25 03:28:28,691][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-25 03:28:29,499][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+[2022-05-25 03:28:31,400][__main__][INFO] - Resume from env_idx 2
+Neil benchmark_NeilBranch0.py:128
+[2022-05-25 03:28:31,403][__main__][INFO] - Start new env from task_idx 0
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-25 03:28:31,407][__main__][INFO] - Start Benchmarking! env_idx: 2, suite_name: ppo_NoCrash-v2_Town02_lbc_train_eval
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:28:36,354][__main__][INFO] - Start Benchmarking WetNoon_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:30:12,100][__main__][INFO] - Start Benchmarking WetNoon_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:31:45,445][__main__][INFO] - Start Benchmarking WetNoon_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:33:20,271][__main__][INFO] - Start Benchmarking WetNoon_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:34:53,131][__main__][INFO] - Start Benchmarking WetNoon_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:36:36,557][__main__][INFO] - Start Benchmarking WetNoon_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:38:37,475][__main__][INFO] - Start Benchmarking WetNoon_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:40:03,896][__main__][INFO] - Start Benchmarking WetNoon_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:43:09,033][__main__][INFO] - Start Benchmarking WetNoon_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:44:22,864][__main__][INFO] - Start Benchmarking WetNoon_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:45:37,387][__main__][INFO] - Start Benchmarking WetNoon_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:47:20,227][__main__][INFO] - Start Benchmarking WetNoon_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:48:33,408][__main__][INFO] - Start Benchmarking WetNoon_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:50:09,603][__main__][INFO] - Start Benchmarking WetNoon_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:51:59,857][__main__][INFO] - Start Benchmarking WetNoon_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:53:39,633][__main__][INFO] - Start Benchmarking WetNoon_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:55:16,292][__main__][INFO] - Start Benchmarking WetNoon_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:56:57,660][__main__][INFO] - Start Benchmarking WetNoon_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:58:35,133][__main__][INFO] - Start Benchmarking WetNoon_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 03:59:57,428][__main__][INFO] - Start Benchmarking WetNoon_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:02:23,002][__main__][INFO] - Start Benchmarking WetNoon_20.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:03:37,882][__main__][INFO] - Start Benchmarking WetNoon_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:05:10,580][__main__][INFO] - Start Benchmarking WetNoon_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:10:26,317][__main__][INFO] - Start Benchmarking WetNoon_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:11:43,568][__main__][INFO] - Start Benchmarking WetNoon_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:13:50,873][__main__][INFO] - Start Benchmarking ClearSunset_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:15:30,900][__main__][INFO] - Start Benchmarking ClearSunset_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:17:06,738][__main__][INFO] - Start Benchmarking ClearSunset_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:18:41,567][__main__][INFO] - Start Benchmarking ClearSunset_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:20:19,527][__main__][INFO] - Start Benchmarking ClearSunset_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:21:52,903][__main__][INFO] - Start Benchmarking ClearSunset_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:23:10,432][__main__][INFO] - Start Benchmarking ClearSunset_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:24:36,308][__main__][INFO] - Start Benchmarking ClearSunset_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:26:09,522][__main__][INFO] - Start Benchmarking ClearSunset_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:27:24,326][__main__][INFO] - Start Benchmarking ClearSunset_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:28:42,263][__main__][INFO] - Start Benchmarking ClearSunset_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:30:26,830][__main__][INFO] - Start Benchmarking ClearSunset_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:31:41,558][__main__][INFO] - Start Benchmarking ClearSunset_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:33:12,089][__main__][INFO] - Start Benchmarking ClearSunset_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:35:03,273][__main__][INFO] - Start Benchmarking ClearSunset_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:36:44,932][__main__][INFO] - Start Benchmarking ClearSunset_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:38:20,681][__main__][INFO] - Start Benchmarking ClearSunset_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:40:05,796][__main__][INFO] - Start Benchmarking ClearSunset_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:41:45,248][__main__][INFO] - Start Benchmarking ClearSunset_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:43:08,677][__main__][INFO] - Start Benchmarking ClearSunset_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:44:25,384][__main__][INFO] - Start Benchmarking ClearSunset_20.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:45:42,150][__main__][INFO] - Start Benchmarking ClearSunset_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:47:16,504][__main__][INFO] - Start Benchmarking ClearSunset_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:48:49,449][__main__][INFO] - Start Benchmarking ClearSunset_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:50:08,871][__main__][INFO] - Start Benchmarking ClearSunset_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:258
+[2022-05-25 04:53:22,637][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 04:53:27,642][utils.server_utils][INFO] - Kill Carla Servers!
+Neil benchmark_NeilBranch0.py:266
+Neil benchmark_NeilBranch0.py:280
+Neil benchmark_NeilBranch0.py:286
+Neil benchmark_NeilBranch0.py:292
+[2022-05-25 04:53:27,953][__main__][INFO] - Finished Benchmarking env_idx 2, suite_name: ppo_NoCrash-v2_Town02_lbc_train_eval
+[2022-05-25 04:53:27,954][__main__][INFO] - Not finished, 3/4
+Neil benchmark_NeilBranch0.py:305
+[2022-05-25 04:53:38,945][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 04:53:39,960][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 04:53:39,960][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-25 04:53:48,336][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-25 04:53:49,170][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+[2022-05-25 04:53:51,059][__main__][INFO] - Resume from env_idx 3
+Neil benchmark_NeilBranch0.py:128
+[2022-05-25 04:53:51,062][__main__][INFO] - Start new env from task_idx 0
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-25 04:53:51,066][__main__][INFO] - Start Benchmarking! env_idx: 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:53:55,192][__main__][INFO] - Start Benchmarking SoftRainSunset_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:55:37,105][__main__][INFO] - Start Benchmarking SoftRainSunset_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 04:57:19,916][__main__][INFO] - Start Benchmarking SoftRainSunset_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:06:31,225][__main__][INFO] - Start Benchmarking SoftRainSunset_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:08:10,937][__main__][INFO] - Start Benchmarking SoftRainSunset_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:09:25,516][__main__][INFO] - Start Benchmarking SoftRainSunset_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:10:40,548][__main__][INFO] - Start Benchmarking SoftRainSunset_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:12:03,719][__main__][INFO] - Start Benchmarking SoftRainSunset_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:13:36,827][__main__][INFO] - Start Benchmarking SoftRainSunset_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:14:51,673][__main__][INFO] - Start Benchmarking SoftRainSunset_09.
+Neil benchmark_NeilBranch0.py:305
+[2022-05-25 05:14:58,519][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 05:14:59,536][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 05:14:59,537][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-25 05:15:08,099][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-25 05:15:08,927][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+[2022-05-25 05:15:11,008][__main__][INFO] - Resume from env_idx 3
+Neil benchmark_NeilBranch0.py:128
+[2022-05-25 05:15:11,011][__main__][INFO] - Resume from task_idx 9
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-25 05:15:11,016][__main__][INFO] - Start Benchmarking! env_idx: 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:15:15,123][__main__][INFO] - Start Benchmarking SoftRainSunset_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:16:28,491][__main__][INFO] - Start Benchmarking SoftRainSunset_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:18:01,957][__main__][INFO] - Start Benchmarking SoftRainSunset_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:19:17,106][__main__][INFO] - Start Benchmarking SoftRainSunset_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:20:53,327][__main__][INFO] - Start Benchmarking SoftRainSunset_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:23:48,447][__main__][INFO] - Start Benchmarking SoftRainSunset_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:25:25,290][__main__][INFO] - Start Benchmarking SoftRainSunset_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:27:01,135][__main__][INFO] - Start Benchmarking SoftRainSunset_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:28:42,589][__main__][INFO] - Start Benchmarking SoftRainSunset_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:30:20,659][__main__][INFO] - Start Benchmarking SoftRainSunset_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:31:46,117][__main__][INFO] - Start Benchmarking SoftRainSunset_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:33:43,855][__main__][INFO] - Start Benchmarking SoftRainSunset_20.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:34:57,352][__main__][INFO] - Start Benchmarking SoftRainSunset_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:36:28,393][__main__][INFO] - Start Benchmarking SoftRainSunset_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:38:02,985][__main__][INFO] - Start Benchmarking SoftRainSunset_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:39:19,403][__main__][INFO] - Start Benchmarking SoftRainSunset_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:41:20,518][__main__][INFO] - Start Benchmarking WetSunset_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:45:35,231][__main__][INFO] - Start Benchmarking WetSunset_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:47:10,122][__main__][INFO] - Start Benchmarking WetSunset_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:48:48,441][__main__][INFO] - Start Benchmarking WetSunset_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:50:23,876][__main__][INFO] - Start Benchmarking WetSunset_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:52:23,600][__main__][INFO] - Start Benchmarking WetSunset_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:54:53,014][__main__][INFO] - Start Benchmarking WetSunset_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:56:20,969][__main__][INFO] - Start Benchmarking WetSunset_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:58:10,487][__main__][INFO] - Start Benchmarking WetSunset_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 05:59:23,118][__main__][INFO] - Start Benchmarking WetSunset_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:00:39,124][__main__][INFO] - Start Benchmarking WetSunset_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:02:18,904][__main__][INFO] - Start Benchmarking WetSunset_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:03:36,401][__main__][INFO] - Start Benchmarking WetSunset_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:05:09,786][__main__][INFO] - Start Benchmarking WetSunset_13.
+Neil benchmark_NeilBranch0.py:305
+[2022-05-25 06:05:17,404][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 06:05:18,421][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 06:05:18,422][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-25 06:05:28,920][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-25 06:05:29,727][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+[2022-05-25 06:05:31,340][__main__][INFO] - Resume from env_idx 3
+Neil benchmark_NeilBranch0.py:128
+[2022-05-25 06:05:31,343][__main__][INFO] - Resume from task_idx 38
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-25 06:05:31,348][__main__][INFO] - Start Benchmarking! env_idx: 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:05:35,649][__main__][INFO] - Start Benchmarking WetSunset_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:07:24,755][__main__][INFO] - Start Benchmarking WetSunset_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:09:07,479][__main__][INFO] - Start Benchmarking WetSunset_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:10:43,505][__main__][INFO] - Start Benchmarking WetSunset_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:12:25,661][__main__][INFO] - Start Benchmarking WetSunset_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:14:00,972][__main__][INFO] - Start Benchmarking WetSunset_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:15:22,213][__main__][INFO] - Start Benchmarking WetSunset_19.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:16:38,953][__main__][INFO] - Start Benchmarking WetSunset_20.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:17:54,706][__main__][INFO] - Start Benchmarking WetSunset_21.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:19:29,339][__main__][INFO] - Start Benchmarking WetSunset_22.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:21:03,661][__main__][INFO] - Start Benchmarking WetSunset_23.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-25 06:22:20,979][__main__][INFO] - Start Benchmarking WetSunset_24.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:258
+[2022-05-25 06:23:56,698][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-25 06:24:01,704][utils.server_utils][INFO] - Kill Carla Servers!
+Neil benchmark_NeilBranch0.py:266
+Neil benchmark_NeilBranch0.py:280
+Neil benchmark_NeilBranch0.py:286
+Neil benchmark_NeilBranch0.py:292
+[2022-05-25 06:24:02,034][__main__][INFO] - Finished Benchmarking env_idx 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+[2022-05-25 06:24:02,034][__main__][INFO] - Finished, 4/4
+Neil benchmark_NeilBranch0.py:308
+[2022-05-25 06:24:02,037][__main__][INFO] - data_collect.py DONE!
+Bash script done.
+```
+```
+/opt/carla-simulator/CarlaUE4.sh: line 2:  4201 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+CarlaUE4-Linux: no process found
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 6 leaked semaphores to clean up at shutdown
+  len(cache))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.16 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.15
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-05-25/06-05-16/wandb/run-20220525_060523-fg8y4a2n
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run roach
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+/opt/carla-simulator/CarlaUE4.sh: line 2: 12543 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+wandb: Waiting for W&B process to finish... (success).
+wandb:                                                                                
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+wandb: Synced 3 W&B file(s), 13 media file(s), 1 artifact file(s) and 13 other file(s)
+wandb: Find logs at: ./outputs/2022-05-25/06-05-16/wandb/run-20220525_060523-fg8y4a2n/logs
+$ PYTHON_RETURN=0!!! Start Over!!!$
+CarlaUE4-Linux: no process found
+```

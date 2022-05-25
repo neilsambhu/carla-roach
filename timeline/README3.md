@@ -2261,3 +2261,195 @@ sh run/benchmark_NeilBranch0.sh>out.txt
 5/22/2022 9:06:02 AM: benchmarking RL experts started; TODO: check for end of benchmark_NeilBranch0.py:main()
 
 5/22/2022 10:49:22 AM: add more print statements: find problem line in benchmark_NeilBranch0.py.
+
+5/22/2022 11:16:36 AM: 
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/benchmark_NeilBranch0.sh>out.txt
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 183, in main
+    wandb.config.update(cfg)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 178, in update
+    sanitized = self._update(d, allow_val_change)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 172, in _update
+    parsed_dict, allow_val_change, ignore_keys=locked_keys
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 231, in _sanitize_dict
+    k, v = self._sanitize(k, v, allow_val_change)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 257, in _sanitize
+    ).format(key, self._items[key], val)
+wandb.sdk.lib.config_util.ConfigError: Attempted to change value of key "_metadata" from ContainerMetadata(ref_type=<class 'dict'>, object_type=None, optional=True, key=None, flags={'struct': True}, resolver_cache=defaultdict(<class 'dict'>, {'now': {'%Y-%m-%d': '2022-05-22', '%H-%M-%S': '09-02-35'}}), key_type=None, element_type=None) to ContainerMetadata(ref_type=<class 'dict'>, object_type=None, optional=True, key=None, flags={'struct': True}, resolver_cache=defaultdict(<class 'dict'>, {'now': {'%Y-%m-%d': '2022-05-22', '%H-%M-%S': '10-58-33'}}), key_type=None, element_type=None)
+If you really want to do this, pass allow_val_change=True to config.update()
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb:                                                                                
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./outputs/2022-05-22/10-58-33/wandb/run-20220522_105840-fg8y4a2n/logs
+$ PYTHON_RETURN=1!!! Start Over!!!$
+```
+5/24/2022 11:36:24 PM: 
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/benchmark_NeilBranch0.sh>out.txt
+Neil benchmark_NeilBranch0.py:305
+Neil benchmark_NeilBranch0.py:72
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-05-22/11-55-45
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction'}, 'terminal': {'entry_point': 'terminal.leaderboard:Leaderboard'}}}, 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'log_level': 'INFO', 'host': 'localhost', 'port': 2000, 'seed': 2021, 'no_rendering': True, 'kill_running': True, 'resume': True, 'wb_project': 'iccv21-roach-benchmark', 'wb_notes': 'Benchmark Roach on NoCrash-dense.', 'wb_group': 'Roach', 'wb_tags': None, 'log_video': True, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}}}, 'test_suites': [{'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'new'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'new'}}], 'wb_sub_group': 'nocrash_dense-2021'}
+type(cfg2) <class 'dict'>
+cfg2 {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction'}, 'terminal': {'entry_point': 'terminal.leaderboard:Leaderboard'}}}, 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'log_level': 'INFO', 'host': 'localhost', 'port': 2000, 'seed': 2021, 'no_rendering': True, 'kill_running': True, 'resume': True, 'wb_project': 'iccv21-roach-benchmark', 'wb_notes': 'Benchmark Roach on NoCrash-dense.', 'wb_group': 'Roach', 'wb_tags': None, 'log_video': True, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}}}, 'test_suites': [{'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'new'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'new'}}], 'wb_sub_group': 'nocrash_dense-2021'}
+Neil benchmark_NeilBranch0.py:81
+[2022-05-22 11:55:46,757][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-22 11:55:47,773][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-05-22 11:55:47,774][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil benchmark_NeilBranch0.py:92
+[2022-05-22 11:55:55,135][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-05-22 11:55:56,080][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+Neil benchmark_NeilBranch0.py:113
+Neil benchmark_NeilBranch0.py:128
+[2022-05-22 11:55:57,567][__main__][INFO] - Start new env from task_idx 0
+Neil benchmark_NeilBranch0.py:148
+Neil benchmark_NeilBranch0.py:157
+[2022-05-22 11:55:57,572][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+calling registration.py > make(id, **kwargs)
+Neil benchmark_NeilBranch0.py:175
+Neil benchmark_NeilBranch0.py:180
+Neil benchmark_NeilBranch0.py:186
+Neil benchmark_NeilBranch0.py:190
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 11:56:01,771][__main__][INFO] - Start Benchmarking WetNoon_00.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 11:58:03,422][__main__][INFO] - Start Benchmarking WetNoon_01.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:00:13,137][__main__][INFO] - Start Benchmarking WetNoon_02.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:02:51,859][__main__][INFO] - Start Benchmarking WetNoon_03.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:04:57,249][__main__][INFO] - Start Benchmarking WetNoon_04.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:07:13,031][__main__][INFO] - Start Benchmarking WetNoon_05.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:09:05,174][__main__][INFO] - Start Benchmarking WetNoon_06.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:11:32,630][__main__][INFO] - Start Benchmarking WetNoon_07.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:13:59,285][__main__][INFO] - Start Benchmarking WetNoon_08.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:16:20,955][__main__][INFO] - Start Benchmarking WetNoon_09.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:18:31,919][__main__][INFO] - Start Benchmarking WetNoon_10.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:20:27,566][__main__][INFO] - Start Benchmarking WetNoon_11.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:22:47,820][__main__][INFO] - Start Benchmarking WetNoon_12.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:25:06,000][__main__][INFO] - Start Benchmarking WetNoon_13.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:27:19,427][__main__][INFO] - Start Benchmarking WetNoon_14.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:29:43,457][__main__][INFO] - Start Benchmarking WetNoon_15.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:31:45,035][__main__][INFO] - Start Benchmarking WetNoon_16.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:33:35,456][__main__][INFO] - Start Benchmarking WetNoon_17.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:35:38,858][__main__][INFO] - Start Benchmarking WetNoon_18.
+Neil benchmark_NeilBranch0.py:219
+Neil benchmark_NeilBranch0.py:225
+Neil benchmark_NeilBranch0.py:233
+Neil benchmark_NeilBranch0.py:245
+Neil benchmark_NeilBranch0.py:255
+Neil benchmark_NeilBranch0.py:195
+[2022-05-22 12:38:03,015][__main__][INFO] - Start Benchmarking WetNoon_19.
+Bash script done.
+```
+5/24/2022 11:38:42 PM: benchmark_NeilBranch0.sh > add loop

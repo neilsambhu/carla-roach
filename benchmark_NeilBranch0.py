@@ -64,21 +64,21 @@ def main(cfg: DictConfig):
     # cfg2 = list(OmegaConf.to_container(cfg))
     # cfg2 = dict(OmegaConf.to_container(cfg))
     # cfg2 = dict(cfg)
-    cfg2 = None
-    import yaml
-    with open(".hydra/config.yaml", "r") as stream:
-        cfg2 = yaml.safe_load(stream)
-    if bVerbose:
-        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
-        import os
-        print('os.getcwd()',os.getcwd())
-        print('type(cfg)',type(cfg))
-        print('cfg',cfg)
-        print('type(cfg2)',type(cfg2))
-        print('cfg2',cfg2)
-        # print('config_path',config_path)
-        # print('config_name',config_name)
-        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+    # cfg2 = None
+    # import yaml
+    # with open(".hydra/config.yaml", "r") as stream:
+    #     cfg2 = yaml.safe_load(stream)
+    # if bVerbose:
+    #     frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+    #     import os
+    #     print('os.getcwd()',os.getcwd())
+    #     print('type(cfg)',type(cfg))
+    #     print('cfg',cfg)
+    #     print('type(cfg2)',type(cfg2))
+    #     print('cfg2',cfg2)
+    #     # print('config_path',config_path)
+    #     # print('config_name',config_name)
+    #     frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     
     log.setLevel(getattr(logging, cfg.log_level.upper()))
     if cfg.kill_running:
@@ -180,7 +180,8 @@ def main(cfg: DictConfig):
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     # wandb.config.update(OmegaConf.to_container(cfg))
     # wandb.config.update(cfg2)
-    wandb.config.update(cfg)
+    # wandb.config.update(cfg)
+    wandb.config.update(cfg, allow_val_change=True)
     if bVerbose:
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     wandb.save('./config_agent.yaml')
@@ -220,10 +221,16 @@ def main(cfg: DictConfig):
         # save diags and agents_log
         wandb.save(diags_json_path)
 
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+
         # save time
         wandb.log({'time/total_step': timestamp['step'],
                    'time/fps':  timestamp['step'] / timestamp['relative_wall_time']
                    }, step=task_idx)
+
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
         # save statistics
         for actor_id, ep_stat in ep_stat_dict.items():
@@ -234,12 +241,18 @@ def main(cfg: DictConfig):
                 log_dict[k_actor] = v
             wandb.log(log_dict, step=task_idx)
 
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+
         with open(ep_state_buffer_json, 'w') as fd:
             json.dump(ep_stat_buffer, fd, indent=4, sort_keys=True)
         # clean up
         list_render.clear()
         ep_stat_dict = None
         ep_event_dict = None
+
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
     
     if bVerbose:
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
@@ -248,6 +261,9 @@ def main(cfg: DictConfig):
     env.close()
     env = None
     server_manager.stop()
+
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
     # log after suite is completed
     table_data = []
@@ -260,11 +276,20 @@ def main(cfg: DictConfig):
         data += [f'{avg_ep_stat[k]:.4f}' for k in ep_stat_keys]
         table_data.append(data)
 
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+
     table_columns = ['Suite', 'actor_id', 'n_episode'] + ep_stat_keys
     wandb.log({'table/summary': wandb.Table(data=table_data, columns=table_columns)})
 
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+
     with open(last_checkpoint_path, 'w') as f:
         f.write(f'{env_idx+1}')
+
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
     log.info(f"Finished Benchmarking env_idx {env_idx}, suite_name: {suite_name}")
     if env_idx+1 == len(cfg.test_suites):

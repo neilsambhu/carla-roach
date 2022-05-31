@@ -68,12 +68,12 @@ def main(cfg: DictConfig):
     # import yaml
     # with open(".hydra/config.yaml", "r") as stream:
     #     cfg2 = yaml.safe_load(stream)
-    # if bVerbose:
+    if bVerbose:
     #     frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
-    #     import os
-    #     print('os.getcwd()',os.getcwd())
-    #     print('type(cfg)',type(cfg))
-    #     print('cfg',cfg)
+        import os
+        print('os.getcwd()',os.getcwd())
+        print('type(cfg)',type(cfg))
+        print('cfg',cfg)
     #     print('type(cfg2)',type(cfg2))
     #     print('cfg2',cfg2)
     #     # print('config_path',config_path)

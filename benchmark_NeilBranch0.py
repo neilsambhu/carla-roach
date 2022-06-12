@@ -17,7 +17,7 @@ from agents.rl_birdview.utils.wandb_callback import WandbCallback
 
 log = logging.getLogger(__name__)
 from inspect import currentframe, getframeinfo
-bVerbose = True
+bVerbose = False
 
 def run_single(run_name, env, agents_dict, agents_log_dir, log_video, max_step=None):
     list_render = []

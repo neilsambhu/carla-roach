@@ -4097,6 +4097,7 @@ cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo
 ```
 6/6/2022 8:31 PM: TODO: find "success rate" and "driving score" from ICCV 2021 paper in benchmark_NeilBranch0.py.
 
-6/11/2022 10:19:39 PM: 
+6/11/2022 10:19:39 PM: \n
 success rate: "score_route"
+
 driving score: "score_composed" 

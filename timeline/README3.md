@@ -4096,3 +4096,9 @@ cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo
 [2022-05-31 09:09:55,949][utils.server_utils][INFO] - Kill Carla Servers!
 ```
 6/6/2022 8:31 PM: TODO: find "success rate" and "driving score" from ICCV 2021 paper in benchmark_NeilBranch0.py.
+
+6/11/2022 10:19:39 PM: 
+
+success rate: "score_route"
+
+driving score: "score_composed" 

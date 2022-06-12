@@ -4,34 +4,16 @@
 #   echo "Neil message"
 # }
 # * To collect from Roach for the Leaderboard benchmark
-data_collect () {
-  python -u data_collect_NeilBranch0.py resume=true log_video=false save_to_wandb=true \
-  wb_project=il_leaderboard_roach \
-  wb_group=bc_data \
-  test_suites=lb_data \
-  n_episodes=1 \
-  dataset_root=/home/ubuntu/dataset/bc \
-  actors.hero.driver=ppo \
-  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
-  agent.ppo.wb_ckpt_step=null \
-  agent/cilrs/obs_configs=central_rgb_wide \
-  inject_noise=true \
-  actors.hero.terminal.kwargs.max_time=300 \
-  actors.hero.terminal.kwargs.no_collision=true \
-  actors.hero.terminal.kwargs.no_run_rl=false \
-  actors.hero.terminal.kwargs.no_run_stop=false \
-  carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
-}
-
-# * To collect from Autopilot for the NoCrash benchmark
 # data_collect () {
-#   python -u data_collect.py resume=true log_video=false save_to_wandb=true \
-#   wb_project=il_nocrash_ap \
+#   python -u data_collect_NeilBranch0.py resume=true log_video=false save_to_wandb=true \
+#   wb_project=il_leaderboard_roach \
 #   wb_group=bc_data \
-#   test_suites=eu_data \
-#   n_episodes=80 \
+#   test_suites=lb_data \
+#   n_episodes=1 \
 #   dataset_root=/home/ubuntu/dataset/bc \
-#   actors.hero.driver=roaming \
+#   actors.hero.driver=ppo \
+#   agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+#   agent.ppo.wb_ckpt_step=null \
 #   agent/cilrs/obs_configs=central_rgb_wide \
 #   inject_noise=true \
 #   actors.hero.terminal.kwargs.max_time=300 \
@@ -40,6 +22,24 @@ data_collect () {
 #   actors.hero.terminal.kwargs.no_run_stop=false \
 #   carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
 # }
+
+# * To collect from Autopilot for the NoCrash benchmark
+data_collect () {
+  python -u data_collect.py resume=true log_video=false save_to_wandb=true \
+  wb_project=il_nocrash_ap \
+  wb_group=bc_data \
+  test_suites=eu_data \
+  n_episodes=80 \
+  dataset_root=/home/ubuntu/dataset/bc \
+  actors.hero.driver=roaming \
+  agent/cilrs/obs_configs=central_rgb_wide \
+  inject_noise=true \
+  actors.hero.terminal.kwargs.max_time=300 \
+  actors.hero.terminal.kwargs.no_collision=true \
+  actors.hero.terminal.kwargs.no_run_rl=false \
+  actors.hero.terminal.kwargs.no_run_stop=false \
+  carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+}
 
 
 # NO NEED TO MODIFY THE FOLLOWING
@@ -62,7 +62,7 @@ until [ $PYTHON_RETURN -eq $ZERO ]; do
   PYTHON_RETURN=$?
   if [ $PYTHON_RETURN -eq $ZERO ]; then
     killall -9 -r CarlaUE4-Linux
-    echo "Bash script done."
+    echo "Bash script done. data_collect_bc_NeilBranch0.sh"
 
     # To shut down the aws instance after the script is finished
     # sleep 10

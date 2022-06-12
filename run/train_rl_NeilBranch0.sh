@@ -2,7 +2,7 @@
 
 train_rl () {
   python -u train_rl_NeilBranch0.py \
-  agent.ppo.wb_run_path=null \
+  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
   wb_project=train_rl_experts wb_name=roach \
   agent/ppo/policy=xtma_beta \
   agent.ppo.training.kwargs.explore_coef=0.05 \
@@ -34,7 +34,7 @@ done
 # echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
 
 killall -9 -r CarlaUE4-Linux
-echo "Bash script done."
+echo "Bash script done. train_rl_NeilBranch0.sh"
 
 # To shut down the aws instance after the script is finished
 # sleep 10

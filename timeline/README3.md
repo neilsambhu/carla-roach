@@ -4097,7 +4097,12 @@ cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo
 ```
 6/6/2022 8:31 PM: TODO: find "success rate" and "driving score" from ICCV 2021 paper in benchmark_NeilBranch0.py.
 
-6/11/2022 10:19:39 PM: \n
+6/11/2022 10:19:39 PM: 
+
 success rate: "score_route"
 
 driving score: "score_composed" 
+
+6/11/2022 10:23:26 PM: https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n included only 1 episode of training data instead of 160. Performance is bad.
+
+6/11/2022 10:24:31 PM: TODO: (1) collect NoCrash-dense data, (2) train RL expert, and (3) benchmark RL expert

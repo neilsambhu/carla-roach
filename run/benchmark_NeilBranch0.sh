@@ -76,7 +76,7 @@ done
 # echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
 
 killall -9 -r CarlaUE4-Linux
-echo "Bash script done."
+echo "Bash script done. benchmark_NeilBranch0.sh"
 
 # To shut down the aws instance after the script is finished
 # sleep 10

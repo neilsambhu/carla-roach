@@ -119,6 +119,8 @@ def main(cfg: DictConfig):
         env = EnvWrapper(env, **wrapper_kargs)
         return env
 
+    wandb.config.update(cfg, allow_val_change=True) # Neil added 6/13/2022 1:15 PM
+
     if cfg.dummy or len(server_manager.env_configs) == 1:
         env = DummyVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
     else:

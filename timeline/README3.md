@@ -4669,3 +4669,8 @@ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude 
 ```
 run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
 ```
+6/13/2022 1:16 PM: train_rl_NeilBranch0.py: wandb.config.update(cfg, allow_val_change=True)
+
+6/13/2022 1:17 PM: change "config/agent/ppo/training/ppo.yaml:  batch_size: 128" to "config/agent/ppo/training/ppo.yaml:  batch_size: 64"
+
+6/13/2022 1:31 PM: change "config/agent/ppo/training/ppo.yaml:  batch_size: 64" to "config/agent/ppo/training/ppo.yaml:  batch_size: 1"

@@ -2,7 +2,7 @@
 
 train_rl () {
   python -u train_rl_NeilBranch0.py \
-  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+  agent.ppo.wb_run_path=null \
   wb_project=train_rl_experts wb_name=roach \
   agent/ppo/policy=xtma_beta \
   agent.ppo.training.kwargs.explore_coef=0.05 \

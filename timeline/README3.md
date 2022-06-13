@@ -4106,3 +4106,554 @@ driving score: "score_composed"
 6/11/2022 10:23:26 PM: https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n included only 1 episode of training data instead of 160. Performance is bad.
 
 6/11/2022 10:24:31 PM: TODO: (1) collect NoCrash-dense data, (2) train RL expert, and (3) benchmark RL expert
+
+6/13/2022 1:02 AM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/data_collect_bc_NeilBranch0.sh>out.txt && run/train_rl_NeilBranch0.sh>>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
+[2022-06-11 22:40:27,631][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-11 22:40:28,643][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-11 22:40:28,643][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-11 22:40:33,682][__main__][INFO] - Start from env_idx: 0, task_idx 0
+calling registration.py > make(id, **kwargs)
+[2022-06-11 22:40:43,090][__main__][INFO] - Start episode 0000, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 22:44:25,969][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 22:44:25,979][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0000.h5, data_len=3000, save_len=3000
+[2022-06-11 22:45:13,821][__main__][INFO] - Episode 0000 done, valid=True
+[2022-06-11 22:45:14,249][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 3903 saved frames=0.11 hours, 3903 critical frames=0.11 hours
+[2022-06-11 22:45:14,284][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 1.3G
+[2022-06-11 22:45:14,285][__main__][INFO] - Start episode 0001, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 22:49:25,357][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 22:49:25,368][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0001.h5, data_len=3000, save_len=3000
+[2022-06-11 22:50:12,717][__main__][INFO] - Episode 0001 done, valid=True
+[2022-06-11 22:50:13,157][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 6602 saved frames=0.18 hours, 6602 critical frames=0.18 hours
+[2022-06-11 22:50:13,190][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 2.1G
+[2022-06-11 22:50:13,191][__main__][INFO] - Start episode 0002, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 22:55:36,364][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 22:55:36,372][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0002.h5, data_len=3000, save_len=3000
+[2022-06-11 22:56:25,595][__main__][INFO] - Episode 0002 done, valid=True
+[2022-06-11 22:56:26,209][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 9301 saved frames=0.26 hours, 9301 critical frames=0.26 hours
+[2022-06-11 22:56:26,242][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 2.9G
+[2022-06-11 22:56:26,243][__main__][INFO] - Start episode 0003, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 22:57:56,614][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 22:57:56,623][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0003.h5, data_len=3000, save_len=3000
+[2022-06-11 22:58:45,103][__main__][INFO] - Episode 0003 done, valid=True
+[2022-06-11 22:58:45,903][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 4 episodes, 12000 saved frames=0.33 hours, 12000 critical frames=0.33 hours
+[2022-06-11 22:58:45,935][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 3.8G
+[2022-06-11 22:58:45,936][__main__][INFO] - Start episode 0004, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 22:59:56,735][utils.saving_utils][INFO] - Episode finished, len=683
+[2022-06-11 22:59:56,736][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=383
+[2022-06-11 22:59:56,737][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0004.h5, data_len=383, save_len=383
+[2022-06-11 23:00:02,748][__main__][INFO] - Episode 0004 done, valid=True
+[2022-06-11 23:00:03,563][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 5 episodes, 12383 saved frames=0.34 hours, 12383 critical frames=0.34 hours
+[2022-06-11 23:00:03,594][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 3.9G
+[2022-06-11 23:00:03,595][__main__][INFO] - Start episode 0005, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:03:51,611][utils.saving_utils][INFO] - Episode finished, len=2848
+[2022-06-11 23:03:51,612][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=2548
+[2022-06-11 23:03:51,619][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0005.h5, data_len=2548, save_len=2548
+[2022-06-11 23:04:32,072][__main__][INFO] - Episode 0005 done, valid=True
+[2022-06-11 23:04:33,049][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 6 episodes, 14931 saved frames=0.41 hours, 14931 critical frames=0.41 hours
+[2022-06-11 23:04:33,080][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 4.7G
+[2022-06-11 23:04:33,081][__main__][INFO] - Start episode 0006, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:08:23,494][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:08:23,502][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0006.h5, data_len=3000, save_len=3000
+[2022-06-11 23:09:12,632][__main__][INFO] - Episode 0006 done, valid=True
+[2022-06-11 23:09:13,822][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 7 episodes, 17931 saved frames=0.50 hours, 17931 critical frames=0.50 hours
+[2022-06-11 23:09:13,855][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 5.7G
+[2022-06-11 23:09:13,855][__main__][INFO] - Start episode 0007, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:16:02,797][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:16:02,805][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0007.h5, data_len=3000, save_len=3000
+[2022-06-11 23:16:51,713][__main__][INFO] - Episode 0007 done, valid=True
+[2022-06-11 23:16:53,085][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 8 episodes, 20931 saved frames=0.58 hours, 20931 critical frames=0.58 hours
+[2022-06-11 23:16:53,118][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 6.7G
+[2022-06-11 23:16:53,119][__main__][INFO] - Start episode 0008, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:23:02,702][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:23:02,710][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0008.h5, data_len=3000, save_len=3000
+[2022-06-11 23:23:51,882][__main__][INFO] - Episode 0008 done, valid=True
+[2022-06-11 23:23:53,455][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 9 episodes, 23931 saved frames=0.66 hours, 23931 critical frames=0.66 hours
+[2022-06-11 23:23:53,487][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 7.6G
+[2022-06-11 23:23:53,488][__main__][INFO] - Start episode 0009, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:24:23,151][utils.saving_utils][INFO] - Episode finished, len=325
+[2022-06-11 23:24:23,152][utils.saving_utils][WARNING] - traffic_rule_violated, valid=False, len=25
+[2022-06-11 23:24:23,152][__main__][INFO] - Episode 0009 done, valid=False
+[2022-06-11 23:24:23,153][__main__][INFO] - Start episode 0009, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:29:55,529][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:29:55,540][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0009.h5, data_len=3000, save_len=3000
+[2022-06-11 23:30:43,409][__main__][INFO] - Episode 0009 done, valid=True
+[2022-06-11 23:30:45,212][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 10 episodes, 26931 saved frames=0.75 hours, 26931 critical frames=0.75 hours
+[2022-06-11 23:30:45,245][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 8.6G
+[2022-06-11 23:30:45,246][__main__][INFO] - Start episode 0010, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:33:16,388][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:33:16,396][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0010.h5, data_len=3000, save_len=3000
+[2022-06-11 23:34:04,610][__main__][INFO] - Episode 0010 done, valid=True
+[2022-06-11 23:34:06,585][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 11 episodes, 29931 saved frames=0.83 hours, 29931 critical frames=0.83 hours
+[2022-06-11 23:34:06,618][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 9.7G
+[2022-06-11 23:34:06,619][__main__][INFO] - Start episode 0011, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:37:19,594][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:37:19,602][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0011.h5, data_len=3000, save_len=3000
+[2022-06-11 23:38:07,810][__main__][INFO] - Episode 0011 done, valid=True
+[2022-06-11 23:38:10,026][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 12 episodes, 32931 saved frames=0.91 hours, 32931 critical frames=0.91 hours
+[2022-06-11 23:38:10,059][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 11G
+[2022-06-11 23:38:10,059][__main__][INFO] - Start episode 0012, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:38:15,504][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-11 23:38:16,519][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-11 23:38:16,519][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-11 23:38:21,558][__main__][INFO] - Start from env_idx: 0, task_idx 12
+calling registration.py > make(id, **kwargs)
+[2022-06-11 23:38:27,560][__main__][INFO] - Start episode 0012, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:42:05,336][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:42:05,344][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0012.h5, data_len=3000, save_len=3000
+[2022-06-11 23:42:53,170][__main__][INFO] - Episode 0012 done, valid=True
+[2022-06-11 23:42:55,507][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 13 episodes, 35931 saved frames=1.00 hours, 35931 critical frames=1.00 hours
+[2022-06-11 23:42:55,544][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 12G
+[2022-06-11 23:42:55,544][__main__][INFO] - Start episode 0013, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:48:05,038][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:48:05,046][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0013.h5, data_len=3000, save_len=3000
+[2022-06-11 23:48:52,343][__main__][INFO] - Episode 0013 done, valid=True
+[2022-06-11 23:48:54,875][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 14 episodes, 38931 saved frames=1.08 hours, 38931 critical frames=1.08 hours
+[2022-06-11 23:48:54,912][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 13G
+[2022-06-11 23:48:54,913][__main__][INFO] - Start episode 0014, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:50:58,823][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-11 23:50:58,831][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0014.h5, data_len=3000, save_len=3000
+[2022-06-11 23:51:47,969][__main__][INFO] - Episode 0014 done, valid=True
+[2022-06-11 23:51:50,690][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 15 episodes, 41931 saved frames=1.16 hours, 41931 critical frames=1.16 hours
+[2022-06-11 23:51:50,726][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 14G
+[2022-06-11 23:51:50,727][__main__][INFO] - Start episode 0015, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-11 23:56:39,854][utils.saving_utils][INFO] - Episode finished, len=2546
+[2022-06-11 23:56:39,856][utils.saving_utils][WARNING] - blocked, valid=True, len=1946
+[2022-06-11 23:56:39,861][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0015.h5, data_len=1946, save_len=1946
+[2022-06-11 23:57:11,908][__main__][INFO] - Episode 0015 done, valid=True
+[2022-06-11 23:57:14,832][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 16 episodes, 43877 saved frames=1.22 hours, 43877 critical frames=1.22 hours
+[2022-06-11 23:57:14,868][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 15G
+[2022-06-11 23:57:14,869][__main__][INFO] - Start episode 0016, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:02:32,463][utils.saving_utils][INFO] - Episode finished, len=2437
+[2022-06-12 00:02:32,463][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=2137
+[2022-06-12 00:02:32,469][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0016.h5, data_len=2137, save_len=2137
+[2022-06-12 00:03:07,639][__main__][INFO] - Episode 0016 done, valid=True
+[2022-06-12 00:03:10,598][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 17 episodes, 46014 saved frames=1.28 hours, 46014 critical frames=1.28 hours
+[2022-06-12 00:03:10,633][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 15G
+[2022-06-12 00:03:10,634][__main__][INFO] - Start episode 0017, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:03:16,142][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 00:03:17,156][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 00:03:17,156][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-12 00:03:22,194][__main__][INFO] - Start from env_idx: 0, task_idx 17
+calling registration.py > make(id, **kwargs)
+[2022-06-12 00:03:28,059][__main__][INFO] - Start episode 0017, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:07:08,651][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:07:08,660][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0017.h5, data_len=3000, save_len=3000
+[2022-06-12 00:07:56,334][__main__][INFO] - Episode 0017 done, valid=True
+[2022-06-12 00:07:59,517][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 18 episodes, 49014 saved frames=1.36 hours, 49014 critical frames=1.36 hours
+[2022-06-12 00:07:59,554][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 16G
+[2022-06-12 00:07:59,555][__main__][INFO] - Start episode 0018, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:12:09,528][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:12:09,538][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0018.h5, data_len=3000, save_len=3000
+[2022-06-12 00:12:57,138][__main__][INFO] - Episode 0018 done, valid=True
+[2022-06-12 00:13:00,545][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 19 episodes, 52014 saved frames=1.44 hours, 52014 critical frames=1.44 hours
+[2022-06-12 00:13:00,580][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 17G
+[2022-06-12 00:13:00,581][__main__][INFO] - Start episode 0019, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:17:56,707][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:17:56,715][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0019.h5, data_len=3000, save_len=3000
+[2022-06-12 00:18:46,025][__main__][INFO] - Episode 0019 done, valid=True
+[2022-06-12 00:18:49,641][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 20 episodes, 55014 saved frames=1.53 hours, 55014 critical frames=1.53 hours
+[2022-06-12 00:18:49,678][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 18G
+[2022-06-12 00:18:49,679][__main__][INFO] - Start episode 0020, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:24:02,131][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:24:02,139][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0020.h5, data_len=3000, save_len=3000
+[2022-06-12 00:24:50,829][__main__][INFO] - Episode 0020 done, valid=True
+[2022-06-12 00:24:54,619][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 21 episodes, 58014 saved frames=1.61 hours, 58014 critical frames=1.61 hours
+[2022-06-12 00:24:54,657][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 19G
+[2022-06-12 00:24:54,658][__main__][INFO] - Start episode 0021, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:27:25,396][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:27:25,405][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0021.h5, data_len=3000, save_len=3000
+[2022-06-12 00:28:12,809][__main__][INFO] - Episode 0021 done, valid=True
+[2022-06-12 00:28:16,844][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 22 episodes, 61014 saved frames=1.69 hours, 61014 critical frames=1.69 hours
+[2022-06-12 00:28:16,881][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 20G
+[2022-06-12 00:28:16,882][__main__][INFO] - Start episode 0022, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:33:04,437][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:33:04,445][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0022.h5, data_len=3000, save_len=3000
+[2022-06-12 00:33:52,258][__main__][INFO] - Episode 0022 done, valid=True
+[2022-06-12 00:33:56,545][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 23 episodes, 64014 saved frames=1.78 hours, 64014 critical frames=1.78 hours
+[2022-06-12 00:33:56,582][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 21G
+[2022-06-12 00:33:56,583][__main__][INFO] - Start episode 0023, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:38:04,902][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:38:04,910][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0023.h5, data_len=3000, save_len=3000
+[2022-06-12 00:38:51,996][__main__][INFO] - Episode 0023 done, valid=True
+[2022-06-12 00:38:56,420][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 24 episodes, 67014 saved frames=1.86 hours, 67014 critical frames=1.86 hours
+[2022-06-12 00:38:56,457][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 22G
+[2022-06-12 00:38:56,458][__main__][INFO] - Start episode 0024, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:43:23,144][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:43:23,152][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0024.h5, data_len=3000, save_len=3000
+[2022-06-12 00:44:11,473][__main__][INFO] - Episode 0024 done, valid=True
+[2022-06-12 00:44:16,057][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 25 episodes, 70014 saved frames=1.94 hours, 70014 critical frames=1.94 hours
+[2022-06-12 00:44:16,094][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 23G
+[2022-06-12 00:44:16,094][__main__][INFO] - Start episode 0025, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:47:48,216][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:47:48,224][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0025.h5, data_len=3000, save_len=3000
+[2022-06-12 00:48:35,940][__main__][INFO] - Episode 0025 done, valid=True
+[2022-06-12 00:48:40,721][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 26 episodes, 73014 saved frames=2.03 hours, 73014 critical frames=2.03 hours
+[2022-06-12 00:48:40,758][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 24G
+[2022-06-12 00:48:40,759][__main__][INFO] - Start episode 0026, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:55:28,461][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:55:28,470][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0026.h5, data_len=3000, save_len=3000
+[2022-06-12 00:56:17,537][__main__][INFO] - Episode 0026 done, valid=True
+[2022-06-12 00:56:22,524][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 27 episodes, 76014 saved frames=2.11 hours, 76014 critical frames=2.11 hours
+[2022-06-12 00:56:22,561][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 25G
+[2022-06-12 00:56:22,562][__main__][INFO] - Start episode 0027, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 00:59:58,069][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 00:59:58,077][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0027.h5, data_len=3000, save_len=3000
+[2022-06-12 01:00:45,249][__main__][INFO] - Episode 0027 done, valid=True
+[2022-06-12 01:00:50,411][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 28 episodes, 79014 saved frames=2.19 hours, 79014 critical frames=2.19 hours
+[2022-06-12 01:00:50,450][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 26G
+[2022-06-12 01:00:50,451][__main__][INFO] - Start episode 0028, noise_lon=True, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:02:07,807][utils.saving_utils][INFO] - Episode finished, len=582
+[2022-06-12 01:02:07,808][utils.saving_utils][WARNING] - traffic_rule_violated, valid=False, len=282
+[2022-06-12 01:02:07,809][__main__][INFO] - Episode 0028 done, valid=False
+[2022-06-12 01:02:07,809][__main__][INFO] - Start episode 0028, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:03:41,695][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:03:41,703][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0028.h5, data_len=3000, save_len=3000
+[2022-06-12 01:04:29,548][__main__][INFO] - Episode 0028 done, valid=True
+[2022-06-12 01:04:34,931][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 29 episodes, 82014 saved frames=2.28 hours, 82014 critical frames=2.28 hours
+[2022-06-12 01:04:34,969][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 27G
+[2022-06-12 01:04:34,970][__main__][INFO] - Start episode 0029, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:08:40,810][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:08:40,819][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0029.h5, data_len=3000, save_len=3000
+[2022-06-12 01:09:29,207][__main__][INFO] - Episode 0029 done, valid=True
+[2022-06-12 01:09:34,753][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 30 episodes, 85014 saved frames=2.36 hours, 85014 critical frames=2.36 hours
+[2022-06-12 01:09:34,791][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 28G
+[2022-06-12 01:09:34,792][__main__][INFO] - Start episode 0030, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:13:02,263][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:13:02,272][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0030.h5, data_len=3000, save_len=3000
+[2022-06-12 01:13:50,669][__main__][INFO] - Episode 0030 done, valid=True
+[2022-06-12 01:13:56,406][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 31 episodes, 88014 saved frames=2.44 hours, 88014 critical frames=2.44 hours
+[2022-06-12 01:13:56,442][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 29G
+[2022-06-12 01:13:56,443][__main__][INFO] - Start episode 0031, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:17:16,340][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:17:16,348][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0031.h5, data_len=3000, save_len=3000
+[2022-06-12 01:18:04,003][__main__][INFO] - Episode 0031 done, valid=True
+[2022-06-12 01:18:09,960][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 32 episodes, 91014 saved frames=2.53 hours, 91014 critical frames=2.53 hours
+[2022-06-12 01:18:09,998][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 30G
+[2022-06-12 01:18:09,999][__main__][INFO] - Start episode 0032, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:20:15,491][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:20:15,500][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0032.h5, data_len=3000, save_len=3000
+[2022-06-12 01:21:03,608][__main__][INFO] - Episode 0032 done, valid=True
+[2022-06-12 01:21:09,782][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 33 episodes, 94014 saved frames=2.61 hours, 94014 critical frames=2.61 hours
+[2022-06-12 01:21:09,818][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 31G
+[2022-06-12 01:21:09,819][__main__][INFO] - Start episode 0033, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:25:00,065][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:25:00,076][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0033.h5, data_len=3000, save_len=3000
+[2022-06-12 01:25:48,021][__main__][INFO] - Episode 0033 done, valid=True
+[2022-06-12 01:25:54,426][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 34 episodes, 97014 saved frames=2.69 hours, 97014 critical frames=2.69 hours
+[2022-06-12 01:25:54,465][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 32G
+[2022-06-12 01:25:54,466][__main__][INFO] - Start episode 0034, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:30:08,624][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:30:08,632][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0034.h5, data_len=3000, save_len=3000
+[2022-06-12 01:30:55,987][__main__][INFO] - Episode 0034 done, valid=True
+[2022-06-12 01:31:02,622][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 35 episodes, 100014 saved frames=2.78 hours, 100014 critical frames=2.78 hours
+[2022-06-12 01:31:02,659][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 32G
+[2022-06-12 01:31:02,660][__main__][INFO] - Start episode 0035, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:35:24,590][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:35:24,598][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0035.h5, data_len=3000, save_len=3000
+[2022-06-12 01:36:12,454][__main__][INFO] - Episode 0035 done, valid=True
+[2022-06-12 01:36:19,187][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 36 episodes, 103014 saved frames=2.86 hours, 103014 critical frames=2.86 hours
+[2022-06-12 01:36:19,224][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 33G
+[2022-06-12 01:36:19,225][__main__][INFO] - Start episode 0036, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:40:07,891][utils.saving_utils][INFO] - Episode finished, len=2271
+[2022-06-12 01:40:07,892][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=1971
+[2022-06-12 01:40:07,898][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0036.h5, data_len=1971, save_len=1971
+[2022-06-12 01:40:39,057][__main__][INFO] - Episode 0036 done, valid=True
+[2022-06-12 01:40:45,955][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 37 episodes, 104985 saved frames=2.92 hours, 104985 critical frames=2.92 hours
+[2022-06-12 01:40:45,993][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 34G
+[2022-06-12 01:40:45,994][__main__][INFO] - Start episode 0037, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:45:31,428][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:45:31,436][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0037.h5, data_len=3000, save_len=3000
+[2022-06-12 01:46:18,884][__main__][INFO] - Episode 0037 done, valid=True
+[2022-06-12 01:46:25,943][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 38 episodes, 107985 saved frames=3.00 hours, 107985 critical frames=3.00 hours
+[2022-06-12 01:46:25,982][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 35G
+[2022-06-12 01:46:25,983][__main__][INFO] - Start episode 0038, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:49:33,935][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:49:33,948][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0038.h5, data_len=3000, save_len=3000
+[2022-06-12 01:50:23,011][__main__][INFO] - Episode 0038 done, valid=True
+[2022-06-12 01:50:30,519][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 39 episodes, 110985 saved frames=3.08 hours, 110985 critical frames=3.08 hours
+[2022-06-12 01:50:30,557][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 36G
+[2022-06-12 01:50:30,558][__main__][INFO] - Start episode 0039, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:55:27,495][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:55:27,503][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0039.h5, data_len=3000, save_len=3000
+[2022-06-12 01:56:15,317][__main__][INFO] - Episode 0039 done, valid=True
+[2022-06-12 01:56:22,820][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 40 episodes, 113985 saved frames=3.17 hours, 113985 critical frames=3.17 hours
+[2022-06-12 01:56:22,858][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 37G
+[2022-06-12 01:56:22,859][__main__][INFO] - Start episode 0040, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 01:58:45,747][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 01:58:45,756][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0040.h5, data_len=3000, save_len=3000
+[2022-06-12 01:59:33,971][__main__][INFO] - Episode 0040 done, valid=True
+[2022-06-12 01:59:41,650][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 41 episodes, 116985 saved frames=3.25 hours, 116985 critical frames=3.25 hours
+[2022-06-12 01:59:41,688][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 38G
+[2022-06-12 01:59:41,689][__main__][INFO] - Start episode 0041, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:03:13,237][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:03:13,245][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0041.h5, data_len=3000, save_len=3000
+[2022-06-12 02:04:02,531][__main__][INFO] - Episode 0041 done, valid=True
+[2022-06-12 02:04:10,397][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 42 episodes, 119985 saved frames=3.33 hours, 119985 critical frames=3.33 hours
+[2022-06-12 02:04:10,434][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 39G
+[2022-06-12 02:04:10,435][__main__][INFO] - Start episode 0042, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:08:59,817][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:08:59,825][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0042.h5, data_len=3000, save_len=3000
+[2022-06-12 02:09:48,148][__main__][INFO] - Episode 0042 done, valid=True
+[2022-06-12 02:09:56,198][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 43 episodes, 122985 saved frames=3.42 hours, 122985 critical frames=3.42 hours
+[2022-06-12 02:09:56,235][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 40G
+[2022-06-12 02:09:56,236][__main__][INFO] - Start episode 0043, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:14:19,356][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:14:19,364][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0043.h5, data_len=3000, save_len=3000
+[2022-06-12 02:15:07,365][__main__][INFO] - Episode 0043 done, valid=True
+[2022-06-12 02:15:15,639][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 44 episodes, 125985 saved frames=3.50 hours, 125985 critical frames=3.50 hours
+[2022-06-12 02:15:15,677][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 41G
+[2022-06-12 02:15:15,677][__main__][INFO] - Start episode 0044, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:20:22,080][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:20:22,089][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0044.h5, data_len=3000, save_len=3000
+[2022-06-12 02:21:10,105][__main__][INFO] - Episode 0044 done, valid=True
+[2022-06-12 02:21:18,589][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 45 episodes, 128985 saved frames=3.58 hours, 128985 critical frames=3.58 hours
+[2022-06-12 02:21:18,626][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 42G
+[2022-06-12 02:21:18,627][__main__][INFO] - Start episode 0045, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:26:50,154][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:26:50,167][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0045.h5, data_len=3000, save_len=3000
+[2022-06-12 02:27:37,866][__main__][INFO] - Episode 0045 done, valid=True
+[2022-06-12 02:27:46,514][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 46 episodes, 131985 saved frames=3.67 hours, 131985 critical frames=3.67 hours
+[2022-06-12 02:27:46,553][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 43G
+[2022-06-12 02:27:46,554][__main__][INFO] - Start episode 0046, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:33:08,687][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:33:08,695][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0046.h5, data_len=3000, save_len=3000
+[2022-06-12 02:33:55,912][__main__][INFO] - Episode 0046 done, valid=True
+[2022-06-12 02:34:04,783][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 47 episodes, 134985 saved frames=3.75 hours, 134985 critical frames=3.75 hours
+[2022-06-12 02:34:04,821][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 43G
+[2022-06-12 02:34:04,822][__main__][INFO] - Start episode 0047, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:37:31,394][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:37:31,402][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0047.h5, data_len=3000, save_len=3000
+[2022-06-12 02:38:19,781][__main__][INFO] - Episode 0047 done, valid=True
+[2022-06-12 02:38:28,959][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 48 episodes, 137985 saved frames=3.83 hours, 137985 critical frames=3.83 hours
+[2022-06-12 02:38:28,997][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 45G
+[2022-06-12 02:38:28,998][__main__][INFO] - Start episode 0048, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:44:03,089][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:44:03,097][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0048.h5, data_len=3000, save_len=3000
+[2022-06-12 02:44:50,381][__main__][INFO] - Episode 0048 done, valid=True
+[2022-06-12 02:44:59,624][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 49 episodes, 140985 saved frames=3.92 hours, 140985 critical frames=3.92 hours
+[2022-06-12 02:44:59,666][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 45G
+[2022-06-12 02:44:59,667][__main__][INFO] - Start episode 0049, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:50:22,856][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:50:22,865][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0049.h5, data_len=3000, save_len=3000
+[2022-06-12 02:51:09,797][__main__][INFO] - Episode 0049 done, valid=True
+[2022-06-12 02:51:19,348][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 50 episodes, 143985 saved frames=4.00 hours, 143985 critical frames=4.00 hours
+[2022-06-12 02:51:19,383][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 46G
+[2022-06-12 02:51:19,384][__main__][INFO] - Start episode 0050, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:55:11,302][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 02:55:11,311][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0050.h5, data_len=3000, save_len=3000
+[2022-06-12 02:56:00,721][__main__][INFO] - Episode 0050 done, valid=True
+[2022-06-12 02:56:10,661][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 51 episodes, 146985 saved frames=4.08 hours, 146985 critical frames=4.08 hours
+[2022-06-12 02:56:10,699][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 47G
+[2022-06-12 02:56:10,700][__main__][INFO] - Start episode 0051, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 02:58:04,697][utils.saving_utils][INFO] - Episode finished, len=1427
+[2022-06-12 02:58:04,698][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=1127
+[2022-06-12 02:58:04,701][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0051.h5, data_len=1127, save_len=1127
+[2022-06-12 02:58:22,151][__main__][INFO] - Episode 0051 done, valid=True
+[2022-06-12 02:58:31,867][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 52 episodes, 148112 saved frames=4.11 hours, 148112 critical frames=4.11 hours
+[2022-06-12 02:58:31,901][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 48G
+[2022-06-12 02:58:31,902][__main__][INFO] - Start episode 0052, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:00:58,833][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:00:58,841][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0052.h5, data_len=3000, save_len=3000
+[2022-06-12 03:01:46,635][__main__][INFO] - Episode 0052 done, valid=True
+[2022-06-12 03:01:56,691][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 53 episodes, 151112 saved frames=4.20 hours, 151112 critical frames=4.20 hours
+[2022-06-12 03:01:56,730][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 49G
+[2022-06-12 03:01:56,731][__main__][INFO] - Start episode 0053, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:06:33,199][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:06:33,207][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0053.h5, data_len=3000, save_len=3000
+[2022-06-12 03:07:22,635][__main__][INFO] - Episode 0053 done, valid=True
+[2022-06-12 03:07:32,704][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 54 episodes, 154112 saved frames=4.28 hours, 154112 critical frames=4.28 hours
+[2022-06-12 03:07:32,742][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 50G
+[2022-06-12 03:07:32,743][__main__][INFO] - Start episode 0054, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:11:18,606][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:11:18,614][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0054.h5, data_len=3000, save_len=3000
+[2022-06-12 03:12:07,875][__main__][INFO] - Episode 0054 done, valid=True
+[2022-06-12 03:12:18,181][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 55 episodes, 157112 saved frames=4.36 hours, 157112 critical frames=4.36 hours
+[2022-06-12 03:12:18,219][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 51G
+[2022-06-12 03:12:18,220][__main__][INFO] - Start episode 0055, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:15:10,449][utils.saving_utils][INFO] - Episode finished, len=1775
+[2022-06-12 03:15:10,450][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=1475
+[2022-06-12 03:15:10,457][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0055.h5, data_len=1475, save_len=1475
+[2022-06-12 03:15:34,900][__main__][INFO] - Episode 0055 done, valid=True
+[2022-06-12 03:15:45,267][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 56 episodes, 158587 saved frames=4.41 hours, 158587 critical frames=4.41 hours
+[2022-06-12 03:15:45,303][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 51G
+[2022-06-12 03:15:45,304][__main__][INFO] - Start episode 0056, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:21:18,191][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:21:18,200][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0056.h5, data_len=3000, save_len=3000
+[2022-06-12 03:22:05,639][__main__][INFO] - Episode 0056 done, valid=True
+[2022-06-12 03:22:16,202][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 57 episodes, 161587 saved frames=4.49 hours, 161587 critical frames=4.49 hours
+[2022-06-12 03:22:16,239][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 52G
+[2022-06-12 03:22:16,239][__main__][INFO] - Start episode 0057, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:24:50,647][utils.saving_utils][INFO] - Episode finished, len=2014
+[2022-06-12 03:24:50,648][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=1714
+[2022-06-12 03:24:50,653][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0057.h5, data_len=1714, save_len=1714
+[2022-06-12 03:25:17,794][__main__][INFO] - Episode 0057 done, valid=True
+[2022-06-12 03:25:28,670][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 58 episodes, 163301 saved frames=4.54 hours, 163301 critical frames=4.54 hours
+[2022-06-12 03:25:28,707][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 52G
+[2022-06-12 03:25:28,708][__main__][INFO] - Start episode 0058, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:28:33,671][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:28:33,679][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0058.h5, data_len=3000, save_len=3000
+[2022-06-12 03:29:22,079][__main__][INFO] - Episode 0058 done, valid=True
+[2022-06-12 03:29:33,098][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 59 episodes, 166301 saved frames=4.62 hours, 166301 critical frames=4.62 hours
+[2022-06-12 03:29:33,135][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 53G
+[2022-06-12 03:29:33,136][__main__][INFO] - Start episode 0059, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:33:53,512][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:33:53,520][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0059.h5, data_len=3000, save_len=3000
+[2022-06-12 03:34:41,053][__main__][INFO] - Episode 0059 done, valid=True
+[2022-06-12 03:34:52,131][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 60 episodes, 169301 saved frames=4.70 hours, 169301 critical frames=4.70 hours
+[2022-06-12 03:34:52,169][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 54G
+[2022-06-12 03:34:52,170][__main__][INFO] - Start episode 0060, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:37:46,826][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:37:46,835][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0060.h5, data_len=3000, save_len=3000
+[2022-06-12 03:38:33,904][__main__][INFO] - Episode 0060 done, valid=True
+[2022-06-12 03:38:45,205][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 61 episodes, 172301 saved frames=4.79 hours, 172301 critical frames=4.79 hours
+[2022-06-12 03:38:45,242][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 55G
+[2022-06-12 03:38:45,243][__main__][INFO] - Start episode 0061, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:42:52,830][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:42:52,841][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0061.h5, data_len=3000, save_len=3000
+[2022-06-12 03:43:40,648][__main__][INFO] - Episode 0061 done, valid=True
+[2022-06-12 03:43:52,176][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 62 episodes, 175301 saved frames=4.87 hours, 175301 critical frames=4.87 hours
+[2022-06-12 03:43:52,214][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 56G
+[2022-06-12 03:43:52,215][__main__][INFO] - Start episode 0062, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:48:57,830][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 03:48:57,838][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0062.h5, data_len=3000, save_len=3000
+[2022-06-12 03:49:45,435][__main__][INFO] - Episode 0062 done, valid=True
+[2022-06-12 03:49:57,130][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 63 episodes, 178301 saved frames=4.95 hours, 178301 critical frames=4.95 hours
+[2022-06-12 03:49:57,167][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 57G
+[2022-06-12 03:49:57,168][__main__][INFO] - Start episode 0063, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 03:53:12,825][utils.saving_utils][INFO] - Episode finished, len=1465
+[2022-06-12 03:53:12,825][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=1165
+[2022-06-12 03:53:12,829][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0063.h5, data_len=1165, save_len=1165
+[2022-06-12 03:53:31,298][__main__][INFO] - Episode 0063 done, valid=True
+[2022-06-12 03:53:43,043][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 64 episodes, 179466 saved frames=4.99 hours, 179466 critical frames=4.99 hours
+[2022-06-12 03:53:43,080][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 58G
+[2022-06-12 03:53:43,080][__main__][INFO] - Start episode 0064, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:00:24,591][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:00:24,599][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0064.h5, data_len=3000, save_len=3000
+[2022-06-12 04:01:11,922][__main__][INFO] - Episode 0064 done, valid=True
+[2022-06-12 04:01:23,864][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 65 episodes, 182466 saved frames=5.07 hours, 182466 critical frames=5.07 hours
+[2022-06-12 04:01:23,901][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 58G
+[2022-06-12 04:01:23,902][__main__][INFO] - Start episode 0065, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:02:16,202][utils.saving_utils][INFO] - Episode finished, len=751
+[2022-06-12 04:02:16,203][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=451
+[2022-06-12 04:02:16,204][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0065.h5, data_len=451, save_len=451
+[2022-06-12 04:02:23,400][__main__][INFO] - Episode 0065 done, valid=True
+[2022-06-12 04:02:35,369][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 66 episodes, 182917 saved frames=5.08 hours, 182917 critical frames=5.08 hours
+[2022-06-12 04:02:35,405][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 59G
+[2022-06-12 04:02:35,406][__main__][INFO] - Start episode 0066, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:08:41,976][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:08:41,984][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0066.h5, data_len=3000, save_len=3000
+[2022-06-12 04:09:31,024][__main__][INFO] - Episode 0066 done, valid=True
+[2022-06-12 04:09:43,148][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 67 episodes, 185917 saved frames=5.16 hours, 185917 critical frames=5.16 hours
+[2022-06-12 04:09:43,185][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 59G
+[2022-06-12 04:09:43,186][__main__][INFO] - Start episode 0067, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:15:26,637][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:15:26,646][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0067.h5, data_len=3000, save_len=3000
+[2022-06-12 04:16:16,148][__main__][INFO] - Episode 0067 done, valid=True
+[2022-06-12 04:16:28,507][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 68 episodes, 188917 saved frames=5.25 hours, 188917 critical frames=5.25 hours
+[2022-06-12 04:16:28,545][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 60G
+[2022-06-12 04:16:28,546][__main__][INFO] - Start episode 0068, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:21:55,047][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:21:55,055][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0068.h5, data_len=3000, save_len=3000
+[2022-06-12 04:22:43,703][__main__][INFO] - Episode 0068 done, valid=True
+[2022-06-12 04:22:56,185][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 69 episodes, 191917 saved frames=5.33 hours, 191917 critical frames=5.33 hours
+[2022-06-12 04:22:56,223][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 61G
+[2022-06-12 04:22:56,223][__main__][INFO] - Start episode 0069, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:28:23,940][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:28:23,948][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0069.h5, data_len=3000, save_len=3000
+[2022-06-12 04:29:11,262][__main__][INFO] - Episode 0069 done, valid=True
+[2022-06-12 04:29:24,016][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 70 episodes, 194917 saved frames=5.41 hours, 194917 critical frames=5.41 hours
+[2022-06-12 04:29:24,053][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 62G
+[2022-06-12 04:29:24,054][__main__][INFO] - Start episode 0070, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:33:01,811][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:33:01,819][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0070.h5, data_len=3000, save_len=3000
+[2022-06-12 04:33:49,425][__main__][INFO] - Episode 0070 done, valid=True
+[2022-06-12 04:34:02,460][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 71 episodes, 197917 saved frames=5.50 hours, 197917 critical frames=5.50 hours
+[2022-06-12 04:34:02,498][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 63G
+[2022-06-12 04:34:02,499][__main__][INFO] - Start episode 0071, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:38:17,471][utils.saving_utils][INFO] - Episode finished, len=2387
+[2022-06-12 04:38:17,472][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=2087
+[2022-06-12 04:38:17,478][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0071.h5, data_len=2087, save_len=2087
+[2022-06-12 04:38:51,625][__main__][INFO] - Episode 0071 done, valid=True
+[2022-06-12 04:39:04,780][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 72 episodes, 200004 saved frames=5.56 hours, 200004 critical frames=5.56 hours
+[2022-06-12 04:39:04,818][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 64G
+[2022-06-12 04:39:04,819][__main__][INFO] - Start episode 0072, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:42:20,070][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:42:20,078][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0072.h5, data_len=3000, save_len=3000
+[2022-06-12 04:43:09,263][__main__][INFO] - Episode 0072 done, valid=True
+[2022-06-12 04:43:22,530][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 73 episodes, 203004 saved frames=5.64 hours, 203004 critical frames=5.64 hours
+[2022-06-12 04:43:22,568][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 65G
+[2022-06-12 04:43:22,569][__main__][INFO] - Start episode 0073, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:47:45,509][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 04:47:45,517][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0073.h5, data_len=3000, save_len=3000
+[2022-06-12 04:48:34,714][__main__][INFO] - Episode 0073 done, valid=True
+[2022-06-12 04:48:48,219][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 74 episodes, 206004 saved frames=5.72 hours, 206004 critical frames=5.72 hours
+[2022-06-12 04:48:48,258][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 66G
+[2022-06-12 04:48:48,258][__main__][INFO] - Start episode 0074, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:53:14,173][utils.saving_utils][INFO] - Episode finished, len=2262
+[2022-06-12 04:53:14,175][utils.saving_utils][WARNING] - blocked, valid=True, len=1662
+[2022-06-12 04:53:14,179][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0074.h5, data_len=1662, save_len=1662
+[2022-06-12 04:53:41,480][__main__][INFO] - Episode 0074 done, valid=True
+[2022-06-12 04:53:55,176][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 75 episodes, 207666 saved frames=5.77 hours, 207666 critical frames=5.77 hours
+[2022-06-12 04:53:55,214][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 66G
+[2022-06-12 04:53:55,215][__main__][INFO] - Start episode 0075, noise_lon=True, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 04:55:50,022][utils.saving_utils][INFO] - Episode finished, len=2338
+[2022-06-12 04:55:50,023][utils.saving_utils][WARNING] - traffic_rule_violated, valid=True, len=2038
+[2022-06-12 04:55:50,029][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0075.h5, data_len=2038, save_len=2038
+[2022-06-12 04:56:22,976][__main__][INFO] - Episode 0075 done, valid=True
+[2022-06-12 04:56:36,728][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 76 episodes, 209704 saved frames=5.83 hours, 209704 critical frames=5.83 hours
+[2022-06-12 04:56:36,766][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 67G
+[2022-06-12 04:56:36,767][__main__][INFO] - Start episode 0076, noise_lon=False, noise_lat=True, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 05:00:20,668][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 05:00:20,677][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0076.h5, data_len=3000, save_len=3000
+[2022-06-12 05:01:08,309][__main__][INFO] - Episode 0076 done, valid=True
+[2022-06-12 05:01:22,254][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 77 episodes, 212704 saved frames=5.91 hours, 212704 critical frames=5.91 hours
+[2022-06-12 05:01:22,293][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 68G
+[2022-06-12 05:01:22,294][__main__][INFO] - Start episode 0077, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 05:06:24,780][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 05:06:24,789][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0077.h5, data_len=3000, save_len=3000
+[2022-06-12 05:07:13,990][__main__][INFO] - Episode 0077 done, valid=True
+[2022-06-12 05:07:28,137][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 78 episodes, 215704 saved frames=5.99 hours, 215704 critical frames=5.99 hours
+[2022-06-12 05:07:28,175][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 69G
+[2022-06-12 05:07:28,175][__main__][INFO] - Start episode 0078, noise_lon=True, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 05:13:30,323][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 05:13:30,331][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0078.h5, data_len=3000, save_len=3000
+[2022-06-12 05:14:19,625][__main__][INFO] - Episode 0078 done, valid=True
+[2022-06-12 05:14:33,964][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 79 episodes, 218704 saved frames=6.08 hours, 218704 critical frames=6.08 hours
+[2022-06-12 05:14:34,000][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 70G
+[2022-06-12 05:14:34,001][__main__][INFO] - Start episode 0079, noise_lon=False, noise_lat=False, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 200], 'weather_group': 'train'}}
+[2022-06-12 05:18:51,113][utils.saving_utils][INFO] - Episode finished, len=3000
+[2022-06-12 05:18:51,124][utils.saving_utils][INFO] - Saving /home/ubuntu/dataset/bc/expert/0079.h5, data_len=3000, save_len=3000
+[2022-06-12 05:19:39,048][__main__][INFO] - Episode 0079 done, valid=True
+[2022-06-12 05:19:53,586][utils.saving_utils][WARNING] - /home/ubuntu/dataset/bc/expert: 80 episodes, 221704 saved frames=6.16 hours, 221704 critical frames=6.16 hours
+[2022-06-12 05:19:53,623][__main__][WARNING] - /home/ubuntu/dataset/bc/expert: dataset_size 71G
+[2022-06-12 05:19:54,992][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 05:19:59,997][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 05:20:00,272][__main__][INFO] - Finished data collection env_idx 0, Endless-v0.
+[2022-06-12 05:20:00,279][__main__][INFO] - Finished, 1/1
+[2022-06-12 05:20:00,280][__main__][INFO] - data_collect.py DONE!
+[2022-06-12 05:21:00,563][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 05:21:01,577][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 05:21:01,577][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-12 05:21:06,615][__main__][INFO] - Start from env_idx: 1, task_idx 0
+[2022-06-12 05:21:09,242][__main__][INFO] - Finished! env_idx: 1, resave to wandb
+[2022-06-12 05:21:09,247][__main__][INFO] - data_collect.py DONE!
+Bash script done. data_collect_bc_NeilBranch0.sh
+[2022-06-12 05:41:45,835][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 05:41:46,865][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-12 05:41:46,866][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-12 05:41:46,875][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-12 05:41:46,884][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-12 05:41:46,892][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-12 05:41:46,900][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+[2022-06-12 05:41:46,908][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2025
+[2022-06-12 05:41:57,599][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_442368.pth
+[2022-06-12 05:41:58,625][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_442368.pth
+```
+6/13/2022 1:04 AM: data_collect_bc_NeilBranch0.sh successful. Re-run (1) train_rl_NeilBranch0.sh>>out.txt and (2) benchmark_NeilBranch0.sh>>out.txt.
+```
+run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
+```
+
+6/13/2022 11:)@ AM: change train_rl_NeilBranch0.sh:agent.ppo.wb_run_path to "null"

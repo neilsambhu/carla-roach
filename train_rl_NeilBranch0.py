@@ -13,7 +13,7 @@ from carla_gym.utils import config_utils
 from utils import server_utils
 
 log = logging.getLogger(__name__)
-bVerbose = False
+bVerbose = True
 
 @hydra.main(config_path='config', config_name='train_rl')
 def main(cfg: DictConfig):

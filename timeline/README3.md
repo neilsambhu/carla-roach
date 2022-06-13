@@ -4656,4 +4656,12 @@ Bash script done. data_collect_bc_NeilBranch0.sh
 run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
 ```
 
-6/13/2022 11:)@ AM: change train_rl_NeilBranch0.sh:agent.ppo.wb_run_path to "null"
+6/13/2022 11:02 AM: change train_rl_NeilBranch0.sh:agent.ppo.wb_run_path to "null"
+
+6/13/2022 11:05 AM: reboot SAMBHU19
+
+6/13/2022 12:41 PM: CUDA out of memory error persists; change train config batch size. grep "batch_size"
+```
+grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "batch_size">outgrep.txt
+```
+6/13/2022 12:49 PM: change "config/agent/ppo/training/ppo.yaml:  batch_size: 256" to "config/agent/ppo/training/ppo.yaml:  batch_size: 128"

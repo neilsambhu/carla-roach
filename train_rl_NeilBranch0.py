@@ -13,7 +13,7 @@ from carla_gym.utils import config_utils
 from utils import server_utils
 
 log = logging.getLogger(__name__)
-bVerbose = True
+bVerbose = False
 
 @hydra.main(config_path='config', config_name='train_rl')
 def main(cfg: DictConfig):
@@ -119,17 +119,16 @@ def main(cfg: DictConfig):
         env = EnvWrapper(env, **wrapper_kargs)
         return env
 
-    wandb.config.update(cfg, allow_val_change=True) # Neil added 6/13/2022 1:15 PM
-
     if cfg.dummy or len(server_manager.env_configs) == 1:
         env = DummyVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
     else:
         env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
 
-
     # wandb init
     if bVerbose:
         print("Neil start here 100")
+    wandb.init()
+    wandb.config.update(cfg, allow_val_change=True) # Neil added 6/13/2022 1:15 PM
     wb_callback = WandbCallback(cfg, env)
     if bVerbose:
         print("Neil left here 100")

@@ -4671,6 +4671,34 @@ run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
 ```
 6/13/2022 1:16 PM: train_rl_NeilBranch0.py: wandb.config.update(cfg, allow_val_change=True)
 
-6/13/2022 1:17 PM: change "config/agent/ppo/training/ppo.yaml:  batch_size: 128" to "config/agent/ppo/training/ppo.yaml:  batch_size: 64"
+6/13/2022 1:17 PM: change "config/agent/ppo/training/ppo.yaml: batch_size: 128" to "config/agent/ppo/training/ppo.yaml: batch_size: 64"
 
-6/13/2022 1:31 PM: change "config/agent/ppo/training/ppo.yaml:  batch_size: 64" to "config/agent/ppo/training/ppo.yaml:  batch_size: 1"
+6/13/2022 1:31 PM: change "config/agent/ppo/training/ppo.yaml: batch_size: 64" to "config/agent/ppo/training/ppo.yaml: batch_size: 1"
+
+6/15/2022 3:36 PM: change "config/agent/ppo/training/ppo.yaml: n_steps_total: 12288" to "config/agent/ppo/training/ppo.yaml: n_steps_total: 1"
+
+6/15/2022 3:46 PM: revert change "config/agent/ppo/training/ppo.yaml: n_steps_total: 12288" to "config/agent/ppo/training/ppo.yaml: n_steps_total: 1"
+
+6/15/2022 3:49 PM: change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak"
+
+6/15/2022 3:56 PM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 130, in main
+    wandb.config.update(cfg, allow_val_change=True) # Neil added 6/13/2022 1:15 PM
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/lib/preinit.py", line 27, in __getattr__
+    raise wandb.Error(f"You must call wandb.init() before {self._name}.{key}")
+wandb.errors.Error: You must call wandb.init() before wandb.config.update
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+ PYTHON_RETURN=1!!! Start Over!!!
+```
+6/15/2022 4:00 PM: https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_15-55-18/runs/32vmzgs0
+
+6/15/2022 4:02 PM: no errors. Revert change "config/agent/ppo/training/ppo.yaml: batch_size: 256" to "config/agent/ppo/training/ppo.yaml: batch_size: 1". change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak1"
+
+6/15/2022 4:04 PM:
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
+```

@@ -13,7 +13,7 @@ from carla_gym.utils import config_utils
 from utils import server_utils
 
 log = logging.getLogger(__name__)
-bVerbose = False
+bVerbose = True
 
 @hydra.main(config_path='config', config_name='train_rl')
 def main(cfg: DictConfig):
@@ -29,6 +29,8 @@ def main(cfg: DictConfig):
         print("Neil start here 2")
     # start carla servers
     server_manager = server_utils.CarlaServerManager(cfg.carla_sh_path, configs=cfg.train_envs)
+    if bVerbose:
+        print('cfg.train_envs',cfg.train_envs)
     server_manager.start()
     if bVerbose:
         print("Neil left here 2")

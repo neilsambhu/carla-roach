@@ -4720,3 +4720,11 @@ Malloc Size=131160 LargeMemoryPoolOffset=327928
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-10-05
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-10-05/runs/1zxw56qm
 ```
+6/15/2022 4:27 PM: memory error persists
+
+6/15/2022 4:32 PM: config/train_envs/endless_all.yaml: comment out Town02-Town06. change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak2"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-33-03
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-33-03/runs/9t4gdkrh
+```

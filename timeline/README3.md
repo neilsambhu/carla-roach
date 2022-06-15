@@ -4717,4 +4717,6 @@ Malloc Size=131160 LargeMemoryPoolOffset=327928
 6/15/2022 4:10 PM: Change "config/agent/ppo/training/ppo.yaml: batch_size: 256" to "config/agent/ppo/training/ppo.yaml: batch_size: 1".
 ```
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-10-05
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-10-05/runs/1zxw56qm
 ```

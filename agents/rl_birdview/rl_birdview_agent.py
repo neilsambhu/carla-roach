@@ -248,8 +248,12 @@ class RlBirdviewAgent():
         fh = logging.FileHandler(log_file_path, mode='w')
         fh.setLevel(logging.DEBUG)
         self._logger.addHandler(fh)
-
+    
     def learn(self, env, total_timesteps, callback, seed):
+        from inspect import currentframe, getframeinfo
+        bVerbose = True
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         if self._policy is None:
             self._policy = self._policy_class(env.observation_space, env.action_space, **self._policy_kwargs)
 

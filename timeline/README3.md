@@ -4727,4 +4727,14 @@ wandb: 🚀 View run at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-33-03
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_16-33-03/runs/9t4gdkrh
+run/train_rl_NeilBranch0.sh: line 3: 89450 Segmentation fault      (core dumped) python -u train_rl_NeilBranch0.py agent.ppo.wb_run_path=null wb_project=train_rl_experts wb_name=roach agent/ppo/policy=xtma_beta agent.ppo.training.kwargs.explore_coef=0.05 carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+ PYTHON_RETURN=139!!! Start Over!!!
+```
+6/15/2022 5:54 PM: add print statements to find call to train_rl_NeilBranch0.py:agent.learn(env, total_timesteps=int(cfg.total_timesteps), callback=callback, seed=cfg.seed). Probably agents/rl_birdview/rl_birdview_agent.py
+
+6/15/2022 6:53PM: revert Change "config/agent/ppo/training/ppo.yaml: batch_size: 256" to "config/agent/ppo/training/ppo.yaml: batch_size: 1".
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_18-51-04
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/carla-roach-outputs_2022-06-15_18-51-04/runs/2i4242s0
 ```

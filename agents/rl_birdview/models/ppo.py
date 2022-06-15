@@ -208,8 +208,12 @@ class PPO():
             "train/train_epoch": epoch,
             "train/learning_rate": self.learning_rate
         }
-
+    
     def learn(self, total_timesteps, callback=None, seed=2021):
+        from inspect import currentframe, getframeinfo
+        bVerbose = True
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         # reset env seed
         self.env.action_space.seed(seed)
         self.env.observation_space.seed(seed)

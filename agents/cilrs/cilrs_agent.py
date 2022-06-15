@@ -141,9 +141,12 @@ class CilrsAgent():
 
         for _, v in self._im_queue.items():
             v.clear()
-
+    
     def learn(self, dataset_dir, train_epochs, reset_step=False):
-
+        from inspect import currentframe, getframeinfo
+        bVerbose = True
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         trainer_class = load_entry_point(self._train_cfg['entry_point'])
         if self._ckpt is None:
             trainer = trainer_class(self._policy, **self._train_cfg['kwargs'])

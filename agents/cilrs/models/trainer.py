@@ -81,8 +81,12 @@ class Trainer():
         return optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, mode='min', min_lr=1e-7,
                                                     factor=self.lr_schedule_factor,
                                                     patience=5)
-
+    
     def learn(self, dataset_dir, train_epochs, env_wrapper, reset_step=False):
+        from inspect import currentframe, getframeinfo
+        bVerbose = True
+        if bVerbose:
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         if reset_step:
             self.starting_iteration = 0
             self.starting_epoch = 0

@@ -4701,4 +4701,20 @@ Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
 6/15/2022 4:04 PM:
 ```
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
+LowLevelFatalError [File:Unknown] [Line: 1214] 
+GameThread timed out waiting for RenderThread after 60.00 secs
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+/opt/carla-simulator/CarlaUE4.sh: line 2: 74440 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 74443 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 74437 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 74447 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 74450 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 74453 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+```
+6/15/2022 4:10 PM: Change "config/agent/ppo/training/ppo.yaml: batch_size: 256" to "config/agent/ppo/training/ppo.yaml: batch_size: 1".
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt && run/benchmark_NeilBranch0.sh>>out.txt
 ```

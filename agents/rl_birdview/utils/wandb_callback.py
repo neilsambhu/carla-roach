@@ -19,8 +19,8 @@ class WandbCallback(BaseCallback):
         self._ckpt_dir.mkdir(parents=True, exist_ok=True)
 
         # wandb.init(project=cfg.wb_project, dir=save_dir, name=cfg.wb_runname)
-        # wandb.init(project=cfg.wb_project, name=cfg.wb_name, notes=cfg.wb_notes, tags=cfg.wb_tags)
-        wandb.init(project=cfg.wb_project, name=cfg.wb_name, notes=cfg.wb_notes, tags=cfg.wb_tags, allow_val_change=True)
+        wandb.init(project=cfg.wb_project, name=cfg.wb_name, notes=cfg.wb_notes, tags=cfg.wb_tags)
+        # wandb.init(project=cfg.wb_project, name=cfg.wb_name, notes=cfg.wb_notes, tags=cfg.wb_tags, allow_val_change=True)
         from inspect import currentframe, getframeinfo
         bVerbose = True
         if bVerbose:
@@ -28,7 +28,8 @@ class WandbCallback(BaseCallback):
             print("type(cfg)",type(cfg))
             print("cfg",cfg)
         # wandb.config.update(cfg, allow_val_change=True) # Neil added 6/17/2022 1:07 AM
-        wandb.config.update(OmegaConf.to_container(cfg))
+        # wandb.config.update(OmegaConf.to_container(cfg))
+        wandb.config.update(OmegaConf.to_container(cfg), allow_val_change=True) # Neil added 6/17/2022 1:47 PM
 
         wandb.save('./config_agent.yaml')
         wandb.save('.hydra/*')

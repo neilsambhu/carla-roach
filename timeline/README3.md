@@ -4888,4 +4888,89 @@ same error
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/29472vhr
+run/train_rl_NeilBranch0.sh: line 3: 127677 Segmentation fault      (core dumped) python -u train_rl_NeilBranch0.py agent.ppo.wb_run_path=null wb_project=train_rl_experts wb_name=roach agent/ppo/policy=xtma_beta agent.ppo.training.kwargs.explore_coef=0.05 carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+ PYTHON_RETURN=139!!! Start Over!!!
 ```
+```
+Neil start here 1
+Neil start here 1
+[2022-06-17 01:29:34,442][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+Neil start here 2
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-17 01:29:35,460][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-17 01:29:35,460][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil left here 2
+Neil start here 3
+Neil left here 3
+Neil start here 4
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6.0
+cfg.agent[agent_name] {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.agent[agent_name].entry_point agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent
+Neil 6.1
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+Neil 6.2
+Neil 6.3
+Neil left here 6.0
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+[2022-06-17 01:29:40,501][__main__][INFO] - making port 2000
+calling registration.py > make(id, **kwargs)
+Neil start here 100
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/utils/wandb_callback.py:27
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction', 'kwargs': {}}, 'terminal': {'entry_point': 'terminal.valeo_no_det_px:ValeoNoDetPx', 'kwargs': {}}}}, 'ev_id': 'hero', 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'total_timesteps': 100000000.0, 'seed': 2021, 'kill_running': True, 'dummy': False, 'wb_project': 'train_rl_experts', 'wb_name': 'roach', 'wb_notes': None, 'wb_tags': None, 'curriculum': False, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}}, 'train_envs': [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]}
+Neil left here 100
+Neil start here 200
+Neil left here 200
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:256
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:216
+n_epoch: 0, num_timesteps: 12288
+n_epoch: 1, num_timesteps: 24576
+n_epoch: 2, num_timesteps: 36864
+n_epoch: 3, num_timesteps: 49152
+n_epoch: 4, num_timesteps: 61440
+n_epoch: 5, num_timesteps: 73728
+n_epoch: 6, num_timesteps: 86016
+n_epoch: 7, num_timesteps: 98304
+n_epoch: 8, num_timesteps: 110592
+```
+6/17/2022 1:40 PM: train_rl_NeilBranch0.sh: add loop
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "train_rl_NeilBranch0.py", line 135, in main
+    wb_callback = WandbCallback(cfg, env)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/utils/wandb_callback.py", line 31, in __init__
+    wandb.config.update(OmegaConf.to_container(cfg))
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 178, in update
+    sanitized = self._update(d, allow_val_change)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 172, in _update
+    parsed_dict, allow_val_change, ignore_keys=locked_keys
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 231, in _sanitize_dict
+    k, v = self._sanitize(k, v, allow_val_change)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 257, in _sanitize
+    ).format(key, self._items[key], val)
+wandb.sdk.lib.config_util.ConfigError: Attempted to change value of key "actors" from {'hero': {'coach': None, 'driver': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction'}, 'terminal': {'kwargs': {'max_time': 300, 'no_run_rl': False, 'no_run_stop': False, 'no_collision': True}, 'entry_point': 'terminal.leaderboard_dagger:LeaderboardDagger'}}} to {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction', 'kwargs': {}}, 'terminal': {'entry_point': 'terminal.valeo_no_det_px:ValeoNoDetPx', 'kwargs': {}}}}
+If you really want to do this, pass allow_val_change=True to config.update()
+```
+6/17/2022 1:44 PM: train_rl_NeilBranch0.sh: remove loop

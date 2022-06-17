@@ -4974,3 +4974,10 @@ wandb.sdk.lib.config_util.ConfigError: Attempted to change value of key "actors"
 If you really want to do this, pass allow_val_change=True to config.update()
 ```
 6/17/2022 1:44 PM: train_rl_NeilBranch0.sh: remove loop
+
+6/17/2022 1:53 PM: agents/rl_birdview/utils/wandb_callback.py:wandb.config.update(OmegaConf.to_container(cfg), allow_val_change=True). Checkpoint works. change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak6".
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/v0z8s6ht
+```

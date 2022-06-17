@@ -4872,3 +4872,12 @@ If you really want to do this, pass allow_val_change=True to config.update()
 6/16/2022 8:40 PM: train_rl_NeilBranch0.py: wandb.init(allow_val_change=True)
 
 6/16/2022 8:40 PM: TODO: find wandb.init() in train_rl_NeilBranch0.py
+
+6/17/2022 1:04 AM: 
+```
+grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "wandb.init">outgrep.txt
+```
+6/17/2022 1:08 AM: agents/rl_birdview/utils/wandb_callback.py:wandb.config.update(cfg, allow_val_change=True)
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+```

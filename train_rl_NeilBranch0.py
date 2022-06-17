@@ -19,6 +19,7 @@ bVerbose = True
 def main(cfg: DictConfig):
     if bVerbose:
         print("Neil start here 1")
+        print("cfg",cfg)
     if cfg.kill_running:
         server_utils.kill_carla()
     set_random_seed(cfg.seed, using_cuda=True)
@@ -129,8 +130,8 @@ def main(cfg: DictConfig):
     # wandb init
     if bVerbose:
         print("Neil start here 100")
-    wandb.init()
-    wandb.config.update(cfg, allow_val_change=True) # Neil added 6/13/2022 1:15 PM
+    wandb.init(allow_val_change=True)
+    # wandb.config.update(cfg, allow_val_change=True) # Neil added 6/13/2022 1:15 PM
     wb_callback = WandbCallback(cfg, env)
     if bVerbose:
         print("Neil left here 100")

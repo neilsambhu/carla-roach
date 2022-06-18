@@ -4980,4 +4980,65 @@ If you really want to do this, pass allow_val_change=True to config.update()
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/v0z8s6ht
+run/train_rl_NeilBranch0.sh: line 3:  6835 Segmentation fault      (core dumped) python -u train_rl_NeilBranch0.py agent.ppo.wb_run_path=null wb_project=train_rl_experts wb_name=roach agent/ppo/policy=xtma_beta agent.ppo.training.kwargs.explore_coef=0.05 carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+ PYTHON_RETURN=139!!! Start Over!!!
+```
+```
+Neil start here 1
+Neil start here 1
+[2022-06-17 13:54:39,484][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+Neil start here 2
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-17 13:54:40,502][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-17 13:54:40,503][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil left here 2
+Neil start here 3
+Neil left here 3
+Neil start here 4
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6.0
+cfg.agent[agent_name] {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.agent[agent_name].entry_point agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent
+Neil 6.1
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+Neil 6.2
+Neil 6.3
+Neil left here 6.0
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+[2022-06-17 13:54:45,546][__main__][INFO] - making port 2000
+calling registration.py > make(id, **kwargs)
+Neil start here 100
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/utils/wandb_callback.py:27
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction', 'kwargs': {}}, 'terminal': {'entry_point': 'terminal.valeo_no_det_px:ValeoNoDetPx', 'kwargs': {}}}}, 'ev_id': 'hero', 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'total_timesteps': 100000000.0, 'seed': 2021, 'kill_running': True, 'dummy': False, 'wb_project': 'train_rl_experts', 'wb_name': 'roach', 'wb_notes': None, 'wb_tags': None, 'curriculum': False, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}}, 'train_envs': [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]}
+Neil left here 100
+Neil start here 200
+Neil left here 200
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:256
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:216
+n_epoch: 0, num_timesteps: 12288
+n_epoch: 1, num_timesteps: 24576
+n_epoch: 2, num_timesteps: 36864
+n_epoch: 3, num_timesteps: 49152
+n_epoch: 4, num_timesteps: 61440
+n_epoch: 5, num_timesteps: 73728
+n_epoch: 6, num_timesteps: 86016
+n_epoch: 7, num_timesteps: 98304
+n_epoch: 8, num_timesteps: 110592
+n_epoch: 9, num_timesteps: 122880
+n_epoch: 10, num_timesteps: 135168
+```
+6/18/2022 2:06 AM: train_rl_NeilBranch0.sh: add loop. Do not remove outputs/checkpoint.txt
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
 ```

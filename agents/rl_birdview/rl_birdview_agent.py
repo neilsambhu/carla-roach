@@ -100,11 +100,11 @@ class RlBirdviewAgent():
             project = "train_rl_experts"
             import random, string
             letters = string.ascii_lowercase
-            run_id = ''.join(random.choice(letters) for i in range(10))
+            # run_id = ''.join(random.choice(letters) for i in range(10))
             # run_id = "roach"
             # run_id = "fg8y4a2n"
             # run_id = "Neil009RL"
-            # run_id = "19f9k9fs"
+            run_id = "d5wcr5ad"
             if bVerbose:
                 print("entity",entity,"\nproject",project,"\nrun_id",run_id)
             # run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
@@ -177,9 +177,13 @@ class RlBirdviewAgent():
                 #     all_ckpts = [0]
                 # 6/19/2022 3:39 PM: end
                 f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+                # if len(all_ckpts) > 0:
+                #     f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
                 if bVerbose:
                     print('Neil 6.2.5.702')
                 self._logger.info(f'Resume checkpoint latest {f.name}')
+                # if len(all_ckpts) > 0:
+                #     self._logger.info(f'Resume checkpoint latest {f.name}')
                 if bVerbose:
                     print('Neil 6.2.5.703')
             else:

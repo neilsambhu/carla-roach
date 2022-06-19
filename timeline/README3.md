@@ -5297,3 +5297,24 @@ Try one run with at least 1 epoch before trying to work on resuming from checkpo
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/d5wcr5ad
 ```
+6/19/2022 5:30 PM: rl_birdview_agent.py: run_id = "d5wcr5ad"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/d5wcr5ad
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 179, in setup
+    f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+ValueError: max() arg is an empty sequence
+
+```
+6/19/2022 5:44 PM: Change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak8". 
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/nfdeex7a
+```

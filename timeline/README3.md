@@ -5255,3 +5255,45 @@ Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
 ```
 same error
 
+6/19/2022 3:33 PM: rl_birdview_agent.py: run_id = "Neil006RL". 
+
+6/19/2022 3:41 PM: train_rl_NeilBranch0.sh: "agent.ppo.wb_run_path=null"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/2javsat7
+```
+outputs/checkpoint.txt
+```
+neilsambhu/train_rl_experts/2javsat7
+```
+6/19/2022 3:55 PM: stop script and retry. Do not modify outputs/checkpoint.txt.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/Neil008R
+```
+
+6/19/2022 3:57 PM: train_rl_NeilBranch0.sh: "agent.ppo.wb_run_path=neilsambhu/train_rl_experts/2javsat7"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/Neil008RL
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 179, in setup
+    f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+ValueError: max() arg is an empty sequence
+```
+6/19/2022 4:11 PM: train_rl.yaml: total_timesteps: 1e8 to total_timesteps: 1e7
+
+6/19/2022 4:15 PM: one run will succeed. 
+Try one run with at least 1 epoch before trying to work on resuming from checkpoint.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/d5wcr5ad
+```

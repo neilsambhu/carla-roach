@@ -6,7 +6,7 @@ import copy
 
 from carla_gym.utils.config_utils import load_entry_point
 
-bVerbose = False
+bVerbose = True
 class RlBirdviewAgent():
     def __init__(self, path_to_conf_file='config_agent.yaml'):
         if bVerbose:
@@ -100,15 +100,15 @@ class RlBirdviewAgent():
             project = "train_rl_experts"
             import random, string
             letters = string.ascii_lowercase
-            # run_id = ''.join(random.choice(letters) for i in range(10))
+            run_id = ''.join(random.choice(letters) for i in range(10))
             # run_id = "roach"
             # run_id = "fg8y4a2n"
-            run_id = "Neil006RL"
-            # run_id = "neil005rl"
+            # run_id = "Neil009RL"
+            # run_id = "19f9k9fs"
             if bVerbose:
                 print("entity",entity,"\nproject",project,"\nrun_id",run_id)
-            run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
-            # run = wandb.init(config=cfg2, entity=entity, project=project, resume=run_id)
+            # run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)
+            run = wandb.init(config=cfg2, entity=entity, project=project, resume=run_id)
             # 5/10/2022 5:48:29 PM: end
             if bVerbose:
                 print('Neil 6.2.5.500')
@@ -172,6 +172,10 @@ class RlBirdviewAgent():
             if cfg.wb_ckpt_step is None:
                 if bVerbose:
                     print('Neil 6.2.5.701')
+                # 6/19/2022 3:39 PM: start
+                # if len(all_ckpts) == 0:
+                #     all_ckpts = [0]
+                # 6/19/2022 3:39 PM: end
                 f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
                 if bVerbose:
                     print('Neil 6.2.5.702')

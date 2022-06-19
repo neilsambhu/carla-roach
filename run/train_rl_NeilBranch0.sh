@@ -2,7 +2,7 @@
 
 train_rl () {
   python -u train_rl_NeilBranch0.py \
-  agent.ppo.wb_run_path=https://wandb.ai/neilsambhu/train_rl_experts/runs/164trgem \
+  agent.ppo.wb_run_path=null \
   wb_project=train_rl_experts wb_name=roach \
   agent/ppo/policy=xtma_beta \
   agent.ppo.training.kwargs.explore_coef=0.05 \
@@ -23,15 +23,15 @@ conda activate carla
 RED=$'\e[0;31m'
 NC=$'\e[0m'
 PYTHON_RETURN=1
-until [ $PYTHON_RETURN == 0 ]; do
-  train_rl
-  PYTHON_RETURN=$?
-  echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
-  sleep 2
-done
-# train_rl
-# PYTHON_RETURN=$?
-# echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
+# until [ $PYTHON_RETURN == 0 ]; do
+#   train_rl
+#   PYTHON_RETURN=$?
+#   echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
+#   sleep 2
+# done
+train_rl
+PYTHON_RETURN=$?
+echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
 
 killall -9 -r CarlaUE4-Linux
 echo "Bash script done. train_rl_NeilBranch0.sh"

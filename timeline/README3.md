@@ -5085,3 +5085,173 @@ wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a
 ```
 outputs/checkpoint.txt changed from "neilsambhu/train_rl_experts/164trgem" to "neilsambhu/train_rl_experts/fg8y4a2n". 
 TODO: see if training affects (1) https://wandb.ai/neilsambhu/train_rl_experts/runs/164trgem or (2) https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+```
+n_epoch: 0, num_timesteps: 1339392
+```
+6/19/2022 2:47 PM: train_rl_NeilBranch0.sh: "agent.ppo.wb_run_path=train_rl_experts/164trgem"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+```
+6/19/2022 2:52 PM: train_rl_NeilBranch0.sh: "agent.ppo.wb_run_path=https://wandb.ai/neilsambhu/train_rl_experts/runs/164trgem"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
+```
+TODO: (1) manually change the run URL or (2) clear the history of the URL. Try #2. 
+
+6/19/2022 2:59 PM: change 1st roach on wandb.ai to roach0.
+
+6/19/2022 3:00 PM: roach rename doesn't do anything. I can delete the fg8y4a2n run.
+
+6/19/2022 3:01 PM: Try #1.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "fg8y4a2n">outgrep.txt
+agents/rl_birdview/rl_birdview_agent.py:            run_id = "fg8y4a2n"
+```
+6/19/2022 3:06 PM: rl_birdview_agent.py: run_id = "Neil001_RL". Train for 10M steps on Town04-Town06.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/Neil001_RL
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 174, in setup
+    f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+ValueError: max() arg is an empty sequence
+```
+6/19/2022 3:06 PM: rl_birdview_agent.py: run_id = "Neil002RL". Train for 10M steps on Town04-Town06.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/Neil002RL
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 174, in setup
+    f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+ValueError: max() arg is an empty sequence
+```
+6/19/2022 3:19 PM: pause #1. Delete roach0 from api.wandb. Try all lowercase: rl_birdview_agent.py: run_id = "neil005rl".
+```
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/neil005rl
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 175, in setup
+    f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+ValueError: max() arg is an empty sequence
+```
+6/19/2022 3:24 PM: rl_birdview_agent.py: run_id = "fg8y4a2n". Train for 10M steps on Town04-Town06.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ERROR Error while calling W&B API: Error 1062: Duplicate entry '928680-fg8y4a2n' for key 'PRIMARY' (<Response [409]>)
+Thread SenderThread:
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 1318, in upsert_run
+    response = self.gql(mutation, variable_values=variable_values, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/lib/retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 140, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/internal_util.py", line 51, in run
+    self._run()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/internal_util.py", line 102, in _run
+    self._process(record)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/internal.py", line 310, in _process
+    self._sm.send(record)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/sender.py", line 234, in send
+    send_handler(record)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/sender.py", line 692, in send_run
+    self._init_run(run, config_value_dict)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/internal/sender.py", line 730, in _init_run
+    commit=run.git.last_commit or None,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    raise CommError(err.response, err)
+wandb.errors.CommError: <Response [409]>
+wandb: ERROR Internal wandb error: file data was not synced
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 995, in init
+    run = wi.init()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 648, in init
+    backend.cleanup()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 246, in cleanup
+    self.interface.join()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 475, in join
+    super().join()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 653, in join
+    _ = self._communicate_shutdown()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 472, in _communicate_shutdown
+    _ = self._communicate(record)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 231, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+wandb: ERROR Abnormal program exit
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 995, in init
+    run = wi.init()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 648, in init
+    backend.cleanup()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 246, in cleanup
+    self.interface.join()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 475, in join
+    super().join()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 653, in join
+    _ = self._communicate_shutdown()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 472, in _communicate_shutdown
+    _ = self._communicate(record)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 231, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 111, in setup
+    run = wandb.init(config=cfg2, entity=entity, project=project, resume=run_id)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 1033, in init
+    raise Exception("problem") from error_seen
+Exception: problem
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+ PYTHON_RETURN=1!!! Start Over!!!
+```
+6/19/2022 3:29 PM: Delete outputs/checkpoint.txt. Train for 10M steps on Town04-Town06.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+```
+same error
+

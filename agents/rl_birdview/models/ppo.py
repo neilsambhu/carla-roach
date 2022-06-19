@@ -112,6 +112,11 @@ class PPO():
         epoch = 0
         data_len = int(self.buffer.buffer_size * self.buffer.n_envs / self.batch_size)
         for epoch in range(self.n_epochs):
+            from inspect import currentframe, getframeinfo
+            bVerbose = False
+            if bVerbose:
+                frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+                print("epoch",epoch,"self.n_epochs",self.n_epochs)
             approx_kl_divs = []
             # Do a complete pass on the rollout buffer
             self.buffer.start_caching(self.batch_size)

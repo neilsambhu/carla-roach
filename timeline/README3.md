@@ -5042,3 +5042,44 @@ n_epoch: 10, num_timesteps: 135168
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
 ```
+training keeps restarting at n_epoch: 0; farthest is n_epoch: 8.
+
+6/18/2022 8:25 PM: endless_all.yaml: Town01 to Town01-Town03 on GPU:0 and Town04-Town06 on GPU:1. No fix for the epoch resetting to 0 at restart.
+
+6/18/2022 8:34 PM: all training goes to GPU:0. endless_all.yaml: comment Town04-Town06.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+```
+22 epochs
+
+6/19/2022 12:10 AM: endless_all.yaml: Town01-Town03 to Town04-Town06
+
+6/19/2022 1:04 AM: TODO: Retrain on Town01-Town03 and Town04-06. 
+train_rl_NeilBranch0.sh: To resume a crashed run, set `agent.ppo.wb_run_path` to the w&b run path. 
+See if changing this setting will keep track of the epochs.
+
+6/19/2022 12:26 PM: n_epoch > 70. TODO: print n_epochs.
+
+6/19/2022 12:40 PM: self.n_epochs 20. 
+Change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak7". 
+train_rl_NeilBranch0.sh: use "agent.ppo.wb_run_path".
+train_rl_NeilBranch0.sh: remove loop.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/164trgem
+```
+20 epochs in 1 epoch.
+```
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:118
+epoch 19 self.n_epochs 20
+n_epoch: 9, num_timesteps: 122880
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:118
+epoch 0 self.n_epochs 20
+```
+6/19/2022 2:30 PM: train_rl_NeilBranch0.sh: "agent.ppo.wb_run_path=neilsambhu/train_rl_experts/164trgem"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+```
+outputs/checkpoint.txt changed from "neilsambhu/train_rl_experts/164trgem" to "neilsambhu/train_rl_experts/fg8y4a2n". 
+TODO: see if training affects (1) https://wandb.ai/neilsambhu/train_rl_experts/runs/164trgem or (2) https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n

@@ -130,6 +130,8 @@ def main(cfg: DictConfig):
     # wandb init
     if bVerbose:
         print("Neil start here 100")
+        print("type(env)",type(env))
+        print("env",env)
     # wandb.init(allow_val_change=True)
     # wandb.config.update(cfg, allow_val_change=True) # Neil added 6/13/2022 1:15 PM
     wb_callback = WandbCallback(cfg, env)
@@ -145,6 +147,11 @@ def main(cfg: DictConfig):
     with open(last_checkpoint_path, 'w') as f:
         f.write(wandb.run.path)
 
+    if bVerbose:
+        print("int(cfg.total_timesteps)",int(cfg.total_timesteps))
+        print("callback",callback)
+        print("cfg.seed",cfg.seed)
+    
     agent.learn(env, total_timesteps=int(cfg.total_timesteps), callback=callback, seed=cfg.seed)
 
     server_manager.stop()

@@ -5080,6 +5080,8 @@ epoch 0 self.n_epochs 20
 6/19/2022 2:30 PM: train_rl_NeilBranch0.sh: "agent.ppo.wb_run_path=neilsambhu/train_rl_experts/164trgem"
 ```
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n
 ```
 outputs/checkpoint.txt changed from "neilsambhu/train_rl_experts/164trgem" to "neilsambhu/train_rl_experts/fg8y4a2n". 
 TODO: see if training affects (1) https://wandb.ai/neilsambhu/train_rl_experts/runs/164trgem or (2) https://wandb.ai/neilsambhu/train_rl_experts/runs/fg8y4a2n

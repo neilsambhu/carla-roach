@@ -5444,4 +5444,5 @@ wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/nfdeex7a
 ```
 TODO: write script to change the active towns on endless_all.yaml for each call to train_rl_NeilBranch0.sh. 
-How to define stopping condition: train_rl_NeilBranch0.sh (1) needs to alternate sets of towns and (2) stop at 10M steps.
+How to define stopping condition: train_rl_NeilBranch0.sh (1) needs to alternate sets of towns and (2) stop at 10M steps. 
+Subtask: grep "endless_all.yaml". Maybe I can alternate the reference to the endless_all.yaml within the code.

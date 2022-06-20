@@ -5446,3 +5446,50 @@ wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/nfdeex
 TODO: write script to change the active towns on endless_all.yaml for each call to train_rl_NeilBranch0.sh. 
 How to define stopping condition: train_rl_NeilBranch0.sh (1) needs to alternate sets of towns and (2) stop at 10M steps. 
 Subtask: grep "endless_all.yaml". Maybe I can alternate the reference to the endless_all.yaml within the code.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "endless_all.yaml">outgrep.txt
+carla_gym/utils/birdview_map.py:    env_config = OmegaConf.load('config/train_envs/endless_all.yaml')
+```
+carla_gym/utils/birdview_map.py: print env_config
+
+6/20/2022 12:27 PM: resume training nfdeex7a
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+```
+6/20/2022 12:58 PM: train_rl.yaml:  - train_envs: endless_all
+
+6/20/2022 12:59 PM: TODO: find "train_envs"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "train_envs">outgrep.txt
+carla_gym/utils/birdview_map.py:    env_config = OmegaConf.load('config/train_envs/endless_all.yaml')
+train_rl.py:    server_manager = server_utils.CarlaServerManager(cfg.carla_sh_path, configs=cfg.train_envs)
+train_rl.py:    config_utils.check_h5_maps(cfg.train_envs, obs_configs, cfg.carla_sh_path)
+train_rl_NeilBranch0.py:    server_manager = server_utils.CarlaServerManager(cfg.carla_sh_path, configs=cfg.train_envs)
+train_rl_NeilBranch0.py:        print('cfg.train_envs',cfg.train_envs)
+train_rl_NeilBranch0.py:    config_utils.check_h5_maps(cfg.train_envs, obs_configs, cfg.carla_sh_path)
+config/train_rl.yaml:  - train_envs: endless_all
+```
+6/20/2022 1:06 PM: Change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak9". 
+Restart training to see if there is a call to birdview_map.py.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/3ory2wxt
+```
+6/20/2022 2:41 PM: See when train_rl.yaml is called.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "train_rl.yaml">outgrep.txt
+Binary file .git/index matches
+```
+6/20/2022 2:45 PM: train_rl.yaml: "total_timesteps: 1e7". 
+Current training is 10M timesteps. 
+Try training for 100K (1e5) timesteps; 
+increase timesteps; 
+resume training by copying checkpoint.txt to rl_birdview_agent.py. 
+
+train_rl.yaml: "total_timesteps: 1e5"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/17ilnqbn
+```

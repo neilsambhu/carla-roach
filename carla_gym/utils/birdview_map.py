@@ -279,6 +279,11 @@ if __name__ == '__main__':
     time.sleep(1)
 
     env_config = OmegaConf.load('config/train_envs/endless_all.yaml')
+    from inspect import currentframe, getframeinfo
+    bVerbose = True
+    if bVerbose:
+        frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+        print("endless_all.yaml: ","env_config",env_config)
     server_manager = CarlaServerManager(args.carla_sh_path, configs=env_config)
     server_manager.start()
 

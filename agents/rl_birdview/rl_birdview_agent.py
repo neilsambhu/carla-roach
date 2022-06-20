@@ -104,7 +104,10 @@ class RlBirdviewAgent():
             # run_id = "roach"
             # run_id = "fg8y4a2n"
             # run_id = "Neil009RL"
-            run_id = "nfdeex7a"
+            run_id = ""
+            with open('outputs/checkpoint.txt') as f:
+                checkpoint = f.read()
+                run_id = checkpoint.split("/")[2]
             if bVerbose:
                 print("entity",entity,"\nproject",project,"\nrun_id",run_id)
             # run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)

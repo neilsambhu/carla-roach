@@ -15,7 +15,8 @@ actors:
       kwargs: {}
 ev_id: hero
 carla_sh_path: /home/ubuntu/apps/carla/carla910/CarlaUE4.sh
-total_timesteps: 1e7
+# total_timesteps: 1e7
+total_timesteps: 1e5
 seed: 2021
 kill_running: true
 dummy: false

@@ -104,7 +104,7 @@ class RlBirdviewAgent():
             # run_id = "roach"
             # run_id = "fg8y4a2n"
             # run_id = "Neil009RL"
-            run_id = "d5wcr5ad"
+            run_id = "nfdeex7a"
             if bVerbose:
                 print("entity",entity,"\nproject",project,"\nrun_id",run_id)
             # run = wandb.init(config=cfg2, entity=entity, project=project, id=run_id)

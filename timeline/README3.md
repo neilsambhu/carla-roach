@@ -5317,4 +5317,131 @@ ValueError: max() arg is an empty sequence
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/nfdeex7a
+int(cfg.total_timesteps) 10000000
+callback <stable_baselines3.common.callbacks.CallbackList object at 0x7f02bf4b4b50>
+cfg.seed 2021
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:266
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12288
+n_epoch: 1, num_timesteps: 24576
+n_epoch: 2, num_timesteps: 36864
+n_epoch: 3, num_timesteps: 49152
+n_epoch: 4, num_timesteps: 61440
+n_epoch: 5, num_timesteps: 73728
+n_epoch: 6, num_timesteps: 86016
+n_epoch: 7, num_timesteps: 98304
+n_epoch: 8, num_timesteps: 110592
+n_epoch: 9, num_timesteps: 122880
+n_epoch: 10, num_timesteps: 135168
+n_epoch: 11, num_timesteps: 147456
+n_epoch: 12, num_timesteps: 159744
+n_epoch: 13, num_timesteps: 172032
+n_epoch: 14, num_timesteps: 184320
+n_epoch: 15, num_timesteps: 196608
+n_epoch: 16, num_timesteps: 208896
+n_epoch: 17, num_timesteps: 221184
+n_epoch: 18, num_timesteps: 233472
+n_epoch: 19, num_timesteps: 245760
+n_epoch: 20, num_timesteps: 258048
+n_epoch: 21, num_timesteps: 270336
+n_epoch: 22, num_timesteps: 282624
+n_epoch: 23, num_timesteps: 294912
+n_epoch: 24, num_timesteps: 307200
+n_epoch: 25, num_timesteps: 319488
+n_epoch: 26, num_timesteps: 331776
+n_epoch: 27, num_timesteps: 344064
+n_epoch: 28, num_timesteps: 356352
+n_epoch: 29, num_timesteps: 368640
+n_epoch: 30, num_timesteps: 380928
+n_epoch: 31, num_timesteps: 393216
+n_epoch: 32, num_timesteps: 405504
+n_epoch: 33, num_timesteps: 417792
+n_epoch: 34, num_timesteps: 430080
+n_epoch: 35, num_timesteps: 442368
+n_epoch: 36, num_timesteps: 454656
+n_epoch: 37, num_timesteps: 466944
+n_epoch: 38, num_timesteps: 479232
+n_epoch: 39, num_timesteps: 491520
+n_epoch: 40, num_timesteps: 503808
+n_epoch: 41, num_timesteps: 516096
+n_epoch: 42, num_timesteps: 528384
+n_epoch: 43, num_timesteps: 540672
+n_epoch: 44, num_timesteps: 552960
+n_epoch: 45, num_timesteps: 565248
+n_epoch: 46, num_timesteps: 577536
+n_epoch: 47, num_timesteps: 589824
+n_epoch: 48, num_timesteps: 602112
+n_epoch: 49, num_timesteps: 614400
+n_epoch: 50, num_timesteps: 626688
+n_epoch: 51, num_timesteps: 638976
+n_epoch: 52, num_timesteps: 651264
+n_epoch: 53, num_timesteps: 663552
+n_epoch: 54, num_timesteps: 675840
+n_epoch: 55, num_timesteps: 688128
+n_epoch: 56, num_timesteps: 700416
+n_epoch: 57, num_timesteps: 712704
+n_epoch: 58, num_timesteps: 724992
+n_epoch: 59, num_timesteps: 737280
+n_epoch: 60, num_timesteps: 749568
+n_epoch: 61, num_timesteps: 761856
+n_epoch: 62, num_timesteps: 774144
+n_epoch: 63, num_timesteps: 786432
+n_epoch: 64, num_timesteps: 798720
+n_epoch: 65, num_timesteps: 811008
+n_epoch: 66, num_timesteps: 823296
+n_epoch: 67, num_timesteps: 835584
+n_epoch: 68, num_timesteps: 847872
+n_epoch: 69, num_timesteps: 860160
+n_epoch: 70, num_timesteps: 872448
+n_epoch: 71, num_timesteps: 884736
+n_epoch: 72, num_timesteps: 897024
+n_epoch: 73, num_timesteps: 909312
+n_epoch: 74, num_timesteps: 921600
+n_epoch: 75, num_timesteps: 933888
+n_epoch: 76, num_timesteps: 946176
+n_epoch: 77, num_timesteps: 958464
+n_epoch: 78, num_timesteps: 970752
+n_epoch: 79, num_timesteps: 983040
+n_epoch: 80, num_timesteps: 995328
+n_epoch: 81, num_timesteps: 1007616
+n_epoch: 82, num_timesteps: 1019904
+n_epoch: 83, num_timesteps: 1032192
+n_epoch: 84, num_timesteps: 1044480
+n_epoch: 85, num_timesteps: 1056768
+n_epoch: 86, num_timesteps: 1069056
+n_epoch: 87, num_timesteps: 1081344
+n_epoch: 88, num_timesteps: 1093632
+n_epoch: 89, num_timesteps: 1105920
+n_epoch: 90, num_timesteps: 1118208
+n_epoch: 91, num_timesteps: 1130496
+n_epoch: 92, num_timesteps: 1142784
+n_epoch: 93, num_timesteps: 1155072
+n_epoch: 94, num_timesteps: 1167360
+n_epoch: 95, num_timesteps: 1179648
+n_epoch: 96, num_timesteps: 1191936
+n_epoch: 97, num_timesteps: 1204224
+n_epoch: 98, num_timesteps: 1216512
+n_epoch: 99, num_timesteps: 1228800
+n_epoch: 100, num_timesteps: 1241088
+n_epoch: 101, num_timesteps: 1253376
+n_epoch: 102, num_timesteps: 1265664
+n_epoch: 103, num_timesteps: 1277952
+n_epoch: 104, num_timesteps: 1290240
+n_epoch: 105, num_timesteps: 1302528
+n_epoch: 106, num_timesteps: 1314816
+n_epoch: 107, num_timesteps: 1327104
+n_epoch: 108, num_timesteps: 1339392
+n_epoch: 109, num_timesteps: 1351680
+n_epoch: 110, num_timesteps: 1363968
+n_epoch: 111, num_timesteps: 1376256
+n_epoch: 112, num_timesteps: 1388544
 ```
+6/20/2022 11:50 AM: rl_birdview_agent.py: run_id = "nfdeex7a"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/nfdeex7a
+```
+TODO: write script to change the active towns on endless_all.yaml for each call to train_rl_NeilBranch0.sh. 
+How to define stopping condition: train_rl_NeilBranch0.sh (1) needs to alternate sets of towns and (2) stop at 10M steps.

@@ -105,7 +105,10 @@ class RlBirdviewAgent():
             # run_id = "fg8y4a2n"
             # run_id = "Neil009RL"
             run_id = ""
-            with open('outputs/checkpoint.txt') as f:
+            # import os
+            # if bVerbose:
+            #     print("os.getcwd()",os.getcwd())
+            with open('../../checkpoint.txt') as f:
                 checkpoint = f.read()
                 run_id = checkpoint.split("/")[2]
             if bVerbose:

@@ -1,12 +1,14 @@
 #!/bin/bash
 
 train_rl () {
+  echo "start at $(date)"
   python -u train_rl_NeilBranch0.py \
   agent.ppo.wb_run_path=null \
   wb_project=train_rl_experts wb_name=roach \
   agent/ppo/policy=xtma_beta \
   agent.ppo.training.kwargs.explore_coef=0.05 \
   carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+  echo "end at $(date)"
 }
 
 # To use gaussian distribution: `agent/ppo/policy=xtma_gaus`

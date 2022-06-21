@@ -5493,3 +5493,189 @@ train_rl.yaml: "total_timesteps: 1e5"
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/17ilnqbn
 ```
+```
+int(cfg.total_timesteps) 100000
+callback <stable_baselines3.common.callbacks.CallbackList object at 0x7fb3175c8a90>
+cfg.seed 2021
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:266
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12288
+n_epoch: 1, num_timesteps: 24576
+n_epoch: 2, num_timesteps: 36864
+n_epoch: 3, num_timesteps: 49152
+n_epoch: 4, num_timesteps: 61440
+n_epoch: 5, num_timesteps: 73728
+n_epoch: 6, num_timesteps: 86016
+n_epoch: 7, num_timesteps: 98304
+n_epoch: 8, num_timesteps: 110592
+```
+6/20/2022 4:10 PM: Try resuming training that has already completed.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/17ilnqbn
+wandb: Run summary:
+wandb:             eval/collisions_layout 0
+wandb:             eval/collisions_others 0
+wandb:         eval/collisions_pedestrian 0
+wandb:            eval/collisions_vehicle 113.82274
+wandb:               eval/encounter_light 0
+wandb:                eval/encounter_stop 0
+wandb:                  eval/eval_timeout 0
+wandb:            eval/is_route_completed 0
+wandb:    eval/is_route_completed_nocrash 0
+wandb:                        eval/length 959.88889
+wandb:                  eval/light_passed 0
+wandb:                    eval/n_episodes 9
+wandb:       eval/percentage_outside_lane 0
+wandb:         eval/percentage_wrong_lane 0
+wandb:                     eval/red_light 0
+wandb:                        eval/reward -39.88508
+wandb:         eval/route_completed_in_km 0.00789
+wandb:                     eval/route_dev 0
+wandb:            eval/route_length_in_km 1.67838
+wandb:                eval/score_composed 0.00603
+wandb:                 eval/score_penalty 0.91111
+wandb:                   eval/score_route 0.00789
+wandb:               eval/stop_infraction 0
+wandb:                   eval/stop_passed 0
+wandb:                       eval/timeout 0
+wandb:               eval/vehicle_blocked 361.11068
+wandb:          rollout/collisions_layout 2.47815
+wandb:          rollout/collisions_others 0
+wandb:      rollout/collisions_pedestrian 0
+wandb:         rollout/collisions_vehicle 11.82891
+wandb:            rollout/encounter_light 0.2
+wandb:             rollout/encounter_stop 0.02857
+wandb:         rollout/is_route_completed 0
+wandb: rollout/is_route_completed_nocrash 0
+wandb:                     rollout/length 3077.08571
+wandb:               rollout/light_passed 0.05714
+wandb:                 rollout/n_episodes 35
+wandb:    rollout/percentage_outside_lane 0.00356
+wandb:      rollout/percentage_wrong_lane 0
+wandb:                  rollout/red_light 38.02827
+wandb:                     rollout/reward -1586.52933
+wandb:      rollout/route_completed_in_km 0.01926
+wandb:                  rollout/route_dev 0
+wandb:         rollout/route_length_in_km 1.68333
+wandb:             rollout/score_composed 0.01709
+wandb:              rollout/score_penalty 0.86522
+wandb:                rollout/score_route 0.01926
+wandb:            rollout/stop_infraction 0
+wandb:                rollout/stop_passed 0.02857
+wandb:                    rollout/timeout 0
+wandb:            rollout/vehicle_blocked 0
+wandb:                           time/fps 27.26424
+wandb:                      time/fps_eval 22.64021
+wandb:                       time/n_epoch 8
+wandb:                       time/rollout 399.19347
+wandb:                 time/sec_per_epoch 450.70021
+wandb:                        time/t_eval 397.52277
+wandb:                         time/train 53.97353
+wandb:                  time/train_values 0
+wandb:                train/clip_fraction 0.03407
+wandb:                   train/clip_range 0.2
+wandb:                 train/entropy_loss 0.06616
+wandb:           train/explained_variance 0.91169
+wandb:             train/exploration_loss 0.02552
+wandb:                train/last_epoch_kl 0.00276
+wandb:                train/learning_rate 1e-05
+wandb:                         train/loss 3.9453
+wandb:         train/policy_gradient_loss 0.07092
+wandb:                  train/train_epoch 19
+wandb:                   train/value_loss 7.74488
+wandb: 
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/17ilnqbn
+```
+Script does not train. 
+
+6/20/2022 4:17 PM: train_rl.yaml: "total_timesteps: 125000"
+```
+wandb: Run summary:
+wandb:             eval/collisions_layout 0
+wandb:             eval/collisions_others 0
+wandb:         eval/collisions_pedestrian 0
+wandb:            eval/collisions_vehicle 113.82274
+wandb:               eval/encounter_light 0
+wandb:                eval/encounter_stop 0
+wandb:                  eval/eval_timeout 0
+wandb:            eval/is_route_completed 0
+wandb:    eval/is_route_completed_nocrash 0
+wandb:                        eval/length 959.88889
+wandb:                  eval/light_passed 0
+wandb:                    eval/n_episodes 9
+wandb:       eval/percentage_outside_lane 0
+wandb:         eval/percentage_wrong_lane 0
+wandb:                     eval/red_light 0
+wandb:                        eval/reward -39.88508
+wandb:         eval/route_completed_in_km 0.00789
+wandb:                     eval/route_dev 0
+wandb:            eval/route_length_in_km 1.67838
+wandb:                eval/score_composed 0.00603
+wandb:                 eval/score_penalty 0.91111
+wandb:                   eval/score_route 0.00789
+wandb:               eval/stop_infraction 0
+wandb:                   eval/stop_passed 0
+wandb:                       eval/timeout 0
+wandb:               eval/vehicle_blocked 361.11068
+wandb:          rollout/collisions_layout 0.0
+wandb:          rollout/collisions_others 0.0
+wandb:      rollout/collisions_pedestrian 0.0
+wandb:         rollout/collisions_vehicle 0.0
+wandb:            rollout/encounter_light 0.38462
+wandb:             rollout/encounter_stop 0.23077
+wandb:         rollout/is_route_completed 0.0
+wandb: rollout/is_route_completed_nocrash 0.0
+wandb:                     rollout/length 1533.15385
+wandb:               rollout/light_passed 0.0
+wandb:                 rollout/n_episodes 13.0
+wandb:    rollout/percentage_outside_lane 0.00172
+wandb:      rollout/percentage_wrong_lane 0.0
+wandb:                  rollout/red_light 70.39481
+wandb:                     rollout/reward -250.04984
+wandb:      rollout/route_completed_in_km 0.0194
+wandb:                  rollout/route_dev 0.0
+wandb:         rollout/route_length_in_km 1.6523
+wandb:             rollout/score_composed 0.01777
+wandb:              rollout/score_penalty 0.88289
+wandb:                rollout/score_route 0.0194
+wandb:            rollout/stop_infraction 0.0
+wandb:                rollout/stop_passed 0.23077
+wandb:                    rollout/timeout 0.0
+wandb:            rollout/vehicle_blocked 0.0
+wandb:                           time/fps 22.57296
+wandb:                      time/fps_eval 22.64021
+wandb:                       time/n_epoch 1
+wandb:                       time/rollout 458.39392
+wandb:                 time/sec_per_epoch 544.36816
+wandb:                        time/t_eval 397.52277
+wandb:                         time/train 53.91302
+wandb:                  time/train_values 0.0
+wandb:                train/clip_fraction 0.04708
+wandb:                   train/clip_range 0.2
+wandb:                 train/entropy_loss 0.04387
+wandb:           train/explained_variance 0.90336
+wandb:             train/exploration_loss 0.01278
+wandb:                train/last_epoch_kl 0.00278
+wandb:                train/learning_rate 1e-05
+wandb:                         train/loss 2.49304
+wandb:         train/policy_gradient_loss 0.08709
+wandb:                  train/train_epoch 19
+wandb:                   train/value_loss 4.80976
+wandb: 
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/17ilnqbn
+```
+6/20/2022 11:13 PM: Change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak11". 
+Find train time of 1M steps on Town01. 
+
+train_rl.yaml: total_timesteps: 1e6
+
+endless_all.yaml: Town01
+
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/2qt330gf
+```

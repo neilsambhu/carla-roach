@@ -5678,4 +5678,609 @@ endless_all.yaml: Town01
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/2qt330gf
+run/train_rl_NeilBranch0.sh: line 3: 84553 Segmentation fault      (core dumped) python -u train_rl_NeilBranch0.py agent.ppo.wb_run_path=null wb_project=train_rl_experts wb_name=roach agent/ppo/policy=xtma_beta agent.ppo.training.kwargs.explore_coef=0.05 carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+ PYTHON_RETURN=0!!! Start Over!!!
+```
+```
+start at Mon Jun 20 23:16:02 EDT 2022
+Neil start here 1
+Neil start here 1
+[2022-06-20 23:16:05,603][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+Neil start here 2
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-20 23:16:06,621][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-20 23:16:06,621][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil left here 2
+Neil start here 3
+Neil left here 3
+Neil start here 4
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6.0
+cfg.agent[agent_name] {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.agent[agent_name].entry_point agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent
+Neil 6.1
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+Neil 6.2
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_agent.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-06-20/23-16-04
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_agent.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.1000
+Neil 6.2.6
+Neil 6.3
+Neil left here 6.0
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+[2022-06-20 23:16:11,670][__main__][INFO] - making port 2000
+calling registration.py > make(id, **kwargs)
+Neil start here 100
+type(env) <class 'stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv'>
+env <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f87d8ae4550>
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/utils/wandb_callback.py:27
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction', 'kwargs': {}}, 'terminal': {'entry_point': 'terminal.valeo_no_det_px:ValeoNoDetPx', 'kwargs': {}}}}, 'ev_id': 'hero', 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'total_timesteps': 1000000.0, 'seed': 2021, 'kill_running': True, 'dummy': False, 'wb_project': 'train_rl_experts', 'wb_name': 'roach', 'wb_notes': None, 'wb_tags': None, 'curriculum': False, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}}, 'train_envs': [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]}
+Neil left here 100
+Neil start here 200
+Neil left here 200
+int(cfg.total_timesteps) 1000000
+callback <stable_baselines3.common.callbacks.CallbackList object at 0x7f86e2256d10>
+cfg.seed 2021
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12288
+n_epoch: 1, num_timesteps: 24576
+n_epoch: 2, num_timesteps: 36864
+n_epoch: 3, num_timesteps: 49152
+n_epoch: 4, num_timesteps: 61440
+n_epoch: 5, num_timesteps: 73728
+n_epoch: 6, num_timesteps: 86016
+n_epoch: 7, num_timesteps: 98304
+n_epoch: 8, num_timesteps: 110592
+n_epoch: 9, num_timesteps: 122880
+end at Tue Jun 21 02:25:34 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+```
+6/21/2022 7:32 AM: Change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak12". 
+Find train time of 10K steps on Town01. 
+
+train_rl.yaml: total_timesteps: 1e4
+
+endless_all.yaml: Town01
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/19l5zld7
+```
+```
+start at Tue Jun 21 07:32:37 EDT 2022
+Neil start here 1
+Neil start here 1
+[2022-06-21 07:32:39,814][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+Neil start here 2
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-21 07:32:40,832][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 07:32:40,832][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil left here 2
+Neil start here 3
+Neil left here 3
+Neil start here 4
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6.0
+cfg.agent[agent_name] {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.agent[agent_name].entry_point agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent
+Neil 6.1
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+Neil 6.2
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_agent.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-06-21/07-32-38
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_agent.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.1000
+Neil 6.2.6
+Neil 6.3
+Neil left here 6.0
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+[2022-06-21 07:32:45,884][__main__][INFO] - making port 2000
+calling registration.py > make(id, **kwargs)
+Neil start here 100
+type(env) <class 'stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv'>
+env <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f53a8ec8b90>
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/utils/wandb_callback.py:27
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction', 'kwargs': {}}, 'terminal': {'entry_point': 'terminal.valeo_no_det_px:ValeoNoDetPx', 'kwargs': {}}}}, 'ev_id': 'hero', 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'total_timesteps': 10000.0, 'seed': 2021, 'kill_running': True, 'dummy': False, 'wb_project': 'train_rl_experts', 'wb_name': 'roach', 'wb_notes': None, 'wb_tags': None, 'curriculum': False, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}}, 'train_envs': [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]}
+Neil left here 100
+Neil start here 200
+Neil left here 200
+int(cfg.total_timesteps) 10000
+callback <stable_baselines3.common.callbacks.CallbackList object at 0x7f538f087fd0>
+cfg.seed 2021
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12288
+[2022-06-21 07:50:54,432][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 07:50:59,437][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+[2022-06-21 07:50:59,438][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 07:51:05 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+```
+18 minutes 28 seconds
+
+6/21/2022 8:06 AM: Change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak13". 
+Find train time of 10K steps on Town01-Town03. 
+
+train_rl.yaml: total_timesteps: 1e4
+
+endless_all.yaml: Town01-Town03
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ run/train_rl_NeilBranch0.sh>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/14whyfkz
+```
+```
+start at Tue Jun 21 08:06:01 EDT 2022
+Neil start here 1
+Neil start here 1
+[2022-06-21 08:06:04,066][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+Neil start here 2
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town02', 'num_zombie_vehicles': [0, 100], 'num_zombie_walkers': [0, 200], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'num_zombie_vehicles': [0, 120], 'num_zombie_walkers': [0, 120], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-21 08:06:05,086][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 08:06:05,087][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 08:06:05,096][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 08:06:05,105][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+Neil left here 2
+Neil start here 3
+Neil left here 3
+Neil start here 4
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6.0
+cfg.agent[agent_name] {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.agent[agent_name].entry_point agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent
+Neil 6.1
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+Neil 6.2
+Neil 6.2.1
+rl_birdview_agent.py > __init__
+Neil 6.2.2
+Neil 6.2.3
+Neil 6.2.4
+path_to_conf_file config_agent.yaml
+exists(path_to_conf_file) True
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-06-21/08-06-02
+Neil 6.2.5
+Neil 6.2.5.100
+path_to_conf_file config_agent.yaml
+Neil 6.2.5.101
+Neil 6.2.5.2
+Neil 6.2.5.1000
+Neil 6.2.6
+Neil 6.3
+Neil left here 6.0
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+Neil start here 100
+type(env) <class 'stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv'>
+env <stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7f5c9c037390>
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/utils/wandb_callback.py:27
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction', 'kwargs': {}}, 'terminal': {'entry_point': 'terminal.valeo_no_det_px:ValeoNoDetPx', 'kwargs': {}}}}, 'ev_id': 'hero', 'carla_sh_path': '/opt/carla-simulator/CarlaUE4.sh', 'total_timesteps': 10000.0, 'seed': 2021, 'kill_running': True, 'dummy': False, 'wb_project': 'train_rl_experts', 'wb_name': 'roach', 'wb_notes': None, 'wb_tags': None, 'curriculum': False, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}}, 'train_envs': [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town02', 'num_zombie_vehicles': [0, 100], 'num_zombie_walkers': [0, 200], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'num_zombie_vehicles': [0, 120], 'num_zombie_walkers': [0, 120], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]}
+Neil left here 100
+Neil start here 200
+Neil left here 200
+int(cfg.total_timesteps) 10000
+callback <stable_baselines3.common.callbacks.CallbackList object at 0x7f5c9c4f8ad0>
+cfg.seed 2021
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12288
+[2022-06-21 08:13:15,872][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 08:13:20,878][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+[2022-06-21 08:13:20,878][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 08:13:26 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+```
+7 minutes 25 seconds
+
+6/21/2022 9:31 AM: Change "outputs/checkpoint.txt" to "outputs/checkpoint.txt.bak14". 
+Find max counts of Towns on 1 GPU.
+
+train_rl.yaml: total_timesteps: 1e4
+
+endless_all.yaml: Town01-Town06
+
+crashed at 6 towns
+
+6/21/2022 11:09 AM: 
+
+train_rl.yaml: total_timesteps: 1e4
+
+endless_all.yaml: Town01-Town05
+```
+start at Tue Jun 21 09:52:25 EDT 2022
+[2022-06-21 09:52:28,584][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 09:52:29,603][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 09:52:29,603][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 09:52:29,611][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 09:52:29,618][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 09:52:29,625][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=1 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 09:52:29,632][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=1 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12285
+[2022-06-21 09:58:34,698][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 09:58:39,703][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 09:58:39,704][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 09:58:46 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+```
+6 minutes 21 seconds
+
+6/21/2022 11:11 AM: TODO: write script to modify (1) train_rl.yaml and (2) endless_all.yaml 
+and call (3) train_rl_NeilBranch.sh.
+
+6/21/2022 1:30 PM: 
+lGlobal_total_timesteps = 25000
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python run/train_rl_parent_NeilBranch0.py>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/w3hu9s5t
+```
+```
+start at Tue Jun 21 13:27:50 EDT 2022
+[2022-06-21 13:27:53,831][utils.server_utils][INFO] - Kill Carla Servers!
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town02', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town04', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town05', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-21 13:27:54,851][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:27:54,852][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 13:27:54,861][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 13:27:54,869][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 13:27:54,878][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 13:27:54,888][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12285
+n_epoch: 1, num_timesteps: 24570
+[2022-06-21 13:39:56,128][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:40:01,133][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:40:01,134][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 13:40:06 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+start at Tue Jun 21 13:40:06 EDT 2022
+[2022-06-21 13:40:09,759][utils.server_utils][INFO] - Kill Carla Servers!
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town02', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town04', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town05', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town06', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-21 13:40:10,780][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:40:10,781][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 13:40:10,790][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 13:40:10,799][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 13:40:10,809][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 13:40:10,816][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 13:40:23 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+start at Tue Jun 21 13:40:23 EDT 2022
+[2022-06-21 13:40:26,822][utils.server_utils][INFO] - Kill Carla Servers!
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town04', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town05', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town06', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+[2022-06-21 13:40:27,843][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:40:27,844][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 13:40:27,853][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 13:40:27,862][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 13:40:27,870][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 13:40:27,878][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 13:40:40 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+starting epoch 0, total_timesteps: 12288
+finished epoch 0
+starting epoch 1, total_timesteps: 24576
+finished epoch 1
+starting epoch 2, total_timesteps: 36864
+finished epoch 2
+```
+6/21/2022 1:48 PM: Delete outputs/checkpoint.txt. Change python flag: add "-u" flag.
+
+lGlobal_total_timesteps = 25000
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/2x3efu5y
+```
+```
+starting epoch 0, total_timesteps: 12288
+start at Tue Jun 21 13:47:15 EDT 2022
+[2022-06-21 13:47:18,438][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:47:19,459][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:47:19,459][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 13:47:19,468][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 13:47:19,479][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 13:47:19,489][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 13:47:19,497][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12285
+n_epoch: 1, num_timesteps: 24570
+[2022-06-21 13:59:35,875][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:59:40,881][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:59:40,882][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 13:59:46 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 0
+starting epoch 1, total_timesteps: 24576
+start at Tue Jun 21 13:59:46 EDT 2022
+[2022-06-21 13:59:49,621][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:59:50,642][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 13:59:50,642][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 13:59:50,651][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 13:59:50,659][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 13:59:50,667][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 13:59:50,678][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 14:00:04 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 1
+starting epoch 2, total_timesteps: 36864
+start at Tue Jun 21 14:00:04 EDT 2022
+[2022-06-21 14:00:07,588][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:00:08,607][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:00:08,607][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:00:08,617][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:00:08,625][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:00:08,633][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:00:08,643][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 14:00:22 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 2
+```
+6/21/2022 2:12 PM: Delete outputs/checkpoint.txt. Review epochs for each set of Towns.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
+```
+```
+lEpochs: 3
+starting epoch 0, total_timesteps: 12288, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05', 'Town06']
+start at Tue Jun 21 14:13:13 EDT 2022
+[2022-06-21 14:13:16,598][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:13:17,617][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:13:17,617][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:13:17,625][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:13:17,634][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:13:17,642][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:13:17,650][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12285
+n_epoch: 1, num_timesteps: 24570
+[2022-06-21 14:26:16,340][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:26:21,346][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:26:21,347][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 14:26:28 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 0
+starting epoch 1, total_timesteps: 24576, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05', 'Town06']
+start at Tue Jun 21 14:26:28 EDT 2022
+[2022-06-21 14:26:31,037][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:26:32,057][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:26:32,057][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:26:32,067][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:26:32,075][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:26:32,083][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:26:32,094][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 14:26:46 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 1
+starting epoch 2, total_timesteps: 36864, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05', 'Town06']
+start at Tue Jun 21 14:26:46 EDT 2022
+[2022-06-21 14:26:49,690][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:26:50,709][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:26:50,709][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:26:50,719][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:26:50,728][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:26:50,736][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:26:50,744][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 14:27:04 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 2
+```
+6/21/2022 2:29 PM: Delete outputs/checkpoint.txt. Delete checkpoint.txt.bak files.
+Change starting epoch steps to half to get a better mapping. 
+Fix print of listTowns.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
+```
+```
+lGlobal_total_timesteps: 25000, lEpochs: 3
+starting epoch 0, total_timesteps: 6144, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
+start at Tue Jun 21 14:31:26 EDT 2022
+[2022-06-21 14:31:29,751][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:31:30,771][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:31:30,771][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:31:30,780][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:31:30,789][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:31:30,797][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:31:30,806][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12285
+[2022-06-21 14:37:33,157][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:37:38,162][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:37:38,163][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 14:37:44 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 0
+starting epoch 1, total_timesteps: 18432, listTowns: ['Town02', 'Town03', 'Town04', 'Town05', 'Town06']
+start at Tue Jun 21 14:37:44 EDT 2022
+[2022-06-21 14:37:47,396][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:37:48,417][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:37:48,417][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:37:48,426][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:37:48,435][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:37:48,444][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:37:48,452][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 14:38:01 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 1
+starting epoch 2, total_timesteps: 30720, listTowns: ['Town03', 'Town04', 'Town05', 'Town06', 'Town01']
+start at Tue Jun 21 14:38:01 EDT 2022
+[2022-06-21 14:38:04,540][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:38:05,561][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:38:05,561][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:38:05,572][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:38:05,582][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:38:05,590][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:38:05,598][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 14:38:18 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 2
+```
+6/21/2022 2:45 PM: Delete outputs/checkpoint.txt. Make wandb sync after each epoch.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 185, in setup
+    f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+ValueError: max() arg is an empty sequence
+```
+```
+lGlobal_total_timesteps: 25000, lEpochs: 3
+starting epoch 0, total_timesteps: 6144, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
+start at Tue Jun 21 14:56:36 EDT 2022
+[2022-06-21 14:56:39,810][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:56:40,831][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 14:56:40,831][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 14:56:40,841][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 14:56:40,852][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 14:56:40,861][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 14:56:40,869][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12285
+[2022-06-21 15:02:49,831][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:02:54,837][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:02:54,838][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 15:03:02 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 0
+starting epoch 1, total_timesteps: 18432, listTowns: ['Town02', 'Town03', 'Town04', 'Town05', 'Town06']
+start at Tue Jun 21 15:03:03 EDT 2022
+[2022-06-21 15:03:05,820][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:03:06,841][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:03:06,841][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 15:03:06,850][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 15:03:06,857][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 15:03:06,866][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 15:03:06,875][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 15:03:19 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 1
+starting epoch 2, total_timesteps: 30720, listTowns: ['Town03', 'Town04', 'Town05', 'Town06', 'Town01']
+start at Tue Jun 21 15:03:20 EDT 2022
+[2022-06-21 15:03:23,505][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:03:24,526][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:03:24,526][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 15:03:24,536][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 15:03:24,544][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 15:03:24,554][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 15:03:24,562][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 15:03:37 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 2
+```
+6/21/2022 2:45 PM: Delete outputs/checkpoint.txt. Add delay after wandb sync.
+```
+lGlobal_total_timesteps: 25000, lEpochs: 3
+starting epoch 0, total_timesteps: 6144, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
+start at Tue Jun 21 15:07:11 EDT 2022
+[2022-06-21 15:07:14,664][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:07:15,683][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:07:15,683][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 15:07:15,693][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 15:07:15,701][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 15:07:15,709][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 15:07:15,719][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py:272
+trainable parameters: 1.53M
+Neil /home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py:221
+n_epoch: 0, num_timesteps: 12285
+[2022-06-21 15:13:22,616][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:13:27,622][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:13:27,623][__main__][INFO] - train_rl.py DONE!
+end at Tue Jun 21 15:13:32 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 0
+starting epoch 1, total_timesteps: 18432, listTowns: ['Town02', 'Town03', 'Town04', 'Town05', 'Town06']
+start at Tue Jun 21 15:13:43 EDT 2022
+[2022-06-21 15:13:46,398][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:13:47,418][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:13:47,419][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 15:13:47,429][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 15:13:47,437][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 15:13:47,445][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 15:13:47,453][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 15:14:00 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 1
+starting epoch 2, total_timesteps: 30720, listTowns: ['Town03', 'Town04', 'Town05', 'Town06', 'Town01']
+start at Tue Jun 21 15:14:11 EDT 2022
+[2022-06-21 15:14:14,130][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:14:15,151][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-21 15:14:15,151][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-21 15:14:15,160][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-21 15:14:15,168][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-21 15:14:15,176][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-21 15:14:15,186][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+end at Tue Jun 21 15:14:28 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 2
+```
+6/21/2022 3:17 PM: Delete outputs/checkpoint.txt. Remove delay after wandb sync. Add multiple epochs before sync.
+
+6/21/2022 4:06 PM: get train_rl_parent_NeilBranch0.py to run multiple epochs.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
 ```

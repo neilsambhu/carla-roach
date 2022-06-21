@@ -216,7 +216,7 @@ class PPO():
     
     def learn(self, total_timesteps, callback=None, seed=2021):
         from inspect import currentframe, getframeinfo
-        bVerbose = True
+        bVerbose = False
         if bVerbose:
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         # reset env seed

@@ -22,7 +22,7 @@ class WandbCallback(BaseCallback):
         wandb.init(project=cfg.wb_project, name=cfg.wb_name, notes=cfg.wb_notes, tags=cfg.wb_tags)
         # wandb.init(project=cfg.wb_project, name=cfg.wb_name, notes=cfg.wb_notes, tags=cfg.wb_tags, allow_val_change=True)
         from inspect import currentframe, getframeinfo
-        bVerbose = True
+        bVerbose = False
         if bVerbose:
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
             print("type(cfg)",type(cfg))

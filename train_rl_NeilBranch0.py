@@ -164,3 +164,8 @@ if __name__ == '__main__':
     if bVerbose:
         print("Neil left here 1")
     log.info("train_rl.py DONE!")
+    # import sys
+    # sys.exit()
+    import os
+    os._exit(1)
+    # print("a")

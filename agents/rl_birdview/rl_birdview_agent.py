@@ -105,9 +105,6 @@ class RlBirdviewAgent():
             # run_id = "fg8y4a2n"
             # run_id = "Neil009RL"
             run_id = ""
-            # import os
-            # if bVerbose:
-            #     print("os.getcwd()",os.getcwd())
             with open('../../checkpoint.txt') as f:
                 checkpoint = f.read()
                 run_id = checkpoint.split("/")[2]
@@ -167,11 +164,11 @@ class RlBirdviewAgent():
                 print('Neil 6.2.5.606')
             
             all_ckpts = [f for f in run.files() if 'ckpt' in f.name]
-            if bVerbose:
-                print('Neil 6.2.5.607')
-                print("type(all_ckpts)",type(all_ckpts))
+            if bVerbose or True:
+                # print('Neil 6.2.5.607')
+                # print("type(all_ckpts)",type(all_ckpts))
                 print("all_ckpts",all_ckpts)
-                print('Neil 6.2.5.608')
+                # print('Neil 6.2.5.608')
 
             if bVerbose:
                 print('Neil 6.2.5.700')
@@ -267,7 +264,6 @@ class RlBirdviewAgent():
     
     def learn(self, env, total_timesteps, callback, seed):
         from inspect import currentframe, getframeinfo
-        bVerbose = True
         if bVerbose:
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         if self._policy is None:

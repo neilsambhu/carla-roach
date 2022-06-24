@@ -6284,3 +6284,87 @@ finished epoch 2
 ```
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
 ```
+6/21/2022 4:46 PM: try upgrading wandb.
+
+6/21/2022 4:54 PM: all_ckpts is empty
+```
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 90, in main
+    agent = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 185, in setup
+    f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+ValueError: max() arg is an empty sequence
+```
+6/21/2022 5:09 PM: grep "rollout"
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "rollout">outgrep.txt
+agents/rl_birdview/models/ppo_buffer.py:        for rollout_data in self.get(batch_size):
+agents/rl_birdview/models/ppo_buffer.py:            self.sample_queue.put(rollout_data)
+Binary file agents/rl_birdview/models/__pycache__/ppo_policy.cpython-37.pyc matches
+Binary file agents/rl_birdview/models/__pycache__/ppo_buffer.cpython-37.pyc matches
+Binary file agents/rl_birdview/models/__pycache__/ppo.cpython-37.pyc matches
+agents/rl_birdview/models/ppo.py:    def collect_rollouts(self, env: VecEnv, callback: BaseCallback,
+agents/rl_birdview/models/ppo.py:                         rollout_buffer: PpoBuffer, n_rollout_steps: int) -> bool:
+agents/rl_birdview/models/ppo.py:        rollout_buffer.reset()
+agents/rl_birdview/models/ppo.py:        while n_steps < n_rollout_steps:
+agents/rl_birdview/models/ppo.py:            rollout_buffer.add(self._last_obs, actions, rewards, self._last_dones, values, log_probs, mu, sigma, infos)
+agents/rl_birdview/models/ppo.py:        rollout_buffer.compute_returns_and_advantage(last_values, dones=self._last_dones)
+agents/rl_birdview/models/ppo.py:            # Do a complete pass on the rollout buffer
+agents/rl_birdview/models/ppo.py:                rollout_data = self.buffer.sample_queue.get()
+agents/rl_birdview/models/ppo.py:                    rollout_data.observations, rollout_data.actions, rollout_data.exploration_suggests,
+agents/rl_birdview/models/ppo.py:                advantages = rollout_data.advantages
+agents/rl_birdview/models/ppo.py:                ratio = th.exp(log_prob - rollout_data.old_log_prob)
+agents/rl_birdview/models/ppo.py:                    values_pred = rollout_data.old_values + th.clamp(values - rollout_data.old_values,
+agents/rl_birdview/models/ppo.py:                value_loss = F.mse_loss(rollout_data.returns, values_pred)
+agents/rl_birdview/models/ppo.py:                        rollout_data.old_mu, rollout_data.old_sigma)
+agents/rl_birdview/models/ppo.py:            callback.on_rollout_start()
+agents/rl_birdview/models/ppo.py:            continue_training = self.collect_rollouts(self.env, callback, self.buffer, self.n_steps)
+agents/rl_birdview/models/ppo.py:            self.t_rollout = time.time() - t0
+agents/rl_birdview/models/ppo.py:            callback.on_rollout_end()
+agents/rl_birdview/models/ppo_policy.py:        used in collect_rollouts(), do not clamp actions
+Binary file agents/rl_birdview/utils/__pycache__/wandb_callback.cpython-37.pyc matches
+agents/rl_birdview/utils/wandb_callback.py:    def _on_rollout_start(self):
+agents/rl_birdview/utils/wandb_callback.py:            'time/rollout': self.model.t_rollout
+agents/rl_birdview/utils/wandb_callback.py:    def _on_rollout_end(self):
+agents/rl_birdview/utils/wandb_callback.py:        wandb.log({'time/rollout': self.model.t_rollout}, step=self.model.num_timesteps)
+agents/rl_birdview/utils/wandb_callback.py:        # save rollout statistics
+agents/rl_birdview/utils/wandb_callback.py:        avg_ep_stat = self.get_avg_ep_stat(self.model.ep_stat_buffer, prefix='rollout/')
+```
+6/21/2022 5:09 PM: grep "collect_rollouts"
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "collect_rollouts">outgrep.txt
+agents/rl_birdview/models/ppo.py:    def collect_rollouts(self, env: VecEnv, callback: BaseCallback,
+agents/rl_birdview/models/ppo.py:            continue_training = self.collect_rollouts(self.env, callback, self.buffer, self.n_steps)
+agents/rl_birdview/models/ppo_policy.py:        used in collect_rollouts(), do not clamp actions
+```
+6/22/2022 10:27 PM: 
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 155, in main
+    agent.learn(env, total_timesteps=int(cfg.total_timesteps), callback=callback, seed=cfg.seed)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 275, in learn
+    model.learn(total_timesteps, callback=callback, seed=seed)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py", line 244, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.buffer, self.n_steps)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py", line 82, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(actions)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 161, in step
+    return self.step_wait()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 107, in step_wait
+    results = [remote.recv() for remote in self.remotes]
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 107, in <listcomp>
+    results = [remote.recv() for remote in self.remotes]
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
+```
+TODO: replicate error by stopping train_rl_parent_NeilBranch0.py and running train_rl_NeilBranh0.sh.
+
+6/22/2022 10:40 PM: EOFError gone

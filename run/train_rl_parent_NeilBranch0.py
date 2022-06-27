@@ -32,8 +32,10 @@ def get_listTowns(listTowns,lTowns,lEpoch):
         lIdx_listTowns += 1
     return listTownsOutput
 def EstimatedCompletion(dtStart, dtCurrent, lEpoch, lEpochs):
-    fPercentComplete = float(lEpoch/lEpochs)
+    fPercentComplete = (lEpoch+1)/lEpochs
+    # print(f'lEpoch: {lEpoch}, lEpochs: {lEpochs}, fPercentComplete: {fPercentComplete}')
     tdStartCurrent = dtCurrent-dtStart
+    # print(f'fPercentComplete: {fPercentComplete}, tdStartCurrent: {tdStartCurrent}')
     dtEstimatedCompletion = dtStart + tdStartCurrent/fPercentComplete
     print(f'fPercentComplete: {fPercentComplete}, tdStartCurrent: {tdStartCurrent}, dtEstimatedCompletion: {dtEstimatedCompletion}')
 
@@ -42,7 +44,8 @@ if __name__ == '__main__':
         os.remove("outputs/checkpoint.txt")
 
     lGlobal_total_timesteps = int(1e7)
-    lGlobal_total_timesteps = int(1e4)
+    # lGlobal_total_timesteps = int(1e3)
+    listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
     n_steps_total = 0
     with open("config/agent/ppo/training/ppo.yaml") as file:
@@ -50,10 +53,10 @@ if __name__ == '__main__':
         n_steps_total = ppo['kwargs']['n_steps_total']
     # lStepsFirstEpoch = n_steps_total*20
     # lEpochs = math.ceil((lGlobal_total_timesteps-lStepsFirstEpoch)/n_steps_total)+1
-    lDeltaStepsEpoch = n_steps_total*20
+    # lDeltaStepsEpoch = n_steps_total*20
+    lDeltaStepsEpoch = math.ceil(lGlobal_total_timesteps/len(listTowns))
     lEpochs = math.ceil(lGlobal_total_timesteps/lDeltaStepsEpoch)
     print(f'lGlobal_total_timesteps: {lGlobal_total_timesteps}, n_steps_total: {n_steps_total}, lEpochs: {lEpochs}')
-    listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
     total_timesteps = lDeltaStepsEpoch
     dtStart = datetime.now()
@@ -65,6 +68,6 @@ if __name__ == '__main__':
         train_rl_NeilBranch0_sh()
         print(f'finished epoch {lEpoch}')
 
-        # EstimatedCompletion(dtStart,datetime.now(),lEpoch,lEpochs)
+        EstimatedCompletion(dtStart,datetime.now(),lEpoch,lEpochs)
 
         total_timesteps += lDeltaStepsEpoch

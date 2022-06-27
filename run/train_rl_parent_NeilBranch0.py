@@ -32,7 +32,7 @@ def get_listTowns(listTowns,lTowns,lEpoch):
         lIdx_listTowns += 1
     return listTownsOutput
 def EstimatedCompletion(dtStart, dtCurrent, lEpoch, lEpochs):
-    fPercentComplete = lEpoch/lEpochs
+    fPercentComplete = float(lEpoch/lEpochs)
     tdStartCurrent = dtCurrent-dtStart
     dtEstimatedCompletion = dtStart + tdStartCurrent/fPercentComplete
     print(f'fPercentComplete: {fPercentComplete}, tdStartCurrent: {tdStartCurrent}, dtEstimatedCompletion: {dtEstimatedCompletion}')
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         os.remove("outputs/checkpoint.txt")
 
     lGlobal_total_timesteps = int(1e7)
-    # lGlobal_total_timesteps = int(10)
+    lGlobal_total_timesteps = int(1e4)
 
     n_steps_total = 0
     with open("config/agent/ppo/training/ppo.yaml") as file:
@@ -65,6 +65,6 @@ if __name__ == '__main__':
         train_rl_NeilBranch0_sh()
         print(f'finished epoch {lEpoch}')
 
-        EstimatedCompletion(dtStart,datetime.now(),lEpoch,lEpochs)
+        # EstimatedCompletion(dtStart,datetime.now(),lEpoch,lEpochs)
 
         total_timesteps += lDeltaStepsEpoch

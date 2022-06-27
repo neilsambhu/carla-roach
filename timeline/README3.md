@@ -6372,3 +6372,5 @@ TODO: replicate error by stopping train_rl_parent_NeilBranch0.py and running tra
 6/25/2022 1:31 AM: EOFError persists; training continues
 
 6/26/2022 7:57 PM: cancel training. Modify train_rl_parent_NeilBranch0.py to larger number of epochs between sets of towns to prevent re-training on the same timestep. 
+
+6/27/2022 2:05 AM: stop execution. Change to 6 sets of towns; 6 sets of epochs.

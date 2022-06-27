@@ -56,7 +56,7 @@ if __name__ == '__main__':
     # lDeltaStepsEpoch = n_steps_total*20
     lDeltaStepsEpoch = math.ceil(lGlobal_total_timesteps/len(listTowns))
     lEpochs = math.ceil(lGlobal_total_timesteps/lDeltaStepsEpoch)
-    print(f'lGlobal_total_timesteps: {lGlobal_total_timesteps}, n_steps_total: {n_steps_total}, lEpochs: {lEpochs}')
+    print(f'lGlobal_total_timesteps: {lGlobal_total_timesteps}, n_steps_total: {n_steps_total}, lEpochs: {lEpochs}, lDeltaStepsEpoch: {lDeltaStepsEpoch}')
 
     total_timesteps = lDeltaStepsEpoch
     dtStart = datetime.now()

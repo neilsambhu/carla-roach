@@ -19,10 +19,21 @@
 # * To benchmark rl experts.
 agent="ppo"
 benchmark () {
+  # python -u benchmark_NeilBranch0.py resume=true log_video=true \
+  # wb_project=iccv21-roach-benchmark \
+  # agent=$agent actors.hero.agent=$agent \
+  # agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+  # 'wb_group="Roach"' \
+  # 'wb_notes="Benchmark Roach on NoCrash-dense."' \
+  # test_suites=nocrash_dense \
+  # seed=2021 \
+  # +wb_sub_group=nocrash_dense-2021 \
+  # no_rendering=true \
+  # carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
   python -u benchmark_NeilBranch0.py resume=true log_video=true \
-  wb_project=iccv21-roach-benchmark \
+  wb_project=train_rl_experts \
   agent=$agent actors.hero.agent=$agent \
-  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+  agent.ppo.wb_run_path=train_rl_experts/runs/3jeo10jg \
   'wb_group="Roach"' \
   'wb_notes="Benchmark Roach on NoCrash-dense."' \
   test_suites=nocrash_dense \
@@ -64,16 +75,16 @@ RED=$'\e[0;31m'
 NC=$'\e[0m'
 PYTHON_RETURN=1
 # until [ $PYTHON_RETURN == 0 ]; do
-until [ $PYTHON_RETURN -eq 0 ]; do
-  benchmark
-  PYTHON_RETURN=$?
-  echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
-  # exit 0 # 4/24/2022 7:11:51 PM: Neil added
-  sleep 2
-done
-# benchmark
-# PYTHON_RETURN=$?
-# echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
+# until [ $PYTHON_RETURN -eq 0 ]; do
+#   benchmark
+#   PYTHON_RETURN=$?
+#   echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
+#   # exit 0 # 4/24/2022 7:11:51 PM: Neil added
+#   sleep 2
+# done
+benchmark
+PYTHON_RETURN=$?
+echo "${RED} PYTHON_RETURN=${PYTHON_RETURN}!!! Start Over!!!${NC}" >&2
 
 killall -9 -r CarlaUE4-Linux
 echo "Bash script done. benchmark_NeilBranch0.sh"

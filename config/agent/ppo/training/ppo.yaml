@@ -2,8 +2,8 @@
 entry_point: agents.rl_birdview.models.ppo:PPO
 kwargs:
   learning_rate: 1e-5
-  n_steps_total: 12288
-  # n_steps_total: 10
+  # n_steps_total: 12288
+  n_steps_total: 5
   batch_size: 256
   # batch_size: 128
   # batch_size: 64

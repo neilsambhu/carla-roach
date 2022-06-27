@@ -1,6 +1,7 @@
 # TODO: write script to modify (1) train_rl.yaml and (2) endless_all.yaml and call (3) train_rl_NeilBranch.sh.
 import subprocess
 import yaml, math, os
+from datetime import datetime
 
 def train_rl_yaml(total_timesteps):
     with open("config/train_rl.yaml.bak1") as file:
@@ -30,6 +31,11 @@ def get_listTowns(listTowns,lTowns,lEpoch):
         listTownsOutput.append(sTown)
         lIdx_listTowns += 1
     return listTownsOutput
+def EstimatedCompletion(dtStart, dtCurrent, lEpoch, lEpochs):
+    fPercentComplete = lEpoch/lEpochs
+    tdStartCurrent = dtCurrent-dtStart
+    dtEstimatedCompletion = dtStart + tdStartCurrent/fPercentComplete
+    print(f'fPercentComplete: {fPercentComplete}, tdStartCurrent: {tdStartCurrent}, dtEstimatedCompletion: {dtEstimatedCompletion}')
 
 if __name__ == '__main__':
     if os.path.exists("outputs/checkpoint.txt"):
@@ -42,23 +48,23 @@ if __name__ == '__main__':
     with open("config/agent/ppo/training/ppo.yaml") as file:
         ppo = yaml.load(file, Loader=yaml.FullLoader)
         n_steps_total = ppo['kwargs']['n_steps_total']
-    lStepsFirstEpoch = n_steps_total*10
-    lEpochs = math.ceil((lGlobal_total_timesteps-lStepsFirstEpoch)/n_steps_total)+1
+    # lStepsFirstEpoch = n_steps_total*20
+    # lEpochs = math.ceil((lGlobal_total_timesteps-lStepsFirstEpoch)/n_steps_total)+1
+    lDeltaStepsEpoch = n_steps_total*20
+    lEpochs = math.ceil(lGlobal_total_timesteps/lDeltaStepsEpoch)
     print(f'lGlobal_total_timesteps: {lGlobal_total_timesteps}, n_steps_total: {n_steps_total}, lEpochs: {lEpochs}')
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
-    total_timesteps = lStepsFirstEpoch
+    total_timesteps = lDeltaStepsEpoch
+    dtStart = datetime.now()
     for lEpoch in range(lEpochs):
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=5,lEpoch=lEpoch)
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
         endless_all_yaml(listTowns=listTownsEpoch)
         train_rl_NeilBranch0_sh()
-        # subprocess.call(['wandb','sync'])  
-        # import time
-        # time.sleep(10)
         print(f'finished epoch {lEpoch}')
-        total_timesteps += n_steps_total
-        # import os
-        # os._exit(1)
-    
+
+        EstimatedCompletion(dtStart,datetime.now(),lEpoch,lEpochs)
+
+        total_timesteps += lDeltaStepsEpoch

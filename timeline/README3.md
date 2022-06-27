@@ -6379,3 +6379,18 @@ TODO: replicate error by stopping train_rl_parent_NeilBranch0.py and running tra
 
 6/27/2022 1:33 PM: benchmarking caused train_rl_parent_NeilBranch0.py to fail. 
 Again try benchmarking https://wandb.ai/neilsambhu/train_rl_experts/runs/3jeo10jg.
+
+6/27/2022 1:45 PM: outputs/checkpoint.txt keeps being deleted when trying to benchmark.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ sh run/benchmark_NeilBranch0.sh>out.txt
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 105, in main
+    agents_dict[ev_id] = AgentClass('config_agent.yaml')
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 31, in __init__
+    self.setup(path_to_conf_file)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 108, in setup
+    with open('../../checkpoint.txt') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../../checkpoint.txt'
+```
+
+6/27/2022 1:47 PM: pause benchmarking. Continue training. 

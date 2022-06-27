@@ -1,100 +1,10 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 12288, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
-start at Mon Jun 27 11:09:13 EDT 2022
-[2022-06-27 11:09:16,729][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 11:09:17,749][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 11:09:17,750][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-27 11:09:17,760][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-27 11:09:17,768][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-27 11:09:17,777][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-27 11:09:17,785][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
-trainable parameters: 1.53M
-n_epoch: 0, num_timesteps: 12285
-n_epoch: 1, num_timesteps: 24570
-n_epoch: 2, num_timesteps: 36855
-n_epoch: 3, num_timesteps: 49140
-n_epoch: 4, num_timesteps: 61425
-n_epoch: 5, num_timesteps: 73710
-n_epoch: 6, num_timesteps: 85995
-n_epoch: 7, num_timesteps: 98280
-n_epoch: 8, num_timesteps: 110565
-n_epoch: 9, num_timesteps: 122850
-n_epoch: 10, num_timesteps: 135135
-n_epoch: 11, num_timesteps: 147420
-n_epoch: 12, num_timesteps: 159705
-n_epoch: 13, num_timesteps: 171990
-n_epoch: 14, num_timesteps: 184275
-n_epoch: 15, num_timesteps: 196560
-end at Mon Jun 27 13:09:22 EDT 2022
-Bash script done. train_rl_NeilBranch0.sh
-finished epoch 0
-fPercentComplete: 0.16666666666666666, tdStartCurrent: 2:00:08.502100, dtEstimatedCompletion: 2022-06-27 23:10:04.835815
-starting epoch 1, total_timesteps: 3333334, listTowns: ['Town02', 'Town03', 'Town04', 'Town05', 'Town06']
-start at Mon Jun 27 13:09:22 EDT 2022
-[2022-06-27 13:09:25,296][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:09:26,318][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:09:26,319][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-27 13:09:26,329][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-27 13:09:26,337][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-27 13:09:26,345][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-27 13:09:26,354][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
-trainable parameters: 1.53M
-n_epoch: 0, num_timesteps: 12285
-n_epoch: 1, num_timesteps: 24570
-n_epoch: 2, num_timesteps: 36855
-end at Mon Jun 27 13:28:57 EDT 2022
-Bash script done. train_rl_NeilBranch0.sh
-finished epoch 1
-fPercentComplete: 0.3333333333333333, tdStartCurrent: 2:19:43.395877, dtEstimatedCompletion: 2022-06-27 18:08:24.010846
-starting epoch 2, total_timesteps: 5000001, listTowns: ['Town03', 'Town04', 'Town05', 'Town06', 'Town01']
-start at Mon Jun 27 13:28:57 EDT 2022
-[2022-06-27 13:29:00,177][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:01,197][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:01,197][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-27 13:29:01,207][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-27 13:29:01,216][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-27 13:29:01,226][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-27 13:29:01,237][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
-all_ckpts []
-end at Mon Jun 27 13:29:13 EDT 2022
-Bash script done. train_rl_NeilBranch0.sh
-finished epoch 2
-fPercentComplete: 0.5, tdStartCurrent: 2:19:59.674753, dtEstimatedCompletion: 2022-06-27 15:49:13.172721
-starting epoch 3, total_timesteps: 6666668, listTowns: ['Town04', 'Town05', 'Town06', 'Town01', 'Town02']
-start at Mon Jun 27 13:29:13 EDT 2022
-[2022-06-27 13:29:16,493][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:17,514][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:17,514][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-27 13:29:17,524][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-27 13:29:17,534][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-27 13:29:17,544][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-27 13:29:17,552][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
-all_ckpts []
-end at Mon Jun 27 13:29:29 EDT 2022
-Bash script done. train_rl_NeilBranch0.sh
-finished epoch 3
-fPercentComplete: 0.6666666666666666, tdStartCurrent: 2:20:16.136976, dtEstimatedCompletion: 2022-06-27 14:39:38.028679
-starting epoch 4, total_timesteps: 8333335, listTowns: ['Town05', 'Town06', 'Town01', 'Town02', 'Town03']
-start at Mon Jun 27 13:29:30 EDT 2022
-[2022-06-27 13:29:32,933][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:33,955][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:33,955][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-27 13:29:33,964][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-27 13:29:33,972][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-27 13:29:33,982][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-27 13:29:33,991][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
-all_ckpts []
-end at Mon Jun 27 13:29:46 EDT 2022
-Bash script done. train_rl_NeilBranch0.sh
-finished epoch 4
-fPercentComplete: 0.8333333333333334, tdStartCurrent: 2:20:32.328051, dtEstimatedCompletion: 2022-06-27 13:57:52.616876
-starting epoch 5, total_timesteps: 10000002, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
-start at Mon Jun 27 13:29:46 EDT 2022
-[2022-06-27 13:29:49,170][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:50,189][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:29:50,190][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-27 13:29:50,204][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-27 13:29:50,212][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-27 13:29:50,220][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-27 13:29:50,228][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
-Problem at: /home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py 114 setup
+start at Mon Jun 27 13:48:52 EDT 2022
+[2022-06-27 13:48:55,030][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-27 13:48:56,051][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-27 13:48:56,051][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-27 13:48:56,061][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-27 13:48:56,069][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-27 13:48:56,080][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-27 13:48:56,088][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020

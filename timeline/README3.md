@@ -6393,4 +6393,15 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: '../../checkpoint.txt'
 ```
 
-6/27/2022 1:47 PM: pause benchmarking. Continue training. 
+6/27/2022 1:47 PM: pause benchmarking. Continue training.
+
+6/28/2022 9:34 PM: 
+train_rl_parent_NeilBranch0.py: lDeltaStepsEpoch: 1666667.
+train_rl_parent_NeilBranch0.py: "epoch 0": 
+(1) "n_epoch: 0, num_timesteps: 12285" through 
+(2) "n_epoch: 80, num_timesteps: 995085".
+TODO: train_rl_parent_NeilBranch0.py: continue training epoch until n_epoch:num_timesteps > total_timesteps 
+is sufficient for the given epoch.
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "n_epoch">outgrep.txt
+```

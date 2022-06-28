@@ -55,6 +55,8 @@ class WandbCallback(BaseCallback):
         pass
 
     def _on_training_end(self) -> None:
+        with open("outputs/num_timesteps.txt","w") as f:
+            f.write(str(self.model.num_timesteps))
         print(f'n_epoch: {self.n_epoch}, num_timesteps: {self.model.num_timesteps}')
         # save time
         time_elapsed = time.time() - self.model.start_time

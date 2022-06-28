@@ -22,6 +22,8 @@ def endless_all_yaml(listTowns):
   gpu: [0]\n'''
             file.write(endless_all)
 def train_rl_NeilBranch0_sh():  
+    if os.path.exists("outputs/num_timesteps.txt"):
+        os.remove("outputs/num_timesteps.txt")
     subprocess.call(['run/train_rl_NeilBranch0.sh'])
 def get_listTowns(listTowns,lTowns,lEpoch):
     lIdx_listTowns = lEpoch%lTowns
@@ -66,6 +68,9 @@ if __name__ == '__main__':
         train_rl_yaml(total_timesteps=total_timesteps)
         endless_all_yaml(listTowns=listTownsEpoch)
         train_rl_NeilBranch0_sh()
+        completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+        while completed_timesteps < total_timesteps:
+            train_rl_NeilBranch0_sh()
         print(f'finished epoch {lEpoch}')
 
         EstimatedCompletion(dtStart,datetime.now(),lEpoch,lEpochs)

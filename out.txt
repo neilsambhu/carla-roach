@@ -1,10 +1,273 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 12288, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
-start at Mon Jun 27 13:48:52 EDT 2022
-[2022-06-27 13:48:55,030][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:48:56,051][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-27 13:48:56,051][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-27 13:48:56,061][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-27 13:48:56,069][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-27 13:48:56,080][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-27 13:48:56,088][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+start at Mon Jun 27 20:29:46 EDT 2022
+[2022-06-27 20:29:49,795][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-27 20:29:50,815][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-27 20:29:50,815][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-27 20:29:50,826][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-27 20:29:50,834][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-27 20:29:50,845][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-27 20:29:50,856][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+trainable parameters: 1.53M
+n_epoch: 0, num_timesteps: 12285
+n_epoch: 1, num_timesteps: 24570
+n_epoch: 2, num_timesteps: 36855
+n_epoch: 3, num_timesteps: 49140
+n_epoch: 4, num_timesteps: 61425
+n_epoch: 5, num_timesteps: 73710
+n_epoch: 6, num_timesteps: 85995
+n_epoch: 7, num_timesteps: 98280
+n_epoch: 8, num_timesteps: 110565
+n_epoch: 9, num_timesteps: 122850
+n_epoch: 10, num_timesteps: 135135
+n_epoch: 11, num_timesteps: 147420
+n_epoch: 12, num_timesteps: 159705
+n_epoch: 13, num_timesteps: 171990
+n_epoch: 14, num_timesteps: 184275
+n_epoch: 15, num_timesteps: 196560
+n_epoch: 16, num_timesteps: 208845
+n_epoch: 17, num_timesteps: 221130
+n_epoch: 18, num_timesteps: 233415
+n_epoch: 19, num_timesteps: 245700
+n_epoch: 20, num_timesteps: 257985
+n_epoch: 21, num_timesteps: 270270
+n_epoch: 22, num_timesteps: 282555
+n_epoch: 23, num_timesteps: 294840
+n_epoch: 24, num_timesteps: 307125
+n_epoch: 25, num_timesteps: 319410
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+n_epoch: 26, num_timesteps: 331695
+n_epoch: 27, num_timesteps: 343980
+n_epoch: 28, num_timesteps: 356265
+n_epoch: 29, num_timesteps: 368550
+n_epoch: 30, num_timesteps: 380835
+n_epoch: 31, num_timesteps: 393120
+n_epoch: 32, num_timesteps: 405405
+n_epoch: 33, num_timesteps: 417690
+n_epoch: 34, num_timesteps: 429975
+n_epoch: 35, num_timesteps: 442260
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added ton_epoch: 36, num_timesteps: 454545
+n_epoch: 37, num_timesteps: 466830
+n_epoch: 38, num_timesteps: 479115
+n_epoch: 39, num_timesteps: 491400
+n_epoch: 40, num_timesteps: 503685
+n_epoch: 41, num_timesteps: 515970
+n_epoch: 42, num_timesteps: 528255
+n_epoch: 43, num_timesteps: 540540
+n_epoch: 44, num_timesteps: 552825
+n_epoch: 45, num_timesteps: 565110
+n_epoch: 46, num_timesteps: 577395
+n_epoch: 47, num_timesteps: 589680
+n_epoch: 48, num_timesteps: 601965
+n_epoch: 49, num_timesteps: 614250
+n_epoch: 50, num_timesteps: 626535
+n_epoch: 51, num_timesteps: 638820
+n_epoch: 52, num_timesteps: 651105
+n_epoch: 53, num_timesteps: 663390
+n_epoch: 54, num_timesteps: 675675
+n_epoch: 55, num_timesteps: 687960
+n_epoch: 56, num_timesteps: 700245
+n_epoch: 57, num_timesteps: 712530
+n_epoch: 58, num_timesteps: 724815
+n_epoch: 59, num_timesteps: 737100
+n_epoch: 60, num_timesteps: 749385
+n_epoch: 61, num_timesteps: 761670
+n_epoch: 62, num_timesteps: 773955
+n_epoch: 63, num_timesteps: 786240
+n_epoch: 64, num_timesteps: 798525
+n_epoch: 65, num_timesteps: 810810
+n_epoch: 66, num_timesteps: 823095
+n_epoch: 67, num_timesteps: 835380
+n_epoch: 68, num_timesteps: 847665
+n_epoch: 69, num_timesteps: 859950
+n_epoch: 70, num_timesteps: 872235
+n_epoch: 71, num_timesteps: 884520
+n_epoch: 72, num_timesteps: 896805
+n_epoch: 73, num_timesteps: 909090
+n_epoch: 74, num_timesteps: 921375
+n_epoch: 75, num_timesteps: 933660
+n_epoch: 76, num_timesteps: 945945
+n_epoch: 77, num_timesteps: 958230
+n_epoch: 78, num_timesteps: 970515
+n_epoch: 79, num_timesteps: 982800
+n_epoch: 80, num_timesteps: 995085
+end at Tue Jun 28 06:46:54 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+finished epoch 0
+fPercentComplete: 0.16666666666666666, tdStartCurrent: 10:17:07.742141, dtEstimatedCompletion: 2022-06-30 10:12:33.326726
+starting epoch 1, total_timesteps: 3333334, listTowns: ['Town02', 'Town03', 'Town04', 'Town05', 'Town06']
+start at Tue Jun 28 06:46:54 EDT 2022
+[2022-06-28 06:46:57,848][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-28 06:46:58,869][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-28 06:46:58,869][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-28 06:46:58,879][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-28 06:46:58,886][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-28 06:46:58,894][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-28 06:46:58,902][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+all_ckpts [<File ckpt/ckpt_110565.pth () 8.5MiB>, <File ckpt/ckpt_221130.pth () 8.5MiB>, <File ckpt/ckpt_331695.pth () 8.5MiB>, <File ckpt/ckpt_442260.pth () 8.5MiB>, <File ckpt/ckpt_552825.pth () 8.5MiB>, <File ckpt/ckpt_663390.pth () 8.5MiB>, <File ckpt/ckpt_773955.pth () 8.5MiB>, <File ckpt/ckpt_884520.pth () 8.5MiB>]
+[2022-06-28 06:47:05,605][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_884520.pth
+[2022-06-28 06:47:06,506][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_884520.pth
+calling registration.py > make(id, **kwargs)
+calling registration.py > make(id, **kwargs)
+calling registration.py > make(id, **kwargs)
+calling registration.py > make(id, **kwargs)
+calling registration.py > make(id, **kwargs)
+trainable parameters: 1.53M
+n_epoch: 0, num_timesteps: 896805
+n_epoch: 1, num_timesteps: 909090
+n_epoch: 2, num_timesteps: 921375
+n_epoch: 3, num_timesteps: 933660
+n_epoch: 4, num_timesteps: 945945
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+n_epoch: 5, num_timesteps: 958230
+n_epoch: 6, num_timesteps: 970515
+n_epoch: 7, num_timesteps: 982800
+n_epoch: 8, num_timesteps: 995085
+n_epoch: 9, num_timesteps: 1007370
+n_epoch: 10, num_timesteps: 1019655
+n_epoch: 11, num_timesteps: 1031940
+n_epoch: 12, num_timesteps: 1044225
+n_epoch: 13, num_timesteps: 1056510
+n_epoch: 14, num_timesteps: 1068795
+n_epoch: 15, num_timesteps: 1081080
+n_epoch: 16, num_timesteps: 1093365
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+n_epoch: 17, num_timesteps: 1105650
+n_epoch: 18, num_timesteps: 1117935
+n_epoch: 19, num_timesteps: 1130220
+n_epoch: 20, num_timesteps: 1142505
+n_epoch: 21, num_timesteps: 1154790
+n_epoch: 22, num_timesteps: 1167075
+n_epoch: 23, num_timesteps: 1179360
+n_epoch: 24, num_timesteps: 1191645
+n_epoch: 25, num_timesteps: 1203930
+n_epoch: 26, num_timesteps: 1216215
+n_epoch: 27, num_timesteps: 1228500

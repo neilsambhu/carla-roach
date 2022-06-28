@@ -13,6 +13,7 @@ from carla_gym.utils import config_utils
 from utils import server_utils
 
 log = logging.getLogger(__name__)
+from inspect import currentframe, getframeinfo
 bVerbose = False
 
 @hydra.main(config_path='config', config_name='train_rl')
@@ -28,11 +29,15 @@ def main(cfg: DictConfig):
 
     if bVerbose:
         print("Neil start here 2")
+        # frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
+        # print(f"cfg.carla_sh_path: {cfg.carla_sh_path}, cfg.train_envs: {cfg.train_envs}")
     # start carla servers
     server_manager = server_utils.CarlaServerManager(cfg.carla_sh_path, configs=cfg.train_envs)
     if bVerbose:
         print('cfg.train_envs',cfg.train_envs)
+        print('server_manager',server_manager)
     server_manager.start()
+    input("Press any key to continue.")
     if bVerbose:
         print("Neil left here 2")
 

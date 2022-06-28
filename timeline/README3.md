@@ -6405,3 +6405,26 @@ is sufficient for the given epoch.
 ```
 (base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "n_epoch">outgrep.txt
 ```
+
+6/28/2022 10:51 PM: pause training RL model. TODO: get training configured to work without on-screen display window.
+
+6/28/2022 10:54 PM: grep "CARLA".
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ grep -r  --exclude *README1.md--exclude *README2.md --exclude *README3.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb "CARLA">outgrep.txt
+grep: CARLA: No such file or directory
+```
+6/28/2022 7:49 PM: server_utils.py:CARLA cmd with on-screen display window
+```
+[2022-06-28 19:48:50,103][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-28 19:48:50,113][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-28 19:48:50,121][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-28 19:48:50,132][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-28 19:48:50,140][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+```
+```
+CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+```

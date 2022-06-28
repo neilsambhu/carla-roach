@@ -1,11 +1,11 @@
-lGlobal_total_timesteps: 10000000, n_steps_total: 12288, lEpochs: 6, lDeltaStepsEpoch: 1666667
-starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
-start at Tue Jun 28 10:35:08 EDT 2022
-[2022-06-28 10:35:11,425][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-28 10:35:12,445][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-06-28 10:35:12,445][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
-[2022-06-28 10:35:12,455][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
-[2022-06-28 10:35:12,465][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
-[2022-06-28 10:35:12,474][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
-[2022-06-28 10:35:12,484][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
-trainable parameters: 1.53M
+lGlobal_total_timesteps: 1000, n_steps_total: 5, lEpochs: 6, lDeltaStepsEpoch: 167
+starting epoch 0, total_timesteps: 167, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
+start at Tue Jun 28 19:48:46 EDT 2022
+[2022-06-28 19:48:49,082][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-28 19:48:50,103][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-28 19:48:50,103][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+[2022-06-28 19:48:50,113][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+[2022-06-28 19:48:50,121][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+[2022-06-28 19:48:50,132][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+[2022-06-28 19:48:50,140][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Press any key to continue.

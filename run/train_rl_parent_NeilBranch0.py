@@ -46,7 +46,7 @@ if __name__ == '__main__':
         os.remove("outputs/checkpoint.txt")
 
     lGlobal_total_timesteps = int(1e7)
-    # lGlobal_total_timesteps = int(1e3)
+    lGlobal_total_timesteps = int(1e3)
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
     n_steps_total = 0
@@ -61,6 +61,7 @@ if __name__ == '__main__':
     print(f'lGlobal_total_timesteps: {lGlobal_total_timesteps}, n_steps_total: {n_steps_total}, lEpochs: {lEpochs}, lDeltaStepsEpoch: {lDeltaStepsEpoch}')
 
     total_timesteps = lDeltaStepsEpoch
+    lEpochs=1
     dtStart = datetime.now()
     for lEpoch in range(lEpochs):
         # setup for current epoch

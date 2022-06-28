@@ -63,16 +63,21 @@ if __name__ == '__main__':
     total_timesteps = lDeltaStepsEpoch
     dtStart = datetime.now()
     for lEpoch in range(lEpochs):
+        # setup for current epoch
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=5,lEpoch=lEpoch)
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
         endless_all_yaml(listTowns=listTownsEpoch)
+        # training
         train_rl_NeilBranch0_sh()
         completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+        print(f"completed_timesteps: {completed_timesteps}")
         while completed_timesteps < total_timesteps:
             train_rl_NeilBranch0_sh()
+            completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+            print(f"completed_timesteps: {completed_timesteps}")
+        # logs
         print(f'finished epoch {lEpoch}')
-
         EstimatedCompletion(dtStart,datetime.now(),lEpoch,lEpochs)
-
+        # setup for next epoch
         total_timesteps += lDeltaStepsEpoch

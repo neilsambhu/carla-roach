@@ -6428,3 +6428,119 @@ CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-le
 CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
 CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
 ```
+6/28/2022 9:20 PM: attempt to run CARLA without GUI
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+LowLevelFatalError [File:Unknown] [Line: 803] 
+VulkanRHI::vkGetPhysicalDeviceSurfaceFormatsKHR(Device.GetPhysicalHandle(), Surface, &NumFormats, nullptr) failed, VkResult=-3
+ at /home/jenkins/UnrealEngine_4.26/Engine/Source/Runtime/VulkanRHI/Private/VulkanSwapChain.cpp:179 
+ with error VK_ERROR_INITIALIZATION_FAILED
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+LowLevelFatalError [File:Unknown] [Line: 803] 
+VulkanRHI::vkGetPhysicalDeviceSurfaceFormatsKHR(Device.GetPhysicalHandle(), Surface, &NumFormats, nullptr) failed, VkResult=-3
+ at /home/jenkins/UnrealEngine_4.26/Engine/Source/Runtime/VulkanRHI/Private/VulkanSwapChain.cpp:179 
+ with error VK_ERROR_INITIALIZATION_FAILED
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+LowLevelFatalError [File:Unknown] [Line: 803] 
+VulkanRHI::vkGetPhysicalDeviceSurfaceFormatsKHR(Device.GetPhysicalHandle(), Surface, &NumFormats, nullptr) failed, VkResult=-3
+ at /home/jenkins/UnrealEngine_4.26/Engine/Source/Runtime/VulkanRHI/Private/VulkanSwapChain.cpp:179 
+ with error VK_ERROR_INITIALIZATION_FAILED
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+LowLevelFatalError [File:Unknown] [Line: 803] 
+VulkanRHI::vkGetPhysicalDeviceSurfaceFormatsKHR(Device.GetPhysicalHandle(), Surface, &NumFormats, nullptr) failed, VkResult=-3
+ at /home/jenkins/UnrealEngine_4.26/Engine/Source/Runtime/VulkanRHI/Private/VulkanSwapChain.cpp:179 
+ with error VK_ERROR_INITIALIZATION_FAILED
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Segmentation fault (core dumped)
+Segmentation fault (core dumped)
+LowLevelFatalError [File:Unknown] [Line: 803] 
+VulkanRHI::vkGetPhysicalDeviceSurfaceFormatsKHR(Device.GetPhysicalHandle(), Surface, &NumFormats, nullptr) failed, VkResult=-3
+ at /home/jenkins/UnrealEngine_4.26/Engine/Source/Runtime/VulkanRHI/Private/VulkanSwapChain.cpp:179 
+ with error VK_ERROR_INITIALIZATION_FAILED
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Segmentation fault (core dumped)
+Segmentation fault (core dumped)
+Segmentation fault (core dumped)
+```
+6/28/2022 9:22 PM: train_rl_parent_NeilBranch0.py: change to 1 Town.
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+Xlib:  extension "GLX" missing on display ":8".
+LowLevelFatalError [File:Unknown] [Line: 803] 
+VulkanRHI::vkGetPhysicalDeviceSurfaceFormatsKHR(Device.GetPhysicalHandle(), Surface, &NumFormats, nullptr) failed, VkResult=-3
+ at /home/jenkins/UnrealEngine_4.26/Engine/Source/Runtime/VulkanRHI/Private/VulkanSwapChain.cpp:179 
+ with error VK_ERROR_INITIALIZATION_FAILED
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Segmentation fault (core dumped)
+```
+6/29/2022 12:28 PM: 
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ DISPLAY=:8 vglrun -d :7.0 glxinfoname of display: :8
+[VGL] ERROR: Could not open display :7.0.
+```
+6/29/2022 7:56 PM: UF Gatorlink login to hpg.rc.ufl.edu.
+```
+[neilsambhu@login2 ~]$ hostnamectl
+   Static hostname: login2.ufhpc
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: 5b89c8d3d2bf403d905dd4ccaf9ccb57
+           Boot ID: 4dbe32fea9f942c79a45f7b47535d010
+  Operating System: Red Hat Enterprise Linux Server 7.7 (Maipo)
+       CPE OS Name: cpe:/o:redhat:enterprise_linux:7.7:GA:server
+            Kernel: Linux 3.10.0-1062.18.1.el7.x86_64
+      Architecture: x86-64
+```

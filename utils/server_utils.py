@@ -47,7 +47,7 @@ class CarlaServerManager():
             # cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} $CARLA_PATH/CarlaUE4/Binaries/Linux/CarlaUE4'
             # cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} bash {self._carla_sh_str} ' \
             #     f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]}'
-            # cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} ${self._carla_sh_str}'
+            cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
             # 06/28/2022: Neil added: end
             log.info(cmd)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'

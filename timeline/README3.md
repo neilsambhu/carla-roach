@@ -6543,4 +6543,6 @@ Segmentation fault (core dumped)
        CPE OS Name: cpe:/o:redhat:enterprise_linux:7.7:GA:server
             Kernel: Linux 3.10.0-1062.18.1.el7.x86_64
       Architecture: x86-64
+[neilsambhu@login2 ~]$ uname -r
+3.10.0-1062.18.1.el7.x86_64
 ```

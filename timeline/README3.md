@@ -6546,3 +6546,78 @@ Segmentation fault (core dumped)
 [neilsambhu@login2 ~]$ uname -r
 3.10.0-1062.18.1.el7.x86_64
 ```
+6/30/2022 1:44 AM: re-install nvidia drivers
+```
+(base) nsambhu@SAMBHU19:~/Downloads$ sudo sh cuda_9.0.176_384.81_linux.run
+Do you accept the previously read EULA?
+accept/decline/quit: accept
+
+You are attempting to install on an unsupported configuration. Do you wish to continue?
+(y)es/(n)o [ default is no ]: y
+
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 384.81?
+(y)es/(n)o/(q)uit: y
+
+Do you want to install the OpenGL libraries?
+(y)es/(n)o/(q)uit [ default is yes ]: y
+
+Do you want to run nvidia-xconfig?
+This will update the system X configuration file so that the NVIDIA X driver
+is used. The pre-existing X configuration file will be backed up.
+This option should not be used on systems that require a custom
+X configuration, such as systems with multiple GPU vendors.
+(y)es/(n)o/(q)uit [ default is no ]: y
+
+Install the CUDA 9.0 Toolkit?
+(y)es/(n)o/(q)uit: y
+
+Enter Toolkit Location
+ [ default is /usr/local/cuda-9.0 ]: 
+
+Do you want to install a symbolic link at /usr/local/cuda?
+(y)es/(n)o/(q)uit: y
+
+Install the CUDA 9.0 Samples?
+(y)es/(n)o/(q)uit: n
+
+Installing the NVIDIA display driver...
+Error: unsupported compiler: 7.5.0. Use --override to override this check.
+
+===========
+= Summary =
+===========
+
+Driver:   Installed
+Toolkit:  Installation Failed. Using unsupported Compiler.
+Samples:  Not Selected
+
+To uninstall the NVIDIA Driver, run nvidia-uninstall
+
+Logfile is /tmp/cuda_install_21701.log
+```
+6/30/2022 3:10 PM: re-install newest nvidia drivers and restart machine
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py >out.txt
+Invalid MIT-MAGIC-COOKIE-1 keyerror: XDG_RUNTIME_DIR not set in the environment.
+Invalid MIT-MAGIC-COOKIE-1 keyerror: XDG_RUNTIME_DIR not set in the environment.
+Invalid MIT-MAGIC-COOKIE-1 keyerror: XDG_RUNTIME_DIR not set in the environment.
+```
+```
+lGlobal_total_timesteps: 1000, n_steps_total: 5, lEpochs: 6, lDeltaStepsEpoch: 167
+starting epoch 0, total_timesteps: 167, listTowns: ['Town01']
+start at Thu Jun 30 15:07:38 EDT 2022
+[2022-06-30 15:07:41,662][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-30 15:07:42,682][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-06-30 15:07:42,682][utils.server_utils][INFO] - DISPLAY=:0 vglrun -d :7.0 /opt/carla-simulator/CarlaUE4.sh
+Press any key to continue.
+```
+6/30/2022 5:04 PM: https://askubuntu.com/questions/872792/what-is-xdg-runtime-dir: "A better way: env_keep": sudo visudo. 
+This solved the XDG_RUNTIME_DIR issue.
+
+7/1/2022 11:40 PM: non-GUI_CARLA_setup.sh: set XDG_RUNTIME_DIR.
+
+7/1/2022 11:41 PM: TODO: (carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 key
+```

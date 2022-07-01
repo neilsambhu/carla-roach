@@ -6,7 +6,8 @@ from omegaconf import OmegaConf
 
 import logging
 log = logging.getLogger(__name__)
-
+from inspect import currentframe, getframeinfo
+bVerbose = True
 
 def kill_carla():
     kill_process = subprocess.Popen('killall -9 -r CarlaUE4-Linux', shell=True)
@@ -48,11 +49,16 @@ class CarlaServerManager():
             # cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} bash {self._carla_sh_str} ' \
             #     f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]}'
             cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
+            cmd = f'DISPLAY=:0 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
             # 06/28/2022: Neil added: end
             log.info(cmd)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdout=open(log_file, "w"))
+            if bVerbose:
+                frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
             server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
+            if bVerbose:
+                frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         time.sleep(self._t_sleep)
 
     def stop(self):

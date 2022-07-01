@@ -2,6 +2,8 @@
 import subprocess
 import yaml, math, os
 from datetime import datetime
+from inspect import currentframe, getframeinfo
+bVerbose = True
 
 def train_rl_yaml(total_timesteps):
     with open("config/train_rl.yaml.bak1") as file:
@@ -71,7 +73,11 @@ if __name__ == '__main__':
         train_rl_yaml(total_timesteps=total_timesteps)
         endless_all_yaml(listTowns=listTownsEpoch)
         # training
+        if bVerbose: 
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         train_rl_NeilBranch0_sh()
+        if bVerbose: 
+            frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
         print(f"completed_timesteps: {completed_timesteps}")
         while completed_timesteps < total_timesteps:

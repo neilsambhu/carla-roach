@@ -14,7 +14,7 @@ from utils import server_utils
 
 log = logging.getLogger(__name__)
 from inspect import currentframe, getframeinfo
-bVerbose = False
+bVerbose = True
 
 @hydra.main(config_path='config', config_name='train_rl')
 def main(cfg: DictConfig):

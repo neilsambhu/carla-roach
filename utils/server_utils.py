@@ -48,9 +48,14 @@ class CarlaServerManager():
             # cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} $CARLA_PATH/CarlaUE4/Binaries/Linux/CarlaUE4'
             # cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} bash {self._carla_sh_str} ' \
             #     f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]}'
-            cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
-            cmd = f'DISPLAY=:0 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
+            # cmd = f'DISPLAY=:8 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
+            # cmd = f'DISPLAY=:1 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
+            # cmd = f'DISPLAY=:2 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
             # 06/28/2022: Neil added: end
+            # 7/10/2022: Neil added: start
+            cmd = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
+                f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            # 7/10/2022: Neil added: end
             log.info(cmd)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdout=open(log_file, "w"))

@@ -37,7 +37,7 @@ def main(cfg: DictConfig):
         print('cfg.train_envs',cfg.train_envs)
         print('server_manager',server_manager)
     server_manager.start()
-    input("Press any key to continue.")
+    input("Press any key to continue.\n")
     if bVerbose:
         print("Neil left here 2")
 
@@ -169,6 +169,6 @@ if __name__ == '__main__':
     if bVerbose:
         print("Neil left here 1")
     log.info("train_rl.py DONE!")
-    import os
-    os._exit(1234)
+    # import os
+    # os._exit(1234)
     # print("a")

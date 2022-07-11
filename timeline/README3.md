@@ -6621,3 +6621,10 @@ This solved the XDG_RUNTIME_DIR issue.
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py
 Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 key
 ```
+7/2/2022 8:29 PM: server_utils.py: change display to "1"
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py >out.txt
+Xlib:  extension "GLX" missing on display ":1".
+Xlib:  extension "GLX" missing on display ":1".
+```
+7/2/2022 9:42 PM: https://ubuntuforums.org/showthread.php?t=2382312: \#2

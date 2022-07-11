@@ -5,4 +5,4 @@
     num_zombie_vehicles: [0, 150]
     num_zombie_walkers: [0, 300]
     weather_group: dynamic_1.0
-  gpu: [0]
+  gpu: [2]

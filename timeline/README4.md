@@ -10,7 +10,8 @@ grep -r  --exclude *README1.md--exclude *README2.md --exclude *README3.md --excl
 7/10/2022 2:08 PM: CARLA will only run with "-RenderOffScreen" flag. 
 
 # Notes for CARLA setup with Daniel
-bla bla bla
+7/14/2022 4:15PM: on USB boot, nomodeset
+
 7/13/2020: 
 ```
 blk id

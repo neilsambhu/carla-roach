@@ -73,3 +73,28 @@ sudo apt install libomp5
 ```
 sudo apt install vulkan-utils
 ```
+7/14/2022 6:36 PM: HDD symbolic link
+```
+(base) nsambhu@SAMBHU19:/media/nsambhu/data1/carla_install$ cd /
+(base) nsambhu@SAMBHU19:/$ sudo mkdir data
+[sudo] password for nsambhu: 
+(base) nsambhu@SAMBHU19:/$ cd d
+data/ dev/  
+(base) nsambhu@SAMBHU19:/$ cd data/
+(base) nsambhu@SAMBHU19:/data$ sudo mkdir data1
+```
+```
+(base) nsambhu@SAMBHU19:/data$ sudo blkid
+ UUID="b1465c28-6bc1-4531-829c-6576c028703f" TYPE="ext4" PARTLABEL="data1" PARTUUID="fe5be838-dd78-461f-82ed-854ffabb9a3e"
+```
+```
+(base) nsambhu@SAMBHU19:/data$ sudo vim /etc/fstab
+```
+```
+# data1 mount point /data/data1
+UUID="b1465c28-6bc1-4531-829c-6576c028703f" /data/data1 ext4 defaults 0 0
+```
+```
+(base) nsambhu@SAMBHU19:/data$ sudo mount -a
+(base) nsambhu@SAMBHU19:/data$ ln -s /data/data1/ ~
+```

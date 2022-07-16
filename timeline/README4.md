@@ -10,7 +10,7 @@ grep -r  --exclude *README1.md--exclude *README2.md --exclude *README3.md --excl
 7/10/2022 2:08 PM: CARLA will only run with "-RenderOffScreen" flag. 
 
 # Notes for CARLA setup with Daniel
-7/14/2022 4:15PM: on USB boot, nomodeset
+7/14/2022 4:15 PM: on USB boot, nomodeset
 
 7/13/2020: 
 ```
@@ -21,9 +21,9 @@ blk id
 ```
 sudo apt install gparted
 ```
-Bootloader (500 MB): EFI System Partition
-OS (200 GB): Ext4. Mount at "/" (i.e. "root")
-Home: Ext4. Mount at "/home"
+Bootloader (500 MB): EFI System Partition  
+OS (200 GB): Ext4. Mount at "/" (i.e. "root")  
+Home: Ext4. Mount at "/home"  
 
 7/31/2022 7:58 PM: Ubuntu 18.04 installed
 ```
@@ -69,6 +69,7 @@ pip install -r requirements.txt
 sudo apt install libomp5
 ```
 7/14/2022 11:40 AM: running CARLA failed with window global shader cache file is missing.
+
 7/14/2022 11:44 AM:
 ```
 sudo apt install vulkan-utils

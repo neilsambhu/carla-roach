@@ -118,3 +118,5 @@ Segmentation fault (core dumped)
 4.26.2-0+++UE4+Release-4.26 522 0
 Disabling core dumps.
 ```
+7/18/2022 12:03 PM: try to re-install CARLA with keeping the "pip install" commands separate.  
+7/18/2022 12:33 PM: still failed.

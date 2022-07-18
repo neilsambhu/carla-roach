@@ -99,3 +99,22 @@ UUID="b1465c28-6bc1-4531-829c-6576c028703f" /data/data1 ext4 defaults 0 0
 (base) nsambhu@SAMBHU19:/data$ sudo mount -a
 (base) nsambhu@SAMBHU19:/data$ ln -s /data/data1/ ~
 ```
+# Continue CARLA debugging
+7/18/2022 11:39 AM: 
+```
+(base) nsambhu@SAMBHU19:/opt/carla-simulator$ ./CarlaUE4.sh
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+CommonUnixCrashHandler: Signal=11
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Engine crash handling finished; re-raising signal 11 for the default handler. Good bye.
+Segmentation fault (core dumped)
+```
+```
+(base) nsambhu@SAMBHU19:/opt/carla-simulator$ ./CarlaUE4.sh -RenderOffScreen
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+```

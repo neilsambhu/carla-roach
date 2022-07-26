@@ -37,7 +37,7 @@ def main(cfg: DictConfig):
         print('cfg.train_envs',cfg.train_envs)
         print('server_manager',server_manager)
     server_manager.start()
-    input("Press any key to continue.\n")
+    # input("Press any key to continue.\n")
     if bVerbose:
         print("Neil left here 2")
 

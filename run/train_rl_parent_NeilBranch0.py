@@ -48,7 +48,7 @@ if __name__ == '__main__':
         os.remove("outputs/checkpoint.txt")
 
     lGlobal_total_timesteps = int(1e7)
-    lGlobal_total_timesteps = int(1e3)
+    # lGlobal_total_timesteps = int(1e3)
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
     n_steps_total = 0

@@ -299,3 +299,16 @@ Malloc Size=131160 LargeMemoryPoolOffset=196744
 Malloc Size=131160 LargeMemoryPoolOffset=327928 
 /opt/carla-simulator/CarlaUE4.sh: line 2: 18914 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
 ```
+# 2020 07 27 1:12 PM: to Daniel:
+```
+(carla) nsambhu@SAMBHU19:/opt/carla-simulator$ bash CarlaUE4.sh 
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+CommonUnixCrashHandler: Signal=11
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Engine crash handling finished; re-raising signal 11 for the default handler. Good bye.
+CarlaUE4.sh: line 2: 51975 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+```

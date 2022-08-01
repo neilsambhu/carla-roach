@@ -361,3 +361,19 @@ Malloc Size=131160 LargeMemoryPoolOffset=327928
 Engine crash handling finished; re-raising signal 11 for the default handler. Good bye.
 CarlaUE4.sh: line 2:  2911 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
 ```
+8/1/2022 2:57 PM: I tried running CARLA with vulkan: 
+```
+(carla) nsambhu@SAMBHU19:/media/nsambhu/data1/carla_install$ cat run_carla.sh 
+/opt/carla-simulator/CarlaUE4.sh -vulkan
+(carla) nsambhu@SAMBHU19:/media/nsambhu/data1/carla_install$ bash run_carla.sh 
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+CommonUnixCrashHandler: Signal=11
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Engine crash handling finished; re-raising signal 11 for the default handler. Good bye.
+Segmentation fault (core dumped)
+```
+The opengl flag is not supported.

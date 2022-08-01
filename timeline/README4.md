@@ -380,3 +380,11 @@ Engine crash handling finished; re-raising signal 11 for the default handler. Go
 Segmentation fault (core dumped)
 ```
 The opengl flag is not supported.
+
+# 2022 08 01: CARLA setup with Daniel Sawyer
+```
+sudo chown -R $USER:$USER /opt/carla-simulator
+sudo chmod -R 777 /opt/carla-simulator
+```
+#install CARLA  
+deactivate conda (1) carla and (2) base environments

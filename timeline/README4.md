@@ -12,7 +12,7 @@ grep -r  --exclude *README1.md--exclude *README2.md --exclude *README3.md --excl
 # Notes for CARLA setup with Daniel
 7/14/2022 4:15 PM: on USB boot, nomodeset
 
-~7/13/2020:~
+~7/13/2020:~  
 ~blk id~
 
 8/1/2022 4:52 PM:

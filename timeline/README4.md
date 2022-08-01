@@ -243,7 +243,7 @@ Traceback (most recent call last):
     completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
-# 2020 07 26 1:36 PM: to Daniel:
+# 2022 07 26 1:36 PM: to Daniel:
 ```
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ python -u run/train_rl_parent_NeilBranch0.py>out.txt
 run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
@@ -299,7 +299,7 @@ Malloc Size=131160 LargeMemoryPoolOffset=196744
 Malloc Size=131160 LargeMemoryPoolOffset=327928 
 /opt/carla-simulator/CarlaUE4.sh: line 2: 18914 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
 ```
-# 2020 07 27 1:12 PM: to Daniel:
+# 2022 07 27 1:12 PM: to Daniel:
 ```
 (carla) nsambhu@SAMBHU19:/opt/carla-simulator$ bash CarlaUE4.sh 
 4.26.2-0+++UE4+Release-4.26 522 0
@@ -311,4 +311,53 @@ Malloc Size=131160 LargeMemoryPoolOffset=196744
 Malloc Size=131160 LargeMemoryPoolOffset=327928 
 Engine crash handling finished; re-raising signal 11 for the default handler. Good bye.
 CarlaUE4.sh: line 2: 51975 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+```
+# 2022 08 01 2:39 PM: to Daniel:
+7/31/2022: I reinstalled Ubuntu 18.04 on SAMBHU19: (1) deselect download 18.04 updates and (2) select third-party drivers.  
+```
+(carla) nsambhu@SAMBHU19:/opt/carla-simulator/PythonAPI/examples$ sudo apt install vulkan-utils
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  vulkan-utils
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 88.7 kB of archives.
+After this operation, 314 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 vulkan-utils amd64 1.1.70+dfsg1-1ubuntu0.18.04.1 [88.7 kB]
+Fetched 88.7 kB in 0s (401 kB/s)        
+Selecting previously unselected package vulkan-utils.
+(Reading database ... 212283 files and directories currently installed.)
+Preparing to unpack .../vulkan-utils_1.1.70+dfsg1-1ubuntu0.18.04.1_amd64.deb ...
+Unpacking vulkan-utils (1.1.70+dfsg1-1ubuntu0.18.04.1) ...
+Setting up vulkan-utils (1.1.70+dfsg1-1ubuntu0.18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+(carla) nsambhu@SAMBHU19:/opt/carla-simulator$ bash CarlaUE4.sh 
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+(carla) nsambhu@SAMBHU19:/opt/carla-simulator$ sudo apt install vulkan-utils
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+vulkan-utils is already the newest version (1.1.70+dfsg1-1ubuntu0.18.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+(carla) nsambhu@SAMBHU19:/opt/carla-simulator$ bash CarlaUE4.sh 
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+(carla) nsambhu@SAMBHU19:/opt/carla-simulator$ 
+```
+There is an error message about vulkan-utils not being installed when I run CARLA.  
+8/1/2022 2:42 PM: TODO: reboot SAMBHU19  
+8/1/2022 2:47 PM: 
+```
+(carla) nsambhu@SAMBHU19:/opt/carla-simulator$ bash CarlaUE4.sh 
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+CommonUnixCrashHandler: Signal=11
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Engine crash handling finished; re-raising signal 11 for the default handler. Good bye.
+CarlaUE4.sh: line 2:  2911 Segmentation fault      (core dumped) "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
 ```

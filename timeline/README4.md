@@ -346,7 +346,7 @@ vulkan-utils is already the newest version (1.1.70+dfsg1-1ubuntu0.18.04.1).
 Disabling core dumps.
 (carla) nsambhu@SAMBHU19:/opt/carla-simulator$ 
 ```
-There is an error message about vulkan-utils not being installed when I run CARLA.  
+There is an error message window pop-up about vulkan-utils not being installed when I run CARLA.  
 8/1/2022 2:42 PM: TODO: reboot SAMBHU19  
 8/1/2022 2:47 PM: 
 ```

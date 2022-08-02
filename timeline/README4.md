@@ -388,3 +388,20 @@ sudo chmod -R 777 /opt/carla-simulator
 ```
 #install CARLA  
 deactivate conda (1) carla and (2) base environments
+
+# 2022 08 22 Daniel Sawyer: restore root directory from backup on HDD
+Preface: (1) boot from USB and (2) nomodeset  
+8/2/2022 11:13:17 AM:  
+```
+blkid
+```
+/dev/nvme0n1p2 is system / partition  
+/dev/sda1 is data1 partition  
+mount data1:
+```
+mkdir data1
+sudo mount -t ext4 /dev/sda1 ~/data1/
+ls data1/
+sudo dd if=~/data1/ubuntu_carla0-backup.img of=/dev/nvme0n1p2 status=progress
+```
+reboot regular (i.e. not from USB)

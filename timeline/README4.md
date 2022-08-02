@@ -404,4 +404,11 @@ sudo mount -t ext4 /dev/sda1 ~/data1/
 ls data1/
 sudo dd if=~/data1/ubuntu_carla0-backup.img of=/dev/nvme0n1p2 status=progress
 ```
+check for errors on the image:
+```
+sudo mount -t ext4 data1/ubuntu_carla0-backup.img test/
+ls test
+sudo umount test
+ls test
+```
 reboot regular (i.e. not from USB)

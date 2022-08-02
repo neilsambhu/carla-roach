@@ -412,3 +412,12 @@ sudo umount test
 ls test
 ```
 reboot regular (i.e. not from USB)
+
+# 2022 08 22 Daniel Sawyer: backup root directory to HDD
+8/2/2022 1:03:11 PM: 
+```
+sudo blkid
+```
+```
+sudo dd if=/dev/nvme0n1p2 of=/data/data1/ubuntu_carla0_teamviewer-backup.img status=progress
+```

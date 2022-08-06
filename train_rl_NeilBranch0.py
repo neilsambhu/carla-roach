@@ -44,13 +44,16 @@ def main(cfg: DictConfig):
     if bVerbose:
         print("Neil start here 3")
     # prepare agent
+    # input("pause for hydra error\n") # hydra error exists here
     agent_name = cfg.actors[cfg.ev_id].agent
     if bVerbose:
         print("Neil left here 3")
 
     if bVerbose:
         print("Neil start here 4")
+    # input("pause for hydra error\n") # hydra error exists here
     last_checkpoint_path = Path(hydra.utils.get_original_cwd()) / 'outputs' / 'checkpoint.txt'
+    # input("pause for hydra error\n") # hydra error exists here
     if last_checkpoint_path.exists():
         if bVerbose:
             print("Neil 4.100")
@@ -165,6 +168,7 @@ def main(cfg: DictConfig):
 if __name__ == '__main__':
     if bVerbose:
         print("Neil start here 1")
+    input("pause for hydra error\n") # small hydra error exists
     main()
     if bVerbose:
         print("Neil left here 1")

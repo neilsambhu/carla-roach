@@ -540,3 +540,5 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 (carla) nsambhu@SAMBHU19:~/github/carla-roach$ /opt/carla-simulator/CarlaUE4.sh: line 2: 13828 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
 ```
+8/6/2022 4:03:18 PM: TODO: find line number of hydra error  
+8/6/2022 4:14:20 PM: TODO: find how to specify hydra version. Possibility: option in config/train_rl.yaml file.

@@ -2,6 +2,8 @@ import gym
 from pathlib import Path
 import wandb
 import hydra
+# HYDRA_FULL_ERROR=1
+# subprocess.call(['run/train_rl_NeilBranch0.sh'])
 from omegaconf import DictConfig, OmegaConf
 import logging
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
@@ -16,7 +18,8 @@ log = logging.getLogger(__name__)
 from inspect import currentframe, getframeinfo
 bVerbose = True
 
-@hydra.main(config_path='config', config_name='train_rl')
+# @hydra.main(config_path='config', config_name='train_rl')
+@hydra.main(config_path='config', config_name='train_rl', version_base='1.2')
 def main(cfg: DictConfig):
     if bVerbose:
         print("Neil start here 1")
@@ -168,7 +171,7 @@ def main(cfg: DictConfig):
 if __name__ == '__main__':
     if bVerbose:
         print("Neil start here 1")
-    input("pause for hydra error\n") # small hydra error exists
+    # input("pause for hydra error\n") # small hydra error exists
     main()
     if bVerbose:
         print("Neil left here 1")

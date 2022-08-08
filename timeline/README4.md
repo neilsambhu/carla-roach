@@ -1018,3 +1018,8 @@ Traceback (most recent call last):
     completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
+8/8/2022 1:38:24 PM: find "# @package _group_"
+```
+grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "# @package _group_">outgrep.txt
+```
+8/8/2022 1:52:27 PM: train_rl_parent_NeilBranch0.py > remove "# @package _group_"

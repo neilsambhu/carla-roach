@@ -885,3 +885,40 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
 8/8/2022 1:01:53 PM: hydra 1.0 to 0.11
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ HYDRA_FULL_ERROR=1 python -u run/train_rl_parent_NeilBranch0.py>out.txt
+run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 22, in <module>
+    @hydra.main(config_path='config', config_name='train_rl', version_base='1.0')
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/main.py", line 56, in main
+    version.setbase(version_base)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/version.py", line 79, in setbase
+    raise HydraException(f'version_base must be >= "{__compat_version__}"')
+hydra.errors.HydraException: version_base must be >= "1.1"
+PYTHON_RETURN=0
+CarlaUE4-Linux: no process found
+Traceback (most recent call last):
+  File "run/train_rl_parent_NeilBranch0.py", line 81, in <module>
+    completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
+```

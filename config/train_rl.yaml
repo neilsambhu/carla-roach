@@ -4,6 +4,7 @@ defaults:
   - agent/ppo/training: ppo
   - agent/ppo/obs_configs: birdview
   - train_envs: endless_all
+  - _self_
 actors:
   hero:
     agent: ppo

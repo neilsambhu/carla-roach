@@ -1,8 +1,8 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 5, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01']
 Neil run/train_rl_parent_NeilBranch0.py:77
-start at Sat Aug  6 18:36:05 EDT 2022
+start at Mon Aug  8 12:34:42 EDT 2022
 Neil start here 1
-end at Sat Aug  6 18:36:07 EDT 2022
+end at Mon Aug  8 12:34:44 EDT 2022
 Bash script done. train_rl_NeilBranch0.sh
 Neil run/train_rl_parent_NeilBranch0.py:80

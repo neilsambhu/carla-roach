@@ -19,7 +19,7 @@ from inspect import currentframe, getframeinfo
 bVerbose = True
 
 # @hydra.main(config_path='config', config_name='train_rl')
-@hydra.main(config_path='config', config_name='train_rl', version_base='1.1')
+@hydra.main(config_path='config', config_name='train_rl', version_base='1.0')
 def main(cfg: DictConfig):
     if bVerbose:
         print("Neil start here 1")

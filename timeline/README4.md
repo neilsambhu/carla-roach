@@ -647,3 +647,104 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
 8/8/2022 12:35:16 PM: train_rl.yaml:defaults: \_self\_
+```
+(carla) nsambhu@SAMBHU19:~/github/carla-roach$ HYDRA_FULL_ERROR=1 python -u run/train_rl_parent_NeilBranch0.py>out.txt
+run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 520, in _compose_config_from_defaults_list
+    cfg.merge_with(loaded.config)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 490, in merge_with
+    self._format_and_raise(key=None, value=None, cause=e)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/base.py", line 237, in _format_and_raise
+    type_override=type_override,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/_utils.py", line 873, in format_and_raise
+    _raise(ex, cause)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/_utils.py", line 771, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 488, in merge_with
+    self._merge_with(*others)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 512, in _merge_with
+    BaseContainer._map_merge(self, other)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 397, in _map_merge
+    dest_node._merge_with(src_node)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 516, in _merge_with
+    raise TypeError("Cannot merge DictConfig with ListConfig")
+omegaconf.errors.ConfigTypeError: Cannot merge DictConfig with ListConfig
+    full_key: 
+    object_type=dict
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 175, in <module>
+    main()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/main.py", line 95, in decorated_main
+    config_name=config_name,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 396, in _run_hydra
+    overrides=overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 453, in _run_app
+    lambda: hydra.run(
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 216, in run_and_report
+    raise ex
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 213, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 456, in <lambda>
+    overrides=overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 109, in run
+    run_mode=RunMode.RUN,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 599, in compose_config
+    validate_sweep_overrides=validate_sweep_overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 146, in load_configuration
+    validate_sweep_overrides=validate_sweep_overrides,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 253, in _load_configuration_impl
+    defaults=defaults_list.defaults, repo=caching_repo
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 524, in _compose_config_from_defaults_list
+    ).with_traceback(sys.exc_info()[2])
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 520, in _compose_config_from_defaults_list
+    cfg.merge_with(loaded.config)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 490, in merge_with
+    self._format_and_raise(key=None, value=None, cause=e)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/base.py", line 237, in _format_and_raise
+    type_override=type_override,
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/_utils.py", line 873, in format_and_raise
+    _raise(ex, cause)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/_utils.py", line 771, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 488, in merge_with
+    self._merge_with(*others)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 512, in _merge_with
+    BaseContainer._map_merge(self, other)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 397, in _map_merge
+    dest_node._merge_with(src_node)
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/omegaconf/basecontainer.py", line 516, in _merge_with
+    raise TypeError("Cannot merge DictConfig with ListConfig")
+hydra.errors.ConfigCompositionException: In 'train_envs/endless_all': ConfigTypeError raised while composing config:
+Cannot merge DictConfig with ListConfig
+    full_key: 
+    object_type=dict
+PYTHON_RETURN=0
+CarlaUE4-Linux: no process found
+Traceback (most recent call last):
+  File "run/train_rl_parent_NeilBranch0.py", line 81, in <module>
+    completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
+```

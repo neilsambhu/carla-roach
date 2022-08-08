@@ -64,7 +64,7 @@ if __name__ == '__main__':
     print(f'lGlobal_total_timesteps: {lGlobal_total_timesteps}, n_steps_total: {n_steps_total}, lEpochs: {lEpochs}, lDeltaStepsEpoch: {lDeltaStepsEpoch}')
 
     total_timesteps = lDeltaStepsEpoch
-    lEpochs=1
+    # lEpochs=1
     dtStart = datetime.now()
     for lEpoch in range(lEpochs):
         # setup for current epoch

@@ -1383,7 +1383,7 @@ wandb: wandb version 0.13.1 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.10.12
 wandb: Syncing run roach
-wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/1vmonw63
 wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-08-08/15-36-44/wandb/run-20220808_153717-1vmonw63
 wandb: Run `wandb offline` to turn off syncing.
@@ -1394,4 +1394,117 @@ wandb: WARNING Symlinked 3 files into the W&B run directory, call wandb.save aga
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 /home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: WARN: Box bound precision lowered by casting to float32
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+/opt/carla-simulator/CarlaUE4.sh: line 2: 46769 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 46778 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 46766 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 46775 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+/opt/carla-simulator/CarlaUE4.sh: line 2: 46772 Killed                  "/opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping" CarlaUE4 $@
+wandb: Waiting for W&B process to finish, PID 48271
+wandb: Program ended successfully.
+wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-08-08/15-36-44/wandb/run-20220808_153717-1vmonw63/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-08-08/15-36-44/wandb/run-20220808_153717-1vmonw63/logs/debug-internal.log
+wandb: Run summary:
+wandb:                         time/rollout 318.84855
+wandb:                  rollout/score_route 0.01581
+wandb:                rollout/score_penalty 0.85564
+wandb:               rollout/score_composed 0.01369
+wandb:                       rollout/length 2819.71429
+wandb:                       rollout/reward -2271.84745
+wandb:                      rollout/timeout 0.0
+wandb:           rollout/is_route_completed 0.0
+wandb:   rollout/is_route_completed_nocrash 0.0
+wandb:        rollout/route_completed_in_km 0.01581
+wandb:           rollout/route_length_in_km 1.64707
+wandb:      rollout/percentage_outside_lane 0.0
+wandb:        rollout/percentage_wrong_lane 0.03008
+wandb:            rollout/collisions_layout 0.0
+wandb:           rollout/collisions_vehicle 22.68909
+wandb:        rollout/collisions_pedestrian 0.0
+wandb:            rollout/collisions_others 0.0
+wandb:                    rollout/red_light 0.0
+wandb:                 rollout/light_passed 0.0
+wandb:              rollout/encounter_light 0.0
+wandb:              rollout/stop_infraction 0.0
+wandb:                  rollout/stop_passed 0.0
+wandb:               rollout/encounter_stop 0.0
+wandb:                    rollout/route_dev 0.0
+wandb:              rollout/vehicle_blocked 0.0
+wandb:                   rollout/n_episodes 7.0
+wandb:                         time/n_epoch 1
+wandb:                   time/sec_per_epoch 347.43335
+wandb:                             time/fps 35.3593
+wandb:                           time/train 52.40159
+wandb:                    time/train_values 0.0
+wandb:                   train/entropy_loss 0.08331
+wandb:               train/exploration_loss 0.01847
+wandb:           train/policy_gradient_loss 0.3679
+wandb:                     train/value_loss 4.48912
+wandb:                  train/last_epoch_kl 0.00142
+wandb:                  train/clip_fraction 0.03141
+wandb:                           train/loss 2.61421
+wandb:             train/explained_variance -0.78875
+wandb:                     train/clip_range 0.2
+wandb:                    train/train_epoch 19
+wandb:                  train/learning_rate 1e-05
+wandb:                                _step 24570
+wandb:                             _runtime 704
+wandb:                           _timestamp 1659988141
+wandb: Run history:
+wandb:                         time/rollout ▁█
+wandb:                  rollout/score_route ▁█
+wandb:                rollout/score_penalty ▁█
+wandb:               rollout/score_composed ▁█
+wandb:                       rollout/length ▁█
+wandb:                       rollout/reward █▁
+wandb:                      rollout/timeout ▁▁
+wandb:           rollout/is_route_completed ▁▁
+wandb:   rollout/is_route_completed_nocrash ▁▁
+wandb:        rollout/route_completed_in_km ▁█
+wandb:           rollout/route_length_in_km ▁█
+wandb:      rollout/percentage_outside_lane ▁▁
+wandb:        rollout/percentage_wrong_lane ▁█
+wandb:            rollout/collisions_layout ▁▁
+wandb:           rollout/collisions_vehicle █▁
+wandb:        rollout/collisions_pedestrian ▁▁
+wandb:            rollout/collisions_others ▁▁
+wandb:                    rollout/red_light ▁▁
+wandb:                 rollout/light_passed ▁▁
+wandb:              rollout/encounter_light ▁▁
+wandb:              rollout/stop_infraction ▁▁
+wandb:                  rollout/stop_passed ▁▁
+wandb:               rollout/encounter_stop ▁▁
+wandb:                    rollout/route_dev ▁▁
+wandb:              rollout/vehicle_blocked ▁▁
+wandb:                   rollout/n_episodes ▁█
+wandb:                         time/n_epoch ▁█
+wandb:                   time/sec_per_epoch ▁█
+wandb:                             time/fps █▁
+wandb:                           time/train ▁█
+wandb:                    time/train_values ▁▁
+wandb:                   train/entropy_loss ▁█
+wandb:               train/exploration_loss ▁█
+wandb:           train/policy_gradient_loss ▁█
+wandb:                     train/value_loss █▁
+wandb:                  train/last_epoch_kl █▁
+wandb:                  train/clip_fraction █▁
+wandb:                           train/loss █▁
+wandb:             train/explained_variance ▁█
+wandb:                     train/clip_range ▁▁
+wandb:                    train/train_epoch ▁▁
+wandb:                  train/learning_rate ▁▁
+wandb:                                _step ▁█
+wandb:                             _runtime ▁█
+wandb:                           _timestamp ▁█
+wandb: 
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 4 other file(s)
+wandb: 
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/1vmonw63
+PYTHON_RETURN=0
+CarlaUE4-Linux: no process found
+```
+8/8/2022 3:59:47 PM: train_rl_parent_NeilBranch0.py > removed hardcoded lEpochs=1
+```
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/1n3jvkk0
 ```

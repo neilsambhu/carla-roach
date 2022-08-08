@@ -13,7 +13,7 @@ def train_rl_yaml(total_timesteps):
             yaml.dump(train_rl, file)
 def endless_all_yaml(listTowns):
     with open('config/train_envs/endless_all.yaml', 'w') as file:
-        # file.write("# @package _group_\n")
+        file.write("# @package _group_\n")
         for sTown in listTowns:
             endless_all = f'''- env_id: Endless-v0
   env_configs:
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=5,lEpoch=lEpoch)
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=1,lEpoch=lEpoch)
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
-        # train_rl_yaml(total_timesteps=total_timesteps)
+        train_rl_yaml(total_timesteps=total_timesteps)
         endless_all_yaml(listTowns=listTownsEpoch)
         # training
         if bVerbose: 

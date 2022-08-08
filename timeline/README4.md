@@ -1114,3 +1114,110 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
 8/8/2022 2:06:58 PM: pause upgrading code to hydra 1.1. TODO: (1) ppo.yaml header; (2) train_rl_parent_NeilBranch0.py
+8/8/2022 2:15:08 PM: conda environment carla -> carla1
+```
+conda create --name carla1 --clone carla
+```
+```
+(carla1) nsambhu@SAMBHU19:~/github/carla-roach$ conda list hydra
+# packages in environment at /home/nsambhu/anaconda3/envs/carla1:
+#
+# Name                    Version                   Build  Channel
+hydra                     2.5              py37h5e8e339_0    conda-forge
+hydra-core                1.2.0                    pypi_0    pypi
+```
+8/8/2022 2:22:12 PM: install hydra v1.0
+```
+conda install -c conda-forge hydra=1.0
+```
+failed.  
+try again: 
+```
+pip install hydra-core==1.0
+```
+```
+(carla1) nsambhu@SAMBHU19:~/github/carla-roach$ conda list hydra
+# packages in environment at /home/nsambhu/anaconda3/envs/carla1:
+#
+# Name                    Version                   Build  Channel
+hydra                     2.5              py37h5e8e339_0    conda-forge
+hydra-core                1.0.0                    pypi_0    pypi
+```
+8/8/2022 2:38:04 PM: run
+```
+(carla1) nsambhu@SAMBHU19:~/github/carla-roach$ HYDRA_FULL_ERROR=1 python -u run/train_rl_parent_NeilBranch0.py>out.txt
+run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/core/utils.py:143: UserWarning: register_resolver() is deprecated.
+See https://github.com/omry/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_resolver(name, f)
+CarlaUE4-Linux: no process found
+CarlaUE4-Linux: no process found
+/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/gym/logger.py:34: UserWarning: WARN: Box bound precision lowered by casting to float32
+  warnings.warn(colorize("%s: %s" % ("WARN", msg % args), "yellow"))
+wandb: Currently logged in as: neilsambhu. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.1 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.21
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-08-08/14-36-42/wandb/run-20220808_143656-3r5miqri
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run roach
+wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/3r5miqri
+wandb: WARNING Symlinked 3 files into the W&B run directory, call wandb.save again to sync new files.
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 175, in <module>
+    main()
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/main.py", line 37, in decorated_main
+    strict=strict,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 356, in _run_hydra
+    lambda: hydra.run(
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 210, in run_and_report
+    raise ex
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 207, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 359, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "train_rl_NeilBranch0.py", line 166, in main
+    agent.learn(env, total_timesteps=int(cfg.total_timesteps), callback=callback, seed=cfg.seed)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/rl_birdview_agent.py", line 275, in learn
+    model.learn(total_timesteps, callback=callback, seed=seed)
+  File "/home/nsambhu/github/carla-roach/agents/rl_birdview/models/ppo.py", line 236, in learn
+    callback.init_callback(self)
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/stable_baselines3/common/callbacks.py", line 47, in init_callback
+    self.logger = model.logger
+AttributeError: 'PPO' object has no attribute 'logger'
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb:                                                                                
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/3r5miqri
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 4 other file(s)
+wandb: Find logs at: ./outputs/2022-08-08/14-36-42/wandb/run-20220808_143656-3r5miqri/logs
+PYTHON_RETURN=0
+Traceback (most recent call last):
+  File "run/train_rl_parent_NeilBranch0.py", line 81, in <module>
+    completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
+```

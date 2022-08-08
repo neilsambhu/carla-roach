@@ -1,10 +1,10 @@
 defaults:
+  - _self_
   - agent: ppo
   - agent/ppo/policy: xtma_beta
   - agent/ppo/training: ppo
   - agent/ppo/obs_configs: birdview
   - train_envs: endless_all
-  - _self_
 actors:
   hero:
     agent: ppo

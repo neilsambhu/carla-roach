@@ -1,8 +1,59 @@
-lGlobal_total_timesteps: 10000000, n_steps_total: 5, lEpochs: 6, lDeltaStepsEpoch: 1666667
-starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01']
-Neil run/train_rl_parent_NeilBranch0.py:77
-start at Mon Aug  8 14:45:35 EDT 2022
+lGlobal_total_timesteps: 100000, n_steps_total: 12288, lEpochs: 6, lDeltaStepsEpoch: 16667
+starting epoch 0, total_timesteps: 16667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
+Neil run/train_rl_parent_NeilBranch0.py:78
+start at Mon Aug  8 15:36:43 EDT 2022
 Neil start here 1
-end at Mon Aug  8 14:45:36 EDT 2022
-Bash script done. train_rl_NeilBranch0.sh
-Neil run/train_rl_parent_NeilBranch0.py:80
+Neil start here 1
+[2022-08-08 15:36:45,120][utils.server_utils][INFO] - Kill Carla Servers!
+Neil left here 1
+Neil start here 2
+cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town02', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town03', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town04', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}, {'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town05', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
+server_manager <utils.server_utils.CarlaServerManager object at 0x7f1f0a1d94d0>
+[2022-08-08 15:36:46,138][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-08 15:36:46,138][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:63
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:66
+[2022-08-08 15:36:46,215][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:63
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:66
+[2022-08-08 15:36:46,223][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:63
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:66
+[2022-08-08 15:36:46,230][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:63
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:66
+[2022-08-08 15:36:46,237][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:63
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:66
+Neil left here 2
+Neil start here 3
+Neil left here 3
+Neil start here 4
+Neil left here 4
+Neil start here 5
+Neil left here 5
+Neil start here 6.0
+cfg.agent[agent_name] {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': None, 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}, 'policy': {'entry_point': 'agents.rl_birdview.models.ppo_policy:PpoPolicy', 'kwargs': {'policy_head_arch': [256, 256], 'value_head_arch': [256, 256], 'features_extractor_entry_point': 'agents.rl_birdview.models.torch_layers:XtMaCNN', 'features_extractor_kwargs': {'states_neurons': [256, 256]}, 'distribution_entry_point': 'agents.rl_birdview.models.distributions:BetaDistribution', 'distribution_kwargs': {'dist_init': None}}}, 'training': {'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': 1e-05, 'n_steps_total': 12288, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}, 'obs_configs': {'birdview': {'module': 'birdview.chauffeurnet', 'width_in_pixels': 192, 'pixels_ev_to_bottom': 40, 'pixels_per_meter': 5.0, 'history_idx': [-16, -11, -6, -1], 'scale_bbox': True, 'scale_mask_col': 1.0}, 'speed': {'module': 'actor_state.speed'}, 'control': {'module': 'actor_state.control'}, 'velocity': {'module': 'actor_state.velocity'}}}
+cfg.agent[agent_name].entry_point agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent
+Neil 6.1
+type(AgentClass) <class 'type'>
+AgentClass <class 'agents.rl_birdview.rl_birdview_agent.RlBirdviewAgent'>
+Neil 6.2
+Neil 6.3
+Neil left here 6.0
+Neil start here 7
+Neil left here 7
+Neil start here 8
+Neil left here 8
+Neil start here 100
+type(env) <class 'stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv'>
+env <stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7f1ef936c490>
+
+Neil left here 100
+Neil start here 200
+Neil left here 200
+int(cfg.total_timesteps) 16667
+callback <stable_baselines3.common.callbacks.CallbackList object at 0x7f1e0b55ea90>
+cfg.seed 2021
+trainable parameters: 1.53M
+n_epoch: 0, num_timesteps: 12285

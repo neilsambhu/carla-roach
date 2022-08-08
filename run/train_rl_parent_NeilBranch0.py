@@ -47,8 +47,9 @@ if __name__ == '__main__':
     if os.path.exists("outputs/checkpoint.txt"):
         os.remove("outputs/checkpoint.txt")
 
-    lGlobal_total_timesteps = int(1e7)
+    # lGlobal_total_timesteps = int(1e7)
     # lGlobal_total_timesteps = int(1e3)
+    lGlobal_total_timesteps = int(1e5)
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
     n_steps_total = 0
@@ -68,7 +69,7 @@ if __name__ == '__main__':
     for lEpoch in range(lEpochs):
         # setup for current epoch
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=5,lEpoch=lEpoch)
-        listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=1,lEpoch=lEpoch)
+        # listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=1,lEpoch=lEpoch)
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
         endless_all_yaml(listTowns=listTownsEpoch)

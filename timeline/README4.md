@@ -1508,3 +1508,13 @@ CarlaUE4-Linux: no process found
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/1n3jvkk0
 ```
+8/8/2022 4:03:05 PM:  
+TODO:  
+(1) CARLA non-gui (i.e. -RenderOffScreen flag) https://carla.readthedocs.io/en/latest/adv_rendering_options/ and  
+(2) CARLA on multiple GPUs:  
+(a) train_rl_parent_NeilBranch0.py > endless_all gpu 0 to 1  
+(b) nvidia-smi > check gpu 1
+
+8/8/2022 4:43:20 PM: carla won't run on GPU 1. TODO: try to run carla on gpu 1.
+unrealengine: Unable to select GPU when using RenderOffscreen.
+TODO: (maybe) select GPU using docker.

@@ -1221,3 +1221,83 @@ Traceback (most recent call last):
     completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
+8/8/2022 2:41:37 PM: try to install hydra v1.1
+```
+(carla1) nsambhu@SAMBHU19:~/github/carla-roach$ conda list hydra
+# packages in environment at /home/nsambhu/anaconda3/envs/carla1:
+#
+# Name                    Version                   Build  Channel
+hydra                     2.5              py37h5e8e339_0    conda-forge
+hydra-core                1.1.0                    pypi_0    pypi
+```
+8/8/2022 2:46:35 PM: run
+```
+(carla1) nsambhu@SAMBHU19:~/github/carla-roach$ HYDRA_FULL_ERROR=1 python -u run/train_rl_parent_NeilBranch0.py>out.txt
+run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/core/default_element.py:127: UserWarning: In 'train_envs/endless_all': Usage of deprecated keyword in package header '# @package _group_'.
+See https://hydra.cc/docs/next/upgrades/1.0_to_1.1/changes_to_package_header for more information
+  See {url} for more information"""
+/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/core/default_element.py:127: UserWarning: In 'agent/ppo/obs_configs/birdview': Usage of deprecated keyword in package header '# @package _group_'.
+See https://hydra.cc/docs/next/upgrades/1.0_to_1.1/changes_to_package_header for more information
+  See {url} for more information"""
+/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/core/default_element.py:127: UserWarning: In 'agent/ppo/training/ppo': Usage of deprecated keyword in package header '# @package _group_'.
+See https://hydra.cc/docs/next/upgrades/1.0_to_1.1/changes_to_package_header for more information
+  See {url} for more information"""
+/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/core/default_element.py:127: UserWarning: In 'agent/ppo/policy/xtma_beta': Usage of deprecated keyword in package header '# @package _group_'.
+See https://hydra.cc/docs/next/upgrades/1.0_to_1.1/changes_to_package_header for more information
+  See {url} for more information"""
+/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/core/default_element.py:127: UserWarning: In 'agent/ppo': Usage of deprecated keyword in package header '# @package _group_'.
+See https://hydra.cc/docs/next/upgrades/1.0_to_1.1/changes_to_package_header for more information
+  See {url} for more information"""
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 175, in <module>
+    main()
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/main.py", line 53, in decorated_main
+    config_name=config_name,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 368, in _run_hydra
+    lambda: hydra.run(
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 214, in run_and_report
+    raise ex
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 211, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/utils.py", line 371, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 91, in run
+    run_mode=RunMode.RUN,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 568, in compose_config
+    from_shell=from_shell,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 150, in load_configuration
+    from_shell=from_shell,
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 250, in _load_configuration_impl
+    defaults=defaults_list.defaults, repo=caching_repo
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 515, in _compose_config_from_defaults_list
+    loaded = self._load_single_config(default=default, repo=repo)
+  File "/home/nsambhu/anaconda3/envs/carla1/lib/python3.7/site-packages/hydra/_internal/config_loader_impl.py", line 400, in _load_single_config
+    f"Config {config_path} must be a Dictionary, got {type(ret).__name__}"
+ValueError: Config train_envs/endless_all must be a Dictionary, got ConfigResult
+PYTHON_RETURN=0
+CarlaUE4-Linux: no process found
+Traceback (most recent call last):
+  File "run/train_rl_parent_NeilBranch0.py", line 81, in <module>
+    completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
+```

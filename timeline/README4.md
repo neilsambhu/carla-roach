@@ -922,3 +922,4 @@ Traceback (most recent call last):
     completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
+8/8/2022 1:10:19 PM: assumption: hydra 1.1 is valid. TODO: locate package header https://hydra.cc/docs/upgrades/1.0_to_1.1/changes_to_package_header/  

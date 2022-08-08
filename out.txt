@@ -1,16 +1,16 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 5, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01']
 Neil run/train_rl_parent_NeilBranch0.py:77
-start at Mon Aug  8 12:44:20 EDT 2022
+start at Mon Aug  8 12:51:22 EDT 2022
 Neil start here 1
 Neil start here 1
-[2022-08-08 12:44:22,881][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-08 12:51:25,195][utils.server_utils][INFO] - Kill Carla Servers!
 Neil left here 1
 Neil start here 2
 cfg.train_envs [{'env_id': 'Endless-v0', 'env_configs': {'carla_map': 'Town01', 'num_zombie_vehicles': [0, 150], 'num_zombie_walkers': [0, 300], 'weather_group': 'dynamic_1.0'}, 'gpu': [0]}]
-server_manager <utils.server_utils.CarlaServerManager object at 0x7f053bd23090>
-[2022-08-08 12:44:23,897][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-08-08 12:44:23,897][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
+server_manager <utils.server_utils.CarlaServerManager object at 0x7f3911c21690>
+[2022-08-08 12:51:26,212][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-08 12:51:26,212][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:63
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:66
 Neil left here 2
@@ -33,17 +33,17 @@ Neil start here 7
 Neil left here 7
 Neil start here 8
 Neil left here 8
-[2022-08-08 12:44:29,049][__main__][INFO] - making port 2000
+[2022-08-08 12:51:31,355][__main__][INFO] - making port 2000
 Neil start here 100
 type(env) <class 'stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv'>
-env <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f0524930350>
+env <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f39118755d0>
 Neil left here 100
 Neil start here 200
 Neil left here 200
 int(cfg.total_timesteps) 10000
-callback <stable_baselines3.common.callbacks.CallbackList object at 0x7f051a304950>
+callback <stable_baselines3.common.callbacks.CallbackList object at 0x7f390fbb0d50>
 cfg.seed 2021
 trainable parameters: 1.53M
-end at Mon Aug  8 12:44:48 EDT 2022
+end at Mon Aug  8 12:51:49 EDT 2022
 Bash script done. train_rl_NeilBranch0.sh
 Neil run/train_rl_parent_NeilBranch0.py:80

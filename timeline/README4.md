@@ -1113,7 +1113,7 @@ Traceback (most recent call last):
     completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
-8/8/2022 2:06:58 PM: pause upgrading code to hydra 1.1. TODO: (1) ppo.yaml header; (2) train_rl_parent_NeilBranch0.py
+8/8/2022 2:06:58 PM: pause upgrading code to hydra 1.1. TODO: (1) ppo.yaml header; (2) train_rl_parent_NeilBranch0.py  
 8/8/2022 2:15:08 PM: conda environment carla -> carla1
 ```
 conda create --name carla1 --clone carla

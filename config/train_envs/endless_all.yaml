@@ -1,4 +1,3 @@
-# @package _group_
 - env_id: Endless-v0
   env_configs:
     carla_map: Town01

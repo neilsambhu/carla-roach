@@ -1045,9 +1045,6 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
-/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/core/default_element.py:128: UserWarning: In 'train_envs/endless_all': Usage of deprecated keyword in package header '# @package _group_'.
-See https://hydra.cc/docs/next/upgrades/1.0_to_1.1/changes_to_package_header for more information
-  See {url} for more information"""
 /home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/hydra/core/default_element.py:128: UserWarning: In 'agent/ppo/obs_configs/birdview': Usage of deprecated keyword in package header '# @package _group_'.
 See https://hydra.cc/docs/next/upgrades/1.0_to_1.1/changes_to_package_header for more information
   See {url} for more information"""
@@ -1068,11 +1065,11 @@ wandb: Currently logged in as: neilsambhu. Use `wandb login --relogin` to force 
 wandb: wandb version 0.13.1 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.12.21
-wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-08-08/13-54-06/wandb/run-20220808_135421-3vdjt80d
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-08-08/14-03-18/wandb/run-20220808_140333-3dz9ykhd
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run roach
 wandb: ⭐ View project at https://wandb.ai/neilsambhu/train_rl_experts
-wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/3vdjt80d
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/3dz9ykhd
 wandb: WARNING Symlinked 3 files into the W&B run directory, call wandb.save again to sync new files.
 Error executing job with overrides: ['agent.ppo.wb_run_path=null', 'wb_project=train_rl_experts', 'wb_name=roach', 'agent/ppo/policy=xtma_beta', 'agent.ppo.training.kwargs.explore_coef=0.05', 'carla_sh_path=/opt/carla-simulator/CarlaUE4.sh']
 Traceback (most recent call last):
@@ -1107,12 +1104,13 @@ Traceback (most recent call last):
 AttributeError: 'PPO' object has no attribute 'logger'
 wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
 wandb:                                                                                
-wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/3vdjt80d
+wandb: Synced roach: https://wandb.ai/neilsambhu/train_rl_experts/runs/3dz9ykhd
 wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 4 other file(s)
-wandb: Find logs at: ./outputs/2022-08-08/13-54-06/wandb/run-20220808_135421-3vdjt80d/logs
+wandb: Find logs at: ./outputs/2022-08-08/14-03-18/wandb/run-20220808_140333-3dz9ykhd/logs
 PYTHON_RETURN=0
 Traceback (most recent call last):
   File "run/train_rl_parent_NeilBranch0.py", line 81, in <module>
     completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
 FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
 ```
+8/8/2022 2:06:58 PM: pause upgrading code to hydra 1.1. TODO: (1) ppo.yaml header; (2) train_rl_parent_NeilBranch0.py

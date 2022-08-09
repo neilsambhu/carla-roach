@@ -1623,3 +1623,5 @@ FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.t
 8/9/2022 10:36:08 AM: train again  
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/2e007w4u  
+Error: EOF  
+8/9/2022 11:43:12 AM: train_rl_parent_NeilBranch0.py > n_steps_total > 1e5 -> 1e4  

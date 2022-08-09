@@ -12,7 +12,7 @@ kwargs:
   lr_schedule_step: 8
   max_grad_norm: 0.5
   n_epochs: 20
-  n_steps_total: 100000
+  n_steps_total: 10000
   target_kl: 0.01
   update_adv: false
   vf_coef: 0.5

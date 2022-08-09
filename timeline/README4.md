@@ -1640,3 +1640,11 @@ stop execution to work on docker
 ```
 sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
 ```
+server_utils.py > new carla docker:
+```
+cmd = f'sudo docker run --privileged --gpus "device={cfg["gpu"]}" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+```
+8/9/2022 4:43:47 PM: new command for calling carla-roach  
+sudo /home/nsambhu/anaconda3/envs/carla2/bin/python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
+new 2 command for calling carla-roach  
+python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  

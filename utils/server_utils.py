@@ -14,6 +14,12 @@ def kill_carla():
     kill_process.wait()
     time.sleep(1)
     log.info("Kill Carla Servers!")
+def kill_carla_docker():
+    kill_process = subprocess.Popen('dockerlist=$(sudo docker container ls -q); sudo docker kill $dockerlist', shell=True, stdin=subprocess.PIPE, encoding="utf8")
+    kill_process.communicate('q\n')
+    # kill_process.wait()
+    # time.sleep(1)
+    log.info("Kill Carla Servers!")
 
 
 class CarlaServerManager():
@@ -39,7 +45,8 @@ class CarlaServerManager():
                     port += 5
 
     def start(self):
-        kill_carla()
+        # kill_carla()
+        kill_carla_docker()
         for cfg in self.env_configs:
             cmd = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
                 f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]}'
@@ -53,8 +60,8 @@ class CarlaServerManager():
             # cmd = f'DISPLAY=:2 vglrun -d :7.{cfg["gpu"]} {self._carla_sh_str}'
             # 06/28/2022: Neil added: end
             # 7/10/2022: Neil added: start
-            cmd = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
-                f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            # cmd = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
+            #     f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # 7/10/2022: Neil added: end
             # 8/8/2022: Neil added: start
             # cmd = f'graphicsadapter={cfg["gpu"]} bash {self._carla_sh_str} ' \
@@ -66,12 +73,20 @@ class CarlaServerManager():
             # cmd = f'DEVICE= CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
             #     f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # 8/8/2022: Neil added: end
+            # 8/9/2022: Neil added: start
+            # cmd = f'sudo docker run --privileged --gpus "device={cfg["gpu"]}" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            cmd = f'echo q | sudo -S docker run --privileged --gpus "device={cfg["gpu"]}" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            # 8/9/2022: Neil added: end
             log.info(cmd)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdout=open(log_file, "w"))
             if bVerbose:
                 frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
-            server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
+            # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid) # 8/9/2022 4:51:00 PM: comment out 
+            # 8/9/2022: Dan added: start
+            server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdin=subprocess.PIPE, encoding="utf8")
+            # sudo_out = server_process.communicate('q\n', timeout=1)
+            # 8/9/2022: Dan added: end
             if bVerbose:
                 frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         time.sleep(self._t_sleep)

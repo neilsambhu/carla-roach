@@ -18,7 +18,7 @@ def ppo_yaml(n_steps_total):
         with open("config/agent/ppo/training/ppo.yaml", 'w') as file:
             file.write('# @package _group_\n')
             yaml.dump(ppo, file)
-def endless_all_yaml(listTowns):
+def endless_all_yaml(listTowns, listGpuIds):
     with open('config/train_envs/endless_all.yaml', 'w') as file:
         file.write("# @package _group_\n")
         for sTown in listTowns:
@@ -28,8 +28,21 @@ def endless_all_yaml(listTowns):
     num_zombie_vehicles: [0, 150]
     num_zombie_walkers: [0, 300]
     weather_group: dynamic_1.0
-  gpu: [0]\n'''
+  gpu: [1]\n'''
             file.write(endless_all)
+def endless_all_yaml2(listTowns, listGpuIds):
+    with open('config/train_envs/endless_all.yaml', 'w') as file:
+        file.write("# @package _group_\n")
+        for sTown in listTowns:
+            for sGpuId in listGpuIds:
+                endless_all = f'''- env_id: Endless-v0
+      env_configs:
+        carla_map: {sTown}
+        num_zombie_vehicles: [0, 150]
+        num_zombie_walkers: [0, 300]
+        weather_group: dynamic_1.0
+      gpu: [{sGpuId}]\n'''
+                file.write(endless_all)
 def train_rl_NeilBranch0_sh():  
     if os.path.exists("outputs/num_timesteps.txt"):
         os.remove("outputs/num_timesteps.txt")
@@ -57,6 +70,7 @@ if __name__ == '__main__':
     lGlobal_total_timesteps = int(1e7)
     # lGlobal_total_timesteps = int(1e3)
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
+    listGpuIds=[0,1]
 
     # n_steps_total = int(1e5)
     n_steps_total = int(1e4)
@@ -81,7 +95,7 @@ if __name__ == '__main__':
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
         ppo_yaml(n_steps_total=n_steps_total)
-        endless_all_yaml(listTowns=listTownsEpoch)
+        endless_all_yaml(listTowns=listTownsEpoch, listGpuIds=listGpuIds)
         # training
         if bVerbose: 
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")

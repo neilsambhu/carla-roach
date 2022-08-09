@@ -16,7 +16,7 @@ from utils import server_utils
 
 log = logging.getLogger(__name__)
 from inspect import currentframe, getframeinfo
-bVerbose = True
+bVerbose = False
 
 @hydra.main(config_path='config', config_name='train_rl')
 # @hydra.main(config_path='config', config_name='train_rl', version_base='1.1')

@@ -19,7 +19,7 @@ dummy: false
 ev_id: hero
 kill_running: true
 seed: 2021
-total_timesteps: 334
+total_timesteps: 1666667
 wb_name: null
 wb_notes: null
 wb_project: train_rl

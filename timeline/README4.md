@@ -1518,3 +1518,7 @@ TODO:
 8/8/2022 4:43:20 PM: carla won't run on GPU 1. TODO: try to run carla on gpu 1.  
 unrealengine: Unable to select GPU when using RenderOffscreen.  
 TODO: (maybe) select GPU using docker.  
+8/8/2022 9:11:35 PM: train non-GUI on GPU 0 for 10M steps
+```
+grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "bVerbose = True">outgrep.txt
+```

@@ -14,7 +14,6 @@ def train_rl_yaml(total_timesteps):
 def ppo_yaml(n_steps_total):
     with open("config/agent/ppo/training/ppo.yaml.bak1") as file:
         ppo = yaml.load(file, Loader=yaml.FullLoader)
-        print(f'ppo:\n{ppo}')
         ppo['kwargs']['n_steps_total'] = int(n_steps_total)
         with open("config/agent/ppo/training/ppo.yaml", 'w') as file:
             file.write('# @package _group_\n')
@@ -59,7 +58,7 @@ if __name__ == '__main__':
     # lGlobal_total_timesteps = int(1e3)
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
-    n_steps_total = 1e5
+    n_steps_total = int(1e5)
     # with open("config/agent/ppo/training/ppo.yaml") as file:
     #     ppo = yaml.load(file, Loader=yaml.FullLoader)
     #     n_steps_total = ppo['kwargs']['n_steps_total']

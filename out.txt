@@ -1,7 +1,6 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 100000.0, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
 ppo:
-{'entry_point': 'agents.rl_birdview.models.ppo:PPO', 'kwargs': {'learning_rate': '1e-5', 'n_steps_total': 5, 'batch_size': 256, 'n_epochs': 20, 'gamma': 0.99, 'gae_lambda': 0.9, 'clip_range': 0.2, 'clip_range_vf': None, 'ent_coef': 0.01, 'explore_coef': 0.05, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': 0.01, 'update_adv': False, 'lr_schedule_step': 8}}
 Neil run/train_rl_parent_NeilBranch0.py:87
 start at Mon Aug  8 22:40:10 EDT 2022
 [2022-08-08 22:40:12,656][utils.server_utils][INFO] - Kill Carla Servers!

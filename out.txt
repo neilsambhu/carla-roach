@@ -1,14 +1,13 @@
-lGlobal_total_timesteps: 10000000, n_steps_total: 100000.0, lEpochs: 6, lDeltaStepsEpoch: 1666667
+lGlobal_total_timesteps: 10000000, n_steps_total: 100000, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
-ppo:
-Neil run/train_rl_parent_NeilBranch0.py:87
-start at Mon Aug  8 22:40:10 EDT 2022
-[2022-08-08 22:40:12,656][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-08-08 22:40:13,677][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-08-08 22:40:13,677][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000 -RenderOffScreen
-[2022-08-08 22:40:13,685][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005 -RenderOffScreen
-[2022-08-08 22:40:13,691][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010 -RenderOffScreen
-[2022-08-08 22:40:13,697][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015 -RenderOffScreen
-[2022-08-08 22:40:13,703][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020 -RenderOffScreen
+Neil run/train_rl_parent_NeilBranch0.py:86
+start at Tue Aug  9 10:38:36 EDT 2022
+[2022-08-09 10:38:39,313][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-09 10:38:40,334][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-09 10:38:40,334][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000 -RenderOffScreen
+[2022-08-09 10:38:40,339][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005 -RenderOffScreen
+[2022-08-09 10:38:40,344][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010 -RenderOffScreen
+[2022-08-09 10:38:40,349][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015 -RenderOffScreen
+[2022-08-09 10:38:40,354][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020 -RenderOffScreen
 
 trainable parameters: 1.53M

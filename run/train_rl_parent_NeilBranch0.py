@@ -11,6 +11,14 @@ def train_rl_yaml(total_timesteps):
         train_rl['total_timesteps'] = int(total_timesteps)
         with open("config/train_rl.yaml", 'w') as file:
             yaml.dump(train_rl, file)
+def ppo_yaml(n_steps_total):
+    with open("config/agent/ppo/training/ppo.yaml.bak1") as file:
+        ppo = yaml.load(file, Loader=yaml.FullLoader)
+        print(f'ppo:\n{ppo}')
+        ppo['kwargs']['n_steps_total'] = int(n_steps_total)
+        with open("config/agent/ppo/training/ppo.yaml", 'w') as file:
+            file.write('# @package _group_\n')
+            yaml.dump(ppo, file)
 def endless_all_yaml(listTowns):
     with open('config/train_envs/endless_all.yaml', 'w') as file:
         file.write("# @package _group_\n")
@@ -51,14 +59,15 @@ if __name__ == '__main__':
     # lGlobal_total_timesteps = int(1e3)
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
 
-    n_steps_total = 0
-    with open("config/agent/ppo/training/ppo.yaml") as file:
-        ppo = yaml.load(file, Loader=yaml.FullLoader)
-        n_steps_total = ppo['kwargs']['n_steps_total']
+    n_steps_total = 1e5
+    # with open("config/agent/ppo/training/ppo.yaml") as file:
+    #     ppo = yaml.load(file, Loader=yaml.FullLoader)
+    #     n_steps_total = ppo['kwargs']['n_steps_total']
     # lStepsFirstEpoch = n_steps_total*20
     # lEpochs = math.ceil((lGlobal_total_timesteps-lStepsFirstEpoch)/n_steps_total)+1
     # lDeltaStepsEpoch = n_steps_total*20
     lDeltaStepsEpoch = math.ceil(lGlobal_total_timesteps/len(listTowns))
+    # lDeltaStepsEpoch = lGlobal_total_timesteps
     lEpochs = math.ceil(lGlobal_total_timesteps/lDeltaStepsEpoch)
     print(f'lGlobal_total_timesteps: {lGlobal_total_timesteps}, n_steps_total: {n_steps_total}, lEpochs: {lEpochs}, lDeltaStepsEpoch: {lDeltaStepsEpoch}')
 
@@ -71,6 +80,7 @@ if __name__ == '__main__':
         # listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=1,lEpoch=lEpoch)
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
+        ppo_yaml(n_steps_total=n_steps_total)
         endless_all_yaml(listTowns=listTownsEpoch)
         # training
         if bVerbose: 

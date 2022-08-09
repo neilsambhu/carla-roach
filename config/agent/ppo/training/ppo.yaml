@@ -1,22 +1,18 @@
 # @package _group_
 entry_point: agents.rl_birdview.models.ppo:PPO
 kwargs:
-  learning_rate: 1e-5
-  n_steps_total: 12288
-  # n_steps_total: 5
   batch_size: 256
-  # batch_size: 128
-  # batch_size: 64
-  # batch_size: 1
-  n_epochs: 20
-  gamma: 0.99
-  gae_lambda: 0.9
   clip_range: 0.2
   clip_range_vf: null
   ent_coef: 0.01
   explore_coef: 0.05
-  vf_coef: 0.5
+  gae_lambda: 0.9
+  gamma: 0.99
+  learning_rate: 1e-5
+  lr_schedule_step: 8
   max_grad_norm: 0.5
+  n_epochs: 20
+  n_steps_total: 100000
   target_kl: 0.01
   update_adv: false
-  lr_schedule_step: 8
+  vf_coef: 0.5

@@ -1532,3 +1532,8 @@ nvidia-smi | grep 'CarlaUE4' | awk '{ print $5 }' | xargs -n1 kill -9
 8/8/2022 9:36:39 PM: train non-GUI on GPU 0 for 10M steps on 5 towns on GPU 0.  
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/v5k7i84s  
+Note: error during execution. Wandb did not sync a checkpoint for the second epoch. 73368 steps should be sufficient for a sync.  
+8/8/2022 10:24:28 PM: train_rl_parent_NeilBranch0.py: add code to modify ppo.yaml:n_steps_total  
+8/8/2022 10:26:03 PM: train non-GUI on GPU 0 for 10M steps on 5 towns on GPU 0. Try 100k steps.  
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/3rwvg1ye  

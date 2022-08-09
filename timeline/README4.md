@@ -1633,3 +1633,10 @@ cancelled execution
 python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt
 ```
 train_rl_parent_NeilBranch0.py > GPU 1  
+execution EOF error  
+8/9/2022 3:20:55 PM: train_rl_parent_NeilBranch0.py > GPU 0  
+stop execution to work on docker  
+8/9/2022 4:09:22 PM: carla docker
+```
+sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
+```

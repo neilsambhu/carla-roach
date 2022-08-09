@@ -1,6 +1,6 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 10000, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
-Neil run/train_rl_parent_NeilBranch0.py:101
+Neil run/train_rl_parent_NeilBranch0.py:102
 run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
 
 CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
@@ -21,16 +21,25 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
-start at Tue Aug  9 17:47:54 EDT 2022
+start at Tue Aug  9 18:03:17 EDT 2022
 CarlaUE4-Linux: no process found
-[2022-08-09 17:47:56,807][utils.server_utils][INFO] - Kill Carla Servers!
-8d5fdd78b56f
-[2022-08-09 17:47:57,424][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-08-09 17:47:57,424][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
-[2022-08-09 17:47:57,430][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2005 -RenderOffScreen
-[sudo] password for nsambhu: [2022-08-09 17:47:57,436][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2010 -RenderOffScreen
-[sudo] password for nsambhu: [2022-08-09 17:47:57,441][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2015 -RenderOffScreen
-[sudo] password for nsambhu: [2022-08-09 17:47:57,447][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2020 -RenderOffScreen
+[2022-08-09 18:03:19,996][utils.server_utils][INFO] - Kill Carla Servers!
+7963f587f319
+33ce6772ef57
+85e8bf079fcb
+2b2626cca1a6
+2865ab86a1ad
+3344f356f8e6
+e6d405b5fb5d
+60d2bc3ad8da
+e0f75edee1fa
+0668b3bb5ace
+[2022-08-09 18:03:26,355][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-09 18:03:26,355][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+[2022-08-09 18:03:26,362][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2005 -RenderOffScreen
+[sudo] password for nsambhu: [2022-08-09 18:03:26,369][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2010 -RenderOffScreen
+[sudo] password for nsambhu: [2022-08-09 18:03:26,376][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2015 -RenderOffScreen
+[sudo] password for nsambhu: [2022-08-09 18:03:26,382][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2020 -RenderOffScreen
 [sudo] password for nsambhu: [sudo] password for nsambhu: sh: 1: xdg-user-dir: not found
 sh: 1: xdg-user-dir: not found
 sh: 1: xdg-user-dir: not found
@@ -202,8 +211,8 @@ wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.10.12
 wandb: Syncing run roach
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts
-wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/2j1ucav1
-wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-08-09/17-47-55/wandb/run-20220809_174818-2j1ucav1
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/3m9at0d1
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-08-09/18-03-18/wandb/run-20220809_180349-3m9at0d1
 wandb: Run `wandb offline` to turn off syncing.
 
 wandb: WARNING Symlinked 3 files into the W&B run directory, call wandb.save again to sync new files.

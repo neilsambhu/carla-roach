@@ -1522,3 +1522,11 @@ TODO: (maybe) select GPU using docker.
 ```
 grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "bVerbose = True">outgrep.txt
 ```
+Note: cancelled execution  
+```
+nvidia-smi | grep 'CarlaUE4' | awk '{ print $5 }' | xargs -n1 kill -9
+```
+8/8/2022 9:26:12 PM: TODO: find max town count on 1 GPU. Current: 5.  
+5 towns: 11843MiB / 24576MiB  
+6 towns: memory allocation error  
+8/8/2022 9:36:39 PM: train non-GUI on GPU 0 for 10M steps on 5 towns on GPU 0.

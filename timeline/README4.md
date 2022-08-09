@@ -1529,4 +1529,6 @@ nvidia-smi | grep 'CarlaUE4' | awk '{ print $5 }' | xargs -n1 kill -9
 8/8/2022 9:26:12 PM: TODO: find max town count on 1 GPU. Current: 5.  
 5 towns: 11843MiB / 24576MiB  
 6 towns: memory allocation error  
-8/8/2022 9:36:39 PM: train non-GUI on GPU 0 for 10M steps on 5 towns on GPU 0.
+8/8/2022 9:36:39 PM: train non-GUI on GPU 0 for 10M steps on 5 towns on GPU 0.  
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/train_rl_experts  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/train_rl_experts/runs/v5k7i84s  

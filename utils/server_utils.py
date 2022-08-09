@@ -7,7 +7,7 @@ from omegaconf import OmegaConf
 import logging
 log = logging.getLogger(__name__)
 from inspect import currentframe, getframeinfo
-bVerbose = True
+bVerbose = False
 
 def kill_carla():
     kill_process = subprocess.Popen('killall -9 -r CarlaUE4-Linux', shell=True)

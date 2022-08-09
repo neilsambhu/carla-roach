@@ -28,7 +28,7 @@ def endless_all_yaml(listTowns):
     num_zombie_vehicles: [0, 150]
     num_zombie_walkers: [0, 300]
     weather_group: dynamic_1.0
-  gpu: [0]\n'''
+  gpu: [1]\n'''
             file.write(endless_all)
 def train_rl_NeilBranch0_sh():  
     if os.path.exists("outputs/num_timesteps.txt"):

@@ -11,3 +11,215 @@ start at Tue Aug  9 11:42:20 EDT 2022
 [2022-08-09 11:42:23,136][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020 -RenderOffScreen
 
 trainable parameters: 1.53M
+n_epoch: 0, num_timesteps: 10000
+n_epoch: 1, num_timesteps: 20000
+n_epoch: 2, num_timesteps: 30000
+n_epoch: 3, num_timesteps: 40000
+n_epoch: 4, num_timesteps: 50000
+n_epoch: 5, num_timesteps: 60000
+n_epoch: 6, num_timesteps: 70000
+n_epoch: 7, num_timesteps: 80000
+n_epoch: 8, num_timesteps: 90000
+n_epoch: 9, num_timesteps: 100000
+n_epoch: 10, num_timesteps: 110000
+n_epoch: 11, num_timesteps: 120000
+n_epoch: 12, num_timesteps: 130000
+n_epoch: 13, num_timesteps: 140000
+n_epoch: 14, num_timesteps: 150000
+n_epoch: 15, num_timesteps: 160000
+n_epoch: 16, num_timesteps: 170000
+n_epoch: 17, num_timesteps: 180000
+n_epoch: 18, num_timesteps: 190000
+n_epoch: 19, num_timesteps: 200000
+n_epoch: 20, num_timesteps: 210000
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added ton_epoch: 21, num_timesteps: 220000
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added to the crowd by some problem! 
+Vehicle agent not added ton_epoch: 22, num_timesteps: 230000
+n_epoch: 23, num_timesteps: 240000
+
+end at Tue Aug  9 14:30:18 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+Neil run/train_rl_parent_NeilBranch0.py:90
+completed_timesteps: 240000
+start at Tue Aug  9 14:30:18 EDT 2022
+[2022-08-09 14:30:20,796][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-09 14:30:21,813][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-09 14:30:21,813][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000 -RenderOffScreen
+[2022-08-09 14:30:21,819][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005 -RenderOffScreen
+[2022-08-09 14:30:21,825][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010 -RenderOffScreen
+[2022-08-09 14:30:21,833][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015 -RenderOffScreen
+[2022-08-09 14:30:21,839][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020 -RenderOffScreen
+
+all_ckpts [<File ckpt/ckpt_100000.pth () 8.5MiB>, <File ckpt/ckpt_200000.pth () 8.5MiB>]
+[2022-08-09 14:30:28,536][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_200000.pth
+[2022-08-09 14:30:29,831][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_200000.pth
+trainable parameters: 1.53M
+n_epoch: 0, num_timesteps: 210000
+
+end at Tue Aug  9 14:40:01 EDT 2022
+Bash script done. train_rl_NeilBranch0.sh
+completed_timesteps: 210000
+start at Tue Aug  9 14:40:01 EDT 2022
+[2022-08-09 14:40:03,467][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-09 14:40:04,483][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-09 14:40:04,483][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2000 -RenderOffScreen
+[2022-08-09 14:40:04,489][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2005 -RenderOffScreen
+[2022-08-09 14:40:04,495][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2010 -RenderOffScreen
+[2022-08-09 14:40:04,501][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2015 -RenderOffScreen
+[2022-08-09 14:40:04,508][utils.server_utils][INFO] - CUDA_VISIBLE_DEVICES=0 bash /opt/carla-simulator/CarlaUE4.sh -fps=10 -quality-level=Epic -carla-rpc-port=2020 -RenderOffScreen
+
+all_ckpts [<File ckpt/ckpt_100000.pth () 8.5MiB>, <File ckpt/ckpt_200000.pth () 8.5MiB>]
+[2022-08-09 14:40:11,562][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_200000.pth
+[2022-08-09 14:40:12,459][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_200000.pth
+trainable parameters: 1.53M
+n_epoch: 0, num_timesteps: 210000
+n_epoch: 1, num_timesteps: 220000
+n_epoch: 2, num_timesteps: 230000
+

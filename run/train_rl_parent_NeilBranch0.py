@@ -93,6 +93,7 @@ if __name__ == '__main__':
         # setup for current epoch
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=5,lEpoch=lEpoch)
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=4,lEpoch=lEpoch)
+        listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=1,lEpoch=lEpoch)
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
         ppo_yaml(n_steps_total=n_steps_total)

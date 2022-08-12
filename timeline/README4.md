@@ -1649,3 +1649,9 @@ sudo /home/nsambhu/anaconda3/envs/carla2/bin/python -u run/train_rl_parent_NeilB
 new 2 command for calling carla-roach  
 python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
 8/11/2022 11:07:47 AM: cancelled execution  
+8/12/2022 11:32:54 AM: server_utils.py: can't properly call Apptainer carla.  
+```
+chmod: cannot access '/home/nsambhu/github/carla-roach/outputs/2022-08-12/11-30-21/carla-0.9.13/home/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping': No such file or directory
+carla-0.9.13/home/carla/CarlaUE4.sh: line 5: /home/nsambhu/github/carla-roach/outputs/2022-08-12/11-30-21/carla-0.9.13/home/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping: No such file or directory
+INFO:    Build complete: carla-0.9.13/
+```

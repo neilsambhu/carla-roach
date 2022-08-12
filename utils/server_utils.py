@@ -7,7 +7,7 @@ from omegaconf import OmegaConf
 import logging
 log = logging.getLogger(__name__)
 from inspect import currentframe, getframeinfo
-bVerbose = False
+bVerbose = True
 
 def kill_carla():
     kill_process = subprocess.Popen('killall -9 -r CarlaUE4-Linux', shell=True)
@@ -85,9 +85,9 @@ class CarlaServerManager():
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdout=open(log_file, "w"))
             if bVerbose:
                 frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
-            # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid) # 8/9/2022 4:51:00 PM: comment out 
+            server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid) # 8/9/2022 4:51:00 PM: comment out 
             # 8/9/2022: Dan added: start
-            server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdin=subprocess.PIPE, encoding="utf8")
+            # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdin=subprocess.PIPE, encoding="utf8")
             # sudo_out = server_process.communicate('q\n', timeout=1)
             # 8/9/2022: Dan added: end
             if bVerbose:

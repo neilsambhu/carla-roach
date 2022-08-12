@@ -21,13 +21,16 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
-start at Thu Aug 11 15:11:12 EDT 2022
+start at Fri Aug 12 11:30:20 EDT 2022
+[2022-08-12 11:30:22,213][utils.server_utils][INFO] - Kill Carla Servers!
 CarlaUE4-Linux: no process found
-[2022-08-11 15:11:14,768][utils.server_utils][INFO] - Kill Carla Servers!
-CarlaUE4-Linux: no process found
-[2022-08-11 15:11:15,784][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-08-11 15:11:15,784][utils.server_utils][INFO] - apptainer build --sandbox carla-0.9.13/ docker://carlasim/carla:0.9.13 && bash carla-0.9.13/home/carla/CarlaUE4.sh
-[2022-08-11 15:11:15,792][utils.server_utils][INFO] - apptainer build --sandbox carla-0.9.13/ docker://carlasim/carla:0.9.13 && bash carla-0.9.13/home/carla/CarlaUE4.sh
+[2022-08-12 11:30:23,230][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-08-12 11:30:23,230][utils.server_utils][INFO] - apptainer build --sandbox carla-0.9.13/ docker://carlasim/carla:0.9.13 && bash carla-0.9.13/home/carla/CarlaUE4.sh
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:87
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:94
+[2022-08-12 11:30:23,307][utils.server_utils][INFO] - apptainer build --sandbox carla-0.9.13/ docker://carlasim/carla:0.9.13 && bash carla-0.9.13/home/carla/CarlaUE4.sh
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:87
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:94
 INFO:    Starting build...
 INFO:    Starting build...
 Getting image source signatures
@@ -80,45 +83,220 @@ Storing signatures
 Copying config sha256:b76c6e37587d078e9778508921df99c3a081654a2deab6b8371d60b1e1f8d7bd
 Writing manifest to image destination
 Storing signatures
-2022/08/11 15:11:41  info unpack layer: sha256:7ddbc47eeb70dc7f08e410a6667948b87ff3883024eb41478b44ef9a81bf400c
-2022/08/11 15:11:41  info unpack layer: sha256:7ddbc47eeb70dc7f08e410a6667948b87ff3883024eb41478b44ef9a81bf400c
-2022/08/11 15:11:42  info unpack layer: sha256:c1bbdc448b7263673926b8fe2e88491e5083a8b4b06ddfabf311f2fc5f27e2ff
-2022/08/11 15:11:42  info unpack layer: sha256:8c3b70e3904492c753652606df4726430426f42ea56e06ea924d6fea7ae162a1
-2022/08/11 15:11:42  info unpack layer: sha256:45d437916d5781043432f2d72608049dcf74ddbd27daa01a25fa63c8f1b9adc4
-2022/08/11 15:11:42  info unpack layer: sha256:d8f1569ddae616589c5a2dabf668fadd250ee9d89253ef16f0cb0c8a9459b322
-2022/08/11 15:11:42  info unpack layer: sha256:c1bbdc448b7263673926b8fe2e88491e5083a8b4b06ddfabf311f2fc5f27e2ff
-2022/08/11 15:11:42  info unpack layer: sha256:8c3b70e3904492c753652606df4726430426f42ea56e06ea924d6fea7ae162a1
-2022/08/11 15:11:42  info unpack layer: sha256:45d437916d5781043432f2d72608049dcf74ddbd27daa01a25fa63c8f1b9adc4
-2022/08/11 15:11:42  info unpack layer: sha256:d8f1569ddae616589c5a2dabf668fadd250ee9d89253ef16f0cb0c8a9459b322
-2022/08/11 15:11:42  info unpack layer: sha256:85386706b02069c58ffaea9de66c360f9d59890e56f58485d05c1a532ca30db1
-2022/08/11 15:11:42  info unpack layer: sha256:85386706b02069c58ffaea9de66c360f9d59890e56f58485d05c1a532ca30db1
-2022/08/11 15:11:42  info unpack layer: sha256:ee9b457b77d047ff322858e2de025e266ff5908aec569560e77e2e4451fc23f4
-2022/08/11 15:11:42  info unpack layer: sha256:83ac96f055c5d921e45cb65e10e56ad8f4ff70a5ec64e6463429d104ae582d65
-2022/08/11 15:11:42  info unpack layer: sha256:ee9b457b77d047ff322858e2de025e266ff5908aec569560e77e2e4451fc23f4
-2022/08/11 15:11:42  info unpack layer: sha256:83ac96f055c5d921e45cb65e10e56ad8f4ff70a5ec64e6463429d104ae582d65
-2022/08/11 15:11:42  info unpack layer: sha256:a34b6c089cd737ade98b90d6266a11ff86284b8b09fd861dc3a4c49eb158b632
-2022/08/11 15:11:42  info unpack layer: sha256:0edc044c394482798e528f3b73018bf0bcf35d90683a941afa099927ce0ceaea
-2022/08/11 15:11:42  info unpack layer: sha256:a34b6c089cd737ade98b90d6266a11ff86284b8b09fd861dc3a4c49eb158b632
-2022/08/11 15:11:42  info unpack layer: sha256:0edc044c394482798e528f3b73018bf0bcf35d90683a941afa099927ce0ceaea
-2022/08/11 15:11:43  info unpack layer: sha256:400337608be098e3f5f88fdc2688e30d0859ff22c963f5876a90d2f439dd6b1f
-2022/08/11 15:11:43  info unpack layer: sha256:a279b58f3937cac0321fdee23f454cad37455364e0004be3fad6470afb4381e5
-2022/08/11 15:11:43  info unpack layer: sha256:400337608be098e3f5f88fdc2688e30d0859ff22c963f5876a90d2f439dd6b1f
-2022/08/11 15:11:43  info unpack layer: sha256:a279b58f3937cac0321fdee23f454cad37455364e0004be3fad6470afb4381e5
-2022/08/11 15:11:44  info unpack layer: sha256:378adbfe27ac2b7b274cf8cd672917fee78d04c7408f03c3f40b907955a1c8d9
-2022/08/11 15:11:44  info unpack layer: sha256:378adbfe27ac2b7b274cf8cd672917fee78d04c7408f03c3f40b907955a1c8d9
-2022/08/11 15:11:44  info unpack layer: sha256:4026c60714753cb9c53e5d58efcbec89ccaade88b72dfb3ed4bc8a7055de657b
-2022/08/11 15:11:44  info unpack layer: sha256:1fe1a46d2a0a360eb92077219a81cd81070e3e1765f8a469a7ecc3361315c027
-2022/08/11 15:11:44  info unpack layer: sha256:4026c60714753cb9c53e5d58efcbec89ccaade88b72dfb3ed4bc8a7055de657b
-2022/08/11 15:11:44  info unpack layer: sha256:1fe1a46d2a0a360eb92077219a81cd81070e3e1765f8a469a7ecc3361315c027
-2022/08/11 15:11:46  info unpack layer: sha256:e75fb1ac9e2a06ecae43f496454cab03d2718c2b215433b6a821450aa99530a8
-2022/08/11 15:11:46  info unpack layer: sha256:0383f8948f29432290ba41072b72cae09c795e61479107633bb6d6a284114aec
-2022/08/11 15:11:46  info unpack layer: sha256:831d73c82880128058661f65cfa09577eb9c025a744f66477f95434cab1a524f
-2022/08/11 15:11:46  info unpack layer: sha256:9052e19e6041f582f033d82943a2b1db959a23dc4a0ecd229bf7c24375f4ae00
-2022/08/11 15:11:46  info unpack layer: sha256:e75fb1ac9e2a06ecae43f496454cab03d2718c2b215433b6a821450aa99530a8
-2022/08/11 15:11:46  info unpack layer: sha256:0383f8948f29432290ba41072b72cae09c795e61479107633bb6d6a284114aec
-2022/08/11 15:11:46  info unpack layer: sha256:831d73c82880128058661f65cfa09577eb9c025a744f66477f95434cab1a524f
-2022/08/11 15:11:46  info unpack layer: sha256:9052e19e6041f582f033d82943a2b1db959a23dc4a0ecd229bf7c24375f4ae00
-2022/08/11 15:11:48  info unpack layer: sha256:5b1ac4f5226f5fc5a5a1295c163b59d3302f061995a65e6237486f51b8e58780
-2022/08/11 15:11:48  info unpack layer: sha256:3652517def4c006b2007ef9db5f08cce7eb234712928ee5adbee4252f1ad6916
-2022/08/11 15:11:48  info unpack layer: sha256:5b1ac4f5226f5fc5a5a1295c163b59d3302f061995a65e6237486f51b8e58780
-2022/08/11 15:11:48  info unpack layer: sha256:3652517def4c006b2007ef9db5f08cce7eb234712928ee5adbee4252f1ad6916
+2022/08/12 11:30:45  info unpack layer: sha256:7ddbc47eeb70dc7f08e410a6667948b87ff3883024eb41478b44ef9a81bf400c
+2022/08/12 11:30:45  info unpack layer: sha256:7ddbc47eeb70dc7f08e410a6667948b87ff3883024eb41478b44ef9a81bf400c
+2022/08/12 11:30:46  info unpack layer: sha256:c1bbdc448b7263673926b8fe2e88491e5083a8b4b06ddfabf311f2fc5f27e2ff
+2022/08/12 11:30:46  info unpack layer: sha256:8c3b70e3904492c753652606df4726430426f42ea56e06ea924d6fea7ae162a1
+2022/08/12 11:30:46  info unpack layer: sha256:45d437916d5781043432f2d72608049dcf74ddbd27daa01a25fa63c8f1b9adc4
+2022/08/12 11:30:46  info unpack layer: sha256:d8f1569ddae616589c5a2dabf668fadd250ee9d89253ef16f0cb0c8a9459b322
+2022/08/12 11:30:46  info unpack layer: sha256:c1bbdc448b7263673926b8fe2e88491e5083a8b4b06ddfabf311f2fc5f27e2ff
+2022/08/12 11:30:46  info unpack layer: sha256:8c3b70e3904492c753652606df4726430426f42ea56e06ea924d6fea7ae162a1
+2022/08/12 11:30:46  info unpack layer: sha256:45d437916d5781043432f2d72608049dcf74ddbd27daa01a25fa63c8f1b9adc4
+2022/08/12 11:30:46  info unpack layer: sha256:d8f1569ddae616589c5a2dabf668fadd250ee9d89253ef16f0cb0c8a9459b322
+2022/08/12 11:30:46  info unpack layer: sha256:85386706b02069c58ffaea9de66c360f9d59890e56f58485d05c1a532ca30db1
+2022/08/12 11:30:46  info unpack layer: sha256:85386706b02069c58ffaea9de66c360f9d59890e56f58485d05c1a532ca30db1
+2022/08/12 11:30:46  info unpack layer: sha256:ee9b457b77d047ff322858e2de025e266ff5908aec569560e77e2e4451fc23f4
+2022/08/12 11:30:46  info unpack layer: sha256:83ac96f055c5d921e45cb65e10e56ad8f4ff70a5ec64e6463429d104ae582d65
+2022/08/12 11:30:46  info unpack layer: sha256:ee9b457b77d047ff322858e2de025e266ff5908aec569560e77e2e4451fc23f4
+2022/08/12 11:30:46  info unpack layer: sha256:83ac96f055c5d921e45cb65e10e56ad8f4ff70a5ec64e6463429d104ae582d65
+2022/08/12 11:30:46  info unpack layer: sha256:a34b6c089cd737ade98b90d6266a11ff86284b8b09fd861dc3a4c49eb158b632
+2022/08/12 11:30:46  info unpack layer: sha256:0edc044c394482798e528f3b73018bf0bcf35d90683a941afa099927ce0ceaea
+2022/08/12 11:30:46  info unpack layer: sha256:a34b6c089cd737ade98b90d6266a11ff86284b8b09fd861dc3a4c49eb158b632
+2022/08/12 11:30:46  info unpack layer: sha256:0edc044c394482798e528f3b73018bf0bcf35d90683a941afa099927ce0ceaea
+2022/08/12 11:30:47  info unpack layer: sha256:400337608be098e3f5f88fdc2688e30d0859ff22c963f5876a90d2f439dd6b1f
+2022/08/12 11:30:47  info unpack layer: sha256:a279b58f3937cac0321fdee23f454cad37455364e0004be3fad6470afb4381e5
+2022/08/12 11:30:47  info unpack layer: sha256:400337608be098e3f5f88fdc2688e30d0859ff22c963f5876a90d2f439dd6b1f
+2022/08/12 11:30:47  info unpack layer: sha256:a279b58f3937cac0321fdee23f454cad37455364e0004be3fad6470afb4381e5
+2022/08/12 11:30:48  info unpack layer: sha256:378adbfe27ac2b7b274cf8cd672917fee78d04c7408f03c3f40b907955a1c8d9
+2022/08/12 11:30:48  info unpack layer: sha256:4026c60714753cb9c53e5d58efcbec89ccaade88b72dfb3ed4bc8a7055de657b
+2022/08/12 11:30:48  info unpack layer: sha256:1fe1a46d2a0a360eb92077219a81cd81070e3e1765f8a469a7ecc3361315c027
+2022/08/12 11:30:48  info unpack layer: sha256:378adbfe27ac2b7b274cf8cd672917fee78d04c7408f03c3f40b907955a1c8d9
+2022/08/12 11:30:48  info unpack layer: sha256:4026c60714753cb9c53e5d58efcbec89ccaade88b72dfb3ed4bc8a7055de657b
+2022/08/12 11:30:48  info unpack layer: sha256:1fe1a46d2a0a360eb92077219a81cd81070e3e1765f8a469a7ecc3361315c027
+2022/08/12 11:30:50  info unpack layer: sha256:e75fb1ac9e2a06ecae43f496454cab03d2718c2b215433b6a821450aa99530a8
+2022/08/12 11:30:50  info unpack layer: sha256:0383f8948f29432290ba41072b72cae09c795e61479107633bb6d6a284114aec
+2022/08/12 11:30:50  info unpack layer: sha256:831d73c82880128058661f65cfa09577eb9c025a744f66477f95434cab1a524f
+2022/08/12 11:30:50  info unpack layer: sha256:9052e19e6041f582f033d82943a2b1db959a23dc4a0ecd229bf7c24375f4ae00
+2022/08/12 11:30:50  info unpack layer: sha256:e75fb1ac9e2a06ecae43f496454cab03d2718c2b215433b6a821450aa99530a8
+2022/08/12 11:30:50  info unpack layer: sha256:0383f8948f29432290ba41072b72cae09c795e61479107633bb6d6a284114aec
+2022/08/12 11:30:50  info unpack layer: sha256:831d73c82880128058661f65cfa09577eb9c025a744f66477f95434cab1a524f
+2022/08/12 11:30:50  info unpack layer: sha256:9052e19e6041f582f033d82943a2b1db959a23dc4a0ecd229bf7c24375f4ae00
+2022/08/12 11:30:51  info unpack layer: sha256:5b1ac4f5226f5fc5a5a1295c163b59d3302f061995a65e6237486f51b8e58780
+2022/08/12 11:30:51  info unpack layer: sha256:3652517def4c006b2007ef9db5f08cce7eb234712928ee5adbee4252f1ad6916
+2022/08/12 11:30:52  info unpack layer: sha256:5b1ac4f5226f5fc5a5a1295c163b59d3302f061995a65e6237486f51b8e58780
+2022/08/12 11:30:52  info unpack layer: sha256:3652517def4c006b2007ef9db5f08cce7eb234712928ee5adbee4252f1ad6916
+Process ForkServerProcess-2:
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 13, in _worker
+    env = env_fn_wrapper.var()
+  File "train_rl_NeilBranch0.py", line 139, in <lambda>
+    env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
+  File "train_rl_NeilBranch0.py", line 132, in env_maker
+    seed=cfg.seed, no_rendering=True, **config['env_configs'])
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/gym/envs/registration.py", line 145, in make
+    return registry.make(id, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/gym/envs/registration.py", line 90, in make
+    env = spec.make(**kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/gym/envs/registration.py", line 60, in make
+    env = cls(**_kwargs)
+  File "/home/nsambhu/github/carla-roach/carla_gym/envs/suites/endless_env.py", line 11, in __init__
+    obs_configs, reward_configs, terminal_configs, all_tasks)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 32, in __init__
+    self._init_client(carla_map, host, port, seed=seed, no_rendering=no_rendering)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 162, in _init_client
+    self._world = client.load_world(carla_map)
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2005
+Process ForkServerProcess-1:
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 13, in _worker
+    env = env_fn_wrapper.var()
+  File "train_rl_NeilBranch0.py", line 139, in <lambda>
+    env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
+  File "train_rl_NeilBranch0.py", line 132, in env_maker
+    seed=cfg.seed, no_rendering=True, **config['env_configs'])
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/gym/envs/registration.py", line 145, in make
+    return registry.make(id, **kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/gym/envs/registration.py", line 90, in make
+    env = spec.make(**kwargs)
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/gym/envs/registration.py", line 60, in make
+    env = cls(**_kwargs)
+  File "/home/nsambhu/github/carla-roach/carla_gym/envs/suites/endless_env.py", line 11, in __init__
+    obs_configs, reward_configs, terminal_configs, all_tasks)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 32, in __init__
+    self._init_client(carla_map, host, port, seed=seed, no_rendering=no_rendering)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 162, in _init_client
+    self._world = client.load_world(carla_map)
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2000
+Traceback (most recent call last):
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "train_rl_NeilBranch0.py", line 139, in main
+    env = SubprocVecEnv([lambda config=config: env_maker(config) for config in server_manager.env_configs])
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 98, in __init__
+    observation_space, action_space = self.remotes[0].recv()
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train_rl_NeilBranch0.py", line 175, in <module>
+    main()
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/hydra/main.py", line 37, in decorated_main
+    strict=strict,
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/hydra/_internal/utils.py", line 347, in _run_hydra
+    lambda: hydra.run(
+  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/hydra/_internal/utils.py", line 237, in run_and_report
+    assert mdl is not None
+AssertionError
+[2022-08-12 11:31:29,258][wandb.sdk.internal.internal][INFO] - Internal process exited
+end at Fri Aug 12 11:31:29 EDT 2022
+[0;31mPYTHON_RETURN=0[0m
+CarlaUE4-Linux: no process found
+Bash script done. train_rl_NeilBranch0.sh
+Neil run/train_rl_parent_NeilBranch0.py:106
+Traceback (most recent call last):
+  File "run/train_rl_parent_NeilBranch0.py", line 107, in <module>
+    completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
+2022/08/12 11:32:32  warn rootless{home/carla/Plugins/.git/modules/carlaviz/modules/backend/third_party/xviz/objects/pack/pack-a0ec17431b5be40deb86ba09de021b42f58e75e3.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:32  warn rootless{home/carla/Plugins/.git/modules/carlaviz/modules/backend/third_party/xviz/objects/pack/pack-a0ec17431b5be40deb86ba09de021b42f58e75e3.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:32  warn rootless{home/carla/Plugins/.git/modules/carlaviz/objects/pack/pack-a3ed103ed99774ec3c91a7659a65873e1aaafb05.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:32  warn rootless{home/carla/Plugins/.git/modules/carlaviz/objects/pack/pack-a3ed103ed99774ec3c91a7659a65873e1aaafb05.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:32  warn rootless{home/carla/Plugins/.git/modules/telecarla/objects/pack/pack-146e2440d0a5a0e2b6dab0297c3496a642a3cd74.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:32  warn rootless{home/carla/Plugins/.git/modules/telecarla/objects/pack/pack-146e2440d0a5a0e2b6dab0297c3496a642a3cd74.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:32  warn rootless{home/carla/Plugins/.git/modules/testpilot/objects/pack/pack-f0a2f7171919ecef3948fb2d87ebe5d297f49f2c.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/carlaviz/modules/backend/third_party/xviz/objects/pack/pack-a0ec17431b5be40deb86ba09de021b42f58e75e3.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/carlaviz/modules/backend/third_party/xviz/objects/pack/pack-a0ec17431b5be40deb86ba09de021b42f58e75e3.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/carlaviz/objects/pack/pack-a3ed103ed99774ec3c91a7659a65873e1aaafb05.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/carlaviz/objects/pack/pack-a3ed103ed99774ec3c91a7659a65873e1aaafb05.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/telecarla/objects/pack/pack-146e2440d0a5a0e2b6dab0297c3496a642a3cd74.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/telecarla/objects/pack/pack-146e2440d0a5a0e2b6dab0297c3496a642a3cd74.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/testpilot/objects/pack/pack-f0a2f7171919ecef3948fb2d87ebe5d297f49f2c.idx} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/testpilot/objects/pack/pack-f0a2f7171919ecef3948fb2d87ebe5d297f49f2c.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/02/78e613882cd828f51fa5d386d5072520a4169f} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/03/b881a6b143a0a8789d426cae564e1770129bbd} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/05/338f737496615f9d29ee0cb16ddc50eab32f4f} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0a/d0518e8f66bb3d310f3bc3cd287569c73328ba} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0b/32114a108052d50b1ce9ccf5f2322974701e74} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0b/4e018f7d4d55d75770757e53f9726a7e46eb9b} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0f/3104dfd9b1ad85ad88b3890461cbc0f09fc89e} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/19/1141ae15c4b92848cda6b67e80b603b96b51ec} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/23/4591fd5843de5601b15908f6a8b562c4581db8} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/2a/35e5796c8fc36717af561c5cbf4820d01f0caa} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/3f/a6db8deaad22ab7ab5e0e42446aaae77782e4c} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/49/7ba38b08617d77c7046099ea5f979730fb8df8} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/49/dfada55790818839f4300ac8f01910bd21f1f1} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/53/bce9ba95012415656e1eea3eb69e8000436f2e} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/5a/f17d316c3397d9d38d17762d515b3279e6a214} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/60/eba403100427f9e0b19c8e0b4b8a472e386dc6} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/63/cf62caaa5172ec05215069a0a5378d5a730813} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/6a/1cf9dba2e0f2bc950e51217bf6e7edb19a1da1} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/79/e2c5ee0205201958d5d9cf26dd64fb0ede7f60} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/88/a1d3c5fe9273c2d583edd16f84f5b3d888a41e} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/94/ad661e9e15b770ae37a9c677d7732e51b9c291} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/a0/751a07daabc61c879276ce62f9340b37c6edb2} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/ae/fa3b9bc5052a4f3aa985158ba277b9214cc2a6} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/b0/0003426514798f4da6b1b51ae7e64c45ca37e6} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/b3/7f9b2ef7e548aae41312af1e01f2303333a573} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/bf/2ea2670fe8d1f146e296bdb373bfdd8763e9fa} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/c4/57e00214e34e518bbe06a47f986a7dcb22f2c4} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/d7/b99639e1e9e56b46bbadaa32addb360ffc2615} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/d9/f5d83dd7ffad718d9a05f9c85bcb0664d945bc} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/da/9089386f6be5fff2245cb7858ca498866769eb} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/modules/testpilot/objects/pack/pack-f0a2f7171919ecef3948fb2d87ebe5d297f49f2c.pack} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/02/78e613882cd828f51fa5d386d5072520a4169f} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/03/b881a6b143a0a8789d426cae564e1770129bbd} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/05/338f737496615f9d29ee0cb16ddc50eab32f4f} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0a/d0518e8f66bb3d310f3bc3cd287569c73328ba} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0b/32114a108052d50b1ce9ccf5f2322974701e74} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0b/4e018f7d4d55d75770757e53f9726a7e46eb9b} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/0f/3104dfd9b1ad85ad88b3890461cbc0f09fc89e} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/19/1141ae15c4b92848cda6b67e80b603b96b51ec} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/23/4591fd5843de5601b15908f6a8b562c4581db8} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/2a/35e5796c8fc36717af561c5cbf4820d01f0caa} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/3f/a6db8deaad22ab7ab5e0e42446aaae77782e4c} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/49/7ba38b08617d77c7046099ea5f979730fb8df8} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/49/dfada55790818839f4300ac8f01910bd21f1f1} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/53/bce9ba95012415656e1eea3eb69e8000436f2e} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/5a/f17d316c3397d9d38d17762d515b3279e6a214} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/60/eba403100427f9e0b19c8e0b4b8a472e386dc6} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/63/cf62caaa5172ec05215069a0a5378d5a730813} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/6a/1cf9dba2e0f2bc950e51217bf6e7edb19a1da1} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/79/e2c5ee0205201958d5d9cf26dd64fb0ede7f60} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/88/a1d3c5fe9273c2d583edd16f84f5b3d888a41e} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/94/ad661e9e15b770ae37a9c677d7732e51b9c291} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/a0/751a07daabc61c879276ce62f9340b37c6edb2} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/ae/fa3b9bc5052a4f3aa985158ba277b9214cc2a6} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/b0/0003426514798f4da6b1b51ae7e64c45ca37e6} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/b3/7f9b2ef7e548aae41312af1e01f2303333a573} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/bf/2ea2670fe8d1f146e296bdb373bfdd8763e9fa} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/c4/57e00214e34e518bbe06a47f986a7dcb22f2c4} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/d7/b99639e1e9e56b46bbadaa32addb360ffc2615} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/d9/f5d83dd7ffad718d9a05f9c85bcb0664d945bc} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+2022/08/12 11:32:33  warn rootless{home/carla/Plugins/.git/objects/da/9089386f6be5fff2245cb7858ca498866769eb} ignoring (usually) harmless EPERM on setxattr "user.rootlesscontainers"
+INFO:    Creating sandbox directory...
+INFO:    Creating sandbox directory...
+INFO:    Build complete: carla-0.9.13/
+chmod: cannot access '/home/nsambhu/github/carla-roach/outputs/2022-08-12/11-30-21/carla-0.9.13/home/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping': No such file or directory
+carla-0.9.13/home/carla/CarlaUE4.sh: line 5: /home/nsambhu/github/carla-roach/outputs/2022-08-12/11-30-21/carla-0.9.13/home/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping: No such file or directory
+INFO:    Build complete: carla-0.9.13/

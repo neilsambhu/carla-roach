@@ -70,16 +70,17 @@ class CarlaServerManager():
             #     f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # cmd = f'CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
             #     f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            # working system CARLA install
             cmd = f'DEVICE= CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
                 f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # 8/8/2022: Neil added: end
             # 8/9/2022: Neil added: start
             # cmd = f'sudo docker run --privileged --gpus "device={cfg["gpu"]}" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # working docker
-            # cmd = f'echo q | sudo -S docker run --privileged --gpus "device={cfg["gpu"]}" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            cmd = f'echo q | sudo -S docker run --privileged --gpus "device={cfg["gpu"]}" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # 8/9/2022: Neil added: end
             # 8/11/2022: Neil added: start 
-            cmd = f'apptainer build --sandbox carla-0.9.13/ docker://carlasim/carla:0.9.13 && bash carla-0.9.13/home/carla/CarlaUE4.sh'
+            # cmd = f'apptainer build --sandbox carla-0.9.13/ docker://carlasim/carla:0.9.13 && bash carla-0.9.13/home/carla/CarlaUE4.sh'
             # 8/11/2022: Neil added: end 
             log.info(cmd)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'

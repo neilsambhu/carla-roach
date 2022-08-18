@@ -1655,3 +1655,5 @@ chmod: cannot access '/home/nsambhu/github/carla-roach/outputs/2022-08-12/11-30-
 carla-0.9.13/home/carla/CarlaUE4.sh: line 5: /home/nsambhu/github/carla-roach/outputs/2022-08-12/11-30-21/carla-0.9.13/home/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping: No such file or directory
 INFO:    Build complete: carla-0.9.13/
 ```
+# SAMBHU19 Red Hat Enterprise Linux
+8/18/2022 4:13:04 PM: install docker: https://docs.docker.com/engine/install/rhel/

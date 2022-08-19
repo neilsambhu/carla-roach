@@ -12,3 +12,4 @@ sudo yum install docker device-mapper-libs device-mapper-event-libs &&
 
 sudo systemctl start docker.service &&
 sudo systemctl enable docker.service &&
+ls

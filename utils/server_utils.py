@@ -45,8 +45,8 @@ class CarlaServerManager():
                     port += 5
 
     def start(self):
-        kill_carla()
-        # kill_carla_docker()
+        # kill_carla()
+        kill_carla_docker()
         for cfg in self.env_configs:
             cmd = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
                 f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]}'

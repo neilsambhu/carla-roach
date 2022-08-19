@@ -1,3 +1,6 @@
+# https://forums.docker.com/t/docker-ce-stable-x86-64-repo-not-available-https-error-404-not-found-https-download-docker-com-linux-centos-7server-x86-64-stable-repodata-repomd-xml/98965
+# https://download.docker.com/linux/centos/7/x86_64/stable/Packages/
+
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-20.10.9-3.el7.x86_64.rpm &&
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-cli-20.10.9-3.el7.x86_64.rpm &&
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.6.7-3.1.el7.x86_64.rpm &&

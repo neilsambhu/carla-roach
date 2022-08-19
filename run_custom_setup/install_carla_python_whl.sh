@@ -1,5 +1,6 @@
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
-sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
-sudo apt-get update # Update the Debian package index
-sudo apt install carla-simulator # Install the latest CARLA version, or update the current installation
-# cd /opt/carla-simulator # Open the folder where CARLA is installed
+cd run_custom_setup
+mkdir install_carla_python_whl
+cd install_carla_python_whl
+
+curl -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13.tar.gz
+ls *.tar.gz

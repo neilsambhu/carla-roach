@@ -21,7 +21,7 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
-start at Thu Aug 18 16:11:57 EDT 2022
+start at Fri Aug 19 16:57:56 EDT 2022
 Traceback (most recent call last):
   File "train_rl_NeilBranch0.py", line 14, in <module>
     from carla_gym.utils import config_utils
@@ -30,7 +30,7 @@ Traceback (most recent call last):
   File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/carla/__init__.py", line 8, in <module>
     from .libcarla import *
 ImportError: libjpeg.so.8: cannot open shared object file: No such file or directory
-end at Thu Aug 18 16:11:58 EDT 2022
+end at Fri Aug 19 16:57:56 EDT 2022
 [0;31mPYTHON_RETURN=0[0m
 CarlaUE4-Linux: no process found
 Bash script done. train_rl_NeilBranch0.sh

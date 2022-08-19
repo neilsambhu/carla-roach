@@ -1,18 +1,14 @@
-curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-20.10.9-3.el7.x86_64.rpm &&
-curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-cli-20.10.9-3.el7.x86_64.rpm &&
-curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.6.7-3.1.el7.x86_64.rpm &&
-curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-compose-plugin-2.6.0-3.el7.x86_64.rpm &&
-# additional packages
-curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-scan-plugin-0.17.0-3.el7.x86_64.rpm &&
-curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-rootless-extras-20.10.17-3.el7.x86_64.rpm &&
+# https://access.redhat.com/discussions/3199282
+# https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html-single/getting_started_with_containers/index#getting_docker_in_rhel_7
 
-# Install Docker Engine
-# sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-sudo yum localinstall *.rpm &&
+# subscription-manager list --available    Find valid RHEL pool ID
+# subscription-manager attach --pool=pool_id
 
-rm *.rpm &&
+subscription-manager repos --enable=rhel-7-server-rpms &&
+subscription-manager repos --enable=rhel-7-server-extras-rpms &&
+subscription-manager repos --enable=rhel-7-server-optional-rpms &&
 
-## Start Docker.
-sudo systemctl start docker &&
-## Verify that Docker Engine is installed correctly by running the hello-world image.
-sudo docker run hello-world &&
+yum install docker device-mapper-libs device-mapper-event-libs &&
+
+systemctl start docker.service &&
+systemctl enable docker.service &&

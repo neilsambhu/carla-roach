@@ -1663,3 +1663,7 @@ INFO:    Build complete: carla-0.9.13/
 (base) [nsambhu@localhost carla-roach]$ sudo docker run --rm -e NVIDIA_VISIBLE_DEVICES=all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
 Failed to initialize NVML: Insufficient Permissions
 ```
+## 2022 08 21 2022: to Daniel: 
+8/21/2022 3:11:39 PM:  
+1. Google search "docker failed to initialize nvml: insufficient permissions" (i.e. https://www.google.com/search?q=docker+failed+to+initialize+nvml%3A+insufficient+permissions&rlz=1C1CHBF_enUS856US856&sxsrf=ALiCzsaVGolpp73zYZzFoppJJMkEpN73nQ%3A1661026549331&ei=9UABY_rwE_qykvQPvo2r4As&ved=0ahUKEwi6v72Lntb5AhV6mYQIHb7GCrwQ4dUDCA4&uact=5&oq=docker+failed+to+initialize+nvml%3A+insufficient+permissions&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECAAQHjoHCCMQsAMQJzoHCAAQRxCwAzoHCCMQsAIQJzoECAAQDToGCAAQHhAHOgYIABAeEA06BQgAEIYDSgQIQRgASgQIRhgAUIUJWIUOYJ4PaAFwAXgAgAGMAYgBhQWSAQM2LjGYAQCgAQHIAQbAAQE&sclient=gws-wiz-serp )  
+2. https://bbs.archlinux.org/viewtopic.php?id=266915 > changes bootloader parameter (i.e. Even sudo isn't sufficient)  

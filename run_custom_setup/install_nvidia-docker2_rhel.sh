@@ -17,11 +17,11 @@
 # sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
 
 # Setting up Docker on RHEL 7
-# sudo subscription-manager repos --enable rhel-7-server-extras-rpms
-# sudo yum install docker -y
-# sudo systemctl --now enable docker
-# sudo docker -v
-# sudo docker run --rm hello-world
+sudo subscription-manager repos --enable rhel-7-server-extras-rpms
+sudo yum install docker -y
+sudo systemctl --now enable docker
+sudo docker -v
+sudo docker run --rm hello-world
 # Setting up NVIDIA Container Toolkit
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
    && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo

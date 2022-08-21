@@ -1660,5 +1660,6 @@ INFO:    Build complete: carla-0.9.13/
 8/19/2022 4:56:35 PM: run_custom_setup/install_docker_rhel3.sh > docker installed  
 8/21/2022 2:58:00 PM: run_custom_setup/install_nvidia-docker2_rhel.sh (i.e. copy line by line) > Error: 
 ```
+(base) [nsambhu@localhost carla-roach]$ sudo docker run --rm -e NVIDIA_VISIBLE_DEVICES=all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
 Failed to initialize NVML: Insufficient Permissions
 ```

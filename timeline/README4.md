@@ -1658,3 +1658,7 @@ INFO:    Build complete: carla-0.9.13/
 # SAMBHU19 Red Hat Enterprise Linux
 8/18/2022 4:13:04 PM: install docker: https://docs.docker.com/engine/install/rhel/  
 8/19/2022 4:56:35 PM: run_custom_setup/install_docker_rhel3.sh > docker installed  
+8/21/2022 2:58:00 PM: run_custom_setup/install_nvidia-docker2_rhel.sh (i.e. copy line by line) > Error: 
+```
+Failed to initialize NVML: Insufficient Permissions
+```

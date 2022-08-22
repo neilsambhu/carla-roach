@@ -1667,3 +1667,6 @@ Failed to initialize NVML: Insufficient Permissions
 8/21/2022 3:11:39 PM:  
 1. Google search "docker failed to initialize nvml: insufficient permissions" (i.e. https://www.google.com/search?q=docker+failed+to+initialize+nvml%3A+insufficient+permissions&rlz=1C1CHBF_enUS856US856&sxsrf=ALiCzsaVGolpp73zYZzFoppJJMkEpN73nQ%3A1661026549331&ei=9UABY_rwE_qykvQPvo2r4As&ved=0ahUKEwi6v72Lntb5AhV6mYQIHb7GCrwQ4dUDCA4&uact=5&oq=docker+failed+to+initialize+nvml%3A+insufficient+permissions&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECAAQHjoHCCMQsAMQJzoHCAAQRxCwAzoHCCMQsAIQJzoECAAQDToGCAAQHhAHOgYIABAeEA06BQgAEIYDSgQIQRgASgQIRhgAUIUJWIUOYJ4PaAFwAXgAgAGMAYgBhQWSAQM2LjGYAQCgAQHIAQbAAQE&sclient=gws-wiz-serp )  
 2. https://bbs.archlinux.org/viewtopic.php?id=266915 > changes bootloader parameter (i.e. Even sudo isn't sufficient)  
+## Debug: Failed to initialize NVML: Insufficient Permissions
+1. https://github.com/NVIDIA/nvidia-docker/issues/1523 > https://github.com/NVIDIA/nvidia-docker/issues/1547  
+2. https://stackoverflow.com/questions/52507744/enable-nvidia-smi-permissions-to-be-run-by-all-users > https://stackoverflow.com/a/70391740  

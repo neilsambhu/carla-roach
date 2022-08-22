@@ -1670,3 +1670,33 @@ Failed to initialize NVML: Insufficient Permissions
 ## Debug: Failed to initialize NVML: Insufficient Permissions
 1. https://github.com/NVIDIA/nvidia-docker/issues/1523 > https://github.com/NVIDIA/nvidia-docker/issues/1547 (failed)  
 2. https://stackoverflow.com/questions/52507744/enable-nvidia-smi-permissions-to-be-run-by-all-users > https://stackoverflow.com/a/70391740 (works)  
+## 2022 08 21 2022: to Daniel: 
+```
+(base) [nsambhu@localhost ~]$ sudo docker run --rm -e NVIDIA_VISIBLE_DEVICES=all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+Mon Aug 22 00:30:49 2022
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA TITAN RTX    Off  | 00000000:01:00.0 Off |                  N/A |
+| 41%   36C    P8    11W / 280W |    114MiB / 24576MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA TITAN RTX    Off  | 00000000:21:00.0 Off |                  N/A |
+| 40%   33C    P8    12W / 280W |      1MiB / 24576MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
++-----------------------------------------------------------------------------+
+(base) [nsambhu@localhost ~]$ sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+unknown flag: --gpus
+See 'docker run --help'.
+```

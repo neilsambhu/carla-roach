@@ -1871,4 +1871,18 @@ download container:
 containe-builder-client -d <build_id> filename.sif
 ```
 ## CARLA GUI
-8/23/2022 4:13:38 PM: SAMBHU19: RHEL: CARLA GUI: https://carla.readthedocs.io/en/latest/build_docker/
+8/23/2022 4:13:38 PM: SAMBHU19: RHEL: CARLA GUI: https://carla.readthedocs.io/en/latest/build_docker/  
+8/23/2022 5:16 PM: 
+```
+(base) [nsambhu@localhost 7RHEL]$ sudo docker pull carlasim/carla:0.9.13
+Trying to pull repository registry.access.redhat.com/carlasim/carla ... 
+Pulling repository registry.access.redhat.com/carlasim/carla
+Trying to pull repository registry.redhat.io/carlasim/carla ... 
+Trying to pull repository docker.io/carlasim/carla ... 
+0.9.13: Pulling from docker.io/carlasim/carla
+Digest: sha256:2c1a59808792b99233c92dcdab6afb575357b863a00f7ff44b3ae096f648af12
+Status: Image is up to date for docker.io/carlasim/carla:0.9.13
+(base) [nsambhu@localhost 7RHEL]$ sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh
+unknown flag: --gpus
+See 'docker run --help'.
+````

@@ -1882,7 +1882,7 @@ Trying to pull repository docker.io/carlasim/carla ...
 0.9.13: Pulling from docker.io/carlasim/carla
 Digest: sha256:2c1a59808792b99233c92dcdab6afb575357b863a00f7ff44b3ae096f648af12
 Status: Image is up to date for docker.io/carlasim/carla:0.9.13
-(base) [nsambhu@localhost 7RHEL]$ sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh
+(base) [nsambhu@localhost 7RHEL]$ sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
 unknown flag: --gpus
 See 'docker run --help'.
 ````

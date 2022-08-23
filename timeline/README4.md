@@ -1700,3 +1700,13 @@ Mon Aug 22 00:30:49 2022
 unknown flag: --gpus
 See 'docker run --help'.
 ```
+## CARLA GUI
+8/23/2022 2:13 PM: carla-roach/server_utils.py:  
+```
+# working docker
+cmd = f'echo q | sudo -S docker run --privileged --gpus "device={cfg["gpu"]}" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+```  
+modified for simplicity:  
+```
+sudo -S docker run --privileged --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
+```

@@ -1754,3 +1754,118 @@ Tue Aug 23 15:43:17 2022
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
 ```
+8/23/2022 3:52:05 PM: GAIVI notes
+```
+[nsambhu@forest.usf.edu@gaivi2 ~]$ srun -p Contributors -w GPU20 --pty --gpus 1 /bin/bash
+srun: job 63123 queued and waiting for resources
+srun: job 63123 has been allocated resources
+[nsambhu@forest.usf.edu@gpu20 ~]$ exit
+exit
+[nsambhu@forest.usf.edu@gaivi2 ~]$ sinfo -N --format="%10N | %10t | %7X | %7Y | %7Z | %9m | %19G"
+NODELIST   | STATE      | SOCKETS | CORES   | THREADS | MEMORY    | GRES
+GPU2       | alloc      | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU2       | alloc      | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU3       | alloc      | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU3       | alloc      | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU4       | mix        | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU4       | mix        | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU4       | mix        | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU5       | idle       | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU5       | idle       | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU6       | mix        | 2       | 8       | 2       | 128664    | gpu:1080Ti:4
+GPU6       | mix        | 2       | 8       | 2       | 128664    | gpu:1080Ti:4
+GPU7       | alloc      | 2       | 8       | 2       | 128664    | gpu:1080Ti:4
+GPU7       | alloc      | 2       | 8       | 2       | 128664    | gpu:1080Ti:4
+GPU8       | alloc      | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU8       | alloc      | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU8       | alloc      | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU9       | idle       | 2       | 8       | 2       | 128667    | gpu:1080Ti:4
+GPU9       | idle       | 2       | 8       | 2       | 128667    | gpu:1080Ti:4
+GPU10      | idle       | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU10      | idle       | 2       | 8       | 2       | 128670    | gpu:1080Ti:4
+GPU11      | drain      | 2       | 8       | 2       | 128664    | gpu:TitanX:8
+GPU11      | drain      | 2       | 8       | 2       | 128664    | gpu:TitanX:8
+GPU12      | alloc      | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU12      | alloc      | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU13      | alloc      | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU13      | alloc      | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU14      | idle       | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU14      | idle       | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU15      | alloc      | 2       | 8       | 1       | 386699    | gpu:TitanX:8
+GPU15      | alloc      | 2       | 8       | 1       | 386699    | gpu:TitanX:8
+GPU16      | mix        | 2       | 8       | 1       | 386699    | gpu:TitanX:4(S:0)
+GPU16      | mix        | 2       | 8       | 1       | 386699    | gpu:TitanX:4(S:0)
+GPU17      | mix        | 2       | 8       | 1       | 128667    | gpu:TitanX:4,gpu:Ti
+GPU17      | mix        | 2       | 8       | 1       | 128667    | gpu:TitanX:4,gpu:Ti
+GPU18      | alloc      | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU18      | alloc      | 2       | 8       | 1       | 128667    | gpu:TitanX:8
+GPU19      | alloc      | 2       | 8       | 1       | 386698    | gpu:TitanX:8
+GPU19      | alloc      | 2       | 8       | 1       | 386698    | gpu:TitanX:8
+GPU20      | mix        | 2       | 8       | 1       | 386699    | gpu:1080Ti:8
+GPU20      | mix        | 2       | 8       | 1       | 386699    | gpu:1080Ti:8
+GPU21      | drain      | 2       | 8       | 1       | 128667    | gpu:1080Ti:8(S:0)
+GPU21      | drain      | 2       | 8       | 1       | 128667    | gpu:1080Ti:8(S:0)
+GPU22      | idle       | 2       | 10      | 2       | 1031770   | gpu:1080Ti:8
+GPU41      | mix        | 2       | 8       | 2       | 128659    | gpu:TitanX:4
+GPU41      | mix        | 2       | 8       | 2       | 128659    | gpu:TitanX:4
+GPU42      | alloc      | 2       | 16      | 2       | 191850    | gpu:TitanRTX:4
+GPU42      | alloc      | 2       | 16      | 2       | 191850    | gpu:TitanRTX:4
+GPU43      | alloc      | 1       | 64      | 2       | 515730    | gpu:A40:4
+GPU43      | alloc      | 1       | 64      | 2       | 515730    | gpu:A40:4
+GPU44      | alloc      | 1       | 32      | 2       | 515739    | gpu:A40:4
+GPU44      | alloc      | 1       | 32      | 2       | 515739    | gpu:A40:4
+GPU45      | idle       | 2       | 24      | 1       | 257647    | gpu:A40:1
+GPU45      | idle       | 2       | 24      | 1       | 257647    | gpu:A40:1
+PHI1       | idle       | 2       | 8       | 2       | 128673    | (null)
+[nsambhu@forest.usf.edu@gaivi2 ~]$ squeue -w GPU43
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             62803 Contribut   dispMT gdayhoff  R 4-06:28:46      1 GPU43
+[nsambhu@forest.usf.edu@gaivi2 ~]$ squeue -p Contributors
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             62265 Contribut  chex.sh kbenahme  R 13-21:51:32      1 GPU16
+             62422 Contribut   nmr2WT gdayhoff  R 12-13:55:33      1 GPU3
+             62429 Contribut   rsffMT gdayhoff  R 12-13:41:27      1 GPU19
+             62511 Contribut   rsffWT gdayhoff  R 11-05:57:55      1 GPU7
+             62513 Contribut   nmr2MT gdayhoff  R 11-05:53:54      1 GPU8
+             62801 Contribut   dispWT gdayhoff  R 4-06:29:10      1 GPU44
+             62803 Contribut   dispMT gdayhoff  R 4-06:29:16      1 GPU43
+             63029 Contribut  DPPC_NA mwsaunde  R 1-01:41:49      1 GPU42
+             63063 Contribut run_trai saeed3@f  R    9:24:44      1 GPU41
+             63076 Contribut     DPPC mwsaunde  R    3:35:01      1 GPU2
+[nsambhu@forest.usf.edu@gaivi2 ~]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             62265 Contribut  chex.sh kbenahme  R 13-21:51:37      1 GPU16
+             62422 Contribut   nmr2WT gdayhoff  R 12-13:55:38      1 GPU3
+             62429 Contribut   rsffMT gdayhoff  R 12-13:41:32      1 GPU19
+             62511 Contribut   rsffWT gdayhoff  R 11-05:58:00      1 GPU7
+             62513 Contribut   nmr2MT gdayhoff  R 11-05:53:59      1 GPU8
+             62801 Contribut   dispWT gdayhoff  R 4-06:29:15      1 GPU44
+             62803 Contribut   dispMT gdayhoff  R 4-06:29:21      1 GPU43
+             63029 Contribut  DPPC_NA mwsaunde  R 1-01:41:54      1 GPU42
+             63063 Contribut run_trai saeed3@f  R    9:24:49      1 GPU41
+             63076 Contribut     DPPC mwsaunde  R    3:35:06      1 GPU2
+             62221  Extended     p045 hamzakar PD       0:00      1 (ReqNodeNotAvail, UnavailableNodes:GPU21)
+             63014  Extended train.sh grotich@  R 1-04:01:36      1 GPU13
+             63069  Extended train.sh grotich@  R    5:19:32      1 GPU12
+             62938     Quick tcctrain sainathr PD       0:00      1 (Resources)
+             63110   general run_trai saeed3@f PD       0:00      1 (Resources)
+             62794   general generate snehaola  R 4-14:44:35      1 GPU17
+             62860   general   run.sh coleh@fo  R 4-00:46:03      1 GPU4
+             62932   general generate snehaola  R 2-02:27:36      1 GPU6
+             62933   general generate snehaola  R 2-02:22:49      1 GPU20
+             63104   general     bash abibat@f  R      58:43      1 GPU20
+             63107   general train.sh mdimranh  R      54:43      1 GPU18
+             63108   general run_base caiodasi  R      52:55      1 GPU15
+             63120   general  jupyter sainathr  R       9:39      1 GPU20
+             63121   general generate snehaola  R       8:19      1 GPU4
+```
+wiki: https://docs.gaivi.cse.usf.edu/doku.php?id=main:gaivi:1.manual:1.quickstart > Checking compute nodes for all resources (i.e. what nodes have what cards)  
+8/23/2022 3:52:59 PM: download singularity image from container-builder-client:  
+check status:  
+```
+container-builder-client -s <build_id>
+```
+download container:  
+```
+containe-builder-client -d <build_id> filename.sif
+```

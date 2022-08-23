@@ -1718,6 +1718,7 @@ error: XDG_RUNTIME_DIR not set in the environment.
 error: XDG_RUNTIME_DIR not set in the environment.
 error: XDG_RUNTIME_DIR not set in the environment.
 ```
+## GAIVI
 8/23/2022 3:39:18 PM: GAIVI container builder client  
 ```
 [nsambhu@forest.usf.edu@gaivi2 ~]$ container-builder-client -u Dockerfile
@@ -1869,3 +1870,5 @@ download container:
 ```
 containe-builder-client -d <build_id> filename.sif
 ```
+## CARLA GUI
+8/23/2022 4:13:38 PM: SAMBHU19: RHEL: CARLA GUI: https://carla.readthedocs.io/en/latest/build_docker/

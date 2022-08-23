@@ -1718,3 +1718,10 @@ error: XDG_RUNTIME_DIR not set in the environment.
 error: XDG_RUNTIME_DIR not set in the environment.
 error: XDG_RUNTIME_DIR not set in the environment.
 ```
+8/23/2022 3:39:18 PM: GAIVI container builder client  
+```
+[nsambhu@forest.usf.edu@gaivi2 ~]$ container-builder-client -u Dockerfile
+Uploading Dockerfile to http://eregion.cse.usf.edu
+Got back build id "a2f33a20-5094-4019-9811-caaaa8589a7b"
+{:host "http://eregion.cse.usf.edu", :poll-time 2, :upload true, :input-file "Dockerfile", :build-id #uuid "a2f33a20-5094-4019-9811-caaaa8589a7b"}
+```

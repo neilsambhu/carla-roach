@@ -1725,3 +1725,32 @@ Uploading Dockerfile to http://eregion.cse.usf.edu
 Got back build id "a2f33a20-5094-4019-9811-caaaa8589a7b"
 {:host "http://eregion.cse.usf.edu", :poll-time 2, :upload true, :input-file "Dockerfile", :build-id #uuid "a2f33a20-5094-4019-9811-caaaa8589a7b"}
 ```
+8/23/2022 3:44:51 PM: GAIVI check for carla singularity to run on a GPU:
+```
+[nsambhu@forest.usf.edu@gaivi2 ~]$ srun --pty --gpus 1 /bin/bash
+srun: job 63122 queued and waiting for resources
+srun: job 63122 has been allocated resources
+[nsambhu@forest.usf.edu@gpu20 ~]$ hostname
+gpu20.cse.usf.edu
+[nsambhu@forest.usf.edu@gpu20 ~]$ nvidia-smi
+Tue Aug 23 15:43:17 2022
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.42.01    Driver Version: 470.42.01    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  Off  | 00000000:84:00.0 Off |                  N/A |
+| 23%   24C    P8     8W / 250W |      0MiB / 11178MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+```

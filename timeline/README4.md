@@ -1710,3 +1710,11 @@ modified for simplicity:
 ```
 sudo -S docker run --privileged --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
 ```
+```
+(base) [nsambhu@localhost ~]$ sudo -S docker run --privileged --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
+[sudo] password for nsambhu: 
+sh: 1: xdg-user-dir: not found
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+```

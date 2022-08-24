@@ -1903,3 +1903,28 @@ INFO:    Build complete: /apps/container_builder/images/7433a09a-65bf-4a8d-8eed-
 Downloading the result of build 7433a09a-65bf-4a8d-8eed-04db60ca38bc to carla-0.9.13.sif
 {:host "http://eregion.cse.usf.edu", :poll-time 2, :upload true, :watch true, :download true, :input-file "Dockerfile", :output-file "carla-0.9.13.sif", :build-id #uuid "7433a09a-65bf-4a8d-8eed-04db60ca38bc"}
 ```
+8/24/2022 4:28:55 PM: (re: https://carla.readthedocs.io/en/latest/build_docker/) CARLA docker GUI and non-GUI:  
+```
+1. Pull the CARLA image.
+
+You can pull either the latest CARLA image or a specific release version. The latest image refers to the most recent packaged release. To pull the image, run one of the following commands:
+
+# Pull the latest image
+docker pull carlasim/carla:latest
+
+# Pull a specific version
+docker pull carlasim/carla:0.9.12
+2. Run the CARLA container.
+
+Different versions of CARLA support different graphics APIs which can affect the conditions in which the Docker image can run:
+
+0.9.12 supports only Vulkan
+0.9.7+ supports both Vulkan and OpenGL.
+CARLA 0.9.12
+
+To run CARLA with a display:
+
+sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh
+To run CARLA in off-screen mode:
+sudo docker run --privileged --gpus all --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh -RenderOffScreen
+```

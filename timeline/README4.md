@@ -1928,3 +1928,13 @@ sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/
 To run CARLA in off-screen mode:
 sudo docker run --privileged --gpus all --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh -RenderOffScreen
 ```
+8/24/2022 4:45:39 PM: CARLA in GAIVI  
+```
+[nsambhu@forest.usf.edu@gaivi2 ~]$ srun --gpus 1 singularity exec --nv carla-real.sif /home/carla/CarlaUE4.sh -RenderOffScreen
+srun: job 63230 queued and waiting for resources
+srun: job 63230 has been allocated resources
+chmod: changing permissions of '/home/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping': Read-only file system
+sh: 1: xdg-user-dir: not found
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+```

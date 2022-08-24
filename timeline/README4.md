@@ -1938,3 +1938,23 @@ sh: 1: xdg-user-dir: not found
 4.26.2-0+++UE4+Release-4.26 522 0
 Disabling core dumps.
 ```
+new shell for job submission
+```
+[nsambhu@forest.usf.edu@gaivi2 ~]$ squeue -u `whoami`
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             63227   general     bash nsambhu@  R      10:05      1 GPU20
+[nsambhu@forest.usf.edu@gaivi2 ~]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             63227   general     bash nsambhu@  R      10:17      1 GPU20
+[nsambhu@forest.usf.edu@gaivi2 ~]$ srun --interactive --jobid 63227 --pty /bin/bash
+[nsambhu@forest.usf.edu@gpu20 ~]$ nvidia-smi
+```
+8/24/2022 4:47:35 PM: (re: https://apptainer.org/docs/user/main/gpu.html#multiple-gpus) Apptainer select GPU: 
+```
+$ APPTAINERENV_CUDA_VISIBLE_DEVICES=0 apptainer run --nv tensorflow_latest-gpu.sif
+
+# or
+
+$ export APPTAINERENV_CUDA_VISIBLE_DEVICES=0
+$ apptainer run tensorflow_latest-gpu.sif
+```

@@ -1958,3 +1958,12 @@ $ APPTAINERENV_CUDA_VISIBLE_DEVICES=0 apptainer run --nv tensorflow_latest-gpu.s
 $ export APPTAINERENV_CUDA_VISIBLE_DEVICES=0
 $ apptainer run tensorflow_latest-gpu.sif
 ```
+8/24/2022 4:55:56 PM: (re: https://docs.sylabs.io/guides/3.5/user-guide/gpu.html#multiple-gpus) Singularity select GPU:
+```
+$ SINGULARITYENV_CUDA_VISIBLE_DEVICES=0 singularity run --nv tensorflow_latest-gpu.sif
+
+# or
+
+$ export SINGULARITYENV_CUDA_VISIBLE_DEVICES=0
+$ singularity run tensorflow_latest-gpu.sif
+```

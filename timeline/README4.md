@@ -1886,3 +1886,20 @@ Status: Image is up to date for docker.io/carlasim/carla:0.9.13
 unknown flag: --gpus
 See 'docker run --help'.
 ````
+## GAIVI
+8/24/2022 1:27:07 PM: build-id: 7433a09a-65bf-4a8d-8eed-04db60ca38bc
+```
+[nsambhu@forest.usf.edu@gaivi2 ~]$ container-builder-client -uwd Dockerfile carla-0.9.13.sif
+Uploading Dockerfile to http://eregion.cse.usf.edu
+Got back build id "7433a09a-65bf-4a8d-8eed-04db60ca38bc"
+Checking the status of build 7433a09a-65bf-4a8d-8eed-04db60ca38bc every 2 seconds
+Build status: running
+Build status: running
+...
+2022/08/24 17:10:17  info unpack layer: sha256:e85fa0a163b13ab5b742dfa4dad887413e9089a258d192f3df104a42ea296510
+INFO:    Creating SIF file...
+INFO:    Build complete: /apps/container_builder/images/7433a09a-65bf-4a8d-8eed-04db60ca38bc.img
+
+Downloading the result of build 7433a09a-65bf-4a8d-8eed-04db60ca38bc to carla-0.9.13.sif
+{:host "http://eregion.cse.usf.edu", :poll-time 2, :upload true, :watch true, :download true, :input-file "Dockerfile", :output-file "carla-0.9.13.sif", :build-id #uuid "7433a09a-65bf-4a8d-8eed-04db60ca38bc"}
+```

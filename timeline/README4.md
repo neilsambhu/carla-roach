@@ -1967,3 +1967,5 @@ $ SINGULARITYENV_CUDA_VISIBLE_DEVICES=0 singularity run --nv tensorflow_latest-g
 $ export SINGULARITYENV_CUDA_VISIBLE_DEVICES=0
 $ singularity run tensorflow_latest-gpu.sif
 ```
+# HiPerGator
+8/25/2022 5:25:52 PM: use singularity; do not use apptainer.

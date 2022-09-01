@@ -92,6 +92,9 @@ class CarlaServerManager():
             server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdin=subprocess.PIPE, encoding="utf8")
             sudo_out = server_process.communicate('q\n', timeout=1)
             # 8/9/2022: Dan added: end
+            # 8/26/2022: Neil added: start
+            time.sleep(10)
+            # 8/26/2022: Neil added: end
             if bVerbose:
                 frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         time.sleep(self._t_sleep)

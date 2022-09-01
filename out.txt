@@ -1,5 +1,5 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 10000, lEpochs: 6, lDeltaStepsEpoch: 1666667
-starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01']
+starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
 Neil run/train_rl_parent_NeilBranch0.py:103
 run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
 
@@ -21,16 +21,16 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
-start at Fri Aug 19 16:57:56 EDT 2022
+start at Fri Aug 26 17:53:36 EDT 2022
 Traceback (most recent call last):
   File "train_rl_NeilBranch0.py", line 14, in <module>
     from carla_gym.utils import config_utils
   File "/home/nsambhu/github/carla-roach/carla_gym/utils/config_utils.py", line 7, in <module>
     import carla
-  File "/home/nsambhu/anaconda3/envs/carla2/lib/python3.7/site-packages/carla/__init__.py", line 8, in <module>
+  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/carla/__init__.py", line 8, in <module>
     from .libcarla import *
 ImportError: libjpeg.so.8: cannot open shared object file: No such file or directory
-end at Fri Aug 19 16:57:56 EDT 2022
+end at Fri Aug 26 17:53:37 EDT 2022
 [0;31mPYTHON_RETURN=0[0m
 CarlaUE4-Linux: no process found
 Bash script done. train_rl_NeilBranch0.sh

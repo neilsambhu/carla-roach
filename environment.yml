@@ -1,4 +1,4 @@
-name: carla2
+name: carla
 channels:
   - pytorch
   - conda-forge

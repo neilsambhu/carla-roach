@@ -1969,3 +1969,9 @@ $ singularity run tensorflow_latest-gpu.sif
 ```
 # HiPerGator
 8/25/2022 5:25:52 PM: use singularity; do not use apptainer.
+
+# SAMBHU19 Red Hat Enterprise Linux
+8/26/2022 5:48:25 PM: 
+```
+python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
+```

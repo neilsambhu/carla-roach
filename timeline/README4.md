@@ -2004,3 +2004,20 @@ Commands:
   poststop
         no-op
 ```
+9/1/2022 3:50:10 PM:
+```
+(base) [nsambhu@localhost Apptainer]$ nvidia-smi -i 0 --query-gpu=uuid --format=csv
+uuid
+GPU-118a9ae7-a087-d9dd-077a-8e7b871255f1
+```
+```
+docker run --gpus device=GPU-118a9ae7-a087-d9dd-077a-8e7b871255f1 nvidia/cuda nvidia-smi
+```
+9/1/2022 4:13:21 PM: send to Jennifer
+```
+(carla) [nsambhu@localhost carla-roach]$ conda list carla
+# packages in environment at /home/nsambhu/anaconda3/envs/carla:
+#
+# Name                    Version                   Build  Channel
+carla                     0.9.5                    pypi_0    pypi
+```

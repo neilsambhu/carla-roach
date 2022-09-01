@@ -1985,3 +1985,22 @@ Jennifer's line
 docker run --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all nvidia/cuda nvidia-smi
 ```
 TODO: install nvidia container runtime
+9/1/2022 3:33:15 PM 
+```
+(carla) [nsambhu@localhost carla-roach]$ nvidia-container-toolkit
+Usage of nvidia-container-toolkit:
+  -config string
+      configuration file
+  -debug
+      enable debug output
+  -version
+      enable version output
+
+Commands:
+  prestart
+        run the prestart hook
+  poststart
+        no-op
+  poststop
+        no-op
+```

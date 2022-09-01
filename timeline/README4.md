@@ -1975,3 +1975,13 @@ $ singularity run tensorflow_latest-gpu.sif
 ```
 python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
 ```
+9/1/2022 3:16:17 PM:  
+sandbox
+```
+docker run --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES="1" --
+```
+Jennifer's line
+```
+docker run --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all nvidia/cuda nvidia-smi
+```
+TODO: install nvidia container runtime

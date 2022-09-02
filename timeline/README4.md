@@ -2021,3 +2021,9 @@ docker run --gpus device=GPU-118a9ae7-a087-d9dd-077a-8e7b871255f1 nvidia/cuda nv
 # Name                    Version                   Build  Channel
 carla                     0.9.5                    pypi_0    pypi
 ```
+9/2/2022 3:04:21 PM: successful: 
+```
+(base) [nsambhu@localhost Apptainer]$ sudo docker run --privileged --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
+```
+9/2/2022 3:06:10 PM: TODO: Docker 1.13.1 select GPU  
+9/2/2022 3:11:19 PM: follow https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html

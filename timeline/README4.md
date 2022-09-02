@@ -2058,3 +2058,12 @@ Fri Sep  2 19:20:33 2022
 |=============================================================================|
 +-----------------------------------------------------------------------------+
 ```
+9/2/2022 3:24:23 PM: try docker select gpu
+```
+(base) [nsambhu@localhost Apptainer]$ sudo docker run --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh
+unknown flag: --gpus
+See 'docker run --help'.
+```
+```
+sudo docker run --security-opt=label=disable --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh
+```

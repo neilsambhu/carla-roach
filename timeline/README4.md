@@ -2026,4 +2026,35 @@ carla                     0.9.5                    pypi_0    pypi
 (base) [nsambhu@localhost Apptainer]$ sudo docker run --privileged --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh
 ```
 9/2/2022 3:06:10 PM: TODO: Docker 1.13.1 select GPU  
-9/2/2022 3:11:19 PM: follow https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+9/2/2022 3:11:19 PM: (1) remove docker and (2) follow https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html  
+9/2/2022 3:20:08 PM:
+```
+(base) [nsambhu@localhost Apptainer]$ sudo docker run --rm -e NVIDIA_VISIBLE_DEVICES=all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+Failed to initialize NVML: Insufficient Permissions
+```
+```
+(base) [nsambhu@localhost Apptainer]$ sudo docker run --security-opt=label=disable --rm -e NVIDIA_VISIBLE_DEVICES=all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+Fri Sep  2 19:20:33 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA TITAN RTX    Off  | 00000000:01:00.0  On |                  N/A |
+| 41%   40C    P8    19W / 280W |    226MiB / 24576MiB |      1%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA TITAN RTX    Off  | 00000000:21:00.0 Off |                  N/A |
+| 41%   36C    P8    14W / 280W |      1MiB / 24576MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
++-----------------------------------------------------------------------------+
+```

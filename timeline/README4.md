@@ -2072,4 +2072,12 @@ sudo docker run --security-opt=label=disable --privileged --gpus all --net=host 
 ## Apptainer namespace
 9/12/2022 5:16:54 PM: why newest apptainer won't run: https://github.com/apptainer/apptainer/issues/686  
 configure user namespace: https://apptainer.org/docs/admin/main/user_namespace.html  
-9/12/2022 5:21:03 PM: use --fix-perms when building docker CARLA
+9/12/2022 5:21:03 PM: use --fix-perms when building docker CARLA  
+9/12/2022 5:31:13 PM: build
+```
+apptainer build --sandbox carla_0.9.13 docker://carlasim/carla:0.9.13
+```
+run
+```
+apptainer exec -w carla_0.9.13 bash
+```

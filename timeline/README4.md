@@ -2067,3 +2067,8 @@ See 'docker run --help'.
 ```
 sudo docker run --security-opt=label=disable --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh
 ```
+
+# SSD Red Hat Enterprise Linux
+## Apptainer namespace
+9/12/2022 5:16:54 PM: why newest apptainer won't run: https://github.com/apptainer/apptainer/issues/686  
+configure user namespace: https://apptainer.org/docs/admin/main/user_namespace.html

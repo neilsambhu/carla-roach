@@ -2071,4 +2071,5 @@ sudo docker run --security-opt=label=disable --privileged --gpus all --net=host 
 # SSD Red Hat Enterprise Linux
 ## Apptainer namespace
 9/12/2022 5:16:54 PM: why newest apptainer won't run: https://github.com/apptainer/apptainer/issues/686  
-configure user namespace: https://apptainer.org/docs/admin/main/user_namespace.html
+configure user namespace: https://apptainer.org/docs/admin/main/user_namespace.html  
+9/12/2022 5:21:03 PM: use --fixperms when building docker CARLA

@@ -2094,5 +2094,5 @@ apptainer exec -w carla_0.9.13 bash
 ```
 9/12/2022 6:07:09 PM: run CARLA
 ```
-apptianer run --nvccli carla_0.9.13 /home/carla/CarlaUE4.sh
+apptainer run --nvccli carla_0.9.13 /home/carla/CarlaUE4.sh
 ```

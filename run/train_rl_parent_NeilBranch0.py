@@ -70,9 +70,8 @@ if __name__ == '__main__':
     lGlobal_total_timesteps = int(1e7)
     # lGlobal_total_timesteps = int(1e3)
     listTowns=["Town01","Town02","Town03","Town04","Town05","Town06"]
-    # listGpuIds=[0,1]
-    listGpuIds=[1]
-    listGpuIds=[0]
+    listGpuIds=[0,1]
+    # listGpuIds=[1]
 
     # n_steps_total = int(1e5)
     n_steps_total = int(1e4)
@@ -94,7 +93,7 @@ if __name__ == '__main__':
         # setup for current epoch
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=5,lEpoch=lEpoch)
         listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=4,lEpoch=lEpoch)
-        # listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=1,lEpoch=lEpoch)
+        listTownsEpoch=get_listTowns(listTowns=listTowns,lTowns=1,lEpoch=lEpoch)
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
         ppo_yaml(n_steps_total=n_steps_total)

@@ -2067,6 +2067,17 @@ See 'docker run --help'.
 ```
 sudo docker run --security-opt=label=disable --privileged --gpus all --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.12 /bin/bash ./CarlaUE4.sh
 ```
+9/2/2022 4:04:07 PM: 
+```
+sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000
+```
+```
+(base) [nsambhu@localhost Apptainer]$ sudo -S docker run --privileged --gpus "device=1" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000
+[sudo] password for nsambhu: 
+unknown flag: --gpus
+See 'docker run --help'.
+```
 
 # SSD Red Hat Enterprise Linux
 ## Apptainer namespace

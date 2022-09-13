@@ -2096,3 +2096,8 @@ apptainer exec -w carla_0.9.13 bash
 ```
 apptainer run --nvccli carla_0.9.13 /home/carla/CarlaUE4.sh
 ```
+# SAMBHU19 Ubuntu 18.04
+9/13/2022 3:31 PM: check training on 5 towns per GPU. TODO: inference to recreate table of ICCV 2021 carla-roach.  
+```
+python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
+```

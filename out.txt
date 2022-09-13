@@ -1,6 +1,6 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 10000, lEpochs: 6, lDeltaStepsEpoch: 1666667
-starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04', 'Town05']
-Neil run/train_rl_parent_NeilBranch0.py:103
+starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04']
+Neil run/train_rl_parent_NeilBranch0.py:104
 run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
 
 CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
@@ -21,21 +21,36 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
-start at Fri Aug 26 17:53:36 EDT 2022
-Traceback (most recent call last):
-  File "train_rl_NeilBranch0.py", line 14, in <module>
-    from carla_gym.utils import config_utils
-  File "/home/nsambhu/github/carla-roach/carla_gym/utils/config_utils.py", line 7, in <module>
-    import carla
-  File "/home/nsambhu/anaconda3/envs/carla/lib/python3.7/site-packages/carla/__init__.py", line 8, in <module>
-    from .libcarla import *
-ImportError: libjpeg.so.8: cannot open shared object file: No such file or directory
-end at Fri Aug 26 17:53:37 EDT 2022
-[0;31mPYTHON_RETURN=0[0m
+start at Tue Sep 13 15:44:30 EDT 2022
 CarlaUE4-Linux: no process found
-Bash script done. train_rl_NeilBranch0.sh
-Neil run/train_rl_parent_NeilBranch0.py:106
-Traceback (most recent call last):
-  File "run/train_rl_parent_NeilBranch0.py", line 107, in <module>
-    completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
-FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'
+[2022-09-13 15:44:32,998][utils.server_utils][INFO] - Kill Carla Servers!
+3c80c96f15cb
+[2022-09-13 15:44:33,637][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-13 15:44:33,637][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:90
+[sudo] password for nsambhu: sh: 1: xdg-user-dir: not found
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:100
+[2022-09-13 15:44:34,530][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2005
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:90
+[sudo] password for nsambhu: sh: 1: xdg-user-dir: not found
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:100
+[2022-09-13 15:44:35,351][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2010
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:90
+[sudo] password for nsambhu: sh: 1: xdg-user-dir: not found
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:100
+[2022-09-13 15:44:36,173][utils.server_utils][INFO] - echo q | sudo -S docker run --privileged --gpus "device=0" --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2015
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:90
+[sudo] password for nsambhu: sh: 1: xdg-user-dir: not found
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:100

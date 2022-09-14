@@ -2079,7 +2079,7 @@ unknown flag: --gpus
 See 'docker run --help'.
 ```
 
-# SSD Red Hat Enterprise Linux
+# SSD Red Hat Enterprise Linux 7
 ## Apptainer namespace
 9/12/2022 5:16:54 PM: why newest apptainer won't run: https://github.com/apptainer/apptainer/issues/686  
 configure user namespace: https://apptainer.org/docs/admin/main/user_namespace.html  
@@ -2101,3 +2101,5 @@ apptainer run --nvccli carla_0.9.13 /home/carla/CarlaUE4.sh
 ```
 python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
 ```
+# SSD Red Hat Enterprise Linux 8
+9/14/2022 3:47:11 PM: bookmark https://www.redhat.com/en/blog/how-use-gpus-containers-bare-metal-rhel-8

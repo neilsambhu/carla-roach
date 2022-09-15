@@ -2101,5 +2101,8 @@ apptainer run --nvccli carla_0.9.13 /home/carla/CarlaUE4.sh
 ```
 python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
 ```
+9/13/2022 4:00 PM: TODO: get docker CARLA working through training.  
+9/13/2022 4:14 PM: new anaconda environment: carla3
+
 # SSD Red Hat Enterprise Linux 8
 9/14/2022 3:47:11 PM: bookmark https://www.redhat.com/en/blog/how-use-gpus-containers-bare-metal-rhel-8

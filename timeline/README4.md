@@ -2119,3 +2119,10 @@ python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt
 ```
 (c0) [nsambhu@localhost carla-roach]$ conda env update --file environment.yml --prune
 ```
+9/17/2022 6:43:11 PM: setup anaconda environment:  
+```
+conda env create -f environment.yml
+conda activate carla
+pip3 installl --upgrade pip
+pip install carla
+```

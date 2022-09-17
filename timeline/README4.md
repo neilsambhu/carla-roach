@@ -2123,6 +2123,6 @@ python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt
 ```
 conda env create -f environment.yml
 conda activate carla
-pip3 installl --upgrade pip
+pip3 install --upgrade pip
 pip install carla
 ```

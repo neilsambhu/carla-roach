@@ -2107,3 +2107,15 @@ python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt
 # SSD Red Hat Enterprise Linux 8
 9/14/2022 3:47:11 PM: bookmark https://www.redhat.com/en/blog/how-use-gpus-containers-bare-metal-rhel-8  
 9/16/2022 5:04:46 PM: rootless container setup: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#step-3-rootless-containers-setup  
+9/16/2022 5:25:07 PM: modify server_utils.py for podman  
+9/16/2022 5:25:36 PM: create conda environment carla from environment.yml  
+```
+conda env create -f environment.yml
+```
+9/16/2022 5:26:11 PM: TODO:  
+python -u run/train_rl_parent_NeilBranch0.py |& tee out.txt  
+9/16/2022 5:38:40 PM: creating carla anaconda environment and installing carla forces carla to be 0.9.5.  
+9/16/2022 5:39:42 PM: 
+```
+(c0) [nsambhu@localhost carla-roach]$ conda env update --file environment.yml --prune
+```

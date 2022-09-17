@@ -97,8 +97,8 @@ if __name__ == '__main__':
         print(f'starting epoch {lEpoch}, total_timesteps: {total_timesteps}, listTowns: {listTownsEpoch}')
         train_rl_yaml(total_timesteps=total_timesteps)
         ppo_yaml(n_steps_total=n_steps_total)
-        endless_all_yaml1(listTowns=listTownsEpoch)
-        # endless_all_yaml(listTowns=listTownsEpoch, listGpuIds=listGpuIds)
+        # endless_all_yaml1(listTowns=listTownsEpoch)
+        endless_all_yaml(listTowns=listTownsEpoch, listGpuIds=listGpuIds)
         # training
         if bVerbose: 
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")

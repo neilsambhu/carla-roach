@@ -1,6 +1,39 @@
 lGlobal_total_timesteps: 10000000, n_steps_total: 10000, lEpochs: 6, lDeltaStepsEpoch: 1666667
 starting epoch 0, total_timesteps: 1666667, listTowns: ['Town01', 'Town02', 'Town03', 'Town04']
+Neil run/train_rl_parent_NeilBranch0.py:104
+run/train_rl_NeilBranch0.sh: line 21: /home/nsambhu/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+start at Fri Sep 16 21:27:32 EDT 2022
 Traceback (most recent call last):
-  File "run/train_rl_parent_NeilBranch0.py", line 100, in <module>
-    endless_all_yaml1(listTowns=listTownsEpoch, listGpuIds=listGpuIds)
-TypeError: endless_all_yaml1() got an unexpected keyword argument 'listGpuIds'
+  File "train_rl_NeilBranch0.py", line 14, in <module>
+    from carla_gym.utils import config_utils
+  File "/home/nsambhu/github/carla-roach/carla_gym/utils/config_utils.py", line 7, in <module>
+    import carla
+ModuleNotFoundError: No module named 'carla'
+end at Fri Sep 16 21:27:33 EDT 2022
+[0;31mPYTHON_RETURN=0[0m
+CarlaUE4-Linux: no process found
+Bash script done. train_rl_NeilBranch0.sh
+Neil run/train_rl_parent_NeilBranch0.py:107
+Traceback (most recent call last):
+  File "run/train_rl_parent_NeilBranch0.py", line 108, in <module>
+    completed_timesteps = int(open("outputs/num_timesteps.txt","r").read())
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/num_timesteps.txt'

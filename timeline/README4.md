@@ -2134,3 +2134,7 @@ pip install carla
 ```
 bash run/benchmark_NeilBranch0.sh |& tee out.txt
 ```
+9/19/2022 4:34:07 PM: benchmark with time
+```
+time bash run/benchmark_NeilBranch0.sh |& tee out.txt
+```

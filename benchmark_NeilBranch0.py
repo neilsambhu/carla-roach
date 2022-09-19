@@ -117,6 +117,7 @@ def main(cfg: DictConfig):
 
     # resume env_idx from checkpoint.txt
     last_checkpoint_path = f'{hydra.utils.get_original_cwd()}/outputs/checkpoint.txt'
+    import os # 9/19/2022 4:28:59 PM: Neil added
     if cfg.resume and os.path.isfile(last_checkpoint_path):
         with open(last_checkpoint_path, 'r') as f:
             env_idx = int(f.read())

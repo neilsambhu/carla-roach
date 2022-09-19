@@ -31,8 +31,48 @@ class RlBirdviewAgent():
         self.setup(path_to_conf_file)
         if bVerbose:
             print('Neil 6.2.6')
-
     def setup(self, path_to_conf_file):
+        cfg = OmegaConf.load(path_to_conf_file)
+
+        # load checkpoint from wandb
+        if cfg.wb_run_path is not None:
+            api = wandb.Api()
+            run = api.run(cfg.wb_run_path)
+            all_ckpts = [f for f in run.files() if 'ckpt' in f.name]
+
+            if cfg.wb_ckpt_step is None:
+                f = max(all_ckpts, key=lambda x: int(x.name.split('_')[1].split('.')[0]))
+                self._logger.info(f'Resume checkpoint latest {f.name}')
+            else:
+                wb_ckpt_step = int(cfg.wb_ckpt_step)
+                f = min(all_ckpts, key=lambda x: abs(int(x.name.split('_')[1].split('.')[0]) - wb_ckpt_step))
+                self._logger.info(f'Resume checkpoint closest to step {wb_ckpt_step}: {f.name}')
+
+            f.download(replace=True)
+            run.file('config_agent.yaml').download(replace=True)
+            cfg = OmegaConf.load('config_agent.yaml')
+            self._ckpt = f.name
+        else:
+            self._ckpt = None
+
+        cfg = OmegaConf.to_container(cfg)
+
+        self._obs_configs = cfg['obs_configs']
+        self._train_cfg = cfg['training']
+
+        # prepare policy
+        self._policy_class = load_entry_point(cfg['policy']['entry_point'])
+        self._policy_kwargs = cfg['policy']['kwargs']
+        if self._ckpt is None:
+            self._policy = None
+        else:
+            self._logger.info(f'Loading wandb checkpoint: {self._ckpt}')
+            self._policy, self._train_cfg['kwargs'] = self._policy_class.load(self._ckpt)
+            self._policy = self._policy.eval()
+
+        self._wrapper_class = load_entry_point(cfg['env_wrapper']['entry_point'])
+        self._wrapper_kwargs = cfg['env_wrapper']['kwargs']
+    def setup2(self, path_to_conf_file):
         if bVerbose:
             print('Neil 6.2.5.100')
             print('path_to_conf_file',path_to_conf_file)

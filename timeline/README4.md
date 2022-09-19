@@ -2129,3 +2129,4 @@ pip install carla
 9/17/2022 7:42:23 PM: On Ubuntu 18.04, I could do 5 towns on 1 card or 4 towns on each card. In RHEL 8, I can do 5 towns on 1 card or 3 towns on each card.
 ## Benchmark carla-roach
 9/19/2022 4:08:33 PM: TODO: find call to carla instance during benchmark  
+9/19/2022 4:10:38 PM: call to carla for benchmark is same as call to carla for training  

@@ -2132,5 +2132,5 @@ pip install carla
 9/19/2022 4:10:38 PM: call to carla for benchmark is same as call to carla for training  
 9/19/2022 4:12:12 PM: benchmark
 ```
-bash run/benchmark_NeilBranch0.sh
+bash run/benchmark_NeilBranch0.sh |& tee out.txt
 ```

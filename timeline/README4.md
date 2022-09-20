@@ -2139,3 +2139,12 @@ bash run/benchmark_NeilBranch0.sh |& tee out.txt
 time bash run/benchmark_NeilBranch0.sh |& tee out.txt
 ```
 9/19/2022 11:46:49 PM: only trained env_idx 0: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/c0pjqnzt?workspace=user-neilsambhu  
+9/20/2022 2:47:27 PM: inference on Roach for NoCrash dense:  
+[nsambhu@localhost carla-roach]$ cat out.txt | grep "View run at "  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1sy0ktpm  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1o359phk  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2p2lxnrv  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3hp1bvog  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1wsvip8l  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1xg9ozfh  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2cl9dvm2  

@@ -2138,3 +2138,4 @@ bash run/benchmark_NeilBranch0.sh |& tee out.txt
 ```
 time bash run/benchmark_NeilBranch0.sh |& tee out.txt
 ```
+9/19/2022 11:46:49 PM: only trained env_idx 0: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/c0pjqnzt?workspace=user-neilsambhu  

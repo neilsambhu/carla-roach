@@ -953,3 +953,6 @@ wandb: Synced ppo_NoCrash-v2_Town02_lbc_new: https://wandb.ai/neilsambhu/iccv21-
 [0;31m PYTHON_RETURN=0!!! Start Over!!![0m
 CarlaUE4-Linux: no process found
 Bash script done. benchmark_NeilBranch0.sh
+^[[A^CFUnixPlatformMisc::RequestExitWithStatus
+ FUnixPlatformMisc::RequestExit
+ Exiting abnormally (error code: 130)

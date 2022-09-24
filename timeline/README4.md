@@ -2156,3 +2156,6 @@ wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2aa47u1s  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3pza7k8j  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/ebyabqbi  
+9/24/2022 4:42:48 PM: inference on PPO+beta for NoCrash busy:  
+[nsambhu@localhost ~]$ cat ~/github/carla-roach/out.txt | grep "View run at "  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/24065p0s  

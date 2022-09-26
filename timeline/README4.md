@@ -2180,7 +2180,11 @@ AttributeError: 'function' object has no attribute 'summary'
 ```
 grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "weather_group">outgrep.txt
 ```
-9/26/2022 7:04:18 PM: weather_group does not have integer of count. Try to find "25".  
+9/26/2022 7:04:18 PM: weather_group does not have integer of count. Try to find "25" for weather instances.  
 ```
 grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "25">outgrep.txt
+```
+9/26/2022 7:15:43 PM: no weather instances of "25". Search for "summary".
+```
+grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "summary">outgrep.txt
 ```

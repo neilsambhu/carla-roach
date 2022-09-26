@@ -2159,7 +2159,7 @@ wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/
 9/24/2022 4:42:48 PM: inference on PPO+beta for NoCrash busy:  
 [nsambhu@localhost ~]$ cat ~/github/carla-roach/out.txt | grep "View run at "  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/24065p0s  
-9/26/2022 5:04:40 PM:  
+9/26/2022 5:04:40 PM: inference on PPO+beta for NoCrash busy  
 ```
 [2022-09-25 16:34:58,863][__main__][INFO] - Finished, 1/1
 wandb.log: <bound method Run.log of <wandb.sdk.wandb_run.Run object at 0x7f22f40d9490>>

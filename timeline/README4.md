@@ -2159,3 +2159,20 @@ wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/
 9/24/2022 4:42:48 PM: inference on PPO+beta for NoCrash busy:  
 [nsambhu@localhost ~]$ cat ~/github/carla-roach/out.txt | grep "View run at "  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/24065p0s  
+9/26/2022 5:04:40 PM:  
+```
+[2022-09-25 16:34:58,863][__main__][INFO] - Finished, 1/1
+wandb.log: <bound method Run.log of <wandb.sdk.wandb_run.Run object at 0x7f22f40d9490>>
+Traceback (most recent call last):
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "benchmark_NeilBranch0.py", line 304, in main
+    print(f'wandb.log.summary: {wandb.log.summary}')
+AttributeError: 'function' object has no attribute 'summary'
+```

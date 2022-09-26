@@ -2176,3 +2176,7 @@ Traceback (most recent call last):
     print(f'wandb.log.summary: {wandb.log.summary}')
 AttributeError: 'function' object has no attribute 'summary'
 ```
+9/26/2022 6:41:21 PM: find weather_group
+```
+grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "weather_group">outgrep.txt
+```

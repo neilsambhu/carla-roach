@@ -2188,6 +2188,16 @@ grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *
 ```
 grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "summary">outgrep.txt
 ```
+```
+README.md:license, please contact the authors. You can view a license summary here.
+benchmark.py:    wandb.log({'table/summary': wandb.Table(data=table_data, columns=table_columns)})
+benchmark_NeilBranch0.py:        #print(f'wandb.log.summary: {wandb.log.summary}
+benchmark_NeilBranch0.py:    wandb.log({'table/summary': wandb.Table(data=table_data, columns=table_columns)})
+benchmark_NeilBranch0.py:        print(f'wandb.summary: {wandb.summary}')
+carla_gym/core/task_actor/ego_vehicle/ego_vehicle_handler.py:            # save episode summary
+data_collect.py:    wandb.log({'table/summary': wandb.Table(data=table_data, columns=table_columns)})
+data_collect_NeilBranch0.py:    wandb.log({'table/summary': wandb.Table(data=table_data, columns=table_columns)})
+```
 9/26/2022 11:55:05 PM: inference on PPO+beta for NoCrash busy (25 tasks per weather)  
 ```
 [2022-09-26 20:17:24,759][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v3_Town01_lbc_train_eval
@@ -2212,3 +2222,8 @@ wandb.log: <bound method Run.log of <wandb.sdk.wandb_run.Run object at 0x7f66303
 wandb.summary: <wandb.sdk.wandb_summary.Summary object at 0x7f66303151d0>
 [2022-09-27 00:07:13,007][__main__][INFO] - data_collect.py DONE!
 ```
+9/27/2022 12:12:49 AM: find "score_composed"  
+```
+grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "score_composed">outgrep.txt
+```
+never mind

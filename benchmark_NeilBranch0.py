@@ -259,8 +259,8 @@ def main(cfg: DictConfig):
         if bVerbose:
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         # 9/26/2022 11:58:39 PM: Neil added: start
-        if task_idx == ckpt_task_idx+1:
-            break 
+        # if task_idx == ckpt_task_idx+1:
+        #     break 
         # 9/26/2022 11:58:39 PM: Neil added: end
     
     if bVerbose:
@@ -306,11 +306,13 @@ def main(cfg: DictConfig):
         # 9/25/2022 1:27:34 PM: Neil added: start
         # print(f'wandb.log: {wandb.log}')
         # print(f'wandb.summary: {wandb.summary}')
-        print(f'table_columns: {table_columns}')
-        print(f'table_data: {table_data}')
-        print(f'table_data[0]: {table_data[0]}')
+        # print(f'table_columns: {table_columns}')
+        # print(f'table_data: {table_data}')
+        # print(f'table_data[0]: {table_data[0]}')
         dict_table = dict(zip(table_columns,table_data[0]))
-        print(f'dict_table: {dict_table}')
+        # print(f'dict_table: {dict_table}')
+        print(f'score_composed: {dict_table["score_composed"]}')
+        print(f'score_route: {dict_table["score_route"]}')
         # 9/25/2022 1:27:34 PM: Neil added: end
         return
     else:

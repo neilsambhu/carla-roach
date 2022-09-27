@@ -18,11 +18,13 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
+rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
 rm: cannot remove 'outputs/wb_run_id.txt': No such file or directory
+rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
 CarlaUE4-Linux: no process found
-[2022-09-27 00:36:25,814][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-27 00:36:26,969][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-27 00:36:26,969][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+[2022-09-27 01:01:13,848][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 01:01:15,004][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 01:01:15,005][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
 4.26.2-0+++UE4+Release-4.26 522 0
@@ -60,20 +62,20 @@ ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
 ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
 ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
 ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
-[2022-09-27 00:36:32,307][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_9953280.pth
-[2022-09-27 00:36:33,019][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_9953280.pth
-[2022-09-27 00:36:34,720][__main__][INFO] - Start new env from task_idx 0
-[2022-09-27 00:36:34,721][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v3_Town01_lbc_train_eval
+[2022-09-27 01:01:20,347][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-09-27 01:01:22,200][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-09-27 01:01:24,018][__main__][INFO] - Start new env from task_idx 0
+[2022-09-27 01:01:24,018][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
 /home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
 wandb: wandb version 0.13.3 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.10.12
-wandb: Syncing run ppo_NoCrash-v3_Town01_lbc_train_eval
+wandb: Syncing run ppo_NoCrash-v2_Town01_lbc_train_eval
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
-wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/q6bx2mkr
-wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-27/00-36-24/wandb/run-20220927_003639-q6bx2mkr
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/qlnixdwq
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-27/01-01-12/wandb/run-20220927_010128-qlnixdwq
 wandb: Run `wandb offline` to turn off syncing.
 
-[2022-09-27 00:36:39,632][__main__][INFO] - Start Benchmarking WetNoon_00.
+[2022-09-27 01:01:28,880][__main__][INFO] - Start Benchmarking WetNoon_00.

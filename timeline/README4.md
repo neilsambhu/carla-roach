@@ -2196,3 +2196,19 @@ wandb.log: <bound method Run.log of <wandb.sdk.wandb_run.Run object at 0x7f9ae85
 wandb.summary: <wandb.sdk.wandb_summary.Summary object at 0x7f9ae8519490>
 [2022-09-26 20:17:24,789][__main__][INFO] - data_collect.py DONE!
 ```
+9/27/2022 12:10:04 AM: inference on PPO+beta for NoCrash busy (1 task per weather)  
+```
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2a1uvpog
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-26/23-59-52/wandb/run-20220927_000007-2a1uvpog
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-09-27 00:00:08,746][__main__][INFO] - Start Benchmarking WetNoon_00.
+CarlaUE4-Linux: no process found
+[2022-09-27 00:07:07,985][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 00:07:12,990][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 00:07:12,996][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v3_Town01_lbc_train_eval
+[2022-09-27 00:07:12,996][__main__][INFO] - Finished, 1/1
+wandb.log: <bound method Run.log of <wandb.sdk.wandb_run.Run object at 0x7f663031b510>>
+wandb.summary: <wandb.sdk.wandb_summary.Summary object at 0x7f66303151d0>
+[2022-09-27 00:07:13,007][__main__][INFO] - data_collect.py DONE!
+```

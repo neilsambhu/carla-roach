@@ -2188,3 +2188,11 @@ grep -r  --exclude timeline/README1.md --exclude timeline/README2.md --exclude *
 ```
 grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "summary">outgrep.txt
 ```
+9/26/2022 11:55:05 PM: inference on PPO+beta for NoCrash busy  
+```
+[2022-09-26 20:17:24,759][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v3_Town01_lbc_train_eval
+[2022-09-26 20:17:24,760][__main__][INFO] - Finished, 1/1
+wandb.log: <bound method Run.log of <wandb.sdk.wandb_run.Run object at 0x7f9ae8519410>>
+wandb.summary: <wandb.sdk.wandb_summary.Summary object at 0x7f9ae8519490>
+[2022-09-26 20:17:24,789][__main__][INFO] - data_collect.py DONE!
+```

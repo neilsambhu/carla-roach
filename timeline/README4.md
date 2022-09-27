@@ -2226,4 +2226,23 @@ wandb.summary: <wandb.sdk.wandb_summary.Summary object at 0x7f66303151d0>
 ```
 grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "score_composed">outgrep.txt
 ```
-never mind
+never mind  
+9/27/2022 12:29:50 AM: inference on PPO+beta for NoCrash busy (1 task per weather)  
+```
+
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3eeui02p
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-27/00-21-47/wandb/run-20220927_002201-3eeui02p
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-09-27 00:22:02,530][__main__][INFO] - Start Benchmarking WetNoon_00.
+CarlaUE4-Linux: no process found
+[2022-09-27 00:28:17,308][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 00:28:22,313][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 00:28:22,318][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v3_Town01_lbc_train_eval
+[2022-09-27 00:28:22,318][__main__][INFO] - Finished, 1/1
+wandb.log: <bound method Run.log of <wandb.sdk.wandb_run.Run object at 0x7efc2c3da790>>
+wandb.summary: <wandb.sdk.wandb_summary.Summary object at 0x7efc78a67710>
+table_columns: ['Suite', 'actor_id', 'n_episode', 'collisions_layout', 'collisions_others', 'collisions_pedestrian', 'collisions_vehicle', 'encounter_light', 'encounter_stop', 'is_route_completed', 'is_route_completed_nocrash', 'length', 'light_passed', 'percentage_outside_lane', 'percentage_wrong_lane', 'red_light', 'reward', 'route_completed_in_km', 'route_dev', 'route_length_in_km', 'score_composed', 'score_penalty', 'score_route', 'stop_infraction', 'stop_passed', 'timeout', 'vehicle_blocked', 'n_episodes']
+table_data: [['ppo_NoCrash-v3_Town01_lbc_train_eval', 'hero', '1', '0.0000', '0.0000', '0.0000', '0.0000', '9.0000', '0.0000', '1.0000', '1.0000', '4429.0000', '9.0000', '0.0000', '0.0000', '0.0000', '3464.7315', '0.8242', '0.0000', '0.8322', '1.0000', '1.0000', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1.0000']]
+[2022-09-27 00:28:22,323][__main__][INFO] - data_collect.py DONE!
+```

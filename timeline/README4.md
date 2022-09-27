@@ -2246,3 +2246,22 @@ table_columns: ['Suite', 'actor_id', 'n_episode', 'collisions_layout', 'collisio
 table_data: [['ppo_NoCrash-v3_Town01_lbc_train_eval', 'hero', '1', '0.0000', '0.0000', '0.0000', '0.0000', '9.0000', '0.0000', '1.0000', '1.0000', '4429.0000', '9.0000', '0.0000', '0.0000', '0.0000', '3464.7315', '0.8242', '0.0000', '0.8322', '1.0000', '1.0000', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1.0000']]
 [2022-09-27 00:28:22,323][__main__][INFO] - data_collect.py DONE!
 ```
+9/27/2022 12:51:02 AM: inference on PPO+beta for NoCrash busy (2 tasks per weather)  
+```
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/q6bx2mkr
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-27/00-36-24/wandb/run-20220927_003639-q6bx2mkr
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-09-27 00:36:39,632][__main__][INFO] - Start Benchmarking WetNoon_00.
+[2022-09-27 00:46:43,258][__main__][INFO] - Start Benchmarking WetNoon_01.
+CarlaUE4-Linux: no process found
+[2022-09-27 00:49:33,236][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 00:49:38,240][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 00:49:38,244][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v3_Town01_lbc_train_eval
+[2022-09-27 00:49:38,244][__main__][INFO] - Finished, 1/1
+table_columns: ['Suite', 'actor_id', 'n_episode', 'collisions_layout', 'collisions_others', 'collisions_pedestrian', 'collisions_vehicle', 'encounter_light', 'encounter_stop', 'is_route_completed', 'is_route_completed_nocrash', 'length', 'light_passed', 'percentage_outside_lane', 'percentage_wrong_lane', 'red_light', 'reward', 'route_completed_in_km', 'route_dev', 'route_length_in_km', 'score_composed', 'score_penalty', 'score_route', 'stop_infraction', 'stop_passed', 'timeout', 'vehicle_blocked', 'n_episodes']
+table_data: [['ppo_NoCrash-v3_Town01_lbc_train_eval', 'hero', '2', '0.0000', '0.0000', '0.0000', '0.6066', '6.5000', '0.0000', '1.0000', '0.5000', '4559.5000', '6.0000', '0.0000', '0.0000', '0.6066', '3264.0164', '0.7268', '0.0000', '0.7338', '0.7100', '0.7100', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '2.0000']]
+table_data[0]: ['ppo_NoCrash-v3_Town01_lbc_train_eval', 'hero', '2', '0.0000', '0.0000', '0.0000', '0.6066', '6.5000', '0.0000', '1.0000', '0.5000', '4559.5000', '6.0000', '0.0000', '0.0000', '0.6066', '3264.0164', '0.7268', '0.0000', '0.7338', '0.7100', '0.7100', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '2.0000']
+dict_table: {'Suite': 'ppo_NoCrash-v3_Town01_lbc_train_eval', 'actor_id': 'hero', 'n_episode': '2', 'collisions_layout': '0.0000', 'collisions_others': '0.0000', 'collisions_pedestrian': '0.0000', 'collisions_vehicle': '0.6066', 'encounter_light': '6.5000', 'encounter_stop': '0.0000', 'is_route_completed': '1.0000', 'is_route_completed_nocrash': '0.5000', 'length': '4559.5000', 'light_passed': '6.0000', 'percentage_outside_lane': '0.0000', 'percentage_wrong_lane': '0.0000', 'red_light': '0.6066', 'reward': '3264.0164', 'route_completed_in_km': '0.7268', 'route_dev': '0.0000', 'route_length_in_km': '0.7338', 'score_composed': '0.7100', 'score_penalty': '0.7100', 'score_route': '1.0000', 'stop_infraction': '0.0000', 'stop_passed': '0.0000', 'timeout': '0.0000', 'vehicle_blocked': '0.0000', 'n_episodes': '2.0000'}
+[2022-09-27 00:49:38,245][__main__][INFO] - data_collect.py DONE!
+```

@@ -2289,3 +2289,7 @@ score_composed: 0.9762, score_route: 0.9972
 ```
 score_composed and score_route successfully print for each env_idx finished.  
 TODO: run benchmark_parent_NeilBranch0.py  
+9/28/2022 1:53:13 PM: 
+```
+python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
+```

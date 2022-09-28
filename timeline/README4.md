@@ -2293,3 +2293,12 @@ TODO: run benchmark_parent_NeilBranch0.py
 ```
 python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
 ```
+9/28/2022 2:02:22 PM: error with wb_group  
+9/28/2022 2:02:39 PM: 
+```
+bash run/benchmark_NeilBranch0.sh |& tee out.txt
+Neil benchmark_NeilBranch0.py:329
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-09-28/14-00-49
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction'}, 'terminal': {'entry_point': 'terminal.leaderboard:Leaderboard'}}}, 'carla_sh_path': '/CarlaUE4.sh', 'log_level': 'INFO', 'host': 'localhost', 'port': 2000, 'seed': 2021, 'no_rendering': True, 'kill_running': True, 'resume': True, 'wb_project': 'iccv21-roach-benchmark', 'wb_notes': 'Benchmark Roach on NoCrash-dense.', 'wb_group': 'Roach', 'wb_tags': None, 'log_video': True, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}}}, 'test_suites': [{'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'new'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'new'}}], 'wb_sub_group': 'nocrash_dense-2021'}
+```

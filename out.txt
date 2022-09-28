@@ -120,3 +120,711 @@ wandb: Run `wandb offline` to turn off syncing.
 [2022-09-27 23:56:31,211][__main__][INFO] - Start Benchmarking ClearSunset_16.
 [2022-09-27 23:59:25,232][__main__][INFO] - Start Benchmarking ClearSunset_17.
 [2022-09-28 00:03:01,083][__main__][INFO] - Start Benchmarking ClearSunset_18.
+[2022-09-28 00:08:02,548][__main__][INFO] - Start Benchmarking ClearSunset_19.
+[2022-09-28 00:11:07,594][__main__][INFO] - Start Benchmarking ClearSunset_20.
+[2022-09-28 00:15:45,680][__main__][INFO] - Start Benchmarking ClearSunset_21.
+[2022-09-28 00:18:50,850][__main__][INFO] - Start Benchmarking ClearSunset_22.
+[2022-09-28 00:22:39,512][__main__][INFO] - Start Benchmarking ClearSunset_23.
+[2022-09-28 00:25:52,974][__main__][INFO] - Start Benchmarking ClearSunset_24.
+CarlaUE4-Linux: no process found
+[2022-09-28 00:36:57,532][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 00:37:02,537][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 00:37:02,544][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+score_composed: 0.9762, score_route: 0.9972
+[2022-09-28 00:37:02,544][__main__][INFO] - Not finished, 1/4
+wandb: Waiting for W&B process to finish, PID 706451
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb: - 146.45MB of 152.66MB uploaded (0.00MB deduped)wandb: \ 152.68MB of 152.68MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-27/20-31-14/wandb/run-20220927_203129-288hrbzj/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-27/20-31-14/wandb/run-20220927_203129-288hrbzj/logs/debug-internal.log
+wandb: Run summary:
+wandb:                   time/total_step 6026
+wandb:                          time/fps 9.13299
+wandb:                  hero/score_route 1.0
+wandb:                hero/score_penalty 1.0
+wandb:               hero/score_composed 1.0
+wandb:                       hero/length 6027
+wandb:                       hero/reward 4912.18258
+wandb:                      hero/timeout 0.0
+wandb:           hero/is_route_completed 1.0
+wandb:   hero/is_route_completed_nocrash 1.0
+wandb:        hero/route_completed_in_km 1.19008
+wandb:           hero/route_length_in_km 1.19808
+wandb:      hero/percentage_outside_lane 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:            hero/collisions_others 0.0
+wandb:                    hero/red_light 0.0
+wandb:                 hero/light_passed 7
+wandb:              hero/encounter_light 7
+wandb:              hero/stop_infraction 0.0
+wandb:                  hero/stop_passed 0
+wandb:               hero/encounter_stop 0
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:                             _step 49
+wandb:                          _runtime 14733
+wandb:                        _timestamp 1664339822
+wandb: Run history:
+wandb:                   time/total_step ▇▃▃▄▃▁▃▂▃▃▃▂▃▁▃▃▃▃▃▁█▃▄▅▂▁▄▂▃▄▂▄▃▂▂▃▃▂▂█
+wandb:                          time/fps █▆█▅▅▄▅▃▃▄▅▃▃▃▅▅▄▄▄▄▃▃▃▂▃▂▃▁▁▃▃▂▂▄▅▄▂▄▃▃
+wandb:                  hero/score_route ███████████████████████▁████████████████
+wandb:                hero/score_penalty ████▁███████████████████████████████████
+wandb:               hero/score_composed ████▁██████████████████▅████████████████
+wandb:                       hero/length ▇▃▃▄▃▁▃▂▃▃▃▂▃▁▃▃▃▃▃▁█▃▄▅▂▁▄▂▃▄▂▄▃▂▂▃▃▂▂█
+wandb:                       hero/reward ▆▃▃▄▃▁▃▂▃▃▂▂▃▁▃▃▃▃▃▁█▃▃▃▂▁▄▁▃▄▂▄▃▂▂▃▂▂▂█
+wandb:                      hero/timeout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/is_route_completed ███████████████████████▁████████████████
+wandb:   hero/is_route_completed_nocrash ███████████████████████▁████████████████
+wandb:        hero/route_completed_in_km ▅▄▆▄▂▃▅▁▂▅▅▃▄▃▇▇▄▅▄▄▅▄▆▃▂▃▅▁▂▅▅▃▄▃▇▇▄▅▄█
+wandb:           hero/route_length_in_km ▅▄▆▄▂▃▅▁▂▅▅▃▄▃▇▇▄▅▄▄▅▄▆▄▂▃▅▁▂▅▅▃▄▃▇▇▄▅▄█
+wandb:      hero/percentage_outside_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        hero/percentage_wrong_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_layout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/collisions_vehicle ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        hero/collisions_pedestrian ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_others ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/red_light ▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                 hero/light_passed █▃▂▇▂▂▄▃▃▃▃▄▄▂▁▂▅▁▂▁█▃▂▆▃▂▄▃▃▃▃▄▄▂▁▂▅▁▂▆
+wandb:              hero/encounter_light █▃▂▇▃▂▄▃▃▃▃▄▄▂▁▂▅▁▂▁█▃▂▆▃▂▄▃▃▃▃▄▄▂▁▂▅▁▂▆
+wandb:              hero/stop_infraction ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                  hero/stop_passed ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               hero/encounter_stop ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/route_dev ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:              hero/vehicle_blocked ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                             _step ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb:                          _runtime ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇███
+wandb:                        _timestamp ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇███
+wandb: 
+wandb: Synced 5 W&B file(s), 51 media file(s), 0 artifact file(s) and 51 other file(s)
+wandb: 
+wandb: Synced ppo_NoCrash-v2_Town01_lbc_train_eval: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/288hrbzj
+
+[0;31m PYTHON_RETURN=1!!! Start Over!!![0m
+CarlaUE4-Linux: no process found
+[2022-09-28 00:37:09,897][utils.server_utils][INFO] - Kill Carla Servers!
+978cefa741317ae115432f4bffd79c33c35c5c7ad806c0a8334c1f80fb3c62e2
+[2022-09-28 00:37:11,045][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 00:37:11,045][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+sh: 1: xdg-user-dir: not found
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+[2022-09-28 00:37:16,417][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-09-28 00:37:17,259][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-09-28 00:37:19,285][__main__][INFO] - Resume from env_idx 1
+[2022-09-28 00:37:19,286][__main__][INFO] - Start new env from task_idx 0
+[2022-09-28 00:37:19,286][__main__][INFO] - Start Benchmarking! env_idx: 1, suite_name: ppo_NoCrash-v2_Town01_lbc_new
+/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.13.3 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run ppo_NoCrash-v2_Town01_lbc_new
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/28jeuvh9
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-28/00-37-08/wandb/run-20220928_003723-28jeuvh9
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-09-28 00:37:24,150][__main__][INFO] - Start Benchmarking SoftRainSunset_00.
+[2022-09-28 00:43:03,776][__main__][INFO] - Start Benchmarking SoftRainSunset_01.
+[2022-09-28 00:46:32,307][__main__][INFO] - Start Benchmarking SoftRainSunset_02.
+[2022-09-28 00:52:27,218][__main__][INFO] - Start Benchmarking SoftRainSunset_03.
+[2022-09-28 00:55:53,790][__main__][INFO] - Start Benchmarking SoftRainSunset_04.
+[2022-09-28 01:00:23,198][__main__][INFO] - Start Benchmarking SoftRainSunset_05.
+[2022-09-28 01:03:05,450][__main__][INFO] - Start Benchmarking SoftRainSunset_06.
+[2022-09-28 01:05:39,146][__main__][INFO] - Start Benchmarking SoftRainSunset_07.
+[2022-09-28 01:10:50,461][__main__][INFO] - Start Benchmarking SoftRainSunset_08.
+[2022-09-28 01:13:37,118][__main__][INFO] - Start Benchmarking SoftRainSunset_09.
+[2022-09-28 01:16:31,553][__main__][INFO] - Start Benchmarking SoftRainSunset_10.
+[2022-09-28 01:20:53,035][__main__][INFO] - Start Benchmarking SoftRainSunset_11.
+[2022-09-28 01:25:02,719][__main__][INFO] - Start Benchmarking SoftRainSunset_12.
+[2022-09-28 01:29:16,036][__main__][INFO] - Start Benchmarking SoftRainSunset_13.
+[2022-09-28 01:32:58,030][__main__][INFO] - Start Benchmarking SoftRainSunset_14.
+[2022-09-28 01:39:04,415][__main__][INFO] - Start Benchmarking SoftRainSunset_15.
+[2022-09-28 01:44:36,407][__main__][INFO] - Start Benchmarking SoftRainSunset_16.
+[2022-09-28 01:47:28,722][__main__][INFO] - Start Benchmarking SoftRainSunset_17.
+[2022-09-28 01:51:18,703][__main__][INFO] - Start Benchmarking SoftRainSunset_18.
+[2022-09-28 01:57:11,787][__main__][INFO] - Start Benchmarking SoftRainSunset_19.
+[2022-09-28 02:00:47,086][__main__][INFO] - Start Benchmarking SoftRainSunset_20.
+[2022-09-28 02:05:32,148][__main__][INFO] - Start Benchmarking SoftRainSunset_21.
+[2022-09-28 02:08:23,609][__main__][INFO] - Start Benchmarking SoftRainSunset_22.
+[2022-09-28 02:11:21,500][__main__][INFO] - Start Benchmarking SoftRainSunset_23.
+[2022-09-28 02:13:32,424][__main__][INFO] - Start Benchmarking SoftRainSunset_24.
+[2022-09-28 02:20:38,960][__main__][INFO] - Start Benchmarking WetSunset_00.
+[2022-09-28 02:31:42,551][__main__][INFO] - Start Benchmarking WetSunset_01.
+[2022-09-28 02:36:02,894][__main__][INFO] - Start Benchmarking WetSunset_02.
+[2022-09-28 02:40:59,176][__main__][INFO] - Start Benchmarking WetSunset_03.
+[2022-09-28 02:47:28,637][__main__][INFO] - Start Benchmarking WetSunset_04.
+[2022-09-28 02:52:28,483][__main__][INFO] - Start Benchmarking WetSunset_05.
+[2022-09-28 02:55:55,749][__main__][INFO] - Start Benchmarking WetSunset_06.
+[2022-09-28 02:59:27,550][__main__][INFO] - Start Benchmarking WetSunset_07.
+[2022-09-28 03:03:56,242][__main__][INFO] - Start Benchmarking WetSunset_08.
+[2022-09-28 03:06:52,809][__main__][INFO] - Start Benchmarking WetSunset_09.
+[2022-09-28 03:11:26,599][__main__][INFO] - Start Benchmarking WetSunset_10.
+[2022-09-28 03:14:05,179][__main__][INFO] - Start Benchmarking WetSunset_11.
+[2022-09-28 03:20:10,312][__main__][INFO] - Start Benchmarking WetSunset_12.
+[2022-09-28 03:24:14,770][__main__][INFO] - Start Benchmarking WetSunset_13.
+[2022-09-28 03:28:10,642][__main__][INFO] - Start Benchmarking WetSunset_14.
+[2022-09-28 03:33:36,031][__main__][INFO] - Start Benchmarking WetSunset_15.
+[2022-09-28 03:39:14,175][__main__][INFO] - Start Benchmarking WetSunset_16.
+[2022-09-28 03:43:42,225][__main__][INFO] - Start Benchmarking WetSunset_17.
+[2022-09-28 03:48:12,537][__main__][INFO] - Start Benchmarking WetSunset_18.
+[2022-09-28 03:52:53,019][__main__][INFO] - Start Benchmarking WetSunset_19.
+[2022-09-28 03:57:05,519][__main__][INFO] - Start Benchmarking WetSunset_20.
+[2022-09-28 04:02:08,153][__main__][INFO] - Start Benchmarking WetSunset_21.
+[2022-09-28 04:05:53,269][__main__][INFO] - Start Benchmarking WetSunset_22.
+[2022-09-28 04:09:42,457][__main__][INFO] - Start Benchmarking WetSunset_23.
+[2022-09-28 04:12:48,307][__main__][INFO] - Start Benchmarking WetSunset_24.
+CarlaUE4-Linux: no process found
+[2022-09-28 04:20:53,770][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 04:20:58,775][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 04:20:58,782][__main__][INFO] - Finished Benchmarking env_idx 1, suite_name: ppo_NoCrash-v2_Town01_lbc_new
+score_composed: 0.9510, score_route: 0.9614
+[2022-09-28 04:20:58,782][__main__][INFO] - Not finished, 2/4
+wandb: Waiting for W&B process to finish, PID 725071
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb: - 134.13MB of 139.26MB uploaded (0.00MB deduped)wandb: \ 139.27MB of 139.27MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/00-37-08/wandb/run-20220928_003723-28jeuvh9/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/00-37-08/wandb/run-20220928_003723-28jeuvh9/logs/debug-internal.log
+wandb: Run summary:
+wandb:                   time/total_step 4451
+wandb:                          time/fps 9.24858
+wandb:                  hero/score_route 1.0
+wandb:                hero/score_penalty 1.0
+wandb:               hero/score_composed 1.0
+wandb:                       hero/length 4452
+wandb:                       hero/reward 3218.23368
+wandb:                      hero/timeout 0.0
+wandb:           hero/is_route_completed 1.0
+wandb:   hero/is_route_completed_nocrash 1.0
+wandb:        hero/route_completed_in_km 1.18908
+wandb:           hero/route_length_in_km 1.19808
+wandb:      hero/percentage_outside_lane 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:            hero/collisions_others 0.0
+wandb:                    hero/red_light 0.0
+wandb:                 hero/light_passed 7
+wandb:              hero/encounter_light 7
+wandb:              hero/stop_infraction 0.0
+wandb:                  hero/stop_passed 0
+wandb:               hero/encounter_stop 0
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:                             _step 49
+wandb:                          _runtime 13415
+wandb:                        _timestamp 1664353258
+wandb: Run history:
+wandb:                   time/total_step ▄▂▄▂▁▁▃▁▃▃▃▂▄▂▂▄▃▂▂▁█▃▃▄▂▂▃▂▁▄▂▂▄▃▃▃▃▂▂▆
+wandb:                          time/fps █▆█▆▆▅▅▅▄▅▆▅▃▄▅▄▅▆▄▆▄▄▄▁▂▂▃▁▂▃▄▄▁▂▄▅▂▃▃▅
+wandb:                  hero/score_route ▃▁█▁████████████████████████████████████
+wandb:                hero/score_penalty ███▁████████████████████████████████████
+wandb:               hero/score_composed ▄▂█▁████████████████████████████████████
+wandb:                       hero/length ▄▂▄▂▁▁▃▁▃▃▃▂▄▂▂▄▃▂▂▁█▃▃▄▂▂▃▂▁▄▂▂▄▃▃▃▃▂▂▆
+wandb:                       hero/reward ▄▂▄▂▂▂▃▂▃▃▃▂▄▂▃▄▃▂▂▁█▃▃▄▂▂▃▂▁▄▃▂▄▃▃▃▃▃▂▅
+wandb:                      hero/timeout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/is_route_completed ▁▁█▁████████████████████████████████████
+wandb:   hero/is_route_completed_nocrash ▁▁█▁████████████████████████████████████
+wandb:        hero/route_completed_in_km ▃▁▇▁▃▃▅▂▃▅▅▃▄▃▇▇▅▅▄▄▅▄▇▄▃▃▅▂▃▅▅▃▄▃▇▇▅▅▄█
+wandb:           hero/route_length_in_km ▅▄▆▄▂▃▅▁▂▅▅▃▄▃▇▇▄▅▄▄▅▄▆▄▂▃▅▁▂▅▅▃▄▃▇▇▄▅▄█
+wandb:      hero/percentage_outside_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        hero/percentage_wrong_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_layout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/collisions_vehicle ▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        hero/collisions_pedestrian ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_others ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/red_light ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                 hero/light_passed ▃▂▃▁▄▃▅▄▄▄▄▅▅▃▂▃▅▂▃▂█▄▃▇▄▃▅▄▄▄▄▅▅▃▂▃▅▂▃▆
+wandb:              hero/encounter_light ▃▂▃▁▄▃▅▄▄▄▄▅▅▃▂▃▅▂▃▂█▄▃▇▄▃▅▄▄▄▄▅▅▃▂▃▅▂▃▆
+wandb:              hero/stop_infraction ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                  hero/stop_passed ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               hero/encounter_stop ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/route_dev ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:              hero/vehicle_blocked ▄█▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                             _step ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb:                          _runtime ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇████
+wandb:                        _timestamp ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇████
+wandb: 
+wandb: Synced 5 W&B file(s), 51 media file(s), 0 artifact file(s) and 51 other file(s)
+wandb: 
+wandb: Synced ppo_NoCrash-v2_Town01_lbc_new: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/28jeuvh9
+
+[0;31m PYTHON_RETURN=1!!! Start Over!!![0m
+CarlaUE4-Linux: no process found
+[2022-09-28 04:21:06,091][utils.server_utils][INFO] - Kill Carla Servers!
+843be87b9e618a15c8bb8bbbd38b937ed86f9435adbfaedca455a4ffca87ac1e
+[2022-09-28 04:21:07,242][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 04:21:07,242][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+sh: 1: xdg-user-dir: not found
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+[2022-09-28 04:21:12,599][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-09-28 04:21:13,377][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-09-28 04:21:15,423][__main__][INFO] - Resume from env_idx 2
+[2022-09-28 04:21:15,423][__main__][INFO] - Start new env from task_idx 0
+[2022-09-28 04:21:15,423][__main__][INFO] - Start Benchmarking! env_idx: 2, suite_name: ppo_NoCrash-v2_Town02_lbc_train_eval
+/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.13.3 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run ppo_NoCrash-v2_Town02_lbc_train_eval
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3ooudqie
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-28/04-21-05/wandb/run-20220928_042119-3ooudqie
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-09-28 04:21:20,555][__main__][INFO] - Start Benchmarking WetNoon_00.
+[2022-09-28 04:22:44,140][__main__][INFO] - Start Benchmarking WetNoon_01.
+[2022-09-28 04:25:00,099][__main__][INFO] - Start Benchmarking WetNoon_02.
+[2022-09-28 04:30:29,825][__main__][INFO] - Start Benchmarking WetNoon_03.
+[2022-09-28 04:31:28,925][__main__][INFO] - Start Benchmarking WetNoon_04.
+[2022-09-28 04:35:47,889][__main__][INFO] - Start Benchmarking WetNoon_05.
+[2022-09-28 04:38:39,601][__main__][INFO] - Start Benchmarking WetNoon_06.
+[2022-09-28 04:42:09,876][__main__][INFO] - Start Benchmarking WetNoon_07.
+[2022-09-28 04:46:55,112][__main__][INFO] - Start Benchmarking WetNoon_08.
+[2022-09-28 04:49:47,646][__main__][INFO] - Start Benchmarking WetNoon_09.
+[2022-09-28 04:52:34,763][__main__][INFO] - Start Benchmarking WetNoon_10.
+[2022-09-28 04:57:21,064][__main__][INFO] - Start Benchmarking WetNoon_11.
+[2022-09-28 05:00:08,262][__main__][INFO] - Start Benchmarking WetNoon_12.
+[2022-09-28 05:02:20,659][__main__][INFO] - Start Benchmarking WetNoon_13.
+[2022-09-28 05:03:55,782][__main__][INFO] - Start Benchmarking WetNoon_14.
+[2022-09-28 05:05:21,996][__main__][INFO] - Start Benchmarking WetNoon_15.
+[2022-09-28 05:07:50,891][__main__][INFO] - Start Benchmarking WetNoon_16.
+[2022-09-28 05:13:38,522][__main__][INFO] - Start Benchmarking WetNoon_17.
+[2022-09-28 05:18:27,286][__main__][INFO] - Start Benchmarking WetNoon_18.
+[2022-09-28 05:19:47,057][__main__][INFO] - Start Benchmarking WetNoon_19.
+[2022-09-28 05:21:59,673][__main__][INFO] - Start Benchmarking WetNoon_20.
+[2022-09-28 05:24:15,916][__main__][INFO] - Start Benchmarking WetNoon_21.
+[2022-09-28 05:27:19,462][__main__][INFO] - Start Benchmarking WetNoon_22.
+[2022-09-28 05:28:56,281][__main__][INFO] - Start Benchmarking WetNoon_23.
+[2022-09-28 05:34:30,417][__main__][INFO] - Start Benchmarking WetNoon_24.
+[2022-09-28 05:36:07,310][__main__][INFO] - Start Benchmarking ClearSunset_00.
+[2022-09-28 05:42:28,403][__main__][INFO] - Start Benchmarking ClearSunset_01.
+[2022-09-28 05:45:41,121][__main__][INFO] - Start Benchmarking ClearSunset_02.
+[2022-09-28 05:52:17,019][__main__][INFO] - Start Benchmarking ClearSunset_03.
+[2022-09-28 05:53:26,515][__main__][INFO] - Start Benchmarking ClearSunset_04.
+[2022-09-28 05:55:06,639][__main__][INFO] - Start Benchmarking ClearSunset_05.
+[2022-09-28 05:58:23,362][__main__][INFO] - Start Benchmarking ClearSunset_06.
+[2022-09-28 06:02:04,968][__main__][INFO] - Start Benchmarking ClearSunset_07.
+[2022-09-28 06:06:31,498][__main__][INFO] - Start Benchmarking ClearSunset_08.
+[2022-09-28 06:10:27,045][__main__][INFO] - Start Benchmarking ClearSunset_09.
+[2022-09-28 06:12:41,856][__main__][INFO] - Start Benchmarking ClearSunset_10.
+[2022-09-28 06:17:07,952][__main__][INFO] - Start Benchmarking ClearSunset_11.
+[2022-09-28 06:22:47,299][__main__][INFO] - Start Benchmarking ClearSunset_12.
+[2022-09-28 06:26:32,110][__main__][INFO] - Start Benchmarking ClearSunset_13.
+[2022-09-28 06:28:37,602][__main__][INFO] - Start Benchmarking ClearSunset_14.
+[2022-09-28 06:33:32,627][__main__][INFO] - Start Benchmarking ClearSunset_15.
+[2022-09-28 06:37:34,119][__main__][INFO] - Start Benchmarking ClearSunset_16.
+[2022-09-28 06:40:42,931][__main__][INFO] - Start Benchmarking ClearSunset_17.
+[2022-09-28 06:44:30,858][__main__][INFO] - Start Benchmarking ClearSunset_18.
+[2022-09-28 06:46:00,758][__main__][INFO] - Start Benchmarking ClearSunset_19.
+[2022-09-28 06:46:51,147][__main__][INFO] - Start Benchmarking ClearSunset_20.
+[2022-09-28 06:49:26,172][__main__][INFO] - Start Benchmarking ClearSunset_21.
+[2022-09-28 06:52:01,982][__main__][INFO] - Start Benchmarking ClearSunset_22.
+[2022-09-28 06:54:09,500][__main__][INFO] - Start Benchmarking ClearSunset_23.
+[2022-09-28 06:59:08,653][__main__][INFO] - Start Benchmarking ClearSunset_24.
+CarlaUE4-Linux: no process found
+[2022-09-28 07:02:56,872][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 07:03:01,876][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 07:03:01,882][__main__][INFO] - Finished Benchmarking env_idx 2, suite_name: ppo_NoCrash-v2_Town02_lbc_train_eval
+score_composed: 0.8423, score_route: 0.8731
+[2022-09-28 07:03:01,882][__main__][INFO] - Not finished, 3/4
+wandb: Waiting for W&B process to finish, PID 739371
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb: - 142.83MB of 145.79MB uploaded (0.00MB deduped)wandb: \ 145.80MB of 145.81MB uploaded (0.00MB deduped)wandb: | 145.80MB of 145.81MB uploaded (0.00MB deduped)wandb: / 145.80MB of 145.81MB uploaded (0.00MB deduped)wandb: - 145.81MB of 145.81MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/04-21-05/wandb/run-20220928_042119-3ooudqie/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/04-21-05/wandb/run-20220928_042119-3ooudqie/logs/debug-internal.log
+wandb: Run summary:
+wandb:                   time/total_step 3067
+wandb:                          time/fps 13.6144
+wandb:                  hero/score_route 1.0
+wandb:                hero/score_penalty 1.0
+wandb:               hero/score_composed 1.0
+wandb:                       hero/length 3068
+wandb:                       hero/reward 2329.2355
+wandb:                      hero/timeout 0.0
+wandb:           hero/is_route_completed 1.0
+wandb:   hero/is_route_completed_nocrash 1.0
+wandb:        hero/route_completed_in_km 0.20802
+wandb:           hero/route_length_in_km 0.21002
+wandb:      hero/percentage_outside_lane 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:            hero/collisions_others 0.0
+wandb:                    hero/red_light 0.0
+wandb:                 hero/light_passed 2
+wandb:              hero/encounter_light 2
+wandb:              hero/stop_infraction 0.0
+wandb:                  hero/stop_passed 0
+wandb:               hero/encounter_stop 0
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:                             _step 49
+wandb:                          _runtime 9702
+wandb:                        _timestamp 1664362981
+wandb: Run history:
+wandb:                   time/total_step ▁▃▇▁▃▄▆▃▆▃▃▂▃▇▆▁▃▄▂▆█▄█▁▄▄▅▄▅▇▄▂▅▄▄▂▃▃▂▅
+wandb:                          time/fps ▅▇█▇▅▄▇▃▅▇▇▄▃▄▇▅▇▄▅▂▅▅▅▄▆▂▅▂▄▁▁▅▂▄▄█▆▅▄█
+wandb:                  hero/score_route ▁▃███▇███▅███▄████▃██▃██████▅███████▄███
+wandb:                hero/score_penalty ██▃████▁▃█████████▁██████████▁██████████
+wandb:               hero/score_composed ▁▃▆██▇█▅▆▅███▄████▂██▃██████▅▅██████▄███
+wandb:                       hero/length ▁▃▇▁▃▄▆▃▆▃▃▂▃▇▆▁▃▄▂▆█▄█▁▄▄▅▄▅▇▄▂▅▄▄▂▃▃▂▅
+wandb:                       hero/reward ▁▄▆▃▅▅▇▄▆▂▄▃▄█▇▃▄▅▃▇█▅▇▃▅▅▆▅▆▇▅▄▄▄▆▃▂▄▄▆
+wandb:                      hero/timeout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/is_route_completed ▁▁███▁███▁███▁████▁██▁██████▁███████▁███
+wandb:   hero/is_route_completed_nocrash ▁▁███▁█▁█▁███▁████▁██▁██████▁▁██████▁███
+wandb:        hero/route_completed_in_km ▁▂█▃▄▃▇▄▅▃▄▃▃▂▅▄▅▆▂▅▇▂█▃▄▃▇▄▃▅▄▃▃▃▅▄▃▆▃▃
+wandb:           hero/route_length_in_km ▆▅█▁▃▁▇▂▃▄▃▁▂▁▃▃▄▅▂▄▆▅█▁▃▁▇▂▃▄▃▁▂▁▃▃▄▅▂▁
+wandb:      hero/percentage_outside_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        hero/percentage_wrong_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_layout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/collisions_vehicle ▁▁▁▁▁▁▁▃▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁
+wandb:        hero/collisions_pedestrian ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_others ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/red_light ▁▁▅▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                 hero/light_passed ▁▄▇▂▅▄▇▄▅▁▄▄▅▂▅▂▅▅▂▅█▄█▂▅▄▇▄▅▅▄▄▅▅▅▂▁▅▂▂
+wandb:              hero/encounter_light ▁▄█▂▅▄▇▄▇▁▄▄▅▂▅▂▅▅▂▅█▄█▂▅▄▇▄▅▅▄▄▅▅▅▂▁▅▂▂
+wandb:              hero/stop_infraction ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                  hero/stop_passed ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               hero/encounter_stop ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/route_dev ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:              hero/vehicle_blocked █▂▁▁▁▂▁▁▁▂▁▁▁▃▁▁▁▁▃▁▁▂▁▁▁▁▁▁▂▁▁▁▁▁▁▁▂▁▁▁
+wandb:                             _step ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb:                          _runtime ▁▁▁▁▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇████
+wandb:                        _timestamp ▁▁▁▁▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇████
+wandb: 
+wandb: Synced 5 W&B file(s), 51 media file(s), 0 artifact file(s) and 51 other file(s)
+wandb: 
+wandb: Synced ppo_NoCrash-v2_Town02_lbc_train_eval: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3ooudqie
+
+[0;31m PYTHON_RETURN=1!!! Start Over!!![0m
+CarlaUE4-Linux: no process found
+[2022-09-28 07:03:15,216][utils.server_utils][INFO] - Kill Carla Servers!
+d934ac374cb79471c6c21ef51e05e79739f52e46b24993fb2424fa7c8a98c80c
+[2022-09-28 07:03:16,367][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 07:03:16,367][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+sh: 1: xdg-user-dir: not found
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+[2022-09-28 07:03:21,724][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-09-28 07:03:22,832][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-09-28 07:03:24,579][__main__][INFO] - Resume from env_idx 3
+[2022-09-28 07:03:24,580][__main__][INFO] - Start new env from task_idx 0
+[2022-09-28 07:03:24,580][__main__][INFO] - Start Benchmarking! env_idx: 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.13.3 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run ppo_NoCrash-v2_Town02_lbc_new
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/lbl7z3en
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-28/07-03-14/wandb/run-20220928_070328-lbl7z3en
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-09-28 07:03:29,667][__main__][INFO] - Start Benchmarking SoftRainSunset_00.
+[2022-09-28 07:04:52,876][__main__][INFO] - Start Benchmarking SoftRainSunset_01.
+[2022-09-28 07:07:44,871][__main__][INFO] - Start Benchmarking SoftRainSunset_02.
+[2022-09-28 07:12:01,306][__main__][INFO] - Start Benchmarking SoftRainSunset_03.
+[2022-09-28 07:12:57,944][__main__][INFO] - Start Benchmarking SoftRainSunset_04.
+[2022-09-28 07:15:31,159][__main__][INFO] - Start Benchmarking SoftRainSunset_05.
+[2022-09-28 07:20:21,700][__main__][INFO] - Start Benchmarking SoftRainSunset_06.
+[2022-09-28 07:22:07,552][__main__][INFO] - Start Benchmarking SoftRainSunset_07.
+[2022-09-28 07:24:31,152][__main__][INFO] - Start Benchmarking SoftRainSunset_08.
+[2022-09-28 07:26:47,399][__main__][INFO] - Start Benchmarking SoftRainSunset_09.
+[2022-09-28 07:28:14,640][__main__][INFO] - Start Benchmarking SoftRainSunset_10.
+run/benchmark_NeilBranch0.sh: line 21: 750346 Segmentation fault      (core dumped) python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=$agent actors.hero.agent=$agent agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 'wb_group="Roach"' 'wb_notes="Benchmark Roach on NoCrash-dense."' test_suites=nocrash_dense seed=2021 +wb_sub_group=nocrash_dense-2021 no_rendering=true carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+[0;31m PYTHON_RETURN=139!!! Start Over!!![0m
+CarlaUE4-Linux: no process found
+[2022-09-28 07:28:20,555][utils.server_utils][INFO] - Kill Carla Servers!
+c071ad7a9fb54c61129ea41b452f833da3d66927fb4c113f9f528044eca574fc
+/home/nsambhu/.conda/envs/carla/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 6 leaked semaphores to clean up at shutdown
+  len(cache))
+[2022-09-28 07:28:21,706][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 07:28:21,706][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+sh: 1: xdg-user-dir: not found
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+[2022-09-28 07:28:27,056][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-09-28 07:28:27,976][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-09-28 07:28:29,918][__main__][INFO] - Resume from env_idx 3
+[2022-09-28 07:28:29,919][__main__][INFO] - Resume from task_idx 10
+[2022-09-28 07:28:29,919][__main__][INFO] - Start Benchmarking! env_idx: 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.13.3 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run ppo_NoCrash-v2_Town02_lbc_new
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1mt1sjgi
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-28/07-28-19/wandb/run-20220928_072834-1mt1sjgi
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-09-28 07:28:34,574][__main__][INFO] - Start Benchmarking SoftRainSunset_10.
+[2022-09-28 07:31:26,863][__main__][INFO] - Start Benchmarking SoftRainSunset_11.
+[2022-09-28 07:33:56,219][__main__][INFO] - Start Benchmarking SoftRainSunset_12.
+[2022-09-28 07:36:22,573][__main__][INFO] - Start Benchmarking SoftRainSunset_13.
+[2022-09-28 07:38:59,979][__main__][INFO] - Start Benchmarking SoftRainSunset_14.
+[2022-09-28 07:42:52,652][__main__][INFO] - Start Benchmarking SoftRainSunset_15.
+[2022-09-28 07:46:09,545][__main__][INFO] - Start Benchmarking SoftRainSunset_16.
+[2022-09-28 07:48:34,323][__main__][INFO] - Start Benchmarking SoftRainSunset_17.
+[2022-09-28 07:51:40,561][__main__][INFO] - Start Benchmarking SoftRainSunset_18.
+[2022-09-28 07:52:57,727][__main__][INFO] - Start Benchmarking SoftRainSunset_19.
+[2022-09-28 07:55:28,478][__main__][INFO] - Start Benchmarking SoftRainSunset_20.
+[2022-09-28 07:57:46,644][__main__][INFO] - Start Benchmarking SoftRainSunset_21.
+[2022-09-28 08:00:48,734][__main__][INFO] - Start Benchmarking SoftRainSunset_22.
+[2022-09-28 08:01:43,817][__main__][INFO] - Start Benchmarking SoftRainSunset_23.
+[2022-09-28 08:06:53,568][__main__][INFO] - Start Benchmarking SoftRainSunset_24.
+[2022-09-28 08:08:21,904][__main__][INFO] - Start Benchmarking WetSunset_00.
+[2022-09-28 08:13:46,147][__main__][INFO] - Start Benchmarking WetSunset_01.
+[2022-09-28 08:16:23,852][__main__][INFO] - Start Benchmarking WetSunset_02.
+[2022-09-28 08:21:30,269][__main__][INFO] - Start Benchmarking WetSunset_03.
+[2022-09-28 08:22:29,408][__main__][INFO] - Start Benchmarking WetSunset_04.
+[2022-09-28 08:25:31,321][__main__][INFO] - Start Benchmarking WetSunset_05.
+[2022-09-28 08:27:36,607][__main__][INFO] - Start Benchmarking WetSunset_06.
+[2022-09-28 08:30:21,864][__main__][INFO] - Start Benchmarking WetSunset_07.
+[2022-09-28 08:34:46,787][__main__][INFO] - Start Benchmarking WetSunset_08.
+[2022-09-28 08:36:47,454][__main__][INFO] - Start Benchmarking WetSunset_09.
+[2022-09-28 08:38:12,286][__main__][INFO] - Start Benchmarking WetSunset_10.
+[2022-09-28 08:43:18,500][__main__][INFO] - Start Benchmarking WetSunset_11.
+[2022-09-28 08:49:58,224][__main__][INFO] - Start Benchmarking WetSunset_12.
+[2022-09-28 08:52:59,693][__main__][INFO] - Start Benchmarking WetSunset_13.
+[2022-09-28 08:54:31,384][__main__][INFO] - Start Benchmarking WetSunset_14.
+[2022-09-28 09:00:49,988][__main__][INFO] - Start Benchmarking WetSunset_15.
+[2022-09-28 09:03:19,569][__main__][INFO] - Start Benchmarking WetSunset_16.
+[2022-09-28 09:09:37,057][__main__][INFO] - Start Benchmarking WetSunset_17.
+[2022-09-28 09:12:44,328][__main__][INFO] - Start Benchmarking WetSunset_18.
+[2022-09-28 09:15:27,609][__main__][INFO] - Start Benchmarking WetSunset_19.
+[2022-09-28 09:17:02,803][__main__][INFO] - Start Benchmarking WetSunset_20.
+[2022-09-28 09:20:38,172][__main__][INFO] - Start Benchmarking WetSunset_21.
+[2022-09-28 09:24:40,983][__main__][INFO] - Start Benchmarking WetSunset_22.
+[2022-09-28 09:26:23,646][__main__][INFO] - Start Benchmarking WetSunset_23.
+[2022-09-28 09:29:33,282][__main__][INFO] - Start Benchmarking WetSunset_24.
+CarlaUE4-Linux: no process found
+[2022-09-28 09:31:52,532][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 09:31:57,537][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 09:31:57,542][__main__][INFO] - Finished Benchmarking env_idx 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+score_composed: 0.7506, score_route: 0.7866
+[2022-09-28 09:31:57,542][__main__][INFO] - Finished, 4/4
+[2022-09-28 09:31:57,543][__main__][INFO] - data_collect.py DONE!
+wandb: Waiting for W&B process to finish, PID 753529
+wandb: Program ended successfully.
+wandb: - 112.29MB of 112.29MB uploaded (0.00MB deduped)wandb: \ 114.51MB of 114.51MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/07-28-19/wandb/run-20220928_072834-1mt1sjgi/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/07-28-19/wandb/run-20220928_072834-1mt1sjgi/logs/debug-internal.log
+wandb: Run summary:
+wandb:                   time/total_step 1816
+wandb:                          time/fps 13.28664
+wandb:                  hero/score_route 1.0
+wandb:                hero/score_penalty 0.6
+wandb:               hero/score_composed 0.6
+wandb:                       hero/length 1817
+wandb:                       hero/reward 1278.11205
+wandb:                      hero/timeout 0.0
+wandb:           hero/is_route_completed 1.0
+wandb:   hero/is_route_completed_nocrash 0.0
+wandb:        hero/route_completed_in_km 0.20802
+wandb:           hero/route_length_in_km 0.21002
+wandb:      hero/percentage_outside_lane 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/collisions_vehicle 4.80713
+wandb:        hero/collisions_pedestrian 0.0
+wandb:            hero/collisions_others 0.0
+wandb:                    hero/red_light 0.0
+wandb:                 hero/light_passed 2
+wandb:              hero/encounter_light 2
+wandb:              hero/stop_infraction 0.0
+wandb:                  hero/stop_passed 0
+wandb:               hero/encounter_stop 0
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:                             _step 49
+wandb:                          _runtime 7403
+wandb:                        _timestamp 1664371917
+wandb: Run history:
+wandb:                   time/total_step ▄▃▃▃▅▄▃▄▁▃▃▄▁▆▂▇▃▆▁▄▂▃▅▂▂▆█▄▂█▃█▄▃▂▄▅▂▄▃
+wandb:                          time/fps █▇▄▂▅▃▅▆▅█▇▄▆▃▃▅▄▅▄▄▄▅▂▂▅▆▂▄▃▂▃▂▄▁▇▃▁▅▂▄
+wandb:                  hero/score_route █▄█▄██▄███▄███▁█▃▄█▅▃▄▄███████▆██▂███▃▃█
+wandb:                hero/score_penalty ▃▁████████▁█████▃▁███████▃███████▁█████▁
+wandb:               hero/score_composed ▆▂█▄██▄███▂███▁█▂▂█▅▃▄▄██▆████▆██▁███▃▃▅
+wandb:                       hero/length ▄▃▃▃▅▄▃▄▁▃▃▄▁▆▂▇▃▆▁▄▂▃▅▂▂▆█▄▂█▃█▄▃▂▄▅▂▄▃
+wandb:                       hero/reward ▃▁▃▃▆▄▄▄▂▂▄▄▁▆▂█▄▄▂▅▂▄▅▂▂▇▇▅▂█▄█▄▃▁▅▅▂▄▃
+wandb:                      hero/timeout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/is_route_completed █▁█▁██▁██▁▁███▁█▁▁█▁▁▁▁███████▁██▁███▁▁█
+wandb:   hero/is_route_completed_nocrash █▁█▁██▁██▁▁███▁█▁▁█▁▁▁▁███████▁██▁███▁▁▁
+wandb:        hero/route_completed_in_km ▅▃▅▂█▄▂▅▅▃▃▆▄▅▁█▃▅▃▃▂▂▄▄▄▅▆▅▃█▃▃▅▂▃▆▆▂▃▃
+wandb:           hero/route_length_in_km ▄▄▃▂▇▂▂▄▃▁▅▅▂▄▂▇▅█▁▃▃▂▇▂▂▄▄▃▂▇▂▂▄▃▁▅▅▂▄▂
+wandb:      hero/percentage_outside_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        hero/percentage_wrong_lane ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_layout ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           hero/collisions_vehicle ▁▃▁▁▁▁▁▁▁▁▄▁▁▁▁▁▁▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▄
+wandb:        hero/collisions_pedestrian ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            hero/collisions_others ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/red_light ▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                 hero/light_passed ▅▁▄▄█▅▂▅▂▂▁▅▂▅▁█▂▅▂▂▂▁▇▄▂▅▅▄▄█▄▅▅▂▂▅▅▂▄▂
+wandb:              hero/encounter_light ▇▁▄▄█▅▂▅▂▂▁▅▂▅▁█▄▅▂▂▂▁▇▄▂▇▅▄▄█▄▅▅▂▂▅▅▂▄▂
+wandb:              hero/stop_infraction ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                  hero/stop_passed ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               hero/encounter_stop ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    hero/route_dev ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:              hero/vehicle_blocked ▁▂▁▃▁▁▃▁▁▂▂▁▁▁█▁▂▂▁▂▂▃▂▁▁▁▁▁▁▁▂▁▁▄▁▁▁▃▂▁
+wandb:                             _step ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:                          _runtime ▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▆▆▆▆▆▇▇▇▇▇█████
+wandb:                        _timestamp ▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▆▆▆▆▆▇▇▇▇▇█████
+wandb: 
+wandb: Synced 5 W&B file(s), 41 media file(s), 0 artifact file(s) and 41 other file(s)
+wandb: 
+wandb: Synced ppo_NoCrash-v2_Town02_lbc_new: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1mt1sjgi
+
+[0;31m PYTHON_RETURN=0!!! Start Over!!![0m
+CarlaUE4-Linux: no process found
+Bash script done. benchmark_NeilBranch0.sh

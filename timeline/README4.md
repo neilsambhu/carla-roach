@@ -2311,3 +2311,9 @@ See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
 
 Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
 ```
+9/28/2022 6:58:05 PM: inference on PPO+exp for NoCrash dense train town:  
+```
+[2022-09-28 18:36:01,791][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+score_composed: 0.9295, score_route: 0.9641
+[2022-09-28 18:36:01,791][__main__][INFO] - Finished, 1/1
+```

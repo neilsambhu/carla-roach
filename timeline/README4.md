@@ -2273,3 +2273,11 @@ wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3h9ygqz4  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/ap5yaa97  
 wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1aje1zxu  
+```
+[2022-09-27 14:29:19,249][__main__][INFO] - Finished Benchmarking env_idx 3, suite_name: ppo_NoCrash-v2_Town02_lbc_new
+[2022-09-27 14:29:19,249][__main__][INFO] - Finished, 4/4
+score_composed: 0.8254
+score_route: 0.8616
+[2022-09-27 14:29:19,251][__main__][INFO] - data_collect.py DONE!
+```
+TODO: print score_composed and score_route after each env_idx is finished  

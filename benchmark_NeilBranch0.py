@@ -301,6 +301,10 @@ def main(cfg: DictConfig):
         frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
     log.info(f"Finished Benchmarking env_idx {env_idx}, suite_name: {suite_name}")
+    # 9/27/2022 8:21:59 PM: Neil added: start
+    dict_table = dict(zip(table_columns,table_data[0]))
+    print(f'score_composed: {dict_table["score_composed"]}, score_route: {dict_table["score_route"]}')
+    # 9/27/2022 8:21:59 PM: Neil added: end
     if env_idx+1 == len(cfg.test_suites):
         log.info(f"Finished, {env_idx+1}/{len(cfg.test_suites)}")
         # 9/25/2022 1:27:34 PM: Neil added: start
@@ -309,10 +313,10 @@ def main(cfg: DictConfig):
         # print(f'table_columns: {table_columns}')
         # print(f'table_data: {table_data}')
         # print(f'table_data[0]: {table_data[0]}')
-        dict_table = dict(zip(table_columns,table_data[0]))
-        # print(f'dict_table: {dict_table}')
-        print(f'score_composed: {dict_table["score_composed"]}')
-        print(f'score_route: {dict_table["score_route"]}')
+        # dict_table = dict(zip(table_columns,table_data[0]))
+        # # print(f'dict_table: {dict_table}')
+        # print(f'score_composed: {dict_table["score_composed"]}')
+        # print(f'score_route: {dict_table["score_route"]}')
         # 9/25/2022 1:27:34 PM: Neil added: end
         return
     else:

@@ -18,13 +18,11 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 
 
-rm: cannot remove 'outputs/checkpoint.txt': No such file or directory
 rm: cannot remove 'outputs/wb_run_id.txt': No such file or directory
-rm: cannot remove 'outputs/ep_stat_buffer_*.json': No such file or directory
 CarlaUE4-Linux: no process found
-[2022-09-27 01:01:13,848][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-27 01:01:15,004][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-27 01:01:15,005][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+[2022-09-27 20:31:16,073][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 20:31:17,231][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-27 20:31:17,231][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
 4.26.2-0+++UE4+Release-4.26 522 0
@@ -62,10 +60,10 @@ ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
 ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
 ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
 ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
-[2022-09-27 01:01:20,347][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
-[2022-09-27 01:01:22,200][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
-[2022-09-27 01:01:24,018][__main__][INFO] - Start new env from task_idx 0
-[2022-09-27 01:01:24,018][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+[2022-09-27 20:31:22,686][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-09-27 20:31:23,665][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-09-27 20:31:25,412][__main__][INFO] - Start new env from task_idx 0
+[2022-09-27 20:31:25,412][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
 /home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
@@ -74,8 +72,51 @@ wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.10.12
 wandb: Syncing run ppo_NoCrash-v2_Town01_lbc_train_eval
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
-wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/qlnixdwq
-wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-27/01-01-12/wandb/run-20220927_010128-qlnixdwq
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/288hrbzj
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-27/20-31-14/wandb/run-20220927_203129-288hrbzj
 wandb: Run `wandb offline` to turn off syncing.
 
-[2022-09-27 01:01:28,880][__main__][INFO] - Start Benchmarking WetNoon_00.
+[2022-09-27 20:31:30,520][__main__][INFO] - Start Benchmarking WetNoon_00.
+[2022-09-27 20:40:49,702][__main__][INFO] - Start Benchmarking WetNoon_01.
+[2022-09-27 20:45:44,544][__main__][INFO] - Start Benchmarking WetNoon_02.
+[2022-09-27 20:50:42,720][__main__][INFO] - Start Benchmarking WetNoon_03.
+[2022-09-27 20:56:48,153][__main__][INFO] - Start Benchmarking WetNoon_04.
+[2022-09-27 21:01:33,442][__main__][INFO] - Start Benchmarking WetNoon_05.
+[2022-09-27 21:05:51,522][__main__][INFO] - Start Benchmarking WetNoon_06.
+[2022-09-27 21:08:34,083][__main__][INFO] - Start Benchmarking WetNoon_07.
+[2022-09-27 21:13:33,429][__main__][INFO] - Start Benchmarking WetNoon_08.
+[2022-09-27 21:16:57,146][__main__][INFO] - Start Benchmarking WetNoon_09.
+[2022-09-27 21:20:05,427][__main__][INFO] - Start Benchmarking WetNoon_10.
+[2022-09-27 21:24:27,019][__main__][INFO] - Start Benchmarking WetNoon_11.
+[2022-09-27 21:28:49,782][__main__][INFO] - Start Benchmarking WetNoon_12.
+[2022-09-27 21:33:41,318][__main__][INFO] - Start Benchmarking WetNoon_13.
+[2022-09-27 21:37:39,782][__main__][INFO] - Start Benchmarking WetNoon_14.
+[2022-09-27 21:42:49,389][__main__][INFO] - Start Benchmarking WetNoon_15.
+[2022-09-27 21:47:31,922][__main__][INFO] - Start Benchmarking WetNoon_16.
+[2022-09-27 21:50:23,789][__main__][INFO] - Start Benchmarking WetNoon_17.
+[2022-09-27 21:54:45,395][__main__][INFO] - Start Benchmarking WetNoon_18.
+[2022-09-27 21:59:31,759][__main__][INFO] - Start Benchmarking WetNoon_19.
+[2022-09-27 22:02:46,255][__main__][INFO] - Start Benchmarking WetNoon_20.
+[2022-09-27 22:07:38,553][__main__][INFO] - Start Benchmarking WetNoon_21.
+[2022-09-27 22:12:01,772][__main__][INFO] - Start Benchmarking WetNoon_22.
+[2022-09-27 22:16:47,035][__main__][INFO] - Start Benchmarking WetNoon_23.
+[2022-09-27 22:19:00,827][__main__][INFO] - Start Benchmarking WetNoon_24.
+[2022-09-27 22:26:47,147][__main__][INFO] - Start Benchmarking ClearSunset_00.
+[2022-09-27 22:37:57,864][__main__][INFO] - Start Benchmarking ClearSunset_01.
+[2022-09-27 22:42:48,583][__main__][INFO] - Start Benchmarking ClearSunset_02.
+[2022-09-27 22:48:23,115][__main__][INFO] - Start Benchmarking ClearSunset_03.
+[2022-09-27 22:56:02,464][__main__][INFO] - Start Benchmarking ClearSunset_04.
+[2022-09-27 23:03:40,357][__main__][INFO] - Start Benchmarking ClearSunset_05.
+[2022-09-27 23:07:14,845][__main__][INFO] - Start Benchmarking ClearSunset_06.
+[2022-09-27 23:10:00,489][__main__][INFO] - Start Benchmarking ClearSunset_07.
+[2022-09-27 23:16:01,583][__main__][INFO] - Start Benchmarking ClearSunset_08.
+[2022-09-27 23:19:23,228][__main__][INFO] - Start Benchmarking ClearSunset_09.
+[2022-09-27 23:24:22,880][__main__][INFO] - Start Benchmarking ClearSunset_10.
+[2022-09-27 23:28:57,459][__main__][INFO] - Start Benchmarking ClearSunset_11.
+[2022-09-27 23:34:54,736][__main__][INFO] - Start Benchmarking ClearSunset_12.
+[2022-09-27 23:39:01,099][__main__][INFO] - Start Benchmarking ClearSunset_13.
+[2022-09-27 23:45:31,786][__main__][INFO] - Start Benchmarking ClearSunset_14.
+[2022-09-27 23:51:47,664][__main__][INFO] - Start Benchmarking ClearSunset_15.
+[2022-09-27 23:56:31,211][__main__][INFO] - Start Benchmarking ClearSunset_16.
+[2022-09-27 23:59:25,232][__main__][INFO] - Start Benchmarking ClearSunset_17.
+[2022-09-28 00:03:01,083][__main__][INFO] - Start Benchmarking ClearSunset_18.

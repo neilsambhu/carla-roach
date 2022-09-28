@@ -2281,3 +2281,11 @@ score_route: 0.8616
 [2022-09-27 14:29:19,251][__main__][INFO] - data_collect.py DONE!
 ```
 TODO: print score_composed and score_route after each env_idx is finished  
+9/28/2022 1:05:38 PM: inference on Roach for NoCrash dense:  
+```
+[2022-09-28 00:37:02,544][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+score_composed: 0.9762, score_route: 0.9972
+[2022-09-28 00:37:02,544][__main__][INFO] - Not finished, 1/4
+```
+score_composed and score_route successfully print for each env_idx finished.  
+TODO: run benchmark_parent_NeilBranch0.py  

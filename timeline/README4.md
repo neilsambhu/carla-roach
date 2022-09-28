@@ -2265,3 +2265,11 @@ table_data[0]: ['ppo_NoCrash-v3_Town01_lbc_train_eval', 'hero', '2', '0.0000', '
 dict_table: {'Suite': 'ppo_NoCrash-v3_Town01_lbc_train_eval', 'actor_id': 'hero', 'n_episode': '2', 'collisions_layout': '0.0000', 'collisions_others': '0.0000', 'collisions_pedestrian': '0.0000', 'collisions_vehicle': '0.6066', 'encounter_light': '6.5000', 'encounter_stop': '0.0000', 'is_route_completed': '1.0000', 'is_route_completed_nocrash': '0.5000', 'length': '4559.5000', 'light_passed': '6.0000', 'percentage_outside_lane': '0.0000', 'percentage_wrong_lane': '0.0000', 'red_light': '0.6066', 'reward': '3264.0164', 'route_completed_in_km': '0.7268', 'route_dev': '0.0000', 'route_length_in_km': '0.7338', 'score_composed': '0.7100', 'score_penalty': '0.7100', 'score_route': '1.0000', 'stop_infraction': '0.0000', 'stop_passed': '0.0000', 'timeout': '0.0000', 'vehicle_blocked': '0.0000', 'n_episodes': '2.0000'}
 [2022-09-27 00:49:38,245][__main__][INFO] - data_collect.py DONE!
 ```
+9/27/2022 8:08:58 PM: inference on Roach for NoCrash dense:  
+[nsambhu@localhost ~]$ cat ~/github/carla-roach/out.txt | grep "View run at "  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/qlnixdwq  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2f2hym4t  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1hxy3keu  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/3h9ygqz4  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/ap5yaa97  
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1aje1zxu  

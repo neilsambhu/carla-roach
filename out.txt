@@ -1,7 +1,7 @@
 CarlaUE4-Linux: no process found
-[2022-09-28 22:59:43,355][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-28 22:59:44,511][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-28 22:59:44,512][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+[2022-09-28 23:18:28,022][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 23:18:29,184][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-09-28 23:18:29,185][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
 4.26.2-0+++UE4+Release-4.26 522 0
@@ -39,10 +39,10 @@ ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
 ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
 ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
 ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
-[2022-09-28 22:59:49,899][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
-[2022-09-28 22:59:50,760][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
-[2022-09-28 22:59:52,594][__main__][INFO] - Start new env from task_idx 0
-[2022-09-28 22:59:52,594][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+[2022-09-28 23:18:34,556][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_11833344.pth
+[2022-09-28 23:18:35,279][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_11833344.pth
+[2022-09-28 23:18:37,054][__main__][INFO] - Start new env from task_idx 0
+[2022-09-28 23:18:37,055][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
 /home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
@@ -51,113 +51,8 @@ wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.10.12
 wandb: Syncing run ppo_NoCrash-v2_Town01_lbc_train_eval
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
-wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1bjwml5g
-wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-28/22-59-42/wandb/run-20220928_225956-1bjwml5g
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/28bm1iau
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-09-28/23-18-26/wandb/run-20220928_231841-28bm1iau
 wandb: Run `wandb offline` to turn off syncing.
 
-[2022-09-28 22:59:57,967][__main__][INFO] - Start Benchmarking WetNoon_00.
-CarlaUE4-Linux: no process found
-[2022-09-28 23:12:36,475][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-28 23:12:41,480][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-09-28 23:12:41,486][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
-score_composed: 0.7000, score_route: 1.0000
-/home/nsambhu/github/carla-roach/outputs/2022-09-28/22-59-42
-Traceback (most recent call last):
-  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
-    return func()
-  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
-    overrides=args.overrides,
-  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
-    configure_logging=with_log_configuration,
-  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
-    ret.return_value = task_function(task_cfg)
-  File "benchmark_NeilBranch0.py", line 313, in main
-    with open("~/github/carla-roach/score_composed1.txt","w") as f:
-FileNotFoundError: [Errno 2] No such file or directory: '~/github/carla-roach/score_composed1.txt'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "benchmark_NeilBranch0.py", line 340, in <module>
-    main()
-  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/main.py", line 37, in decorated_main
-    strict=strict,
-  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 347, in _run_hydra
-    lambda: hydra.run(
-  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 237, in run_and_report
-    assert mdl is not None
-AssertionError
-wandb: Waiting for W&B process to finish, PID 828623
-wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
-wandb: - 0.01MB of 7.34MB uploaded (0.00MB deduped)wandb: \ 7.35MB of 7.35MB uploaded (0.00MB deduped)wandb:                                                                                
-wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/22-59-42/wandb/run-20220928_225956-1bjwml5g/logs/debug.log
-wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-09-28/22-59-42/wandb/run-20220928_225956-1bjwml5g/logs/debug-internal.log
-wandb: Run summary:
-wandb:                   time/total_step 7177
-wandb:                          time/fps 9.52427
-wandb:                  hero/score_route 1.0
-wandb:                hero/score_penalty 0.7
-wandb:               hero/score_composed 0.7
-wandb:                       hero/length 7178
-wandb:                       hero/reward 5332.93433
-wandb:                      hero/timeout 0.0
-wandb:           hero/is_route_completed 1.0
-wandb:   hero/is_route_completed_nocrash 1.0
-wandb:        hero/route_completed_in_km 0.82424
-wandb:           hero/route_length_in_km 0.83224
-wandb:      hero/percentage_outside_lane 0.0
-wandb:        hero/percentage_wrong_lane 0.0
-wandb:            hero/collisions_layout 0.0
-wandb:           hero/collisions_vehicle 0.0
-wandb:        hero/collisions_pedestrian 0.0
-wandb:            hero/collisions_others 0.0
-wandb:                    hero/red_light 1.21323
-wandb:                 hero/light_passed 8
-wandb:              hero/encounter_light 9
-wandb:              hero/stop_infraction 0.0
-wandb:                  hero/stop_passed 0
-wandb:               hero/encounter_stop 0
-wandb:                    hero/route_dev 0.0
-wandb:              hero/vehicle_blocked 0.0
-wandb:                             _step 0
-wandb:                          _runtime 765
-wandb:                        _timestamp 1664421161
-wandb: Run history:
-wandb:                   time/total_step ▁
-wandb:                          time/fps ▁
-wandb:                  hero/score_route ▁
-wandb:                hero/score_penalty ▁
-wandb:               hero/score_composed ▁
-wandb:                       hero/length ▁
-wandb:                       hero/reward ▁
-wandb:                      hero/timeout ▁
-wandb:           hero/is_route_completed ▁
-wandb:   hero/is_route_completed_nocrash ▁
-wandb:        hero/route_completed_in_km ▁
-wandb:           hero/route_length_in_km ▁
-wandb:      hero/percentage_outside_lane ▁
-wandb:        hero/percentage_wrong_lane ▁
-wandb:            hero/collisions_layout ▁
-wandb:           hero/collisions_vehicle ▁
-wandb:        hero/collisions_pedestrian ▁
-wandb:            hero/collisions_others ▁
-wandb:                    hero/red_light ▁
-wandb:                 hero/light_passed ▁
-wandb:              hero/encounter_light ▁
-wandb:              hero/stop_infraction ▁
-wandb:                  hero/stop_passed ▁
-wandb:               hero/encounter_stop ▁
-wandb:                    hero/route_dev ▁
-wandb:              hero/vehicle_blocked ▁
-wandb:                             _step ▁
-wandb:                          _runtime ▁
-wandb:                        _timestamp ▁
-wandb: 
-wandb: Synced 5 W&B file(s), 2 media file(s), 0 artifact file(s) and 2 other file(s)
-wandb: 
-wandb: Synced ppo_NoCrash-v2_Town01_lbc_train_eval: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1bjwml5g
-
-Traceback (most recent call last):
-  File "run/benchmark_parent_NeilBranch0.py", line 63, in <module>
-    with open("score_composed.txt","r") as f:
-FileNotFoundError: [Errno 2] No such file or directory: 'score_composed.txt'
+[2022-09-28 23:18:41,892][__main__][INFO] - Start Benchmarking WetNoon_00.

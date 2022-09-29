@@ -2281,3 +2281,39 @@ score_route: 0.8616
 [2022-09-27 14:29:19,251][__main__][INFO] - data_collect.py DONE!
 ```
 TODO: print score_composed and score_route after each env_idx is finished  
+9/28/2022 1:05:38 PM: inference on Roach for NoCrash dense:  
+```
+[2022-09-28 00:37:02,544][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+score_composed: 0.9762, score_route: 0.9972
+[2022-09-28 00:37:02,544][__main__][INFO] - Not finished, 1/4
+```
+score_composed and score_route successfully print for each env_idx finished.  
+TODO: run benchmark_parent_NeilBranch0.py  
+9/28/2022 1:53:13 PM: 
+```
+python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
+```
+9/28/2022 2:02:22 PM: error with wb_group  
+9/28/2022 2:02:39 PM: 
+```
+bash run/benchmark_NeilBranch0.sh |& tee out.txt
+Neil benchmark_NeilBranch0.py:329
+os.getcwd() /home/nsambhu/github/carla-roach/outputs/2022-09-28/14-00-49
+type(cfg) <class 'omegaconf.dictconfig.DictConfig'>
+cfg {'actors': {'hero': {'agent': 'ppo', 'reward': {'entry_point': 'reward.valeo_action:ValeoAction'}, 'terminal': {'entry_point': 'terminal.leaderboard:Leaderboard'}}}, 'carla_sh_path': '/CarlaUE4.sh', 'log_level': 'INFO', 'host': 'localhost', 'port': 2000, 'seed': 2021, 'no_rendering': True, 'kill_running': True, 'resume': True, 'wb_project': 'iccv21-roach-benchmark', 'wb_notes': 'Benchmark Roach on NoCrash-dense.', 'wb_group': 'Roach', 'wb_tags': None, 'log_video': True, 'agent': {'ppo': {'entry_point': 'agents.rl_birdview.rl_birdview_agent:RlBirdviewAgent', 'wb_run_path': 'iccv21-roach/trained-models/1929isj0', 'wb_ckpt_step': None, 'env_wrapper': {'entry_point': 'agents.rl_birdview.utils.rl_birdview_wrapper:RlBirdviewWrapper', 'kwargs': {'input_states': ['control', 'vel_xy'], 'acc_as_action': True}}}}, 'test_suites': [{'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town01', 'weather_group': 'new'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'train_eval'}}, {'env_id': 'NoCrash-v2', 'env_configs': {'route_description': 'lbc', 'carla_map': 'Town02', 'weather_group': 'new'}}], 'wb_sub_group': 'nocrash_dense-2021'}
+```
+```
+(carla) [nsambhu@localhost carla-roach]$ python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
+Neil benchmark_NeilBranch0.py:329
+LexerNoViableAltException: 'wb_group="PPO+exp"'
+                           ^
+See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+```
+9/28/2022 6:58:05 PM: inference on PPO+exp for NoCrash dense train town:  
+```
+[2022-09-28 18:36:01,791][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_NoCrash-v2_Town01_lbc_train_eval
+score_composed: 0.9295, score_route: 0.9641
+[2022-09-28 18:36:01,791][__main__][INFO] - Finished, 1/1
+```

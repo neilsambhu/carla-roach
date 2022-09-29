@@ -260,6 +260,7 @@ def main(cfg: DictConfig):
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         # 9/26/2022 11:58:39 PM: Neil added: start
         # if task_idx == ckpt_task_idx+1:
+        # if task_idx >= ckpt_task_idx:
         #     break 
         # 9/26/2022 11:58:39 PM: Neil added: end
     
@@ -304,6 +305,15 @@ def main(cfg: DictConfig):
     # 9/27/2022 8:21:59 PM: Neil added: start
     dict_table = dict(zip(table_columns,table_data[0]))
     print(f'score_composed: {dict_table["score_composed"]}, score_route: {dict_table["score_route"]}')
+    print(os.getcwd())
+    with open("../../../score_composed.txt","w") as f:
+        f.write(dict_table["score_composed"])
+    with open("../../../score_route.txt","w") as f:
+        f.write(dict_table["score_route"])
+    # with open("~/github/carla-roach/score_composed1.txt","w") as f:
+    #     f.write(dict_table["score_composed"])
+    # with open("~/github/carla-roach/score_route1.txt","w") as f:
+    #     f.write(dict_table["score_route"])
     # 9/27/2022 8:21:59 PM: Neil added: end
     if env_idx+1 == len(cfg.test_suites):
         log.info(f"Finished, {env_idx+1}/{len(cfg.test_suites)}")

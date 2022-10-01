@@ -2319,3 +2319,12 @@ score_composed: 0.9295, score_route: 0.9641
 ```
 10/1/2022 1:12:43 PM: delete checkpoint files after each new seed  
 10/1/2022 1:20:23 PM: TODO: print benchmark configuration before calling benchark script  
+10/1/2022 7:05:03 PM:
+```
+PPO+exp nocrash_dense_tt
+        success rate (average, standard deviation): 1.0, 0.0
+        driving score (average, standard deviation): 1.0, 0.0
+PPO+exp nocrash_dense_tn
+        success rate (average, standard deviation): 0.9775, 0.031819805153394644
+        driving score (average, standard deviation): 0.8842333333333334, 0.08410613665020064
+```

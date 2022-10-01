@@ -2317,3 +2317,4 @@ Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
 score_composed: 0.9295, score_route: 0.9641
 [2022-09-28 18:36:01,791][__main__][INFO] - Finished, 1/1
 ```
+10/1/2022 1:12:43 PM: delete checkpoint files after each new seed

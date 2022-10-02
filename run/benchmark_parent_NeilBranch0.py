@@ -81,7 +81,7 @@ def GenerateBenchmarkConfigurations():
         benchmarkConfigurations.append(Roach_NCd)
         # Autopilot: NCd
         Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
-        benchmarkConfigurations.append(Roach_NCd)
+        benchmarkConfigurations.append(Autopilot_NCd)
     return benchmarkConfigurations
 if __name__ == '__main__':
     DeleteResultsFile()

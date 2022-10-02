@@ -1,0 +1,48 @@
+PPO+exp nocrash_dense_tt
+	success rate (average, standard deviation): 1.0, 0.0
+	driving score (average, standard deviation): 0.8933, 0.1508
+PPO+beta nocrash_dense_tt
+	success rate (average, standard deviation): 1.0, 0.0
+	driving score (average, standard deviation): 1.0, 0.0
+Roach nocrash_dense_tt
+	success rate (average, standard deviation): 1.0, 0.0
+	driving score (average, standard deviation): 1.0, 0.0
+Roach nocrash_dense_tt
+	success rate (average, standard deviation): 0.9214, 0.1758
+	driving score (average, standard deviation): 0.8945, 0.1775
+PPO+exp nocrash_dense_tn
+	success rate (average, standard deviation): 1.0, 0.0
+	driving score (average, standard deviation): 0.9333, 0.0943
+PPO+beta nocrash_dense_tn
+	success rate (average, standard deviation): 0.9175, 0.1167
+	driving score (average, standard deviation): 0.8838, 0.1643
+Roach nocrash_dense_tn
+	success rate (average, standard deviation): 1.0, 0.0
+	driving score (average, standard deviation): 1.0, 0.0
+Roach nocrash_dense_tn
+	success rate (average, standard deviation): 1.0, 0.0
+	driving score (average, standard deviation): 1.0, 0.0
+PPO+exp nocrash_dense_nt
+	success rate (average, standard deviation): 0.6683, 0.27
+	driving score (average, standard deviation): 0.3768, 0.2458
+PPO+beta nocrash_dense_nt
+	success rate (average, standard deviation): 0.8702, 0.1835
+	driving score (average, standard deviation): 0.7221, 0.1101
+Roach nocrash_dense_nt
+	success rate (average, standard deviation): 0.5725, 0.3298
+	driving score (average, standard deviation): 0.5546, 0.3505
+Roach nocrash_dense_nt
+	success rate (average, standard deviation): 0.7063, 0.3128
+	driving score (average, standard deviation): 0.6723, 0.3455
+PPO+exp nocrash_dense_nn
+	success rate (average, standard deviation): 0.8872, 0.1595
+	driving score (average, standard deviation): 0.7323, 0.2508
+PPO+beta nocrash_dense_nn
+	success rate (average, standard deviation): 1.0, 0.0
+	driving score (average, standard deviation): 0.8067, 0.1367
+Roach nocrash_dense_nn
+	success rate (average, standard deviation): 0.5033, 0.016
+	driving score (average, standard deviation): 0.5015, 0.0185
+Roach nocrash_dense_nn
+	success rate (average, standard deviation): 0.5375, 0.2365
+	driving score (average, standard deviation): 0.4706, 0.1703

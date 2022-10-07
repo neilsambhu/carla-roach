@@ -25,3 +25,24 @@ Autopilot nocrash_dense_tn
 PPO+exp nocrash_dense_nt
 	success rate (average, standard deviation): 0.9698, 0.0106
 	driving score (average, standard deviation): 0.8678, 0.0105
+PPO+beta nocrash_dense_nt
+	success rate (average, standard deviation): 0.962, 0.0137
+	driving score (average, standard deviation): 0.8757, 0.0374
+Roach nocrash_dense_nt
+	success rate (average, standard deviation): 0.9093, 0.0416
+	driving score (average, standard deviation): 0.8338, 0.0279
+Autopilot nocrash_dense_nt
+	success rate (average, standard deviation): 0.9156, 0.0007
+	driving score (average, standard deviation): 0.6875, 0.0041
+PPO+exp nocrash_dense_nn
+	success rate (average, standard deviation): 0.9798, 0.0113
+	driving score (average, standard deviation): 0.8961, 0.0172
+PPO+beta nocrash_dense_nn
+	success rate (average, standard deviation): 0.9724, 0.0007
+	driving score (average, standard deviation): 0.918, 0.0341
+Roach nocrash_dense_nn
+	success rate (average, standard deviation): 0.848, 0.0
+	driving score (average, standard deviation): 0.804, 0.0
+Autopilot nocrash_dense_nn
+	success rate (average, standard deviation): 0.8688, 0.0295
+	driving score (average, standard deviation): 0.7775, 0.0374

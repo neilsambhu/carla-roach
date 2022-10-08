@@ -2429,4 +2429,5 @@ Roach nocrash_dense_nn
 Autopilot nocrash_dense_nn
 	success rate (average, standard deviation): 0.8688, 0.0295
 	driving score (average, standard deviation): 0.7775, 0.0374
- ```
+```
+10/8/2022 2:27:47 PM: TODO: debug IL inference

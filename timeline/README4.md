@@ -2430,4 +2430,30 @@ Autopilot nocrash_dense_nn
 	success rate (average, standard deviation): 0.8688, 0.0295
 	driving score (average, standard deviation): 0.7775, 0.0374
 ```
-10/8/2022 2:27:47 PM: TODO: debug IL inference
+10/8/2022 2:27:47 PM: TODO: debug IL inference  
+10/8/2022 3:03:04 PM: 
+```
+(carla) [nsambhu@localhost carla-roach]$ python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
+benchmark configuration: L_A(AP) trained on NoCrash benchmark nocrash_dense_tt-2021
+cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/39o1h862 wb_group="L_A(AP) trained on NoCrash benchmark" wb_notes="Benchmark
+L_A(AP) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=true
+Traceback (most recent call last):
+  File "run/benchmark_parent_NeilBranch0.py", line 101, in <module>
+    benchmarkConfiguration.Benchmark()
+  File "run/benchmark_parent_NeilBranch0.py", line 46, in Benchmark
+    benchmarkProcess = self.StartBenchmarkProcess(seed)
+  File "run/benchmark_parent_NeilBranch0.py", line 37, in StartBenchmarkProcess
+    benchmarkProcess = subprocess.Popen([cmd])
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/subprocess.py", line 1551, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/39o1h862 wb_group="L_A(AP) trained on NoCrash benchmark" wb_notes="Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=true': 'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/39o1h862 wb_group="L_A(AP) trained on NoCrash benchmark" wb_notes="Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=true'
+```
+```
+(carla) [nsambhu@localhost carla-roach]$ python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/39o1h862 wb_group="L_A(AP) trained on NoCrash benchmark" wb_notes="Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=true
+mismatched input ' ' expecting <EOF>
+See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+```

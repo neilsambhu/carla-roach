@@ -2490,3 +2490,19 @@ ppo with cmd
 benchmark configuration: PPO+exp nocrash_dense_tt-2021
 ppo cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=ppo actors.hero.agent=ppo agent.ppo.wb_run_path=iccv21-roach/trained-models/10pscpih wb_group="PPO+exp" wb_notes="Benchmark PPO+exp on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=true
 ```
+10/8/2022 7:25:10 PM: cirls (i.e. change no_rendering from true to false)
+```
+(carla) [nsambhu@localhost carla-roach]$ python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
+benchmark configuration: L_A(AP) nocrash_dense_tt-2021
+cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/39o1h862 wb_group="L_A(AP)" wb_notes="Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=false
+Error parsing override 'wb_group=L_A(AP)'
+HydraException while evaluating 'L_A(AP)': Unknown function 'L_A'
+Available: bool,choice,float,glob,int,interval,range,shuffle,sort,str,tag
+
+See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+score_composed: [0.7246], score_route: [0.9105]
+benchmark configuration: L_A(AP) nocrash_dense_tt-2022
+cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/39o1h862 wb_group="L_A(AP)" wb_notes="Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2022 +wb_sub_group=nocrash_dense_tt-2022 no_rendering=false
+```

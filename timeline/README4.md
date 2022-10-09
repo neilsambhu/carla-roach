@@ -2508,5 +2508,5 @@ cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_proj
 ```
 10/8/2022 7:56:38 PM: TODO: find wb_group
 ```
-grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "wandb_group">outgrep.txt
+grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "wb_group">outgrep.txt
 ```

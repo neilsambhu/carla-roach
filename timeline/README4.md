@@ -2507,3 +2507,6 @@ benchmark configuration: L_A(AP) nocrash_dense_tt-2022
 cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/39o1h862 wb_group="L_A(AP)" wb_notes="Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2022 +wb_sub_group=nocrash_dense_tt-2022 no_rendering=false
 ```
 10/8/2022 7:56:38 PM: TODO: find wb_group
+```
+grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "wandb_group">outgrep.txt
+```

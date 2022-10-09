@@ -2540,4 +2540,5 @@ cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_proj
 mismatched input '(' expecting <EOF>
 See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
 ```
-10/8/2022 9:57:41 PM: TODO: use non-parent bash script for inference to see IL inference results
+10/8/2022 9:57:41 PM: TODO: use non-parent bash script for inference to see IL inference results  
+10/9/2022 3:20:50 PM: TODO: map IL inference to \*.yaml.  

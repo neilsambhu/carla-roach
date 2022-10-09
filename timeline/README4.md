@@ -2510,3 +2510,18 @@ cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_proj
 ```
 grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "wb_group">outgrep.txt
 ```
+10/8/2022 8:10:25 PM: cilrs wb_group="L_K+L_F(c)"
+```
+(carla) [nsambhu@localhost carla-roach]$ python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
+benchmark configuration: L_K+L_F(c) nocrash_dense_tt-2021
+cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/31u9tki7 wb_group="L_K+L_F(c)" wb_notes="Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=false
+mismatched input '(' expecting <EOF>
+See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+score_composed: [0.7246], score_route: [0.9105]
+benchmark configuration: L_K+L_F(c) nocrash_dense_tt-2022
+cilrs cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=cilrs actors.hero.agent=cilrs agent.cilrs.wb_run_path=iccv21-roach/trained-models/31u9tki7 wb_group="L_K+L_F(c)" wb_notes="Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2022 +wb_sub_group=nocrash_dense_tt-2022 no_rendering=false
+mismatched input '(' expecting <EOF>
+See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
+```

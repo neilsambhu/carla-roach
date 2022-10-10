@@ -2545,4 +2545,4 @@ See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
 10/9/2022 3:28:34 PM: no need to map IL inference: the NoCrash Dense is already split among the 4 environment files  
 10/9/2022 4:15:13 PM: TODO: benchmark_NeilBranch0.sh: benchmark.py should be benchmark_NeilBranch0.py.  
 10/10/2022 6:10:23 PM: results from non-parent bash script for IL inference using benchmark.py instead of benchmark_NeilBranch0.py: https://github.com/neilsambhu/carla-roach/blob/13fcf5685c6c8eb81e97c534c5449e41300e438b/out.txt  
-10/10/2022 7:21:28 PM: changing benchmark.py to benchmark_NeilBranch0.py didn't change the output. I changed the test_suites to only 1 environment instead of 4  
+10/10/2022 7:21:28 PM: changing benchmark.py to benchmark_NeilBranch0.py didn't change the output. I changed the test_suites to only 1 environment instead of 4.  

@@ -11,7 +11,7 @@ class BenchmarkConfiguration:
         if agent=="roaming":
             # benchmark Autopilot
             pass
-        elif agent=="ppo":
+        elif agent=="ppo" or agent=="cilrs":
             # benchmark RL experts
             self.agent_ppo_wb_run_path = agent_ppo_wb_run_path
         self.score_composed = []
@@ -29,7 +29,15 @@ class BenchmarkConfiguration:
     def StartBenchmarkProcess(self,seed):
         benchmarkProcess = None
         if self.agent=="ppo":
-            benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} agent.ppo.wb_run_path={self.agent_ppo_wb_run_path} wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
+            # benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} agent.ppo.wb_run_path={self.agent_ppo_wb_run_path} wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
+            cmd = f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} agent.ppo.wb_run_path={self.agent_ppo_wb_run_path} wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'
+            print(f'ppo cmd: {cmd}')
+            benchmarkProcess = subprocess.Popen([cmd],shell=True)
+        elif self.agent=="cilrs":
+            # benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
+            cmd = f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=false'
+            print(f'cilrs cmd: {cmd}')
+            benchmarkProcess = subprocess.Popen([cmd],shell=True)
         elif self.agent=="roaming":
             benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} +agent/roaming/obs_configs=birdview wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
         return benchmarkProcess
@@ -70,22 +78,25 @@ def DeleteResultsFile():
 def GenerateBenchmarkConfigurations():
     benchmarkConfigurations = []
     for environment in ["tt","tn","nt","nn"]:
-        # PPO+exp: NCd
-        PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
-        benchmarkConfigurations.append(PPO_exp_NCd)
-        # PPO+beta: NCd
-        PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
-        benchmarkConfigurations.append(PPO_beta_NCd)
-        # Roach: NCd
-        Roach_NCd = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0")
-        benchmarkConfigurations.append(Roach_NCd)
-        # Autopilot: NCd
-        Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
-        benchmarkConfigurations.append(Autopilot_NCd)
-        # 10/5/2022 10:27:13 PM: IL agents: start
-        benchmarkConfigurations.append(BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP) trained on NoCrash benchmark",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862"))
-        benchmarkConfigurations.append(BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c) trained on NoCrash benchmark",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7"))
-        # 10/5/2022 10:27:13 PM: IL agents: end
+        # # PPO+exp: NCd
+        # PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
+        # benchmarkConfigurations.append(PPO_exp_NCd)
+        # # PPO+beta: NCd
+        # PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
+        # benchmarkConfigurations.append(PPO_beta_NCd)
+        # # Roach: NCd
+        # Roach_NCd = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0")
+        # benchmarkConfigurations.append(Roach_NCd)
+        # # Autopilot: NCd
+        # Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
+        # benchmarkConfigurations.append(Autopilot_NCd)
+        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
+        # L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A_AP",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="bc_data",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+        benchmarkConfigurations.append(L_A_AP_NCd)
+        # L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
+        # benchmarkConfigurations.append(L_K_L_F_c_NCd)
+        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
     return benchmarkConfigurations
 if __name__ == '__main__':
     DeleteResultsFile()

@@ -17,60 +17,60 @@
 # }
 
 # * To benchmark rl experts.
-agent="ppo"
-benchmark () {
-  python -u benchmark_NeilBranch0.py resume=true log_video=true \
-  wb_project=iccv21-roach-benchmark \
-  agent=$agent actors.hero.agent=$agent \
-  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
-  'wb_group="Roach"' \
-  'wb_notes="Benchmark Roach on NoCrash-dense."' \
-  test_suites=nocrash_dense \
-  seed=2021 \
-  +wb_sub_group=nocrash_dense-2021 \
-  no_rendering=true \
-  carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
-  
-  #python -u benchmark_NeilBranch0.py resume=true log_video=true \
-  #wb_project=iccv21-roach-benchmark \
-  #agent=$agent actors.hero.agent=$agent \
-  #agent.ppo.wb_run_path=iccv21-roach/trained-models/1ch63m76 \
-  #'wb_group="PPO+beta"' \
-  #'wb_notes="Benchmark PPO+beta on NoCrash-dense."' \
-  #test_suites=nocrash_dense \
-  #seed=2021 \
-  #+wb_sub_group=nocrash_dense-2021 \
-  #no_rendering=true \
-  #carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
-  
-  # python -u benchmark_NeilBranch0.py resume=true log_video=true \
-  # wb_project=iccv21-roach-benchmark \
-  # agent=$agent actors.hero.agent=$agent \
-  # agent.ppo.wb_run_path=iccv21-roach/trained-models/1ch63m76 \
-  # 'wb_group="PPO+beta"' \
-  # 'wb_notes="Benchmark PPO+beta on NoCrash-busy."' \
-  # test_suites=eu_test_tt \
-  # seed=2021 \
-  # +wb_sub_group=nocrash_busy-2021 \
-  # no_rendering=true \
-  # carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
-}
-
-# * To benchmark il agents.
-# agent="cilrs"
+# agent="ppo"
 # benchmark () {
-#   python -u benchmark.py resume=true log_video=true \
+#   python -u benchmark_NeilBranch0.py resume=true log_video=true \
 #   wb_project=iccv21-roach-benchmark \
 #   agent=$agent actors.hero.agent=$agent \
-#   agent.cilrs.wb_run_path=iccv21-roach/trained-models/31u9tki7 \
-#   'wb_group="L_K+L_F(c)"' \
-#   'wb_notes="Benchmark L_K+L_F(c) on NoCrash-dense."' \
+#   agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+#   'wb_group="Roach"' \
+#   'wb_notes="Benchmark Roach on NoCrash-dense."' \
 #   test_suites=nocrash_dense \
 #   seed=2021 \
 #   +wb_sub_group=nocrash_dense-2021 \
-#   no_rendering=false \
+#   no_rendering=true \
 #   carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+  
+#   #python -u benchmark_NeilBranch0.py resume=true log_video=true \
+#   #wb_project=iccv21-roach-benchmark \
+#   #agent=$agent actors.hero.agent=$agent \
+#   #agent.ppo.wb_run_path=iccv21-roach/trained-models/1ch63m76 \
+#   #'wb_group="PPO+beta"' \
+#   #'wb_notes="Benchmark PPO+beta on NoCrash-dense."' \
+#   #test_suites=nocrash_dense \
+#   #seed=2021 \
+#   #+wb_sub_group=nocrash_dense-2021 \
+#   #no_rendering=true \
+#   #carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+  
+#   # python -u benchmark_NeilBranch0.py resume=true log_video=true \
+#   # wb_project=iccv21-roach-benchmark \
+#   # agent=$agent actors.hero.agent=$agent \
+#   # agent.ppo.wb_run_path=iccv21-roach/trained-models/1ch63m76 \
+#   # 'wb_group="PPO+beta"' \
+#   # 'wb_notes="Benchmark PPO+beta on NoCrash-busy."' \
+#   # test_suites=eu_test_tt \
+#   # seed=2021 \
+#   # +wb_sub_group=nocrash_busy-2021 \
+#   # no_rendering=true \
+#   # carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
 # }
+
+# * To benchmark il agents.
+agent="cilrs"
+benchmark () {
+  python -u benchmark.py resume=true log_video=true \
+  wb_project=iccv21-roach-benchmark \
+  agent=$agent actors.hero.agent=$agent \
+  agent.cilrs.wb_run_path=iccv21-roach/trained-models/31u9tki7 \
+  'wb_group="L_K+L_F(c)"' \
+  'wb_notes="Benchmark L_K+L_F(c) on NoCrash-dense."' \
+  test_suites=nocrash_dense \
+  seed=2021 \
+  +wb_sub_group=nocrash_dense-2021 \
+  no_rendering=false \
+  carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+}
 
 
 # NO NEED TO MODIFY THE FOLLOWING

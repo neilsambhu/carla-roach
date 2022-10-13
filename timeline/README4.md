@@ -2559,3 +2559,4 @@ TODO: verify cmd for L_A(AP)
 10/13/2022 11:38:58 AM: TODO: benchmark_parent_NeilBranch0.py: create ResultsLatex() function for results to be easily imported into Overleaf.  
 10/13/2022 12:02:53 PM: functional inference: https://github.com/neilsambhu/carla-roach/blob/8daa28cabc34d806a80f75b59a9664c0038e2faf/run/benchmark_parent_NeilBranch0.py  
 10/13/2022 1:29:39 PM: TODO: check for process flow of RL and IL (1 weather per environment).  
+10/13/2022 1:46:39 PM: TODO: switch IL from NoCrash to DAGGER.  

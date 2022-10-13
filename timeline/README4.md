@@ -2547,6 +2547,7 @@ See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
 10/10/2022 6:10:23 PM: results from non-parent bash script for IL inference using benchmark.py instead of benchmark_NeilBranch0.py: https://github.com/neilsambhu/carla-roach/blob/13fcf5685c6c8eb81e97c534c5449e41300e438b/out.txt  
 10/10/2022 7:21:28 PM: changing benchmark.py to benchmark_NeilBranch0.py didn't change the output. I changed the test_suites to only 1 environment instead of 4.  
 10/10/2022 7:40:53 PM: waiting on results to see if new command works for IL inference (1 environment).  
+### inference handles crashes
 10/13/2022 11:16:38 AM: inference on L_K+L_F(c) (50 weathers)  
 ```
 L_K+L_F(c) nocrash_dense_tt
@@ -2557,3 +2558,4 @@ out.txt: https://github.com/neilsambhu/carla-roach/blob/5af49e30dc89ec0c4bc753a7
 TODO: verify cmd for L_A(AP)  
 10/13/2022 11:38:58 AM: TODO: benchmark_parent_NeilBranch0.py: create ResultsLatex() function for results to be easily imported into Overleaf.  
 10/13/2022 12:02:53 PM: functional inference: https://github.com/neilsambhu/carla-roach/blob/8daa28cabc34d806a80f75b59a9664c0038e2faf/run/benchmark_parent_NeilBranch0.py  
+10/13/2022 1:29:39 PM: TODO: check for process flow of RL and IL (1 weather per environment).  

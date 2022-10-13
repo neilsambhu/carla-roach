@@ -2556,3 +2556,4 @@ L_K+L_F(c) nocrash_dense_tt
 out.txt: https://github.com/neilsambhu/carla-roach/blob/5af49e30dc89ec0c4bc753a728d6cd42ab80fa60/out.txt  
 TODO: verify cmd for L_A(AP)  
 10/13/2022 11:38:58 AM: TODO: benchmark_parent_NeilBranch0.py: create ResultsLatex() function for results to be easily imported into Overleaf.  
+10/13/2022 12:02:53 PM: functional inference: https://github.com/neilsambhu/carla-roach/blob/8daa28cabc34d806a80f75b59a9664c0038e2faf/run/benchmark_parent_NeilBranch0.py  

@@ -2553,4 +2553,5 @@ L_K+L_F(c) nocrash_dense_tt
         success rate (average, standard deviation): 0.9762, 0.0074
         driving score (average, standard deviation): 0.8767, 0.0041
 ```
+out.txt: https://github.com/neilsambhu/carla-roach/blob/5af49e30dc89ec0c4bc753a728d6cd42ab80fa60/out.txt  
 TODO: verify cmd for L_A(AP)  

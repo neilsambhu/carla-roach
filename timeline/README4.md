@@ -2547,3 +2547,10 @@ See https://hydra.cc/docs/next/advanced/override_grammar/basic for details
 10/10/2022 6:10:23 PM: results from non-parent bash script for IL inference using benchmark.py instead of benchmark_NeilBranch0.py: https://github.com/neilsambhu/carla-roach/blob/13fcf5685c6c8eb81e97c534c5449e41300e438b/out.txt  
 10/10/2022 7:21:28 PM: changing benchmark.py to benchmark_NeilBranch0.py didn't change the output. I changed the test_suites to only 1 environment instead of 4.  
 10/10/2022 7:40:53 PM: waiting on results to see if new command works for IL inference (1 environment).  
+10/13/2022 11:16:38 AM: inference on L_K+L_F(c) (50 weathers)  
+```
+L_K+L_F(c) nocrash_dense_tt
+        success rate (average, standard deviation): 0.9762, 0.0074
+        driving score (average, standard deviation): 0.8767, 0.0041
+```
+TODO: verify cmd for L_A_AP_NCd  

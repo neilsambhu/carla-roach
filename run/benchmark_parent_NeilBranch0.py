@@ -36,6 +36,16 @@ class BenchmarkConfiguration:
         elif self.agent=="cilrs":
             # benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
             cmd = f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=false'
+            cmd = f'''python -u benchmark_NeilBranch0.py resume=true log_video=true \
+  wb_project=iccv21-roach-benchmark \
+  agent={self.agent} actors.hero.agent={self.agent} \
+  agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} \
+  'wb_group="{self.wb_group}"' \
+  'wb_notes="{self.wb_notes}"' \
+  test_suites={self.test_suites} \
+  seed={seed} \
+  +wb_sub_group={self.wb_sub_group} \
+  no_rendering=false'''
             print(f'cilrs cmd: {cmd}')
             benchmarkProcess = subprocess.Popen([cmd],shell=True)
         elif self.agent=="roaming":
@@ -43,16 +53,20 @@ class BenchmarkConfiguration:
         return benchmarkProcess
     def Benchmark(self):
         for seed in [2021,2022,2023]:
+            DeleteScoreFiles()
             DeleteCheckpointFiles()
-            self.wb_sub_group = f'{self.test_suites}-{seed}'
-            print(f'benchmark configuration: {self.wb_group} {self.wb_sub_group}')
-            benchmarkProcess = self.StartBenchmarkProcess(seed)
-            benchmarkProcess.wait()
-            with open("score_composed.txt","r") as f:
-                self.score_composed.append(float(f.read()))
-            with open("score_route.txt","r") as f:
-                self.score_route.append(float(f.read()))
-            print(f'score_composed: {self.score_composed}, score_route: {self.score_route}')
+            while True:
+                self.wb_sub_group = f'{self.test_suites}-{seed}'
+                print(f'benchmark configuration: {self.wb_group} {self.wb_sub_group}')
+                benchmarkProcess = self.StartBenchmarkProcess(seed)
+                benchmarkProcess.wait()
+                if CheckScoreFilesExist():
+                    with open("score_composed.txt","r") as f:
+                        self.score_composed.append(float(f.read()))
+                    with open("score_route.txt","r") as f:
+                        self.score_route.append(float(f.read()))
+                    print(f'score_composed: {self.score_composed}, score_route: {self.score_route}')
+                    break
         with open("results.txt","a") as f:
             f.write(f'{self.stringConfiguration()}\n')
             f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')
@@ -63,6 +77,8 @@ def DeleteScoreFiles():
         os.remove("score_composed.txt")
     if os.path.exists("score_route.txt"):
         os.remove("score_route.txt")
+def CheckScoreFilesExist():
+    return os.path.exists("score_composed.txt") and os.path.exists("score_route.txt")
 def DeleteCheckpointFiles():
     if os.path.exists("outputs/checkpoint.txt"):
         os.remove("outputs/checkpoint.txt")
@@ -77,7 +93,8 @@ def DeleteResultsFile():
         os.remove("results.txt")
 def GenerateBenchmarkConfigurations():
     benchmarkConfigurations = []
-    for environment in ["tt","tn","nt","nn"]:
+    # for environment in ["tt","tn","nt","nn"]:
+    for environment in ["tt"]:
         # # PPO+exp: NCd
         # PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
         # benchmarkConfigurations.append(PPO_exp_NCd)
@@ -91,8 +108,8 @@ def GenerateBenchmarkConfigurations():
         # Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
         # benchmarkConfigurations.append(Autopilot_NCd)
         # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
-        # L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A_AP",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
-        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="bc_data",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A_AP",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
         benchmarkConfigurations.append(L_A_AP_NCd)
         # L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
         # benchmarkConfigurations.append(L_K_L_F_c_NCd)

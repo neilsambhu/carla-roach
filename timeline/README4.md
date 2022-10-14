@@ -2560,3 +2560,4 @@ TODO: verify cmd for L_A(AP)
 10/13/2022 12:02:53 PM: functional inference: https://github.com/neilsambhu/carla-roach/blob/8daa28cabc34d806a80f75b59a9664c0038e2faf/run/benchmark_parent_NeilBranch0.py  
 10/13/2022 1:29:39 PM: TODO: check for process flow of RL and IL (1 weather per environment).  
 10/13/2022 1:46:39 PM: TODO: switch IL from NoCrash to DAGGER.  
+10/14/2022 12:30:20 PM: (1) TODO: check for process flow of RL and IL (1 weather per environment). (2) no need to switch IL from NoCrash to DAGGER.  

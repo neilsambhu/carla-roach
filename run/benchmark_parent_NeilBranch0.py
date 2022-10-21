@@ -51,6 +51,19 @@ class BenchmarkConfiguration:
         elif self.agent=="roaming":
             benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} +agent/roaming/obs_configs=birdview wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
         return benchmarkProcess
+    def StartBenchmarkProcessAcross_test_suites(self,town):
+        benchmarkProcess = None
+        if self.test_suites==f'cc_test_{town}':
+            cmd = f'''python -u benchmark_NeilBranch0.py resume=true log_video=true \
+  wb_project=iccv21-roach-benchmark \
+  agent={self.agent} actors.hero.agent={self.agent} \
+  agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} \
+  'wb_group="{self.wb_group}"' \
+  'wb_notes="{self.wb_notes}"' \
+  test_suites={self.test_suites} \
+  seed={seed} \
+  +wb_sub_group={self.wb_sub_group} \
+  no_rendering=false'''
     def Benchmark(self):
         for seed in [2021,2022,2023]:
             DeleteScoreFiles()
@@ -71,6 +84,12 @@ class BenchmarkConfiguration:
             f.write(f'{self.stringConfiguration()}\n')
             f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')
             f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
+    def BenchmarkAcrossTown(self):
+        for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
+            DeleteScoreFiles()
+            DeleteCheckpointFiles()
+            while True:
+                self
 
 def DeleteScoreFiles():
     if os.path.exists("score_composed.txt"):
@@ -91,8 +110,8 @@ def DeleteCheckpointFiles():
 def DeleteResultsFile():
     if os.path.exists("results.txt"):
         os.remove("results.txt")
-def GenerateBenchmarkConfigurations():
-    benchmarkConfigurations = []
+def GenerateBenchmarkConfigurations0():
+    benchmarkConfigurations = {}
     # for environment in ["tt","tn","nt","nn"]:
     for environment in ["tt"]:
         # # PPO+exp: NCd
@@ -109,13 +128,63 @@ def GenerateBenchmarkConfigurations():
         # benchmarkConfigurations.append(Autopilot_NCd)
         # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
         L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
-        benchmarkConfigurations.append(L_A_AP_NCd)
+        # benchmarkConfigurations.append(L_A_AP_NCd)
+        benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
         # L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
         # benchmarkConfigurations.append(L_K_L_F_c_NCd)
         # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
     return benchmarkConfigurations
+def GenerateBenchmarkConfigurations():
+    benchmarkConfigurations = {}
+    # for environment in ["tt","tn","nt","nn"]:
+    for environment in ["tt"]:
+        # # PPO+exp: NCd
+        # PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
+        # benchmarkConfigurations.append(PPO_exp_NCd)
+        # # PPO+beta: NCd
+        # PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
+        # benchmarkConfigurations.append(PPO_beta_NCd)
+        # # Roach: NCd
+        # Roach_NCd = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0")
+        # benchmarkConfigurations.append(Roach_NCd)
+        # # Autopilot: NCd
+        # Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
+        # benchmarkConfigurations.append(Autopilot_NCd)
+        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
+        # L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+        # benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
+        # L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
+        # benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
+        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
+        pass
+    for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
+        # 10/20/2022 3:23:08 PM: Neil added LB-all: start
+        benchmarkConfigurations[str(f'PPO_exp_LB_{town}')] = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-{town}.',test_suites=f'cc_test_{town}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
+        # 10/20/2022 3:23:08 PM: Neil added LB-all: end
+        # 10/20/2022 8:37:54 PM: Neil added LB-all: start
+        # LB-all (i.e. moving down)
+        # left to right: write average of towns across models
+        # TODO: write variable names to add to dictionary benchmarkConfigurations
+        for 
+        # PPO+exp: LB-all
+        PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="")
+        benchmarkConfigurations[str(f'PPO_exp_{town}_LB_all{}')]
+        # 10/20/2022 8:37:54 PM: Neil added LB-all: end
+    return benchmarkConfigurations    
+def ResultsLatex(dictBenchmarkConfigurations=None):
+    # output = '\\begin{table*}[!t]\n\\begin{center}\n\\begin{tabular}{ |c|c|c|c|c|c| }\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $99 \pm 0$ & $99 \pm 1$ & $97 \pm 1$ & $98 \pm 1$ & $ \pm $ \\\ \n \hline\n PPO+beta & $98 \pm 2$ & $100 \pm 0$ & $96 \pm 1$ & $97 \pm 0$ & $ \pm $ \\\ \n \hline\n Roach & $98 \pm 0$ & $100 \pm 0$ & $91 \pm 4$ & $85 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $96 \pm 2$ & $99 \pm 1$ & $92 \pm 0$ & $87 \pm 3$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $94 \pm 0$ & $97 \pm 1$ & $87 \pm 1$ & $90 \pm 2$ & $ \pm $ \\\ \n \hline\n PPO+beta & $95 \pm 2$ & $97 \pm 1$ & $88 \pm 4$ & $92 \pm 3$ & $ \pm $ \\\ \n \hline\n Roach & $96 \pm 0$ & $97 \pm 1$ & $83 \pm 3$ & $80 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $88 \pm 6$ & $85 \pm 0$ & $69 \pm 0$ & $78 \pm 4$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n\end{tabular}\n\end{center}\n\end{table*}'
+    output = '\\begin{{table*}}[!t]\n\\begin{{center}}\n\\begin{{tabular}}{{ |c|c|c|c|c|c| }}\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $99 \pm 0$ & $99 \pm 1$ & $97 \pm 1$ & $98 \pm 1$ & $ \pm $ \\\ \n \hline\n PPO+beta & $98 \pm 2$ & $100 \pm 0$ & $96 \pm 1$ & $97 \pm 0$ & $ \pm $ \\\ \n \hline\n Roach & $98 \pm 0$ & $100 \pm 0$ & $91 \pm 4$ & $85 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $96 \pm 2$ & $99 \pm 1$ & $92 \pm 0$ & $87 \pm 3$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_successRate} \pm {L_A_AP_NCd_tt_successRate_standardDeviation}$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $94 \pm 0$ & $97 \pm 1$ & $87 \pm 1$ & $90 \pm 2$ & $ \pm $ \\\ \n \hline\n PPO+beta & $95 \pm 2$ & $97 \pm 1$ & $88 \pm 4$ & $92 \pm 3$ & $ \pm $ \\\ \n \hline\n Roach & $96 \pm 0$ & $97 \pm 1$ & $83 \pm 3$ & $80 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $88 \pm 6$ & $85 \pm 0$ & $69 \pm 0$ & $78 \pm 4$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_drivingScore} \pm {L_A_AP_NCd_tt_drivingScore_standardDeviation}$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n\end{{tabular}}\n\end{{center}}\n\end{{table*}}'.format(
+        L_A_AP_NCd_tt_successRate=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].average_score_route()*100),
+        L_A_AP_NCd_tt_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].standardDeviation_score_route()*100),
+        L_A_AP_NCd_tt_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].average_score_composed()*100),
+        L_A_AP_NCd_tt_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].standardDeviation_score_composed()*100)
+        )
+    return output
 if __name__ == '__main__':
     DeleteResultsFile()
-    benchmarkConfigurations = GenerateBenchmarkConfigurations()
-    for benchmarkConfiguration in benchmarkConfigurations:
-        benchmarkConfiguration.Benchmark()
+    dictBenchmarkConfigurations = GenerateBenchmarkConfigurations()
+    print(f'dictBenchmarkConfigurations: {dictBenchmarkConfigurations}')
+    for keyBenchmarkConfiguration in dictBenchmarkConfigurations:
+        dictBenchmarkConfigurations[keyBenchmarkConfiguration].Benchmark()
+        print(f'results from {keyBenchmarkConfiguration}: success rate {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_route()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_route()}, driving score {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_composed()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_composed()}')
+    # print(f'LaTeX-formatted results:\n{ResultsLatex(dictBenchmarkConfigurations)}')

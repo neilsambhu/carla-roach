@@ -84,12 +84,15 @@ class BenchmarkConfiguration:
             f.write(f'{self.stringConfiguration()}\n')
             f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')
             f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
+    # 10/21/2022 9:23:47 AM: probably I should not iterate across towns here; delete function probably
     def BenchmarkAcrossTown(self):
-        for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
-            DeleteScoreFiles()
-            DeleteCheckpointFiles()
-            while True:
-                self
+        for seed in [2021,2022,2023]:
+            for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
+                DeleteScoreFiles()
+                DeleteCheckpointFiles()
+                while True:
+                    self.wb_sub_group = f'{self.test_suites}-{seed}'
+                    self.
 
 def DeleteScoreFiles():
     if os.path.exists("score_composed.txt"):

@@ -1,7 +1,7 @@
 import subprocess,os,time,glob,statistics
 class BenchmarkConfiguration:
     # various parameters when calling benchmark_NeilBranch0.sh
-    def __init__(self,agent,wb_group,wb_notes,test_suites,agent_ppo_wb_run_path=None):
+    def __init__(self,agent,wb_group,wb_notes,test_suites,agent_ppo_wb_run_path=None,bLB_all=False):
         self.agent = agent
         self.wb_group = wb_group
         self.wb_notes = wb_notes
@@ -16,6 +16,7 @@ class BenchmarkConfiguration:
             self.agent_ppo_wb_run_path = agent_ppo_wb_run_path
         self.score_composed = []
         self.score_route = []
+        self.bLB_all = bLB_all
     def stringConfiguration(self):
         return f'{self.wb_group} {self.test_suites}'
     def average_score_composed(self):
@@ -64,7 +65,7 @@ class BenchmarkConfiguration:
   seed={seed} \
   +wb_sub_group={self.wb_sub_group} \
   no_rendering=false'''
-    def Benchmark(self):
+    def BenchmarkAcrossSeed(self):
         for seed in [2021,2022,2023]:
             DeleteScoreFiles()
             DeleteCheckpointFiles()
@@ -86,14 +87,36 @@ class BenchmarkConfiguration:
             f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
     # 10/21/2022 9:23:47 AM: probably I should not iterate across towns here; delete function probably
     def BenchmarkAcrossTown(self):
+        print(f'self.test_suites: {self.test_suites}')
         for seed in [2021,2022,2023]:
+            sBase_test_suites = self.test_suites
+            self.score_composed = []
+            self.score_route = []
             for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
                 DeleteScoreFiles()
                 DeleteCheckpointFiles()
                 while True:
+                    self.test_suites = f'{sBase_test_suites}_{town}'
                     self.wb_sub_group = f'{self.test_suites}-{seed}'
-                    self.
-
+                    print(f'benchmark configuration: {self.wb_group} {self.wb_sub_group}')
+                    benchmarkProcess = self.StartBenchmarkProcess(seed)
+                    benchmarkProcess.wait()
+                    if CheckScoreFilesExist():
+                        with open("score_composed.txt","r") as f:
+                            self.score_composed.append(float(f.read()))
+                        with open("score_route.txt","r") as f:
+                            self.score_route.append(float(f.read()))
+                        print(f'score_composed: {self.score_composed}, score_route: {self.score_route}')
+                        break
+        with open("results.txt","a") as f:
+            f.write(f'{self.stringConfiguration()}\n')
+            f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')
+            f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
+    def Benchmark(self):
+        if not self.bLB_all:
+            self.BenchmarkAcrossSeed()
+        elif self.bLB_all:
+            self.BenchmarkAcrossTown()
 def DeleteScoreFiles():
     if os.path.exists("score_composed.txt"):
         os.remove("score_composed.txt")
@@ -160,19 +183,23 @@ def GenerateBenchmarkConfigurations():
         # benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
         # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
         pass
-    for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
-        # 10/20/2022 3:23:08 PM: Neil added LB-all: start
-        benchmarkConfigurations[str(f'PPO_exp_LB_{town}')] = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-{town}.',test_suites=f'cc_test_{town}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
-        # 10/20/2022 3:23:08 PM: Neil added LB-all: end
-        # 10/20/2022 8:37:54 PM: Neil added LB-all: start
-        # LB-all (i.e. moving down)
-        # left to right: write average of towns across models
-        # TODO: write variable names to add to dictionary benchmarkConfigurations
-        for 
-        # PPO+exp: LB-all
-        PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="")
-        benchmarkConfigurations[str(f'PPO_exp_{town}_LB_all{}')]
-        # 10/20/2022 8:37:54 PM: Neil added LB-all: end
+    # for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
+    #     # 10/20/2022 3:23:08 PM: Neil added LB-all: start
+    #     benchmarkConfigurations[str(f'PPO_exp_LB_{town}')] = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-{town}.',test_suites=f'cc_test_{town}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
+    #     # 10/20/2022 3:23:08 PM: Neil added LB-all: end
+    #     # 10/20/2022 8:37:54 PM: Neil added LB-all: start
+    #     # LB-all (i.e. moving down)
+    #     # left to right: write average of towns across models
+    #     # TODO: write variable names to add to dictionary benchmarkConfigurations
+    #     for 
+    #     # PPO+exp: LB-all
+    #     PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="")
+    #     benchmarkConfigurations[str(f'PPO_exp_{town}_LB_all{}')]
+    #     # 10/20/2022 8:37:54 PM: Neil added LB-all: end
+    # 10/23/2022 11:09:27 AM: Neil added LB-all: start
+    PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih",bLB_all=True)
+    benchmarkConfigurations[str('PPO_exp_LB_all')] = PPO_exp_LB_all
+    # 10/23/2022 11:09:27 AM: Neil added LB-all: end
     return benchmarkConfigurations    
 def ResultsLatex(dictBenchmarkConfigurations=None):
     # output = '\\begin{table*}[!t]\n\\begin{center}\n\\begin{tabular}{ |c|c|c|c|c|c| }\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $99 \pm 0$ & $99 \pm 1$ & $97 \pm 1$ & $98 \pm 1$ & $ \pm $ \\\ \n \hline\n PPO+beta & $98 \pm 2$ & $100 \pm 0$ & $96 \pm 1$ & $97 \pm 0$ & $ \pm $ \\\ \n \hline\n Roach & $98 \pm 0$ & $100 \pm 0$ & $91 \pm 4$ & $85 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $96 \pm 2$ & $99 \pm 1$ & $92 \pm 0$ & $87 \pm 3$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $94 \pm 0$ & $97 \pm 1$ & $87 \pm 1$ & $90 \pm 2$ & $ \pm $ \\\ \n \hline\n PPO+beta & $95 \pm 2$ & $97 \pm 1$ & $88 \pm 4$ & $92 \pm 3$ & $ \pm $ \\\ \n \hline\n Roach & $96 \pm 0$ & $97 \pm 1$ & $83 \pm 3$ & $80 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $88 \pm 6$ & $85 \pm 0$ & $69 \pm 0$ & $78 \pm 4$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n\end{tabular}\n\end{center}\n\end{table*}'

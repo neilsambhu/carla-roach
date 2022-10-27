@@ -2561,3 +2561,30 @@ TODO: verify cmd for L_A(AP)
 10/13/2022 1:29:39 PM: TODO: check for process flow of RL and IL (1 weather per environment).  
 10/13/2022 1:46:39 PM: TODO: switch IL from NoCrash to DAGGER.  
 10/14/2022 12:30:20 PM: (1) TODO: check for process flow of RL and IL (1 weather per environment). (2) no need to switch IL from NoCrash to DAGGER.  
+10/27/2022 10:39:47 AM: inference on first cell in LB-all column
+```
+Traceback (most recent call last):
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/utils.py", line 350, in <lambda>
+    overrides=args.overrides,
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 112, in run
+    configure_logging=with_log_configuration,
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/hydra/core/utils.py", line 125, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "benchmark_NeilBranch0.py", line 177, in main
+    seed=cfg.seed, no_rendering=cfg.no_rendering, **env_setup['env_configs'])
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 145, in make
+    return registry.make(id, **kwargs)
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 90, in make
+    env = spec.make(**kwargs)
+  File "/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/envs/registration.py", line 60, in make
+    env = cls(**_kwargs)
+  File "/home/nsambhu/github/carla-roach/carla_gym/envs/suites/leaderboard_env.py", line 13, in __init__
+    obs_configs, reward_configs, terminal_configs, all_tasks)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 32, in __init__
+    self._init_client(carla_map, host, port, seed=seed, no_rendering=no_rendering)
+  File "/home/nsambhu/github/carla-roach/carla_gym/carla_multi_agent_env.py", line 162, in _init_client
+    self._world = client.load_world(carla_map)
+RuntimeError: map not found
+```

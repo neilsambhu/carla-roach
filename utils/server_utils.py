@@ -24,6 +24,9 @@ def kill_carla_podman():
     kill_process = subprocess.Popen('podman kill --signal KILL -a', shell=True)
     kill_process.wait()
     time.sleep(1)
+    kill_process = subprocess.Popen('podman container cleanup --all --rm', shell=True)
+    kill_process.wait()
+    time.sleep(1)
     log.info("Kill Carla Servers!")
 
 class CarlaServerManager():

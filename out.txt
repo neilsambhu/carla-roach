@@ -1,11 +1,63 @@
-dictBenchmarkConfigurations: {'PPO_exp_LB_all': <__main__.BenchmarkConfiguration object at 0x7f9364b35d10>}
+dictBenchmarkConfigurations: {'PPO_exp_LB_all': <__main__.BenchmarkConfiguration object at 0x7fd2b1928d50>}
 self.test_suites: cc_test
 benchmark configuration: PPO+exp cc_test_Town01-2021
 ppo cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=ppo actors.hero.agent=ppo agent.ppo.wb_run_path=iccv21-roach/trained-models/10pscpih wb_group="PPO+exp" wb_notes="Benchmark PPO+exp on LeaderBoard-all." test_suites=cc_test_Town01 seed=2021 +wb_sub_group=cc_test_Town01-2021 no_rendering=true
 CarlaUE4-Linux: no process found
-[2022-10-23 11:34:43,538][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-10-23 11:34:45,222][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-10-23 11:34:45,222][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
-Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:97
-Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:107
-Error: error allocating lock for new container: allocation failed; exceeded num_locks (2048)
+[2022-10-27 11:25:28,778][utils.server_utils][INFO] - Kill Carla Servers!
+89b06f8c257dc2f92687826702ede40dca844a3ab50adbba03ecc41017fa24e1
+[2022-10-27 11:25:31,098][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-10-27 11:25:31,098][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:100
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:110
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+sh: 1: xdg-user-dir: not found
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+[2022-10-27 11:25:36,488][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_9179136.pth
+[2022-10-27 11:25:37,270][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_9179136.pth
+[2022-10-27 11:25:39,203][__main__][INFO] - Start new env from task_idx 0
+[2022-10-27 11:25:39,203][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_LeaderBoard-v0_Town01_None_dynamic_1.0
+/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.13.4 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run ppo_LeaderBoard-v0_Town01_None_dynamic_1.0
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2ohsc4pc
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-10-27/11-25-27/wandb/run-20221027_112543-2ohsc4pc
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-10-27 11:25:44,059][__main__][INFO] - Start Benchmarking dynamic_1.0_00.

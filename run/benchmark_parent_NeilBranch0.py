@@ -88,11 +88,14 @@ class BenchmarkConfiguration:
     # 10/21/2022 9:23:47 AM: probably I should not iterate across towns here; delete function probably
     def BenchmarkAcrossTown(self):
         print(f'self.test_suites: {self.test_suites}')
+        sBase_test_suites = self.test_suites
+        self.score_composed = []
+        self.score_route = []
         for seed in [2021,2022,2023]:
-            sBase_test_suites = self.test_suites
-            self.score_composed = []
-            self.score_route = []
-            for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
+            list_score_composed_across_town = []
+            list_score_route_across_town = []
+            # for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
+            for town in ["Town01","Town02","Town03","Town04","Town05"]:
                 DeleteScoreFiles()
                 DeleteCheckpointFiles()
                 while True:
@@ -103,11 +106,14 @@ class BenchmarkConfiguration:
                     benchmarkProcess.wait()
                     if CheckScoreFilesExist():
                         with open("score_composed.txt","r") as f:
-                            self.score_composed.append(float(f.read()))
+                            list_score_route_across_town.append(float(f.read()))
                         with open("score_route.txt","r") as f:
-                            self.score_route.append(float(f.read()))
-                        print(f'score_composed: {self.score_composed}, score_route: {self.score_route}')
+                            list_score_route_across_town.append(float(f.read()))
+                        print(f'list_score_composed_across_town: {list_score_composed_across_town}, list_score_route_across_town: {list_score_route_across_town}')
                         break
+            self.score_composed.append(list_score_route_across_town)
+            self.score_route.append(list_score_route_across_town)
+            print(f'score_composed: {self.score_composed}, score_route: {self.score_route}')
         with open("results.txt","a") as f:
             f.write(f'{self.stringConfiguration()}\n')
             f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')

@@ -1,12 +1,12 @@
-dictBenchmarkConfigurations: {'PPO_exp_LB_all': <__main__.BenchmarkConfiguration object at 0x7fd2b1928d50>}
+dictBenchmarkConfigurations: {'PPO_exp_LB_all': <__main__.BenchmarkConfiguration object at 0x7f9a20af6d50>}
 self.test_suites: cc_test
 benchmark configuration: PPO+exp cc_test_Town01-2021
 ppo cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=ppo actors.hero.agent=ppo agent.ppo.wb_run_path=iccv21-roach/trained-models/10pscpih wb_group="PPO+exp" wb_notes="Benchmark PPO+exp on LeaderBoard-all." test_suites=cc_test_Town01 seed=2021 +wb_sub_group=cc_test_Town01-2021 no_rendering=true
 CarlaUE4-Linux: no process found
-[2022-10-27 11:25:28,778][utils.server_utils][INFO] - Kill Carla Servers!
-89b06f8c257dc2f92687826702ede40dca844a3ab50adbba03ecc41017fa24e1
-[2022-10-27 11:25:31,098][utils.server_utils][INFO] - Kill Carla Servers!
-[2022-10-27 11:25:31,098][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+[2022-10-31 17:22:06,361][utils.server_utils][INFO] - Kill Carla Servers!
+1a999dca2170886ea9264e2a8e412e91fab8e23a72f359cdd4e74c90d03bbb0a
+[2022-10-31 17:22:08,676][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-10-31 17:22:08,677][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:100
 Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:110
 4.26.2-0+++UE4+Release-4.26 522 0
@@ -44,10 +44,10 @@ ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
 ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
 ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
 ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
-[2022-10-27 11:25:36,488][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_9179136.pth
-[2022-10-27 11:25:37,270][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_9179136.pth
-[2022-10-27 11:25:39,203][__main__][INFO] - Start new env from task_idx 0
-[2022-10-27 11:25:39,203][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_LeaderBoard-v0_Town01_None_dynamic_1.0
+[2022-10-31 17:22:14,049][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_9179136.pth
+[2022-10-31 17:22:14,833][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_9179136.pth
+[2022-10-31 17:22:16,611][__main__][INFO] - Start new env from task_idx 0
+[2022-10-31 17:22:16,611][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_LeaderBoard-v0_Town01_None_dynamic_1.0
 /home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
@@ -56,8 +56,149 @@ wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.10.12
 wandb: Syncing run ppo_LeaderBoard-v0_Town01_None_dynamic_1.0
 wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
-wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2ohsc4pc
-wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-10-27/11-25-27/wandb/run-20221027_112543-2ohsc4pc
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1qt8c02s
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-10-31/17-22-05/wandb/run-20221031_172220-1qt8c02s
 wandb: Run `wandb offline` to turn off syncing.
 
-[2022-10-27 11:25:44,059][__main__][INFO] - Start Benchmarking dynamic_1.0_00.
+[2022-10-31 17:22:21,479][__main__][INFO] - Start Benchmarking dynamic_1.0_00.
+CarlaUE4-Linux: no process found
+[2022-10-31 17:25:18,609][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-10-31 17:25:23,614][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-10-31 17:25:23,618][__main__][INFO] - Finished Benchmarking env_idx 0, suite_name: ppo_LeaderBoard-v0_Town01_None_dynamic_1.0
+score_composed: 1.0000, score_route: 1.0000
+/home/nsambhu/github/carla-roach/outputs/2022-10-31/17-22-05
+[2022-10-31 17:25:23,618][__main__][INFO] - Finished, 1/1
+[2022-10-31 17:25:23,631][__main__][INFO] - data_collect.py DONE!
+wandb: Waiting for W&B process to finish, PID 2651924
+wandb: Program ended successfully.
+wandb: - 0.00MB of 2.29MB uploaded (0.00MB deduped)wandb: \ 2.29MB of 2.29MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-10-31/17-22-05/wandb/run-20221031_172220-1qt8c02s/logs/debug.log
+wandb: Find internal logs for this run at: /home/nsambhu/github/carla-roach/outputs/2022-10-31/17-22-05/wandb/run-20221031_172220-1qt8c02s/logs/debug-internal.log
+wandb: Run summary:
+wandb:                   time/total_step 2126
+wandb:                          time/fps 12.199
+wandb:                  hero/score_route 1.0
+wandb:                hero/score_penalty 1.0
+wandb:               hero/score_composed 1.0
+wandb:                       hero/length 2127
+wandb:                       hero/reward 1454.06302
+wandb:                      hero/timeout 0.0
+wandb:           hero/is_route_completed 1.0
+wandb:   hero/is_route_completed_nocrash 1.0
+wandb:        hero/route_completed_in_km 0.75216
+wandb:           hero/route_length_in_km 0.74816
+wandb:      hero/percentage_outside_lane 0.0
+wandb:        hero/percentage_wrong_lane 0.0
+wandb:            hero/collisions_layout 0.0
+wandb:           hero/collisions_vehicle 0.0
+wandb:        hero/collisions_pedestrian 0.0
+wandb:            hero/collisions_others 0.0
+wandb:                    hero/red_light 0.0
+wandb:                 hero/light_passed 3
+wandb:              hero/encounter_light 3
+wandb:              hero/stop_infraction 0.0
+wandb:                  hero/stop_passed 0
+wandb:               hero/encounter_stop 0
+wandb:                    hero/route_dev 0.0
+wandb:              hero/vehicle_blocked 0.0
+wandb:                             _step 0
+wandb:                          _runtime 183
+wandb:                        _timestamp 1667251523
+wandb: Run history:
+wandb:                   time/total_step ▁
+wandb:                          time/fps ▁
+wandb:                  hero/score_route ▁
+wandb:                hero/score_penalty ▁
+wandb:               hero/score_composed ▁
+wandb:                       hero/length ▁
+wandb:                       hero/reward ▁
+wandb:                      hero/timeout ▁
+wandb:           hero/is_route_completed ▁
+wandb:   hero/is_route_completed_nocrash ▁
+wandb:        hero/route_completed_in_km ▁
+wandb:           hero/route_length_in_km ▁
+wandb:      hero/percentage_outside_lane ▁
+wandb:        hero/percentage_wrong_lane ▁
+wandb:            hero/collisions_layout ▁
+wandb:           hero/collisions_vehicle ▁
+wandb:        hero/collisions_pedestrian ▁
+wandb:            hero/collisions_others ▁
+wandb:                    hero/red_light ▁
+wandb:                 hero/light_passed ▁
+wandb:              hero/encounter_light ▁
+wandb:              hero/stop_infraction ▁
+wandb:                  hero/stop_passed ▁
+wandb:               hero/encounter_stop ▁
+wandb:                    hero/route_dev ▁
+wandb:              hero/vehicle_blocked ▁
+wandb:                             _step ▁
+wandb:                          _runtime ▁
+wandb:                        _timestamp ▁
+wandb: 
+wandb: Synced 5 W&B file(s), 2 media file(s), 0 artifact file(s) and 2 other file(s)
+wandb: 
+wandb: Synced ppo_LeaderBoard-v0_Town01_None_dynamic_1.0: https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/1qt8c02s
+
+list_score_composed_across_town: [1.0], list_score_route_across_town: [1.0]
+benchmark configuration: PPO+exp cc_test_Town02-2021
+ppo cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=ppo actors.hero.agent=ppo agent.ppo.wb_run_path=iccv21-roach/trained-models/10pscpih wb_group="PPO+exp" wb_notes="Benchmark PPO+exp on LeaderBoard-all." test_suites=cc_test_Town02 seed=2021 +wb_sub_group=cc_test_Town02-2021 no_rendering=true
+CarlaUE4-Linux: no process found
+[2022-10-31 17:25:28,930][utils.server_utils][INFO] - Kill Carla Servers!
+1ad47d63fe3a9f959e8250b8e571aa895bf7b0da6f8604bbb0147a63657887bf
+1ad47d63fe3a9f959e8250b8e571aa895bf7b0da6f8604bbb0147a63657887bf
+[2022-10-31 17:25:31,236][utils.server_utils][INFO] - Kill Carla Servers!
+[2022-10-31 17:25:31,236][utils.server_utils][INFO] - podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES=0 --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port=2000 -RenderOffScreen
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:100
+Neil /home/nsambhu/github/carla-roach/utils/server_utils.py:110
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+sh: 1: xdg-user-dir: not found
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4528:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5007:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2495:(snd_pcm_open_noupdate) Unknown PCM default
+[2022-10-31 17:25:36,582][agents.rl_birdview.rl_birdview_agent][INFO] - Resume checkpoint latest ckpt/ckpt_9179136.pth
+[2022-10-31 17:25:37,381][agents.rl_birdview.rl_birdview_agent][INFO] - Loading wandb checkpoint: ckpt/ckpt_9179136.pth
+[2022-10-31 17:25:39,179][__main__][INFO] - Start new env from task_idx 0
+[2022-10-31 17:25:39,179][__main__][INFO] - Start Benchmarking! env_idx: 0, suite_name: ppo_LeaderBoard-v0_Town02_None_dynamic_1.0
+/home/nsambhu/.conda/envs/carla/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+wandb: Currently logged in as: neilsambhu (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.13.4 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.12
+wandb: Syncing run ppo_LeaderBoard-v0_Town02_None_dynamic_1.0
+wandb: ⭐️ View project at https://wandb.ai/neilsambhu/iccv21-roach-benchmark
+wandb: 🚀 View run at https://wandb.ai/neilsambhu/iccv21-roach-benchmark/runs/2bngwr82
+wandb: Run data is saved locally in /home/nsambhu/github/carla-roach/outputs/2022-10-31/17-25-27/wandb/run-20221031_172543-2bngwr82
+wandb: Run `wandb offline` to turn off syncing.
+
+[2022-10-31 17:25:43,855][__main__][INFO] - Start Benchmarking dynamic_1.0_00.

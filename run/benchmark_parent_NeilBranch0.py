@@ -20,13 +20,53 @@ class BenchmarkConfiguration:
     def stringConfiguration(self):
         return f'{self.wb_group} {self.test_suites}'
     def average_score_composed(self):
-        return round(sum(self.score_composed)/len(self.score_composed),4)
+        if not self.bLB_all:
+            return round(sum(self.score_composed)/len(self.score_composed),4)
+        elif self.bLB_all:
+            fAccumulator = 0
+            print(f'average_score_composed: fAccumulator (before loop): {fAccumulator}')
+            for list_score_composed_across_town in self.score_composed:
+                # add average of values in list_score_composed_across_town to fAccumulator
+                fAccumulator += sum(list_score_composed_across_town)/len(list_score_composed_across_town)
+            print(f'average_score_composed: fAccumulator (after loop): {fAccumulator}')
+            lCount_list_score_composed_across_town = len(self.score_composed)
+            print(f'average_score_composed: lCount_list_score_composed_across_town: {lCount_list_score_composed_across_town}')
+            return round(fAccumulator/lCount_list_score_composed_across_town,4)
     def average_score_route(self):
-        return round(sum(self.score_route)/len(self.score_route),4)
+        if not self.bLB_all:
+            return round(sum(self.score_route)/len(self.score_route),4)
+        elif self.bLB_all:
+            fAccumulator = 0
+            print(f'average_score_route: fAccumulator (before loop): {fAccumulator}')
+            for list_score_route_across_town in self.score_route:
+                # add average of values in list_score_route_across_town to fAccumulator
+                fAccumulator += sum(list_score_route_across_town)/len(list_score_route_across_town)
+            print(f'average_score_route: fAccumulator (after loop): {fAccumulator}')
+            lCount_list_score_route_across_town = len(self.score_route)
+            print(f'average_score_route: lCount_list_score_route_across_town: {lCount_list_score_route_across_town}')
+            return round(fAccumulator/lCount_list_score_route_across_town,4)
     def standardDeviation_score_composed(self):
-        return round(statistics.pstdev(self.score_composed),4)
+        if not self.bLB_all:
+            return round(statistics.pstdev(self.score_composed),4)
+        elif self.bLB_all:
+            listAverageForEachSetOfTowns = []
+            print(f'standardDeviation_score_composed: listAverageForEachSetOfTowns (before loop): {listAverageForEachSetOfTowns}')
+            for list_score_composed_across_town in self.score_composed:
+                # add average of values in list_score_composed_across_town to listAverageForEachSetOfTowns
+                listAverageForEachSetOfTowns.append(sum(list_score_composed_across_town)/len(list_score_composed_across_town))
+            print(f'standardDeviation_score_composed: listAverageForEachSetOfTowns (after loop): {listAverageForEachSetOfTowns}')
+            return round(statistics.pstdev(listAverageForEachSetOfTowns),4)
     def standardDeviation_score_route(self):
-        return round(statistics.pstdev(self.score_route),4)
+        if not self.bLB_all:
+            return round(statistics.pstdev(self.score_route),4)
+        elif self.bLB_all:
+            listAverageForEachSetOfTowns = []
+            print(f'standardDeviation_score_route: listAverageForEachSetOfTowns (before loop): {listAverageForEachSetOfTowns}')
+            for list_score_route_across_town in self.score_route:
+                # add average of values in list_score_route_across_town to listAverageForEachSetOfTowns
+                listAverageForEachSetOfTowns.append(sum(list_score_route_across_town)/len(list_score_route_across_town))
+            print(f'standardDeviation_score_route: listAverageForEachSetOfTowns (after loop): {listAverageForEachSetOfTowns}')
+            return round(statistics.pstdev(listAverageForEachSetOfTowns),4)
     def StartBenchmarkProcess(self,seed):
         benchmarkProcess = None
         if self.agent=="ppo":
@@ -85,6 +125,7 @@ class BenchmarkConfiguration:
             f.write(f'{self.stringConfiguration()}\n')
             f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')
             f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
+
     # 10/21/2022 9:23:47 AM: probably I should not iterate across towns here; delete function probably
     def BenchmarkAcrossTown(self):
         print(f'self.test_suites: {self.test_suites}')
@@ -106,18 +147,21 @@ class BenchmarkConfiguration:
                     benchmarkProcess.wait()
                     if CheckScoreFilesExist():
                         with open("score_composed.txt","r") as f:
-                            list_score_route_across_town.append(float(f.read()))
+                            list_score_composed_across_town.append(float(f.read()))
                         with open("score_route.txt","r") as f:
                             list_score_route_across_town.append(float(f.read()))
                         print(f'list_score_composed_across_town: {list_score_composed_across_town}, list_score_route_across_town: {list_score_route_across_town}')
                         break
-            self.score_composed.append(list_score_route_across_town)
+            self.score_composed.append(list_score_composed_across_town)
             self.score_route.append(list_score_route_across_town)
             print(f'score_composed: {self.score_composed}, score_route: {self.score_route}')
         with open("results.txt","a") as f:
             f.write(f'{self.stringConfiguration()}\n')
             f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')
             f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
+            # f.write(f'\tdriving score (average): {self.average_score_composed()}\n')
+            # f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
+            # f.write(f'\tsuccess rate (average): {self.average_score_route()}\n')
     def Benchmark(self):
         if not self.bLB_all:
             self.BenchmarkAcrossSeed()

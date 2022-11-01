@@ -155,13 +155,11 @@ class BenchmarkConfiguration:
             self.score_composed.append(list_score_composed_across_town)
             self.score_route.append(list_score_route_across_town)
             print(f'score_composed: {self.score_composed}, score_route: {self.score_route}')
+        self.test_suites = sBase_test_suites
         with open("results.txt","a") as f:
             f.write(f'{self.stringConfiguration()}\n')
             f.write(f'\tsuccess rate (average, standard deviation): {self.average_score_route()}, {self.standardDeviation_score_route()}\n')
             f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
-            # f.write(f'\tdriving score (average): {self.average_score_composed()}\n')
-            # f.write(f'\tdriving score (average, standard deviation): {self.average_score_composed()}, {self.standardDeviation_score_composed()}\n')
-            # f.write(f'\tsuccess rate (average): {self.average_score_route()}\n')
     def Benchmark(self):
         if not self.bLB_all:
             self.BenchmarkAcrossSeed()

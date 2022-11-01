@@ -231,22 +231,19 @@ def GenerateBenchmarkConfigurations():
         # benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
         # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
         pass
-    # for town in ["Town01","Town02","Town03","Town04","Town05","Town06"]:
-    #     # 10/20/2022 3:23:08 PM: Neil added LB-all: start
-    #     benchmarkConfigurations[str(f'PPO_exp_LB_{town}')] = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-{town}.',test_suites=f'cc_test_{town}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
-    #     # 10/20/2022 3:23:08 PM: Neil added LB-all: end
-    #     # 10/20/2022 8:37:54 PM: Neil added LB-all: start
-    #     # LB-all (i.e. moving down)
-    #     # left to right: write average of towns across models
-    #     # TODO: write variable names to add to dictionary benchmarkConfigurations
-    #     for 
-    #     # PPO+exp: LB-all
-    #     PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="")
-    #     benchmarkConfigurations[str(f'PPO_exp_{town}_LB_all{}')]
-    #     # 10/20/2022 8:37:54 PM: Neil added LB-all: end
     # 10/23/2022 11:09:27 AM: Neil added LB-all: start
     PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih",bLB_all=True)
     benchmarkConfigurations[str('PPO_exp_LB_all')] = PPO_exp_LB_all
+    PPO_beta_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76",bLB_all=True)
+    benchmarkConfigurations[str('PPO_beta_LB_all')] = PPO_beta_LB_all
+    Roach_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0",bLB_all=True)
+    benchmarkConfigurations[str('Roach_LB_all')] = Roach_LB_all
+    Autopilot_LB_all = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on LeaderBoard-all.',test_suites=f'cc_test',bLB_all=True)
+    benchmarkConfigurations[str('Autopilot_LB_all')] = Autopilot_LB_all
+    L_A_AP_LB_all = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on LeaderBoard benchmark on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1myvm4mw",bLB_all=True)
+    benchmarkConfigurations[str('L_A_AP_LB_all')] = L_A_AP_LB_all
+    L_K_L_F_c_LB_all = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on LeaderBoard benchmark on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/zwadqx9z",bLB_all=True)
+    benchmarkConfigurations[str('L_K_L_F_c_LB_all')] = L_K_L_F_c_LB_all
     # 10/23/2022 11:09:27 AM: Neil added LB-all: end
     return benchmarkConfigurations    
 def ResultsLatex(dictBenchmarkConfigurations=None):

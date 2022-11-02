@@ -225,8 +225,8 @@ def GenerateBenchmarkConfigurations():
         # Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
         # benchmarkConfigurations.append(Autopilot_NCd)
         # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
-        # L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
-        # benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
+        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+        benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
         # L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
         # benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
         # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
@@ -248,11 +248,46 @@ def GenerateBenchmarkConfigurations():
     return benchmarkConfigurations    
 def ResultsLatex(dictBenchmarkConfigurations=None):
     # output = '\\begin{table*}[!t]\n\\begin{center}\n\\begin{tabular}{ |c|c|c|c|c|c| }\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $99 \pm 0$ & $99 \pm 1$ & $97 \pm 1$ & $98 \pm 1$ & $ \pm $ \\\ \n \hline\n PPO+beta & $98 \pm 2$ & $100 \pm 0$ & $96 \pm 1$ & $97 \pm 0$ & $ \pm $ \\\ \n \hline\n Roach & $98 \pm 0$ & $100 \pm 0$ & $91 \pm 4$ & $85 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $96 \pm 2$ & $99 \pm 1$ & $92 \pm 0$ & $87 \pm 3$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $94 \pm 0$ & $97 \pm 1$ & $87 \pm 1$ & $90 \pm 2$ & $ \pm $ \\\ \n \hline\n PPO+beta & $95 \pm 2$ & $97 \pm 1$ & $88 \pm 4$ & $92 \pm 3$ & $ \pm $ \\\ \n \hline\n Roach & $96 \pm 0$ & $97 \pm 1$ & $83 \pm 3$ & $80 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $88 \pm 6$ & $85 \pm 0$ & $69 \pm 0$ & $78 \pm 4$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n\end{tabular}\n\end{center}\n\end{table*}'
-    output = '\\begin{{table*}}[!t]\n\\begin{{center}}\n\\begin{{tabular}}{{ |c|c|c|c|c|c| }}\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $99 \pm 0$ & $99 \pm 1$ & $97 \pm 1$ & $98 \pm 1$ & $ \pm $ \\\ \n \hline\n PPO+beta & $98 \pm 2$ & $100 \pm 0$ & $96 \pm 1$ & $97 \pm 0$ & $ \pm $ \\\ \n \hline\n Roach & $98 \pm 0$ & $100 \pm 0$ & $91 \pm 4$ & $85 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $96 \pm 2$ & $99 \pm 1$ & $92 \pm 0$ & $87 \pm 3$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_successRate} \pm {L_A_AP_NCd_tt_successRate_standardDeviation}$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $94 \pm 0$ & $97 \pm 1$ & $87 \pm 1$ & $90 \pm 2$ & $ \pm $ \\\ \n \hline\n PPO+beta & $95 \pm 2$ & $97 \pm 1$ & $88 \pm 4$ & $92 \pm 3$ & $ \pm $ \\\ \n \hline\n Roach & $96 \pm 0$ & $97 \pm 1$ & $83 \pm 3$ & $80 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $88 \pm 6$ & $85 \pm 0$ & $69 \pm 0$ & $78 \pm 4$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_drivingScore} \pm {L_A_AP_NCd_tt_drivingScore_standardDeviation}$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n\end{{tabular}}\n\end{{center}}\n\end{{table*}}'.format(
+    output = '\\begin{{table*}}[!t]\n\\begin{{center}}\n\\begin{{tabular}}{{ |c|c|c|c|c|c| }}\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $99 \pm 0$ & $99 \pm 1$ & $97 \pm 1$ & $98 \pm 1$ & ${PPO_exp_LB_all_successRate} \pm {PPO_exp_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n PPO+beta & $98 \pm 2$ & $100 \pm 0$ & $96 \pm 1$ & $97 \pm 0$ & ${PPO_beta_LB_all_successRate} \pm {PPO_beta_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n Roach & $98 \pm 0$ & $100 \pm 0$ & $91 \pm 4$ & $85 \pm 0$ & ${Roach_LB_all_successRate} \pm {Roach_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n AP (carla-roach) & $96 \pm 2$ & $99 \pm 1$ & $92 \pm 0$ & $87 \pm 3$ & ${Autopilot_LB_all_successRate} \pm {Autopilot_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_successRate} \pm {L_A_AP_NCd_tt_successRate_standardDeviation}$ & $ \pm $ & $ \pm $ & $ \pm $ & ${L_A_AP_LB_all_successRate} \pm {L_A_AP_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & ${L_K_L_F_c_LB_all_successRate} \pm {L_K_L_F_c_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $94 \pm 0$ & $97 \pm 1$ & $87 \pm 1$ & $90 \pm 2$ & ${PPO_exp_LB_all_drivingScore} \pm {PPO_exp_LB_all_drivingScore_standardDeviation}$ \\\ \n \hline\n PPO+beta & $95 \pm 2$ & $97 \pm 1$ & $88 \pm 4$ & $92 \pm 3$ & ${PPO_beta_LB_all_drivingScore} \pm {PPO_beta_LB_all_drivingScore_standardDeviation}$ \\\ \n \hline\n Roach & $96 \pm 0$ & $97 \pm 1$ & $83 \pm 3$ & $80 \pm 0$ & ${Roach_LB_all_drivingScore} \pm {Roach_LB_all_drivingScore_standardDeviation}$ \\\ \n \hline\n AP (carla-roach) & $88 \pm 6$ & $85 \pm 0$ & $69 \pm 0$ & $78 \pm 4$ & ${Autopilot_LB_all_drivingScore} \pm {Autopilot_LB_all_drivingScore_standardDeviation}$ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_drivingScore} \pm {L_A_AP_NCd_tt_drivingScore_standardDeviation}$ & $ \pm $ & $ \pm $ & $ \pm $ & ${L_A_AP_LB_all_drivingScore} \pm {L_A_AP_LB_all_drivingScore_standardDeviation}$ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n\end{{tabular}}\n\end{{center}}\n\end{{table*}}'.format(
+        # success rate below
+        # PPO_exp_NCd_tt
+        # PPO_beta_NCd_tt
+        # Roach_NCd_tt
+        # Autopilot_NCd_tt
         L_A_AP_NCd_tt_successRate=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].average_score_route()*100),
         L_A_AP_NCd_tt_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].standardDeviation_score_route()*100),
+        # L_K_L_F_c_NCd_tt
+        # NCd-tn through NCd-nn
+        PPO_exp_LB_all_successRate=round(dictBenchmarkConfigurations['PPO_exp_LB_all'].average_score_route()*100),
+        PPO_exp_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['PPO_exp_LB_all'].standardDeviation_score_route()*100),
+        PPO_beta_LB_all_successRate=round(dictBenchmarkConfigurations['PPO_beta_LB_all'].average_score_route()*100),
+        PPO_beta_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['PPO_beta_LB_all'].standardDeviation_score_route()*100),
+        Roach_LB_all_successRate=round(dictBenchmarkConfigurations['Roach_LB_all'].average_score_route()*100),
+        Roach_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['Roach_LB_all'].standardDeviation_score_route()*100),
+        Autopilot_LB_all_successRate=round(dictBenchmarkConfigurations['Autopilot_LB_all'].average_score_route()*100),
+        Autopilot_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['Autopilot_LB_all'].standardDeviation_score_route()*100),
+        L_A_AP_LB_all_successRate=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].average_score_route()*100),
+        L_A_AP_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].standardDeviation_score_route()*100),
+        L_K_L_F_c_LB_all_successRate=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].average_score_route()*100),
+        L_K_L_F_c_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].standardDeviation_score_route()*100),
+
+        # driving score below
         L_A_AP_NCd_tt_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].average_score_composed()*100),
-        L_A_AP_NCd_tt_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].standardDeviation_score_composed()*100)
+        L_A_AP_NCd_tt_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].standardDeviation_score_composed()*100),
+        # L_K_L_F_c_NCd_tt
+        # NCd-tn through NCd-nn
+        PPO_exp_LB_all_drivingScore=round(dictBenchmarkConfigurations['PPO_exp_LB_all'].average_score_composed()*100),
+        PPO_exp_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['PPO_exp_LB_all'].standardDeviation_score_composed()*100),
+        PPO_beta_LB_all_drivingScore=round(dictBenchmarkConfigurations['PPO_beta_LB_all'].average_score_composed()*100),
+        PPO_beta_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['PPO_beta_LB_all'].standardDeviation_score_composed()*100),
+        Roach_LB_all_drivingScore=round(dictBenchmarkConfigurations['Roach_LB_all'].average_score_composed()*100),
+        Roach_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['Roach_LB_all'].standardDeviation_score_composed()*100),
+        Autopilot_LB_all_drivingScore=round(dictBenchmarkConfigurations['Autopilot_LB_all'].average_score_composed()*100),
+        Autopilot_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['Autopilot_LB_all'].standardDeviation_score_composed()*100),
+        L_A_AP_LB_all_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].average_score_composed()*100),
+        L_A_AP_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].standardDeviation_score_composed()*100),
+        L_K_L_F_c_LB_all_drivingScore=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].average_score_composed()*100),
+        L_K_L_F_c_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].standardDeviation_score_composed()*100),
         )
     return output
 if __name__ == '__main__':

@@ -259,9 +259,9 @@ def main(cfg: DictConfig):
         if bVerbose:
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         # 9/26/2022 11:58:39 PM: Neil added: start
-        if task_idx >= ckpt_task_idx:
-        # if task_idx == ckpt_task_idx+1:
-            break 
+        # if task_idx >= ckpt_task_idx:
+        # # if task_idx == ckpt_task_idx+1:
+        #     break 
         # 9/26/2022 11:58:39 PM: Neil added: end
     
     if bVerbose:

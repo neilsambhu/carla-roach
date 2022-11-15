@@ -2592,3 +2592,4 @@ RuntimeError: map not found
 ```
 grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "import carla">outgrep.txt
 ```
+11/14/2022 10:36:16 PM: TODO: try to run CARLA simulator with GUI displayed. Significance: I can see changes to the textures of objects. 

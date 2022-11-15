@@ -2588,3 +2588,4 @@ Traceback (most recent call last):
     self._world = client.load_world(carla_map)
 RuntimeError: map not found
 ```
+11/14/2022 10:32:42 PM: TODO: find carla to add texture to objects in simulation

@@ -2589,3 +2589,6 @@ Traceback (most recent call last):
 RuntimeError: map not found
 ```
 11/14/2022 10:32:42 PM: TODO: find carla to add texture to objects in simulation
+```
+grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "import carla">outgrep.txt
+```

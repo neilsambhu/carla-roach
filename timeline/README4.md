@@ -2604,3 +2604,4 @@ carla_multi_agent_env.py (1) initializes EgoVehcileHandler with self.\_client an
 host: localhost	
 port: 2000
 ```
+12/3/2022 5:36:38 PM: successfully able to connect to podman carla simulator for carla client python object. For CLI podman carla, manual_control.py prints "Waiting for the ego vehicle".  

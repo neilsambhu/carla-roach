@@ -2599,7 +2599,7 @@ grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --excl
 ```
 12/3/2022 5:04:37 PM:  
 ego_vehicle_handler.py requires "client" object.  
-carla_multi_agent_env.py (1) initializes EgoVehcileHandler with self.\_client and (2) self.\client is set to the client object. TODO: get "client" object to connect to podman instance of carla simulator.  
+carla_multi_agent_env.py (1) initializes EgoVehcileHandler with self.\_client and (2) self.\_client is set to the client object. TODO: get "client" object to connect to podman instance of carla simulator.  
 ```
 host: localhost	
 port: 2000

@@ -2605,3 +2605,8 @@ host: localhost
 port: 2000
 ```
 12/3/2022 5:36:38 PM: successfully able to connect to podman carla simulator for carla client python object. For CLI podman carla, manual_control.py prints "Waiting for the ego vehicle".  
+12/5/2022 4:48:57 PM: already successfully modified carla-roach code to show view of ego vehicle from manual_control.py. Code modification is in benchmark_NeilBranch0.py.  
+12/5/2022 4:50:14 PM: TODO: find where in carla-roach there is "load_world(town)" or "self.client.load_world(town)".  
+```
+grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "load_world(">outgrep.txt
+```

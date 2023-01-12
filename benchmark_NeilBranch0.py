@@ -30,6 +30,16 @@ def run_single(run_name, env, agents_dict, agents_log_dir, log_video, max_step=N
 
     log.info(f'Start Benchmarking {run_name}.')
     obs = env.reset()
+    # 12/3/2022 10:40:58 PM: Neil add call to visualize ego vehicle: start
+    # import run.manual_control
+    # run.manual_control.main()
+    import subprocess
+    # import os; print(f'os.getcwd(): {os.getcwd()}')
+    cmd = f'python -u ../../../run/manual_control.py'
+    # processEgoVehicleView = subprocess.Popen([cmd],shell=True)
+    # processEgoVehicleView.wait()
+    import time;time.sleep(1)
+    # 12/3/2022 10:40:58 PM: Neil add call to visualize ego vehicle: end
     timestamp = env.timestamp
     done = {'__all__': False}
     while not done['__all__']:
@@ -260,7 +270,7 @@ def main(cfg: DictConfig):
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         # 9/26/2022 11:58:39 PM: Neil added: start
         # if task_idx >= ckpt_task_idx:
-        # # if task_idx == ckpt_task_idx+1:
+        # if task_idx == ckpt_task_idx+1:
         #     break 
         # 9/26/2022 11:58:39 PM: Neil added: end
     

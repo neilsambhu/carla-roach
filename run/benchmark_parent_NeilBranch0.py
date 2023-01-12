@@ -1,4 +1,4 @@
-import subprocess,os,time,glob,statistics
+import subprocess,os,time,glob,statistics,shutil
 class BenchmarkConfiguration:
     # various parameters when calling benchmark_NeilBranch0.sh
     def __init__(self,agent,wb_group,wb_notes,test_suites,agent_ppo_wb_run_path=None,bLB_all=False):
@@ -113,6 +113,10 @@ class BenchmarkConfiguration:
                 self.wb_sub_group = f'{self.test_suites}-{seed}'
                 print(f'benchmark configuration: {self.wb_group} {self.wb_sub_group}')
                 benchmarkProcess = self.StartBenchmarkProcess(seed)
+                # 12/3/2022 10:08:37 PM: Neil add call to visualize ego vehicle: start
+                # import manual_control
+                # manual_control.main()
+                # 12/3/2022 10:08:37 PM: Neil add call to visualize ego vehicle: end
                 benchmarkProcess.wait()
                 if CheckScoreFilesExist():
                     with open("score_composed.txt","r") as f:
@@ -184,6 +188,18 @@ def DeleteCheckpointFiles():
 def DeleteResultsFile():
     if os.path.exists("results.txt"):
         os.remove("results.txt")
+def Delete_outputs_DirectoryContents():
+    folder = 'outputs/'
+    for filename in os.listdir(folder):
+        file_path = os.path.join(folder, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path, e))
+            import sys;sys.exit('ended here')
 def GenerateBenchmarkConfigurations0():
     benchmarkConfigurations = {}
     # for environment in ["tt","tn","nt","nn"]:
@@ -211,9 +227,11 @@ def GenerateBenchmarkConfigurations0():
 def GenerateBenchmarkConfigurations():
     benchmarkConfigurations = {}
     for environment in ["tt","tn","nt","nn"]:
+    # for environment in ["tt"]:
         # PPO+exp: NCd
         PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
         benchmarkConfigurations[str(f'PPO_exp_NCd_{environment}')] = PPO_exp_NCd
+        # '''
         # PPO+beta: NCd
         PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
         benchmarkConfigurations[str(f'PPO_beta_NCd_{environment}')] = PPO_beta_NCd
@@ -244,6 +262,7 @@ def GenerateBenchmarkConfigurations():
     L_K_L_F_c_LB_all = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on LeaderBoard benchmark on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/zwadqx9z",bLB_all=True)
     benchmarkConfigurations[str('L_K_L_F_c_LB_all')] = L_K_L_F_c_LB_all
     # 10/23/2022 11:09:27 AM: Neil added LB-all: end
+    # '''
     return benchmarkConfigurations    
 def ResultsLatex(dictBenchmarkConfigurations=None):
     # output = '\\begin{table*}[!t]\n\\begin{center}\n\\begin{tabular}{ |c|c|c|c|c|c| }\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $99 \pm 0$ & $99 \pm 1$ & $97 \pm 1$ & $98 \pm 1$ & $ \pm $ \\\ \n \hline\n PPO+beta & $98 \pm 2$ & $100 \pm 0$ & $96 \pm 1$ & $97 \pm 0$ & $ \pm $ \\\ \n \hline\n Roach & $98 \pm 0$ & $100 \pm 0$ & $91 \pm 4$ & $85 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $96 \pm 2$ & $99 \pm 1$ & $92 \pm 0$ & $87 \pm 3$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n PPO+exp & $94 \pm 0$ & $97 \pm 1$ & $87 \pm 1$ & $90 \pm 2$ & $ \pm $ \\\ \n \hline\n PPO+beta & $95 \pm 2$ & $97 \pm 1$ & $88 \pm 4$ & $92 \pm 3$ & $ \pm $ \\\ \n \hline\n Roach & $96 \pm 0$ & $97 \pm 1$ & $83 \pm 3$ & $80 \pm 0$ & $ \pm $ \\\ \n \hline\n AP (carla-roach) & $88 \pm 6$ & $85 \pm 0$ & $69 \pm 0$ & $78 \pm 4$ & $ \pm $ \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ & $ \pm $ \\\ \n \hline\n\end{tabular}\n\end{center}\n\end{table*}'
@@ -375,6 +394,7 @@ def ResultsLatex(dictBenchmarkConfigurations=None):
     return output
 if __name__ == '__main__':
     DeleteResultsFile()
+    Delete_outputs_DirectoryContents()
     dictBenchmarkConfigurations = GenerateBenchmarkConfigurations()
     print(f'dictBenchmarkConfigurations: {dictBenchmarkConfigurations}')
     for keyBenchmarkConfiguration in dictBenchmarkConfigurations:

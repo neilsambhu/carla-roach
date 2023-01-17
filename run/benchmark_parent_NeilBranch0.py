@@ -92,7 +92,7 @@ class BenchmarkConfiguration:
         elif self.agent=="roaming":
             benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} +agent/roaming/obs_configs=birdview wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
         return benchmarkProcess
-    def StartBenchmarkProcessAcross_test_suites(self,town):
+    def StartBenchmarkProcessAcross_test_suites(self,town,seed):
         benchmarkProcess = None
         if self.test_suites==f'cc_test_{town}':
             cmd = f'''python -u benchmark_NeilBranch0.py resume=true log_video=true \
@@ -147,7 +147,7 @@ class BenchmarkConfiguration:
                     self.test_suites = f'{sBase_test_suites}_{town}'
                     self.wb_sub_group = f'{self.test_suites}-{seed}'
                     print(f'benchmark configuration: {self.wb_group} {self.wb_sub_group}')
-                    benchmarkProcess = self.StartBenchmarkProcess(seed)
+                    benchmarkProcess = self.StartBenchmarkProcessAcross_test_suites(town,seed)
                     benchmarkProcess.wait()
                     if CheckScoreFilesExist():
                         with open("score_composed.txt","r") as f:

@@ -210,6 +210,13 @@ def main(cfg: DictConfig):
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
         env.set_task_idx(task_idx)
+        # 1/12/2023 6:06 PM: filter route_id: start
+        route_id = int(env.task['route_id'])
+        if route_id == 0 or route_id == 1:
+            pass
+        else:
+            continue
+        # 1/12/2023 6:06 PM: filter route_id: end
         run_name = f"{env.task['weather']}_{env.task['route_id']:02d}"
 
         list_render, ep_stat_dict, ep_event_dict, timestamp = run_single(

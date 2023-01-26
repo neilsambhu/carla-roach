@@ -34,20 +34,28 @@ class BenchmarkConfiguration:
             return round(fAccumulator/lCount_list_score_composed_across_town,4)
     def average_score_route(self):
         if not self.bLB_all:
-            return round(sum(self.score_route)/len(self.score_route),4)
+            lCountOnes_score_route = 0
+            for score_route in self.score_route:
+                if int(score_route) == 1:
+                    lCountOnes_score_route+=1
+            return round(lCountOnes_score_route/len(self.score_route),4)
         elif self.bLB_all:
             fAccumulator = 0
             print(f'average_score_route: fAccumulator (before loop): {fAccumulator}')
             for list_score_route_across_town in self.score_route:
+                lCountOnes_score_route = 0
+                for score_route in list_score_route_across_town:
+                    if int(score_route) == 1:
+                        lCountOnes_score_route+=1
                 # add average of values in list_score_route_across_town to fAccumulator
-                fAccumulator += sum(list_score_route_across_town)/len(list_score_route_across_town)
+                fAccumulator += lCountOnes_score_route/len(list_score_route_across_town)
             print(f'average_score_route: fAccumulator (after loop): {fAccumulator}')
             lCount_list_score_route_across_town = len(self.score_route)
             print(f'average_score_route: lCount_list_score_route_across_town: {lCount_list_score_route_across_town}')
             return round(fAccumulator/lCount_list_score_route_across_town,4)
     def standardDeviation_score_composed(self):
         if not self.bLB_all:
-            return round(statistics.pstdev(self.score_composed),4)
+            return round(statistics.stdev(self.score_composed),4)
         elif self.bLB_all:
             listAverageForEachSetOfTowns = []
             print(f'standardDeviation_score_composed: listAverageForEachSetOfTowns (before loop): {listAverageForEachSetOfTowns}')
@@ -55,18 +63,29 @@ class BenchmarkConfiguration:
                 # add average of values in list_score_composed_across_town to listAverageForEachSetOfTowns
                 listAverageForEachSetOfTowns.append(sum(list_score_composed_across_town)/len(list_score_composed_across_town))
             print(f'standardDeviation_score_composed: listAverageForEachSetOfTowns (after loop): {listAverageForEachSetOfTowns}')
-            return round(statistics.pstdev(listAverageForEachSetOfTowns),4)
+            return round(statistics.stdev(listAverageForEachSetOfTowns),4)
     def standardDeviation_score_route(self):
         if not self.bLB_all:
-            return round(statistics.pstdev(self.score_route),4)
+            # TODO: 1/23/2023: how to calculate standard deviation of score_route
+            listBinarized_score_route = []
+            for score_route in self.score_route:
+                if int(score_route) == 0:
+                    listBinarized_score_route.append(0)
+                elif int(score_route) == 1:
+                    listBinarized_score_route.append(1)
+            return round(statistics.stdev(listBinarized_score_route),4)
         elif self.bLB_all:
             listAverageForEachSetOfTowns = []
             print(f'standardDeviation_score_route: listAverageForEachSetOfTowns (before loop): {listAverageForEachSetOfTowns}')
             for list_score_route_across_town in self.score_route:
+                lCountOnes_score_route = 0
+                for score_route in list_score_route_across_town:
+                    if int(score_route) == 1:
+                        lCountOnes_score_route+=1
                 # add average of values in list_score_route_across_town to listAverageForEachSetOfTowns
-                listAverageForEachSetOfTowns.append(sum(list_score_route_across_town)/len(list_score_route_across_town))
+                listAverageForEachSetOfTowns.append(lCountOnes_score_route/len(list_score_route_across_town))
             print(f'standardDeviation_score_route: listAverageForEachSetOfTowns (after loop): {listAverageForEachSetOfTowns}')
-            return round(statistics.pstdev(listAverageForEachSetOfTowns),4)
+            return round(statistics.stdev(listAverageForEachSetOfTowns),4)
     def StartBenchmarkProcess(self,seed):
         benchmarkProcess = None
         if self.agent=="ppo":
@@ -92,19 +111,22 @@ class BenchmarkConfiguration:
         elif self.agent=="roaming":
             benchmarkProcess = subprocess.Popen([f'python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent={self.agent} actors.hero.agent={self.agent} +agent/roaming/obs_configs=birdview wb_group=\"{self.wb_group}\" wb_notes="{self.wb_notes}" test_suites={self.test_suites} seed={seed} +wb_sub_group={self.wb_sub_group} no_rendering=true'],shell=True)
         return benchmarkProcess
-    def StartBenchmarkProcessAcross_test_suites(self,town,seed):
-        benchmarkProcess = None
-        if self.test_suites==f'cc_test_{town}':
-            cmd = f'''python -u benchmark_NeilBranch0.py resume=true log_video=true \
-  wb_project=iccv21-roach-benchmark \
-  agent={self.agent} actors.hero.agent={self.agent} \
-  agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} \
-  'wb_group="{self.wb_group}"' \
-  'wb_notes="{self.wb_notes}"' \
-  test_suites={self.test_suites} \
-  seed={seed} \
-  +wb_sub_group={self.wb_sub_group} \
-  no_rendering=false'''
+#     def StartBenchmarkProcessAcross_test_suites(self,seed):
+#         benchmarkProcess = None
+#         if self.test_suites==f'cc_test_{town}':
+#             cmd = f'''python -u benchmark_NeilBranch0.py resume=true log_video=true \
+#   wb_project=iccv21-roach-benchmark \
+#   agent={self.agent} actors.hero.agent={self.agent} \
+#   agent.cilrs.wb_run_path={self.agent_ppo_wb_run_path} \
+#   'wb_group="{self.wb_group}"' \
+#   'wb_notes="{self.wb_notes}"' \
+#   test_suites={self.test_suites} \
+#   seed={seed} \
+#   +wb_sub_group={self.wb_sub_group} \
+#   no_rendering=false'''
+#             print(f'cilrs cmd: {cmd}')
+#             benchmarkProcess = subprocess.Popen([cmd],shell=True)
+#             return benchmarkProcess
     def BenchmarkAcrossSeed(self):
         for seed in [2021,2022,2023]:
             DeleteScoreFiles()
@@ -147,7 +169,7 @@ class BenchmarkConfiguration:
                     self.test_suites = f'{sBase_test_suites}_{town}'
                     self.wb_sub_group = f'{self.test_suites}-{seed}'
                     print(f'benchmark configuration: {self.wb_group} {self.wb_sub_group}')
-                    benchmarkProcess = self.StartBenchmarkProcessAcross_test_suites(town,seed)
+                    benchmarkProcess = self.StartBenchmarkProcess(seed)
                     benchmarkProcess.wait()
                     if CheckScoreFilesExist():
                         with open("score_composed.txt","r") as f:
@@ -226,28 +248,28 @@ def GenerateBenchmarkConfigurations0():
     return benchmarkConfigurations
 def GenerateBenchmarkConfigurations():
     benchmarkConfigurations = {}
-    for environment in ["tt","tn","nt","nn"]:
-    # for environment in ["tt"]:
-        # PPO+exp: NCd
-        PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
-        benchmarkConfigurations[str(f'PPO_exp_NCd_{environment}')] = PPO_exp_NCd
-        # '''
-        # PPO+beta: NCd
-        PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
-        benchmarkConfigurations[str(f'PPO_beta_NCd_{environment}')] = PPO_beta_NCd
-        # Roach: NCd
-        Roach_NCd = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0")
-        benchmarkConfigurations[str(f'Roach_NCd_{environment}')] = Roach_NCd
-        # Autopilot: NCd
-        Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
-        benchmarkConfigurations[str(f'Autopilot_NCd_{environment}')] = Autopilot_NCd
-        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
-        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
-        benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
-        L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
-        benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
-        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
-        pass
+    # for environment in ["tt","tn","nt","nn"]:
+    # # for environment in ["tt"]:
+    #     # PPO+exp: NCd
+    #     PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
+    #     benchmarkConfigurations[str(f'PPO_exp_NCd_{environment}')] = PPO_exp_NCd
+    #     # '''
+    #     # PPO+beta: NCd
+    #     PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
+    #     benchmarkConfigurations[str(f'PPO_beta_NCd_{environment}')] = PPO_beta_NCd
+    #     # Roach: NCd
+    #     Roach_NCd = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0")
+    #     benchmarkConfigurations[str(f'Roach_NCd_{environment}')] = Roach_NCd
+    #     # Autopilot: NCd
+    #     Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
+    #     benchmarkConfigurations[str(f'Autopilot_NCd_{environment}')] = Autopilot_NCd
+    #     # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
+    #     L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+    #     benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
+    #     L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
+    #     benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
+    #     # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
+    #     pass
     # 10/23/2022 11:09:27 AM: Neil added LB-all: start
     PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih",bLB_all=True)
     benchmarkConfigurations[str('PPO_exp_LB_all')] = PPO_exp_LB_all

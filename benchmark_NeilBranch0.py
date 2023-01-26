@@ -211,11 +211,11 @@ def main(cfg: DictConfig):
 
         env.set_task_idx(task_idx)
         # 1/12/2023 6:06 PM: filter route_id: start
-        route_id = int(env.task['route_id'])
-        if route_id == 0 or route_id == 1:
-            pass
-        else:
-            continue
+        # route_id = int(env.task['route_id'])
+        # if route_id == 0 or route_id == 1:
+        #     pass
+        # else:
+        #     continue
         # 1/12/2023 6:06 PM: filter route_id: end
         run_name = f"{env.task['weather']}_{env.task['route_id']:02d}"
 
@@ -266,8 +266,18 @@ def main(cfg: DictConfig):
         if bVerbose:
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
 
+        # 1/20/2023 1:07 PM: Neil debug: start
+        # print(f'before write to ep_state_buffer_json')
+        # 1/20/2023 1:07 PM: Neil debug: start
         with open(ep_state_buffer_json, 'w') as fd:
             json.dump(ep_stat_buffer, fd, indent=4, sort_keys=True)
+            # 1/20/2023 10:13:33 AM: write ep_state_buffer_json: start
+            # print(f'wrote {ep_stat_buffer} to ')
+            # 1/20/2023 10:13:33 AM: write ep_state_buffer_json: end
+        # 1/20/2023 1:08 PM: Neil debug: start
+        # print(f'after write to ep_state_buffer_json')
+        # 1/20/2023 1:08 PM: Neil debug: end
+        
         # clean up
         list_render.clear()
         ep_stat_dict = None
@@ -277,8 +287,8 @@ def main(cfg: DictConfig):
             frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
         # 9/26/2022 11:58:39 PM: Neil added: start
         # if task_idx >= ckpt_task_idx:
-        # if task_idx == ckpt_task_idx+1:
-        #     break 
+        if task_idx == ckpt_task_idx+1:
+            break 
         # 9/26/2022 11:58:39 PM: Neil added: end
     
     if bVerbose:
@@ -295,6 +305,12 @@ def main(cfg: DictConfig):
     # log after suite is completed
     table_data = []
     ep_stat_keys = None
+    # 1/20/2023 9:52:29 AM: Neil check ep_state_buffer_json: start
+    # if os.path.isfile(ep_state_buffer_json):
+    #     print('ep_state_buffer_json FILE EXISTS')
+    # else:
+    #     print('ep_state_buffer_json FILE MISSING')
+    # 1/20/2023 9:52:29 AM: Neil check ep_state_buffer_json: end
     for actor_id, list_ep_stat in json.load(open(ep_state_buffer_json, 'r')).items():
         avg_ep_stat = WandbCallback.get_avg_ep_stat(list_ep_stat)
         data = [suite_name, actor_id, str(len(list_ep_stat))]

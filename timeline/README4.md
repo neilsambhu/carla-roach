@@ -2645,3 +2645,7 @@ pip3 install --user distro &&
 pip install --user wheel &&
 pip3 install --user wheel auditwheel
 ```
+2/1/2023 9:14:59 PM:
+```
+git clone --depth 1 -b carla https://github.com/CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
+```

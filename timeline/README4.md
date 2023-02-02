@@ -2691,3 +2691,7 @@ chmod -R 777 /opt/carla-simulator &&
 useradd nsambhu &&
 passwd nsambhu
 ```
+2/2/2023 1:18:59 PM:
+```
+su nsambhu
+```

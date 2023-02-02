@@ -2614,7 +2614,7 @@ grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --excl
 # Podman Ubuntu 18.04
 2/1/2023 8:24:43 PM: made podman-carla/0ubuntu.sh file. Use Ctrl+P+Q to detach from container.
 ## Commands to install CARLA 0.9.13 within the Ubuntu container
-2/1/2023 8:52:21 PM:
+~~2/1/2023 8:52:21 PM:
 ```
 apt-get update &&
 apt-get install wget software-properties-common &&
@@ -2648,4 +2648,9 @@ pip3 install --user wheel auditwheel
 2/1/2023 9:14:59 PM:
 ```
 git clone --depth 1 -b carla https://github.com/CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
+```
+~~
+2/2/2023 11:01:15 AM: 
+```
+pip3 install --upgrade pip
 ```

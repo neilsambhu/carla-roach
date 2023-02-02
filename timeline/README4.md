@@ -2704,3 +2704,7 @@ su nsambhu
 ```
 podman save docker.io/library/ubuntu:18.04 > mycontainer.tar
 ```
+2/2/2023 1:27:24 PM:
+```
+docker load < mycontainer.tar
+```

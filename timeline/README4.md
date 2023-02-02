@@ -2686,3 +2686,8 @@ cd .. &&
 chmod -R 777 /opt/carla-simulator &&
 ./ImportAssets.sh
 ```
+2/2/2023 1:15:17 PM:
+```
+useradd nsambhu &&
+passwd nsambhu
+```

@@ -2627,3 +2627,8 @@ apt-get update
 ```
 apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git
 ```
+2/1/2023 9:09:04 PM:
+```
+update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &&
+update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180
+```

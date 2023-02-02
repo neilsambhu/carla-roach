@@ -2634,10 +2634,5 @@ update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180
 ```
 2/1/2023 9:10:14 PM:
 ```
-pip install --user setuptools &&
-pip3 install --user -Iv setuptools==47.3.1 &&
-pip install --user distro &&
-pip3 install --user distro &&
-pip install --user wheel &&
-pip3 install --user wheel auditwheel
+pip3 install --upgrade pip
 ```

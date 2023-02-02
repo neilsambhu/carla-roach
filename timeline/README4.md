@@ -2695,3 +2695,7 @@ passwd nsambhu
 ```
 su nsambhu
 ```
+2/2/2023 1:21:07 PM:
+```
+./CarlaUE4.sh
+```

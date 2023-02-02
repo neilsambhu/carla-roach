@@ -2616,10 +2616,10 @@ grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --excl
 ## Commands to install CARLA 0.9.13 within the Ubuntu container
 2/1/2023 8:52:21 PM:
 ```
-sudo apt-get update &&
-sudo apt-get install wget software-properties-common &&
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test &&
+apt-get update &&
+apt-get install wget software-properties-common &&
+add-apt-repository ppa:ubuntu-toolchain-r/test &&
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - &&
-sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &&
-sudo apt-get update
+apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &&
+apt-get update
 ```

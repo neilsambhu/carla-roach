@@ -2667,6 +2667,6 @@ pip3 install --user pygame numpy
 ```
 2/2/2023 11:21:32 AM:
 ```
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9 &&
 add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
 ```

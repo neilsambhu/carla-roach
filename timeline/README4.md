@@ -2682,6 +2682,5 @@ curl -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/AdditionalMaps_0
 ```
 2/2/2023 12:52:00 PM:
 ```
-cd ../.. &&
 chmod -R 777 /opt/carla-simulator
 ```

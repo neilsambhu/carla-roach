@@ -2613,7 +2613,7 @@ grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --excl
 12/5/2022 10:28:50 PM: create regex to filter vehicles from list of objects  
 # Podman Ubuntu 18.04
 2/1/2023 8:24:43 PM: made podman-carla/0ubuntu.sh file. Use Ctrl+P+Q to detach from container.
-## Commands to install CARLA 0.9.13 within the Ubuntu container
+## Attempt 1: (failed) Commands to install CARLA 0.9.13 within the Ubuntu container
 ~~2/1/2023 8:52:21 PM:
 ```
 apt-get update &&
@@ -2650,6 +2650,7 @@ pip3 install --user wheel auditwheel
 git clone --depth 1 -b carla https://github.com/CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
 ```
 ~~
+## Attempt 2: Commands to install CARLA 0.9.13 within the Ubuntu container
 2/2/2023 11:01:15 AM: 
 ```
 pip3 install --upgrade pip

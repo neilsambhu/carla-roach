@@ -2611,3 +2611,5 @@ port: 2000
 grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "load_world(">outgrep.txt
 ```
 12/5/2022 10:28:50 PM: create regex to filter vehicles from list of objects  
+# Podman Ubuntu 18.04
+2/1/2023 8:24:43 PM: made podman-carla/0ubuntu.sh file. Use Ctrl+P+Q to detach from container.

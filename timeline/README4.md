@@ -2619,7 +2619,7 @@ grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --excl
 apt-get update &&
 apt-get install wget software-properties-common &&
 add-apt-repository ppa:ubuntu-toolchain-r/test &&
-wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - &&
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add - &&
 apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &&
 apt-get update
 ```

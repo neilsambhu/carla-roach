@@ -2673,6 +2673,6 @@ add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -
 2/2/2023 11:23:54 AM:
 ```
 apt-get update &&
-apt-get install carla-simulator=0.9.10-1 &&
+apt-get install carla-simulator=0.9.13-1 &&
 cd /opt/carla-simulator
 ```

@@ -2665,3 +2665,8 @@ update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180
 pip3 install --upgrade pip &&
 pip3 install --user pygame numpy
 ```
+2/2/2023 11:21:32 AM:
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
+sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
+```

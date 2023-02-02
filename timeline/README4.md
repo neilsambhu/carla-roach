@@ -2699,3 +2699,8 @@ su nsambhu
 ```
 ./CarlaUE4.sh
 ```
+## Save podman to hard disk
+2/2/2023 1:24:42 PM:
+```
+podman save docker.io/library/ubuntu:18.04 > mycontainer.tar
+```

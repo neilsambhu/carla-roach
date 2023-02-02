@@ -2686,3 +2686,7 @@ cd .. &&
 chmod -R 777 /opt/carla-simulator &&
 ./ImportAssets.sh
 ```
+2/2/2023 1:04:19 PM:
+```
+pip3 install carla
+```

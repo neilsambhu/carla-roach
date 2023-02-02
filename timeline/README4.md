@@ -2674,5 +2674,9 @@ add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -
 ```
 apt-get update &&
 apt-get install carla-simulator=0.9.13 &&
-cd /opt/carla-simulator
+cd /opt/carla-simulator/Import
+```
+2/2/2023 11:49:46 AM:
+```
+curl -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/AdditionalMaps_0.9.13.tar.gz -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13.tar.gz -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13_RSS.tar.gz
 ```

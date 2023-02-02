@@ -2651,7 +2651,17 @@ git clone --depth 1 -b carla https://github.com/CarlaUnreal/UnrealEngine.git ~/U
 ```
 ~~
 ## Attempt 2: Commands to install CARLA 0.9.13 within the Ubuntu container
-2/2/2023 11:01:15 AM: 
+2/2/2023 11:15:51 AM:
 ```
-pip3 install --upgrade pip
+apt-get update &&
+apt-get install wget software-properties-common &&
+add-apt-repository ppa:ubuntu-toolchain-r/test &&
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add - &&
+apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &&
+apt-get update &&
+apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git &&
+update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &&
+update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180 &&
+pip3 install --upgrade pip &&
+pip3 install --user pygame numpy
 ```

@@ -2710,5 +2710,5 @@ podman stop mycontainer
 ```
 2/2/2023 1:32:39 PM:
 ```
-docker load < mycontainer.tar
+podman load < mycontainer.tar
 ```

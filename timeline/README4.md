@@ -2672,7 +2672,7 @@ add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -
 ```
 2/2/2023 11:23:54 AM:
 ```
-apt-get update # Update the Debian package index
-apt-get install carla-simulator # Install the latest CARLA version, or update the current installation
-cd /opt/carla-simulator # Open the folder where CARLA is installed
+apt-get update &&
+apt-get install carla-simulator &&
+cd /opt/carla-simulator
 ```

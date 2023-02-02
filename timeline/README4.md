@@ -2623,3 +2623,7 @@ wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add - &&
 apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &&
 apt-get update
 ```
+2/1/2023 9:05:53 PM:
+```
+apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git
+```

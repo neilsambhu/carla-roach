@@ -2680,3 +2680,8 @@ cd /opt/carla-simulator/Import
 ```
 curl -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/AdditionalMaps_0.9.13.tar.gz -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13.tar.gz -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13_RSS.tar.gz
 ```
+2/2/2023 12:52:00 PM:
+```
+cd ../.. &&
+chmod -R 777 /opt/carla-simulator
+```

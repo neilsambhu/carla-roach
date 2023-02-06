@@ -2715,9 +2715,17 @@ podman load < mycontainer.tar
 2/3/2023 5:16:59 PM: TODO: find out how to save a podman container to hard disk, reboot machine, and load container from hard disk.  
 ## Save podman image to hard disk (full process)
 2/6/2023 10:56:53 AM:  
+list images
+```
+podman images
+```
 remove old image  
 ```
-podman rmi <image id>
+podman rmi --force <image id>
+```
+list images
+```
+podman images
 ```
 2/6/2023 10:35:25 AM:  
 run Ubuntu script

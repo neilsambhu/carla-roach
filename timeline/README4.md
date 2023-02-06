@@ -2712,4 +2712,38 @@ podman stop mycontainer
 ```
 podman load < mycontainer.tar
 ```
-2/3/2023 5:16:59 PM: TODO: find out how to save a podman container to hard disk, reboot machine, and load container from hard disk.
+2/3/2023 5:16:59 PM: TODO: find out how to save a podman container to hard disk, reboot machine, and load container from hard disk.  
+2/6/2023 10:35:25 AM:
+run Ubuntu script
+```
+./0ubuntu.sh
+```
+modify Ubuntu contianer
+```
+touch ~/example.txt
+```
+detach from container: Ctrl+P+Q  
+export container
+```
+podman export mycontainer > mycontainer.tar
+```
+list images
+```
+podman images
+```
+remove images
+```
+podman image rm <image id>
+```
+list images
+```
+podman images
+```
+import container
+```
+podman import mycontainer.tar
+```
+list containers
+```
+podman ps
+```

@@ -2745,9 +2745,9 @@ list images
 ```
 podman images
 ```
-remove images
+remove image  
 ```
-podman image rm <image id>
+podman rmi --force <image id>
 ```
 list images
 ```

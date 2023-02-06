@@ -2769,3 +2769,5 @@ list containers
 ```
 podman ps
 ```
+## Save podman image to hard disk (full process) 2
+https://www.geeksforgeeks.org/backing-up-a-docker-container/

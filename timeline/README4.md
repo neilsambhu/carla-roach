@@ -2611,3 +2611,168 @@ port: 2000
 grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "load_world(">outgrep.txt
 ```
 12/5/2022 10:28:50 PM: create regex to filter vehicles from list of objects  
+# Podman Ubuntu 18.04
+2/1/2023 8:24:43 PM: made podman-carla/0ubuntu.sh file. Use Ctrl+P+Q to detach from container.
+## Attempt 1: (failed) Commands to install CARLA 0.9.13 within the Ubuntu container
+~~2/1/2023 8:52:21 PM:
+```
+apt-get update &&
+apt-get install wget software-properties-common &&
+add-apt-repository ppa:ubuntu-toolchain-r/test &&
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add - &&
+apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &&
+apt-get update
+```
+2/1/2023 9:05:53 PM:
+```
+apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git
+```
+2/1/2023 9:09:04 PM:
+```
+update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &&
+update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180
+```
+2/1/2023 9:10:14 PM:
+```
+pip3 install --upgrade pip
+```
+2/1/2023 9:12:06 PM:
+```
+pip install --user setuptools &&
+pip3 install --user -Iv setuptools==47.3.1 &&
+pip install --user distro &&
+pip3 install --user distro &&
+pip install --user wheel &&
+pip3 install --user wheel auditwheel
+```
+2/1/2023 9:14:59 PM:
+```
+git clone --depth 1 -b carla https://github.com/CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
+```
+~~
+## Attempt 2: Commands to install CARLA 0.9.13 within the Ubuntu container
+2/2/2023 11:15:51 AM:
+```
+apt-get update &&
+apt-get install wget software-properties-common &&
+add-apt-repository ppa:ubuntu-toolchain-r/test &&
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add - &&
+apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &&
+apt-get update &&
+apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git &&
+update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &&
+update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180 &&
+pip3 install --upgrade pip &&
+pip3 install --user pygame numpy
+```
+2/2/2023 11:21:32 AM:
+```
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9 &&
+add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
+```
+2/2/2023 11:23:54 AM:
+```
+apt-get update &&
+apt-get install carla-simulator=0.9.13 &&
+cd /opt/carla-simulator/Import
+```
+2/2/2023 11:49:46 AM:
+```
+curl -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/AdditionalMaps_0.9.13.tar.gz -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13.tar.gz -O https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13_RSS.tar.gz
+```
+2/2/2023 12:52:00 PM:
+```
+cd .. &&
+chmod -R 777 /opt/carla-simulator &&
+./ImportAssets.sh
+```
+2/2/2023 1:15:17 PM:
+```
+useradd nsambhu &&
+passwd nsambhu
+```
+2/2/2023 1:18:59 PM:
+```
+su nsambhu
+```
+2/2/2023 1:21:07 PM:
+```
+./CarlaUE4.sh
+```
+## Save podman to hard disk
+2/2/2023 1:24:42 PM:
+```
+podman save docker.io/library/ubuntu:18.04 > mycontainer.tar
+```
+2/2/2023 1:32:27 PM:
+```
+podman stop mycontainer
+```
+2/2/2023 1:32:39 PM:
+```
+podman load < mycontainer.tar
+```
+2/3/2023 5:16:59 PM: TODO: find out how to save a podman container to hard disk, reboot machine, and load container from hard disk.  
+## Save podman image to hard disk (full process)
+2/6/2023 10:56:53 AM:  
+list images
+```
+podman images
+```
+remove old image  
+```
+podman rmi --force <image id>
+```
+list images
+```
+podman images
+```
+2/6/2023 10:35:25 AM:  
+run Ubuntu script
+```
+./0ubuntu.sh
+```
+modify Ubuntu contianer
+```
+touch ~/example.txt
+```
+detach from container: Ctrl+P+Q  
+export container
+```
+podman export mycontainer > mycontainer.tar
+```
+list images
+```
+podman images
+```
+remove image  
+```
+podman rmi --force <image id>
+```
+list images
+```
+podman images
+```
+import container
+```
+podman import mycontainer.tar
+```
+list images
+```
+podman images
+```
+start Ubuntu container
+```
+podman start <image id>
+```
+list containers
+```
+podman ps
+```
+## Save podman image to hard disk (full process) 2
+https://www.geeksforgeeks.org/backing-up-a-docker-container/
+## Save podman image to hard disk (full process) 3
+2/6/2023 3:59:23 PM: TODO: (1) run docker ubuntu 18.04 and (2) touch ~/example.txt  
+~## Dockerfile~  
+~2/6/2023 6:07:27 PM: TODO: find ubuntu dockerfile with readme~  
+2/7/2023 11:58:37 AM: TODO: write ~/example.txt file to container; make sure file exists through desktop reboot

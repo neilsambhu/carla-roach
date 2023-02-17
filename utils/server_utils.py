@@ -93,6 +93,9 @@ class CarlaServerManager():
             # 9/16/2022: Neil added: start
             cmd = f'podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES={cfg["gpu"]} --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # 9/16/2022: Neil added: end
+            # 2/1/2023 12:37:10 PM: Neil added: start
+            # cmd = f'podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES={cfg["gpu"]} --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.14 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            # 2/1/2023 12:37:10 PM: Neil added: end
             # 11/29/2022 5:44:04 PM: Neil added podman GUI: start
             # cmd = f'xhost local:root&&podman run --privileged --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]}'
             # 11/29/2022 5:44:04 PM: Neil added podman GUI: end

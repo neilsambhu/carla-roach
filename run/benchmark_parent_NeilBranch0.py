@@ -139,7 +139,7 @@ class BenchmarkConfiguration:
                 # import manual_control
                 # manual_control.main()
                 # 12/3/2022 10:08:37 PM: Neil add call to visualize ego vehicle: end
-                benchmarkProcess.wait()
+                benchmarkProcess.wait();import sys;sys.exit();
                 if CheckScoreFilesExist():
                     with open("score_composed.txt","r") as f:
                         self.score_composed.append(float(f.read()))
@@ -248,12 +248,12 @@ def GenerateBenchmarkConfigurations0():
     return benchmarkConfigurations
 def GenerateBenchmarkConfigurations():
     benchmarkConfigurations = {}
-    for environment in ["tt","tn","nt","nn"]:
-    # for environment in ["tt"]:
+    # for environment in ["tt","tn","nt","nn"]:
+    for environment in ["tt"]:
         # PPO+exp: NCd
         PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
         benchmarkConfigurations[str(f'PPO_exp_NCd_{environment}')] = PPO_exp_NCd
-        # '''
+        '''
         # PPO+beta: NCd
         PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
         benchmarkConfigurations[str(f'PPO_beta_NCd_{environment}')] = PPO_beta_NCd

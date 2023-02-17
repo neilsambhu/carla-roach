@@ -15,7 +15,7 @@ from stable_baselines3.common.utils import set_random_seed
 logger = logging.getLogger(__name__)
 
 from inspect import currentframe, getframeinfo
-bVerbose = False
+bVerbose = True
 
 class CarlaMultiAgentEnv(gym.Env):
     def __init__(self, carla_map, host, port, seed, no_rendering,
@@ -89,7 +89,7 @@ class CarlaMultiAgentEnv(gym.Env):
         if bVerbose:
             # print("self._task['ego_vehicles']",self._task['ego_vehicles'])
             # print("self._task['ego_vehicles']['actors']",self._task['ego_vehicles']['actors']);quit();
-            print(f'self._world.get_names_of_all_objects(): {self._world.get_names_of_all_objects()}')
+            # print(f'self._world.get_names_of_all_objects(): {self._world.get_names_of_all_objects()}')
             pass
         ev_spawn_locations = self._ev_handler.reset(self._task['ego_vehicles']) # 4/22/2022 11:09:04 AM: error line
         logger.debug("_ev_handler reset done!!")
@@ -111,7 +111,7 @@ class CarlaMultiAgentEnv(gym.Env):
         logger.debug("_om_handler reset done!!")
         
         # 12/5/2022 4:59:47 PM: Neil added adversarial textures: start
-        # self.adversarial_textures(bVerbose)
+        self.adversarial_textures(bVerbose)
         # 12/5/2022 4:59:47 PM: Neil added adversarial textures: end
 
         self._world.tick()
@@ -167,19 +167,29 @@ class CarlaMultiAgentEnv(gym.Env):
     def adversarial_textures_on_object(self, target_object):
         print('Altering texture for object: ' + target_object)
         # Modify its texture 
-        import cv2
-        image = cv2.imread('../../../textures/colorful_cat.jpeg')
+        # import cv2
+        # image = cv2.imread('../../../textures/colorful_cat.jpeg')
+        # image = cv2.imread('../../../textures/M_Tesla_Bodywork_orm2.TGA')
         # print(f'image.shape: {image.shape}')
-        height,width,_ = image.shape
+        # height,width,_ = image.shape
+        from PIL import Image
+        image = Image.open('../../../textures/M_Tesla_Bodywork_orm4.TGA')
+        height = image.size[1]
+        width = image.size[0]
+        print(f'image.size: {image.size}')
         texture = carla.TextureColor(width,height)
-        for x in range(0,len(image[0])):
-            for y in range(0,len(image)):
-                color = image[y][x]
+        # for x in range(0,len(image[0])):
+        #     for y in range(0,len(image)):
+        for x in range(0,width):
+            for y in range(0,height):
+                # color = image[y][x]
+                color = image.getpixel((x,y))
                 r = int(color[0])
                 g = int(color[1])
                 b = int(color[2])
                 # a = int(color[3])
                 a = int(0)
+                a = 255
                 # texture.set(x, height - y - 1, carla.Color(r,g,b,a))
                 texture.set(x, y, carla.Color(r,g,b,a)) # 12/14/2022 9:52:20 PM: I think this will be upside down
         self._world.apply_color_texture_to_object(target_object, carla.MaterialParameter.Diffuse, texture)
@@ -189,14 +199,16 @@ class CarlaMultiAgentEnv(gym.Env):
         reVehicle = re.compile('Vehicle_Car_.*')
         reVh = re.compile('Vh_.*')
         reBP_C = re.compile('BP_.*_C_.*')
+        reBP_Tesla = re.compile('BP_TeslaM3_C_.*')
         for object_name in object_names:
-            if (reVehicle.match(object_name) or reVh.match(object_name) or reBP_C.match(object_name)):
+            # if (reVehicle.match(object_name) or reVh.match(object_name) or reBP_C.match(object_name)):
+            if reBP_Tesla.match(object_name):
                 list_output_object_names.append(object_name)
         return list_output_object_names
     def adversarial_textures(self, bVerbose):
         # Get names of all available objects
         object_names = self._world.get_names_of_all_objects()
-        # object_names = self.filter_carla_object_names(object_names)
+        object_names = self.filter_carla_object_names(object_names)
         if bVerbose:
             import os;print(f'os.getcwd(): {os.getcwd()}')
             print(f'len(object_names): {len(object_names)}')

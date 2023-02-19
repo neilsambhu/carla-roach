@@ -2776,3 +2776,5 @@ https://www.geeksforgeeks.org/backing-up-a-docker-container/
 ~## Dockerfile~  
 ~2/6/2023 6:07:27 PM: TODO: find ubuntu dockerfile with readme~  
 2/7/2023 11:58:37 AM: TODO: write ~/example.txt file to container; make sure file exists through desktop reboot
+# Podman Ubuntu 18.04: carla compiled from source
+2/19/2023 3:08:23 PM: https://carla.readthedocs.io/en/0.9.13/build_linux/ following these instructions to create Dockerfile in carla-roach/podman-carla/4ubuntu-carla-source  

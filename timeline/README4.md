@@ -2825,3 +2825,4 @@ W: GPG error: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu180
 E: The repository 'https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  InRelease' is not signed.
 Error: error building at STEP "RUN apt-get update": error while running runtime: exit status 100
 ```
+2/20/2023 3:40:29 PM: need to change python 3.6 to python 3.7  

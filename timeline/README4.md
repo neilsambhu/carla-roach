@@ -2778,3 +2778,58 @@ https://www.geeksforgeeks.org/backing-up-a-docker-container/
 2/7/2023 11:58:37 AM: TODO: write ~/example.txt file to container; make sure file exists through desktop reboot
 # Podman Ubuntu 18.04: carla compiled from source
 2/19/2023 3:08:23 PM: https://carla.readthedocs.io/en/0.9.13/build_linux/ following these instructions to create Dockerfile in carla-roach/podman-carla/4ubuntu-carla-source  
+2/20/2023 2:50:25 PM: 
+```
+STEP 3/3: RUN apt-get update
+Get:1 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  InRelease [1581 B]
+Err:1 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY A4B469963BF863CC
+Ign:2 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64  InRelease
+Get:3 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64  Release [564 B]
+Get:4 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64  Release.gpg [833 B]
+Get:5 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64  Packages [73.8 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.8 kB]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3190 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [83.3 kB]
+Get:12 http://security.ubuntu.com/ubuntu bionic-security/universe i386 Packages [1330 kB]
+Get:13 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1595 kB]
+Get:14 http://security.ubuntu.com/ubuntu bionic-security/main i386 Packages [1637 kB]
+Get:15 http://security.ubuntu.com/ubuntu bionic-security/multiverse i386 Packages [6602 B]
+Get:16 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1426 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic/multiverse i386 Packages [177 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic/restricted i386 Packages [13.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:20 http://security.ubuntu.com/ubuntu bionic-security/restricted i386 Packages [38.8 kB]
+Get:21 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:22 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:23 http://archive.ubuntu.com/ubuntu bionic/main i386 Packages [1328 kB]
+Get:24 http://archive.ubuntu.com/ubuntu bionic/universe i386 Packages [11.3 MB]
+Get:25 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:26 http://archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [2011 kB]
+Get:27 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
+Get:28 http://archive.ubuntu.com/ubuntu bionic-updates/universe i386 Packages [2076 kB]
+Get:29 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2369 kB]
+Get:30 http://archive.ubuntu.com/ubuntu bionic-updates/restricted i386 Packages [48.8 kB]
+Get:31 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse i386 Packages [12.7 kB]
+Get:32 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1466 kB]
+Get:33 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3610 kB]
+Get:34 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [64.0 kB]
+Get:35 http://archive.ubuntu.com/ubuntu bionic-backports/main i386 Packages [64.1 kB]
+Get:36 http://archive.ubuntu.com/ubuntu bionic-backports/universe i386 Packages [20.6 kB]
+Get:37 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [20.5 kB]
+Reading package lists...
+W: GPG error: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY A4B469963BF863CC
+E: The repository 'https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  InRelease' is not signed.
+Error: error building at STEP "RUN apt-get update": error while running runtime: exit status 100
+```
+2/20/2023 3:40:29 PM: need to change python 3.6 to python 3.7  
+2/20/2023 4:08:26 PM: 
+```
+STEP 16/20: RUN pip3 install --user -Iv setuptools==47.3.1
+Using pip 21.3.1 from /usr/local/lib/python3.6/dist-packages/pip (python 3.6)
+  Link requires a different Python (3.6.9 not in: '>=3.7'): https://files.pythonhosted.org/packages/4f/27/b51cc9cebfd53b168b8a187c844e7a67dc523dda76be9b46d532815df284/setuptools-59.7.0-py3-none-any.whl#sha256=0c8d5c36aea600828875ab751c03e2c52624edc8382a88a127e31bd8d860e34b (from https://pypi.org/simple/setuptools/) (requires-python:>=3.7)
+```
+2/20/2023 4:39:12 PM: https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-7-on-ubuntu-18-10/  how to change python 3.6 to python 3.7.  

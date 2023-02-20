@@ -2826,3 +2826,9 @@ E: The repository 'https://developer.download.nvidia.com/compute/cuda/repos/ubun
 Error: error building at STEP "RUN apt-get update": error while running runtime: exit status 100
 ```
 2/20/2023 3:40:29 PM: need to change python 3.6 to python 3.7  
+2/20/2023 4:08:26 PM: 
+```
+STEP 16/20: RUN pip3 install --user -Iv setuptools==47.3.1
+Using pip 21.3.1 from /usr/local/lib/python3.6/dist-packages/pip (python 3.6)
+  Link requires a different Python (3.6.9 not in: '>=3.7'): https://files.pythonhosted.org/packages/4f/27/b51cc9cebfd53b168b8a187c844e7a67dc523dda76be9b46d532815df284/setuptools-59.7.0-py3-none-any.whl#sha256=0c8d5c36aea600828875ab751c03e2c52624edc8382a88a127e31bd8d860e34b (from https://pypi.org/simple/setuptools/) (requires-python:>=3.7)
+```

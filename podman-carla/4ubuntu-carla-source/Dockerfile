@@ -1,6 +1,40 @@
 FROM nvidia/vulkan:1.1.121-cuda-10.1--ubuntu18.04
 
-# ARG DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
+RUN apt-get update
+RUN apt-get install -y wget software-properties-common
+# 2/20/2023 3:52:11 PM: debug python 3.7: start
+# RUN apt-cache search python3
+RUN python3 -V
+# 2/20/2023 3:52:11 PM: debug python 3.7: end
+RUN add-apt-repository ppa:ubuntu-toolchain-r/test
+RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add -
+RUN apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main"
+RUN apt-get update
+
+# 2/20/2023 3:27:57 PM: Debug: start
+RUN apt-get install -y python3.7
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
+RUN update-alternatives --config python3
+RUN python3 -V
+# 2/20/2023 3:27:57 PM: Debug: end
+RUN apt-get install -y build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git
+RUN update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180
+RUN update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180
+
+RUN pip3 -V
+
+RUN pip3 install --upgrade pip
+
+RUN pip install --user setuptools
+RUN pip3 install --user -Iv setuptools==47.3.1
+RUN pip install --user distro
+RUN pip3 install --user distro
+RUN pip install --user wheel
+RUN pip3 install --user wheel auditwheel
 
 # RUN apt-key adv --fetch-keys "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub" \
 #     && apt-get update \

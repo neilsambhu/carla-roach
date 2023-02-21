@@ -2833,3 +2833,4 @@ Using pip 21.3.1 from /usr/local/lib/python3.6/dist-packages/pip (python 3.6)
   Link requires a different Python (3.6.9 not in: '>=3.7'): https://files.pythonhosted.org/packages/4f/27/b51cc9cebfd53b168b8a187c844e7a67dc523dda76be9b46d532815df284/setuptools-59.7.0-py3-none-any.whl#sha256=0c8d5c36aea600828875ab751c03e2c52624edc8382a88a127e31bd8d860e34b (from https://pypi.org/simple/setuptools/) (requires-python:>=3.7)
 ```
 2/20/2023 4:39:12 PM: https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-7-on-ubuntu-18-10/  how to change python 3.6 to python 3.7.  
+2/21/2023 12:35:32 PM: TODO: github SSH

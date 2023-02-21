@@ -6,7 +6,8 @@ TAR_NAME="ubuntu-jennifer-archive.tar"
 # cleanup
 podman kill --signal KILL -a && \
 podman container cleanup --all --rm && \
-podman rmi -f docker.io/nvidia/$IMAGE_NAME
+podman rmi -f docker.io/nvidia/$IMAGE_NAME && \
+podman image prune --filter="dangling=true" -f
 
 # 2/6/2023 4:18:05 PM: call Dockerfile
 podman build -t $IMAGE_NAME .

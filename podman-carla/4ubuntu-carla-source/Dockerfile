@@ -2,6 +2,14 @@ FROM nvidia/vulkan:1.1.121-cuda-10.1--ubuntu18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+# 2/21/2023 4:08:06 PM: file system debug: start
+# RUN pwd
+# RUN ls
+# WORKDIR /bin
+# RUN pwd
+# RUN ls
+# 2/21/2023 4:08:06 PM: file system debug: end
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
 RUN apt-get update
 RUN apt-get install -y wget software-properties-common
@@ -35,6 +43,32 @@ RUN pip install --user distro
 RUN pip3 install --user distro
 RUN pip install --user wheel
 RUN pip3 install --user wheel auditwheel
+
+# 2/21/2023 12:55:25 PM: git debug: start
+# RUN git config --global user.name "Neil Sambhu"
+# RUN git config --global user.name
+# RUN git config --global user.email "neilsambhu@gmail.com"
+# RUN git config --global user.email
+# RUN eval "$(ssh-agent -s)"
+# RUN ls ~/.ssh/
+# COPY id_rsa 
+# 2/21/2023 12:55:25 PM: git debug: start
+
+# RUN git clone --depth 1 -b carla https://github.com/CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
+
+# 2/21/2023 3:41:31 PM: git replacement line: start
+# RUN pwd
+# WORKDIR $HOME
+# RUN pwd
+# RUN ls
+COPY ./UnrealEngine_4.26 $HOME/UnrealEngine_4.26
+# RUN ls
+# RUN ls /UnrealEngine_4.26
+# 2/21/2023 3:41:31 PM: git replacement line: end
+
+WORKDIR $HOME/UnrealEngine_4.26
+RUN ./Setup.sh && ./GenerateProjectFiles.sh && make
+RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux && ./UE4Editor
 
 # RUN apt-key adv --fetch-keys "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub" \
 #     && apt-get update \

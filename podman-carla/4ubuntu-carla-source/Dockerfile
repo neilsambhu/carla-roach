@@ -67,7 +67,9 @@ COPY ./UnrealEngine_4.26 $HOME/UnrealEngine_4.26
 # 2/21/2023 3:41:31 PM: git replacement line: end
 
 WORKDIR $HOME/UnrealEngine_4.26
-RUN ./Setup.sh && ./GenerateProjectFiles.sh && make
+RUN ./Setup.sh 
+RUN ./GenerateProjectFiles.sh 
+RUN make
 RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux && ./UE4Editor
 
 # RUN apt-key adv --fetch-keys "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub" \

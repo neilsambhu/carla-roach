@@ -2834,3 +2834,5 @@ Using pip 21.3.1 from /usr/local/lib/python3.6/dist-packages/pip (python 3.6)
 ```
 2/20/2023 4:39:12 PM: https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-7-on-ubuntu-18-10/  how to change python 3.6 to python 3.7.  
 2/21/2023 12:35:32 PM: TODO: github SSH
+# CARLA hello world
+2/26/2023 9:05:07 AM: problem: how to run a command after podman or docker display of carla? I can use podman in a python script like before.

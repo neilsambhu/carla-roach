@@ -2836,3 +2836,12 @@ Using pip 21.3.1 from /usr/local/lib/python3.6/dist-packages/pip (python 3.6)
 2/21/2023 12:35:32 PM: TODO: github SSH
 # CARLA hello world
 2/26/2023 9:05:07 AM: problem: how to run a command after podman or docker display of carla? I can use podman in a python script like before.
+# Podman Ubuntu 18.04: carla compiled from source (resume)
+3/2/2023 1:48:30 PM: 
+```
+Setup successful.
+Error: error committing container for step {Env:[DEBIAN_FRONTEND=noninteractive PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin CUDA_VERSION=10.1.243 CUDA_PKG_VERSION=10-1=10.1.243-1 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 NVIDIA_VISIBLE_DEVICES=all NVIDIA_DRIVER_CAPABILITIES=compute,graphics,utility NVIDIA_REQUIRE_CUDA=cuda>=10.1 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411] Command:run Args:[./Setup.sh] Flags:[] Attrs:map[] Message:RUN ./Setup.sh Original:RUN ./Setup.sh }: error copying layers and metadata for container "634057f208b325bcbfcba77ecaff8224641d662f55cae3570bb409b466c5abad": writing blob: storing blob to file "/var/tmp/storage246180599/1": write /var/tmp/storage246180599/1: no space left on device
+```
+```
+sudo ln -s /data/data1/tmp_hdd tmp
+```

@@ -2892,3 +2892,10 @@ Authenticating as: Neil Sambhu (nsambhu)
 Password: 
 ==== AUTHENTICATION COMPLETE ====
 ```
+3/3/2023 12:25:47 PM: 
+```
+Setup successful.
+time="2023-03-03T12:24:59-05:00" level=error msg="Can't add file /home/nsambhu/.local/share/containers/storage/overlay/aef7678d829148019e01bca9d22473d7df12f2a9dddad8f8b10f0d310262040f/diff/UnrealEngine_4.26/Engine/Binaries/Mac/UnrealSync.app/Contents/MacOS/UnrealSync to tar: io: read/write on closed pipe"
+time="2023-03-03T12:24:59-05:00" level=error msg="Can't close tar writer: io: read/write on closed pipe"
+Error: error committing container for step {Env:[DEBIAN_FRONTEND=noninteractive PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin CUDA_VERSION=10.1.243 CUDA_PKG_VERSION=10-1=10.1.243-1 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 NVIDIA_VISIBLE_DEVICES=all NVIDIA_DRIVER_CAPABILITIES=compute,graphics,utility NVIDIA_REQUIRE_CUDA=cuda>=10.1 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411] Command:run Args:[./Setup.sh] Flags:[] Attrs:map[] Message:RUN ./Setup.sh Original:RUN ./Setup.sh }: error copying layers and metadata for container "cc635f926d5242eb140420be1b15a40b46bfeb63a4a8acd65a3e32941d0ec014": initializing source containers-storage:e73b055ee5f8-working-container-2: error storing layer "aef7678d829148019e01bca9d22473d7df12f2a9dddad8f8b10f0d310262040f" to file: write /var/tmp/buildah3088000481/layer: no space left on device
+```

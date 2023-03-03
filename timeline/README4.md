@@ -2855,3 +2855,9 @@ Error: error building at STEP "RUN ./Setup.sh": error while running runtime: exi
 ```
 ln -s /data/data1/containers_hdd/ containers
 ```
+3/3/2023 9:24:55 AM: error after moving container storage
+```
+STEP 3/32: RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
+/bin/sh: error while loading shared libraries: libc.so.6: cannot change memory protections
+Error: error building at STEP "RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC": error while running runtime: exit status 127
+```

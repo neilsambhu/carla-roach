@@ -2862,3 +2862,8 @@ STEP 3/32: RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B46996
 Error: error building at STEP "RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC": error while running runtime: exit status 127
 ```
 3/3/2023 9:32:01 AM: remove link to /data/data1/containers  
+3/3/2023 10:48:03 AM: output from run.sh
+```
+Setup successful.
+Error: error committing container for step {Env:[DEBIAN_FRONTEND=noninteractive PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin CUDA_VERSION=10.1.243 CUDA_PKG_VERSION=10-1=10.1.243-1 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 NVIDIA_VISIBLE_DEVICES=all NVIDIA_DRIVER_CAPABILITIES=compute,graphics,utility NVIDIA_REQUIRE_CUDA=cuda>=10.1 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411] Command:run Args:[./Setup.sh] Flags:[] Attrs:map[] Message:RUN ./Setup.sh Original:RUN ./Setup.sh }: error copying layers and metadata for container "ab2152da1b8a308db5f028f159876198a2cc5cd5d83b27dd1f5b985c3341f1ce": writing blob: adding layer with blob "sha256:931beabc8aa86855c834980011705ea61a749b371e761efd8877344832083bc4": processing tar file(write /UnrealEngine_4.26/Engine/Source/ThirdParty/PhysX3/Lib/IOS/libPhysX3PROFILE.a: no space left on device): exit status 1
+```

@@ -2882,3 +2882,13 @@ time="2023-03-03T12:13:45-05:00" level=error msg="Can't add file /home/nsambhu/.
 time="2023-03-03T12:13:45-05:00" level=error msg="Can't close tar writer: io: read/write on closed pipe"
 Error: error committing container for step {Env:[DEBIAN_FRONTEND=noninteractive PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin CUDA_VERSION=10.1.243 CUDA_PKG_VERSION=10-1=10.1.243-1 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 NVIDIA_VISIBLE_DEVICES=all NVIDIA_DRIVER_CAPABILITIES=compute,graphics,utility NVIDIA_REQUIRE_CUDA=cuda>=10.1 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411] Command:run Args:[./Setup.sh] Flags:[] Attrs:map[] Message:RUN ./Setup.sh Original:RUN ./Setup.sh }: error copying layers and metadata for container "731e7da7995e2a57c5bf4d1a4a393c1728c15a7adc01c00b6e3f6330d0c39fca": initializing source containers-storage:e73b055ee5f8-working-container-2: error storing layer "c9598829cda6a6b98d0fa1603328960bbf695f21c6321dd214baa265e8d13e0a" to file: write /var/tmp/buildah2469029510/layer: no space left on device
 ```
+3/3/2023 12:19:03 PM: restart podman service
+```
+(base) [nsambhu@mhb-open-wired-237-156 4ubuntu-carla-source]$ service podman restart
+Redirecting to /bin/systemctl restart podman.service
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ====
+Authentication is required to restart 'podman.service'.
+Authenticating as: Neil Sambhu (nsambhu)
+Password: 
+==== AUTHENTICATION COMPLETE ====
+```

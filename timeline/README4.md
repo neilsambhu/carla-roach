@@ -2916,3 +2916,9 @@ drwx------. 9 nsambhu nsambhu 169 Mar  3 09:31 storage
 (base) [nsambhu@mhb-open-wired-237-156 containers]$ ls -dZ storage/
 unconfined_u:object_r:data_home_t:s0 storage/
 ```
+3/4/2023 4:29:56 PM:
+```
+STEP 32/32: RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux && ./UE4Editor
+/bin/sh: 1: cd: can't cd to /root/UnrealEngine_4.26/Engine/Binaries/Linux
+Error: error building at STEP "RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux && ./UE4Editor": error while running runtime: exit status 2
+```

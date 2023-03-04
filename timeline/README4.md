@@ -2904,4 +2904,15 @@ Error: error committing container for step {Env:[DEBIAN_FRONTEND=noninteractive 
 Error: error committing container for step {Env:[DEBIAN_FRONTEND=noninteractive PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin CUDA_VERSION=10.1.243 CUDA_PKG_VERSION=10-1=10.1.243-1 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 NVIDIA_VISIBLE_DEVICES=all NVIDIA_DRIVER_CAPABILITIES=compute,graphics,utility NVIDIA_REQUIRE_CUDA=cuda>=10.1 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411] Command:run Args:[make] Flags:[] Attrs:map[] Message:RUN make Original:RUN make}: error copying layers and metadata for container "cb242e96b55398110d0291029a9912060f99737925c8264370b04912da213ed9": writing blob: adding layer with blob "sha256:d0b971d362a9002ae0ae073cc52e703e5566aebc3a8fdf61a88c81f820a54923": processing tar file(write /UnrealEngine_4.26/Engine/Intermediate/Build/Linux/B4D820EA/CrashReportClient/Shipping/CoreUObject/Module.CoreUObject.7_of_8.cpp.o: no space left on device): exit status 1
 ```
 Docker build options https://docs.docker.com/engine/reference/commandline/build/ . TODO: find option to allow for enough disk space for container.  
-3/4/2023 1:57:24 PM: in run.sh, try build with --compress flag. 
+3/4/2023 1:57:24 PM: in run.sh, try build with --compress flag.  
+3/4/2023 2:18:25 PM:  
+```
+(base) [nsambhu@mhb-open-wired-237-156 containers]$ pwd
+/home/nsambhu/.local/share/containers
+(base) [nsambhu@mhb-open-wired-237-156 containers]$ ll
+total 0
+drwx------. 2 nsambhu nsambhu  39 Mar  3 09:31 cache
+drwx------. 9 nsambhu nsambhu 169 Mar  3 09:31 storage
+(base) [nsambhu@mhb-open-wired-237-156 containers]$ ls -dZ storage/
+unconfined_u:object_r:data_home_t:s0 storage/
+```

@@ -2957,3 +2957,8 @@ sh: 1: xdg-user-dir: not found
 - Existing per-process limit (soft=1024, hard=1024) is enough for us (need only 1024)
 ```
 3/5/2023 1:57:46 PM: revert back from nsambhu to root account. Rebuild without using any previous data.  
+```
+STEP 32/32: RUN ./Engine/Binaries/Linux/UE4Editor
+Refusing to run with the root privileges.
+```
+3/5/2023 3:58:16 PM: switch from root to nsambhu. Rebuild without using any previous data. 

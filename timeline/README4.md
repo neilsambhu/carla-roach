@@ -2933,3 +2933,9 @@ Error: error building at STEP "RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux 
 ```
 3/4/2023 9:17:27 PM: change ~ to $HOME; error persists  
 3/4/2023 9:18:26 PM: debug in progress  
+3/4/2023 9:23:45 PM: 
+```
+STEP 33/33: RUN ./UE4Editor
+/bin/sh: 1: ./UE4Editor: not found
+Error: error building at STEP "RUN ./UE4Editor": error while running runtime: exit status 127
+```

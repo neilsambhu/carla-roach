@@ -2950,3 +2950,9 @@ STEP 32/32: RUN ./Engine/Binaries/Linux/UE4Editor
 Refusing to run with the root privileges.
 Error: error building at STEP "RUN ./Engine/Binaries/Linux/UE4Editor": error while running runtime: exit status 1
 ```
+3/5/2023 12:39:19 PM:
+```
+STEP 36/36: RUN ./Engine/Binaries/Linux/UE4Editor
+sh: 1: xdg-user-dir: not found
+- Existing per-process limit (soft=1024, hard=1024) is enough for us (need only 1024)
+```

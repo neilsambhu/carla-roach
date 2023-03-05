@@ -2931,3 +2931,5 @@ STEP 33/33: RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux && ./UE4Editor
 /bin/sh: 1: cd: can't cd to /root/UnrealEngine_4.26/Engine/Binaries/Linux
 Error: error building at STEP "RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux && ./UE4Editor": error while running runtime: exit status 2
 ```
+3/4/2023 9:17:27 PM: change ~ to $HOME; error persists  
+3/4/2023 9:18:26 PM: debug in progress  

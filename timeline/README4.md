@@ -2939,3 +2939,8 @@ STEP 33/33: RUN ./UE4Editor
 /bin/sh: 1: ./UE4Editor: not found
 Error: error building at STEP "RUN ./UE4Editor": error while running runtime: exit status 127
 ```
+3/4/2023 9:34:22 PM: 
+```
+STEP 34/35: RUN find /UnrealEngine_4.26 -name "UE4Editor"
+/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor
+```

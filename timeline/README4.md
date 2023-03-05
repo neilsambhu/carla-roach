@@ -2944,3 +2944,9 @@ Error: error building at STEP "RUN ./UE4Editor": error while running runtime: ex
 STEP 34/35: RUN find /UnrealEngine_4.26 -name "UE4Editor"
 /UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor
 ```
+3/4/2023 9:57:04 PM:
+```
+STEP 32/32: RUN ./Engine/Binaries/Linux/UE4Editor
+Refusing to run with the root privileges.
+Error: error building at STEP "RUN ./Engine/Binaries/Linux/UE4Editor": error while running runtime: exit status 1
+```

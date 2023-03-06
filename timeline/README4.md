@@ -5250,3 +5250,22 @@ Error: error building at STEP "RUN ./Setup.sh": error while running runtime: exi
 0625dd24bf07b19625a9570379a2a755e555248ee31eaebca55f219651ec8eb4
 ```
 3/6/2023 2:36:20 PM: see where "UnrealEngine_4.26" folder exists in container now that nsambhu user exists.
+```
+STEP 33/39: RUN pwd
+/home/nsambhu/UnrealEngine_4.26
+--> bc2e7a53c9d
+STEP 34/39: RUN ls -lh
+total 48K
+drwxrwxr-x. 11 root root  144 Feb 21 20:39 Engine
+-rwxrwxr-x.  1 root root  660 Feb 21 20:39 GenerateProjectFiles.bat
+-rwxrwxr-x.  1 root root  231 Feb 21 20:39 GenerateProjectFiles.command
+-rwxrwxr-x.  1 root root  736 Feb 21 20:39 GenerateProjectFiles.sh
+-rw-rw-r--.  1 root root  195 Feb 21 20:39 LICENSE.md
+-rw-rw-r--.  1 root root 9.5K Feb 21 20:39 README.md
+drwxrwxr-x.  4 root root   56 Feb 21 20:39 Samples
+-rwxrwxr-x.  1 root root 1.3K Feb 21 20:39 Setup.bat
+-rwxrwxr-x.  1 root root  198 Feb 21 20:39 Setup.command
+-rwxrwxr-x.  1 root root 1.7K Feb 21 20:39 Setup.sh
+drwxrwxr-x. 42 root root 4.0K Feb 21 20:39 Templates
+-rw-rw-r--.  1 root root  269 Feb 21 20:39 UE4Games.uprojectdirs
+```

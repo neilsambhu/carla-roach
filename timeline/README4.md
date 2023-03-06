@@ -5346,3 +5346,28 @@ Refusing to run with the root privileges.
 Error: error building at STEP "RUN $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor": error while running runtime: exit status 1
 ```
 TOOD: change to user nsambhu  
+3/6/2023 3:57:40 PM: 
+```
+STEP 39/39: RUN $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor
+sh: 1: xdg-user-dir: not found
+- Existing per-process limit (soft=1024, hard=1024) is enough for us (need only 1024)
+Increasing per-process limit of core file size to infinity.
+LogInit: LLM is enabled
+LogInit: LLM CsvWriter: off TraceWriter: off
+LogInit: Display: Running engine without a game
+LogPlatformFile: Not using cached read wrapper
+LogInit: NumberOfWorkerThreadsToSpawn:
+LogInit:  - Number of physical cores available for the process: 24
+LogInit:  - Number of logical cores available for the process: 48
+LogInit:  - Worker number by default: 23 (you can change this number with the command line parameter '-workersthreadpool X', for a max of 26 threads)
+LogTaskGraph: Started task graph with 5 named threads and 74 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.102375
+LogInit: NumberOfWorkerThreadsToSpawn:
+LogInit:  - Number of physical cores available for the process: 24
+LogInit:  - Number of logical cores available for the process: 48
+LogInit:  - Worker number by default: 23 (you can change this number with the command line parameter '-workersthreadpool X', for a max of 26 threads)
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogUnixPlatformFile: Warning: create dir('/home/nsambhu/UnrealEngine_4.26/Engine/Saved/Logs/UE4.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/home/nsambhu/UnrealEngine_4.26/Engine/Saved/Logs/UE4.log') failed: errno=13 (Permission denied)
+```
+TODO: call xhost local:root from within the Dockerfile.  

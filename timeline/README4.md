@@ -5339,3 +5339,10 @@ drwxr-xr-x. 2 root root  4.0K Mar  6 20:27 Linux
 -rw-r--r--. 1 root root   253 Mar  6 20:12 ShaderCompileWorker.version
 -rwxr-xr-x. 1 root root  495K Mar  6 20:26 UE4Editor
 ```
+3/6/2023 3:51:30 PM: call UE4Editor path directly
+```
+STEP 38/38: RUN $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor
+Refusing to run with the root privileges.
+Error: error building at STEP "RUN $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor": error while running runtime: exit status 1
+```
+TOOD: change to user nsambhu  

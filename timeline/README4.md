@@ -5278,3 +5278,64 @@ STEP 39/39: RUN ./UE4Editor
 /bin/sh: 1: ./UE4Editor: not found
 ```
 3/6/2023 3:44:54 PM: find UE4Editor  
+```
+STEP 38/42: RUN cd $HOME/UnrealEngine_4.26/Engine/Binaries/Linux 
+--> Using cache 93c02d4c2863ac72d455f7e57967e332f67e2787265860da1d73ace362088e12
+--> 93c02d4c286
+STEP 39/42: RUN pwd && echo ""
+/home/nsambhu/UnrealEngine_4.26
+
+--> 0741731ab0f
+STEP 40/42: RUN ls -lh
+total 4.7M
+-rw-r--r--. 1 root root  57K Mar  6 20:07 CMakeLists.txt
+drwxrwxr-x. 1 root root  100 Mar  6 20:06 Engine
+drwxr-xr-x. 2 root root 4.0K Mar  6 19:49 FeaturePacks
+-rwxrwxr-x. 1 root root  660 Feb 21 20:39 GenerateProjectFiles.bat
+-rwxrwxr-x. 1 root root  231 Feb 21 20:39 GenerateProjectFiles.command
+-rwxrwxr-x. 1 root root  736 Feb 21 20:39 GenerateProjectFiles.sh
+-rw-rw-r--. 1 root root  195 Feb 21 20:39 LICENSE.md
+-rw-r--r--. 1 root root  29K Mar  6 20:06 Makefile
+-rw-rw-r--. 1 root root 9.5K Feb 21 20:39 README.md
+drwxrwxr-x. 1 root root   56 Feb 21 20:39 Samples
+-rwxrwxr-x. 1 root root 1.3K Feb 21 20:39 Setup.bat
+-rwxrwxr-x. 1 root root  198 Feb 21 20:39 Setup.command
+-rwxrwxr-x. 1 root root 1.7K Feb 21 20:39 Setup.sh
+drwxrwxr-x. 1 root root 4.0K Mar  6 19:48 Templates
+-rw-r--r--. 1 root root  271 Mar  6 20:06 UE4.code-workspace
+-rw-r--r--. 1 root root   52 Mar  6 20:06 UE4.kdev4
+-rw-r--r--. 1 root root  30K Mar  6 20:07 UE4.pro
+-rw-r--r--. 1 root root 482K Mar  6 20:07 UE4.workspace
+-rw-r--r--. 1 root root 371K Mar  6 20:07 UE4CodeCompletionFolders.txt
+-rw-r--r--. 1 root root    0 Mar  6 20:07 UE4CodeLitePreProcessor.txt
+-rw-r--r--. 1 root root 148K Mar  6 20:07 UE4Config.pri
+-rw-r--r--. 1 root root   13 Mar  6 20:07 UE4Defines.pri
+-rw-rw-r--. 1 root root  269 Feb 21 20:39 UE4Games.uprojectdirs
+-rw-r--r--. 1 root root 1.9M Mar  6 20:07 UE4Header.pri
+-rw-r--r--. 1 root root 241K Mar  6 20:07 UE4Includes.pri
+-rw-r--r--. 1 root root 1.5M Mar  6 20:07 UE4Source.pri
+-rw-r--r--. 1 root root  456 Mar  6 19:46 cpp.hint
+--> 6387dad3915
+STEP 41/42: RUN ls -lh $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/
+total 9.1G
+-rw-r--r--. 1 root root   12K Mar  6 20:12 AgentInterface.dll
+drwxr-xr-x. 2 root root  4.0K Mar  6 20:27 Android
+-rwxr-xr-x. 1 root root 1002K Mar  6 19:47 BreakpadSymbolEncoder
+-rwxr-xr-x. 1 root root   61K Mar  6 19:47 BreakpadSymbolEncoder.exe
+-rwxr-xr-x. 1 root root   27M Mar  6 20:11 CrashReportClient
+-rw-r--r--. 1 root root   31K Mar  6 20:11 CrashReportClient-Linux-Shipping.target
+-rw-r--r--. 1 root root  252M Mar  6 20:11 CrashReportClient.debug
+-rw-r--r--. 1 root root   14M Mar  6 20:11 CrashReportClient.sym
+-rwxr-xr-x. 1 root root   27M Mar  6 20:11 CrashReportClientEditor
+-rw-r--r--. 1 root root   31K Mar  6 20:11 CrashReportClientEditor-Linux-Shipping.target
+-rw-r--r--. 1 root root  252M Mar  6 20:11 CrashReportClientEditor.debug
+-rw-r--r--. 1 root root   14M Mar  6 20:11 CrashReportClientEditor.sym
+drwxr-xr-x. 2 root root  4.0K Mar  6 20:27 Linux
+-rwxr-xr-x. 1 root root  197K Mar  6 20:12 ShaderCompileWorker
+-rw-r--r--. 1 root root  3.2M Mar  6 20:12 ShaderCompileWorker.debug
+-rw-r--r--. 1 root root  1.8K Mar  6 20:12 ShaderCompileWorker.modules
+-rw-r--r--. 1 root root  158K Mar  6 20:12 ShaderCompileWorker.sym
+-rw-r--r--. 1 root root   41K Mar  6 20:12 ShaderCompileWorker.target
+-rw-r--r--. 1 root root   253 Mar  6 20:12 ShaderCompileWorker.version
+-rwxr-xr-x. 1 root root  495K Mar  6 20:26 UE4Editor
+```

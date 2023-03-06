@@ -5241,3 +5241,11 @@ drwxr-xr-x. 2 root root  4.0K Mar  6 17:47 Linux
 -rw-r--r--. 1 root root   12K Mar  6 17:32 libUnrealLightmass-TraceLog.sym
 -rw-r--r--. 1 root root  2.2M Mar  6 17:34 libtbb.so.2
 ```
+3/6/2023 2:32:19 PM: create nsambhu account before copying the UnrealEngine_4.26 folder. Delete container image before starting. 
+```
+STEP 33/37: RUN ./Setup.sh 
+Registering git hooks... (this will override existing ones!)
+./Setup.sh: line 30: .git/hooks/post-checkout: Permission denied
+Error: error building at STEP "RUN ./Setup.sh": error while running runtime: exit status 1
+0625dd24bf07b19625a9570379a2a755e555248ee31eaebca55f219651ec8eb4
+```

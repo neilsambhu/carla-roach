@@ -5371,3 +5371,9 @@ LogUnixPlatformFile: Warning: create dir('/home/nsambhu/UnrealEngine_4.26/Engine
 LogUnixPlatformFile: Warning: create dir('/home/nsambhu/UnrealEngine_4.26/Engine/Saved/Logs/UE4.log') failed: errno=13 (Permission denied)
 ```
 TODO: call xhost local:root from within the Dockerfile.  
+3/6/2023 3:59:27 PM: error
+```
+STEP 39/40: RUN xhost local:root
+/bin/sh: 1: xhost: not found
+Error: error building at STEP "RUN xhost local:root": error while running runtime: exit status 127
+```

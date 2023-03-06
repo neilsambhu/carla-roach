@@ -3532,3 +3532,4 @@ error: XDG_RUNTIME_DIR not set in the environment.
 Error: error building at STEP "RUN ./Engine/Binaries/Linux/UE4Editor": error while running runtime: exit status 1
 d7e0a1f12a4b27378b2c427d27550236b5ed9b1f6cf0f33f6ca17f2d830fe2fc
 ```
+3/6/2023 12:20:20 PM: check files and file permissions of /UnrealEngine_4.26/Engine/Binaries/Linux/. Next TODO: modify Dockerfile: create nsambhu account before copying the UnrealEngine_4.26 folder.  

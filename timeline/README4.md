@@ -2962,3 +2962,573 @@ STEP 32/32: RUN ./Engine/Binaries/Linux/UE4Editor
 Refusing to run with the root privileges.
 ```
 3/5/2023 3:58:16 PM: switch from root to nsambhu. Rebuild without using any previous data. 
+```
+STEP 36/36: RUN ./Engine/Binaries/Linux/UE4Editor
+sh: 1: xdg-user-dir: not found
+- Existing per-process limit (soft=1024, hard=1024) is enough for us (need only 1024)
+Increasing per-process limit of core file size to infinity.
+LogInit: LLM is enabled
+LogInit: LLM CsvWriter: off TraceWriter: off
+LogInit: Display: Running engine without a game
+LogPlatformFile: Not using cached read wrapper
+LogInit: NumberOfWorkerThreadsToSpawn:
+LogInit:  - Number of physical cores available for the process: 24
+LogInit:  - Number of logical cores available for the process: 48
+LogInit:  - Worker number by default: 23 (you can change this number with the command line parameter '-workersthreadpool X', for a max of 26 threads)
+LogTaskGraph: Started task graph with 5 named threads and 74 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.101002
+LogInit: NumberOfWorkerThreadsToSpawn:
+LogInit:  - Number of physical cores available for the process: 24
+LogInit:  - Number of logical cores available for the process: 48
+LogInit:  - Worker number by default: 23 (you can change this number with the command line parameter '-workersthreadpool X', for a max of 26 threads)
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_2.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_2.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_3.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_3.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_4.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_4.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_5.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_5.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_6.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_6.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_7.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_7.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_8.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_8.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_9.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_9.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_10.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_10.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_11.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_11.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_12.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_12.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_13.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_13.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_14.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_14.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_15.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_15.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_16.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_16.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_17.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_17.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_18.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_18.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_19.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_19.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_20.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_20.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_21.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_21.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_22.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_22.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_23.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_23.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_24.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_24.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_25.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_25.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_26.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_26.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_27.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_27.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_28.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_28.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_29.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_29.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_30.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_30.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_31.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Logs/UE4_31.log') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Config/CrashReportClient/UE4CC-Linux-9500BF510C2244E39266008C80564A35/CrashReportClient.ini') failed: errno=13 (Permission denied)
+LogUnixPlatformFile: Warning: create dir('/UnrealEngine_4.26/Engine/Saved/Config/CrashReportClient/UE4CC-Linux-9500BF510C2244E39266008C80564A35/CrashReportClient.ini') failed: errno=13 (Permission denied)
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+LogInit: Using libcurl 7.65.3-DEV
+LogInit:  - built for x86_64-unknown-linux-gnu
+LogInit:  - supports SSL with OpenSSL/1.1.1c
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_TLSAUTH_SRP
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.26-CL-0
+LogInit: Engine Version: 4.26.2-0+++UE4+Release-4.26
+LogInit: Compatible Engine Version: 4.26.0-0+++UE4+Release-4.26
+LogInit: Net CL: 0
+LogInit: OS: GenericOSVersionLabel (GenericOSSubVersionLabel), CPU: AMD Ryzen Threadripper 3960X 24-Core Processor , GPU: GenericGPUBrand
+LogInit: Compiled (64-bit): Mar  5 2023 21:29:55
+LogInit: Compiled with Clang: 10.0.1 
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.26
+LogInit: Command Line: 
+LogInit: Base Directory: /UnrealEngine_4.26/Engine/Binaries/Linux/
+LogInit: Allocator: binned2
+LogInit: Installed Engine Build: 0
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 4
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 44
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 12
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 43
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 40
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+[2023.03.05-21.56.26:615][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2023.03.05-21.56.26:615][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+[2023.03.05-21.56.26:615error: XDG_RUNTIME_DIR not set in the environment.
+][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+[2023.03.05-21.56.26:615][  0]LogInit: Initializing SDL.
+[2023.03.05-21.56.26:628][  0]LogInit: Warning: Could not initialize SDL: No available video device
+[2023.03.05-21.56.26:628][  0]LogInit: Warning: FDisplayMetrics::GetDisplayMetrics: InitSDL() failed, cannot get display metrics
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2023.03.05-21.56.26:628][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2023.03.05-21.56.26:628][  0]LogLinux: Selected Device Profile: [Linux]
+[2023.03.05-21.56.26:628][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Linux]
+[2023.03.05-21.56.26:628][  0]LogHAL: Display: Platform has ~ 4 GB [67166060544 / 4294967296 / 63], which maps to Smallest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2023.03.05-21.56.26:628][  0]LogInit: Going up to parent DeviceProfile []
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [../../../Engine/Saved/Config/Linux/Scalability.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [../../../Engine/Saved/Config/Linux/Engine.ini]
+[2023.03.05-21.56.26:629][  0]LogConfig: Setting CVar [[g.TimeoutForBlockOnRenderFence:60000]]
+[2023.03.05-21.56.26:629][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [../../../Engine/Saved/Config/Linux/Editor.ini]
+[2023.03.05-21.56.26:629][  0]LogInit: Unix hardware info:
+[2023.03.05-21.56.26:629][  0]LogInit:  - we are the first instance of this executable
+[2023.03.05-21.56.26:629][  0]LogInit:  - this process' id (pid) is 7, parent process' id (ppid) is 1
+[2023.03.05-21.56.26:629][  0]LogInit:  - we are not running under debugger
+[2023.03.05-21.56.26:629][  0]LogInit:  - machine network name is 'a6c9091c6f8d'
+[2023.03.05-21.56.26:629][  0]LogInit:  - user name is 'nsambhu' (nsambhu)
+[2023.03.05-21.56.26:629][  0]LogInit:  - we're logged in locally
+[2023.03.05-21.56.26:629][  0]LogInit:  - we're running with rendering
+[2023.03.05-21.56.26:629][  0]LogInit:  - CPU: AuthenticAMD 'AMD Ryzen Threadripper 3960X 24-Core Processor ' (signature: 0x830F10)
+[2023.03.05-21.56.26:629][  0]LogInit:  - Number of physical cores available for the process: 24
+[2023.03.05-21.56.26:629][  0]LogInit:  - Number of logical cores available for the process: 48
+[2023.03.05-21.56.26:629][  0]LogInit:  - Cache line size: 64
+[2023.03.05-21.56.26:629][  0]LogInit:  - Memory allocator used: binned2
+[2023.03.05-21.56.26:629][  0]LogInit:  - This binary is optimized with LTO: no, PGO: no, instrumented for PGO data collection: no
+[2023.03.05-21.56.26:629][  0]LogInit:  - This is an internal build.
+[2023.03.05-21.56.26:629][  0]LogCore: Benchmarking clocks:
+[2023.03.05-21.56.26:629][  0]LogCore:  - CLOCK_MONOTONIC (id=1) can sustain 49864499 (49864K, 50M) calls per second without zero deltas.
+[2023.03.05-21.56.26:629][  0]LogCore:  - CLOCK_MONOTONIC_RAW (id=4) can sustain 49961584 (49962K, 50M) calls per second without zero deltas.
+[2023.03.05-21.56.26:629][  0]LogCore:  - CLOCK_MONOTONIC_COARSE (id=6) can sustain 226062940 (226063K, 226M) calls per second with 99.999553% zero deltas.
+[2023.03.05-21.56.26:629][  0]LogCore: Selected clock_id 4 (CLOCK_MONOTONIC_RAW) since it is the fastest support clock without zero deltas.
+[2023.03.05-21.56.26:629][  0]LogInit: Unix-specific commandline switches:
+[2023.03.05-21.56.26:629][  0]LogInit:  -ansimalloc - use malloc()/free() from libc (useful for tools like valgrind and electric fence)
+[2023.03.05-21.56.26:629][  0]LogInit:  -jemalloc - use jemalloc for all memory allocation
+[2023.03.05-21.56.26:629][  0]LogInit:  -binnedmalloc - use binned malloc  for all memory allocation
+[2023.03.05-21.56.26:629][  0]LogInit:  -filemapcachesize=NUMBER - set the size for case-sensitive file mapping cache
+[2023.03.05-21.56.26:629][  0]LogInit:  -useksm - uses kernel same-page mapping (KSM) for mapped memory (OFF)
+[2023.03.05-21.56.26:629][  0]LogInit:  -ksmmergeall - marks all mmap'd memory pages suitable for KSM (OFF)
+[2023.03.05-21.56.26:629][  0]LogInit:  -preloadmodulesymbols - Loads the main module symbols file into memory (OFF)
+[2023.03.05-21.56.26:629][  0]LogInit:  -sigdfl=SIGNAL - Allows a specific signal to be set to its default handler rather then ignoring the signal
+[2023.03.05-21.56.26:629][  0]LogInit:  -httpproxy=ADDRESS:PORT - redirects HTTP requests to a proxy (only supported if compiled with libcurl)
+[2023.03.05-21.56.26:629][error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+error: XDG_RUNTIME_DIR not set in the environment.
+Error: error building at STEP "RUN ./Engine/Binaries/Linux/UE4Editor": error while running runtime: exit status 1
+d7e0a1f12a4b27378b2c427d27550236b5ed9b1f6cf0f33f6ca17f2d830fe2fc
+```

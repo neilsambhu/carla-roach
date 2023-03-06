@@ -5272,3 +5272,9 @@ drwxrwxr-x. 42 root root 4.0K Feb 21 20:39 Templates
 3/6/2023 2:43:13 PM: get Setup.sh to run. Try root user before running script.  
 3/6/2023 3:05:31 PM: Setup.sh runs with root user in nsaambhu home directory.  
 3/6/2023 3:07:26 PM: modify Dockerfile to cd into directory and run UE4Editor.  
+3/6/2023 3:44:27 PM: error
+```
+STEP 39/39: RUN ./UE4Editor
+/bin/sh: 1: ./UE4Editor: not found
+```
+3/6/2023 3:44:54 PM: find UE4Editor  

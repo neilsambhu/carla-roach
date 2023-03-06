@@ -5270,3 +5270,5 @@ drwxrwxr-x. 42 root root 4.0K Feb 21 20:39 Templates
 -rw-rw-r--.  1 root root  269 Feb 21 20:39 UE4Games.uprojectdirs
 ```
 3/6/2023 2:43:13 PM: get Setup.sh to run. Try root user before running script.  
+3/6/2023 3:05:31 PM: Setup.sh runs with root user in nsaambhu home directory.  
+3/6/2023 3:07:26 PM: modify Dockerfile to cd into directory and run UE4Editor.  

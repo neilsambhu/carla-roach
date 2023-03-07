@@ -1,7 +1,6 @@
 FROM nvidia/vulkan:1.1.121-cuda-10.1--ubuntu18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
-
 # 2/21/2023 4:08:06 PM: file system debug: start
 # RUN pwd
 # RUN ls
@@ -56,6 +55,12 @@ RUN pip3 install --user wheel auditwheel
 
 # RUN git clone --depth 1 -b carla https://github.com/CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
 
+# 3/4/2023 7:10:39 PM: add non-root user: start
+RUN groupadd -g 1000 nsambhu 
+RUN useradd -d /home/nsambhu -s /bin/bash -m nsambhu -u 1000 -g 1000 
+USER nsambhu 
+ENV HOME /home/nsambhu 
+# 3/4/2023 7:10:39 PM: add non-root user: end
 # 2/21/2023 3:41:31 PM: git replacement line: start
 # RUN pwd
 # WORKDIR $HOME
@@ -65,12 +70,49 @@ COPY ./UnrealEngine_4.26 $HOME/UnrealEngine_4.26
 # RUN ls
 # RUN ls /UnrealEngine_4.26
 # 2/21/2023 3:41:31 PM: git replacement line: end
+# 3/6/2023 3:52:39 PM: debug running UE4Editor: start
+# RUN xhost local:root
+# RUN cat $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor
+RUN ls -lh $HOME 
+USER root
+RUN chown -R nsambhu $HOME/UnrealEngine_4.26/
+RUN chmod -R u+rw $HOME/UnrealEngine_4.26/
+USER nsambhu
+RUN ls -lh $HOME
+# 3/6/2023 3:52:39 PM: debug running UE4Editor: end
 
 WORKDIR $HOME/UnrealEngine_4.26
+# 3/6/2023 2:38:42 PM: check path: start
+# RUN pwd
+# RUN ls -lh
+# 3/6/2023 2:38:42 PM: check path: end
+# 3/6/2023 2:42:21 PM: get ./Setup.sh to run: start
+USER root
+RUN echo $HOME
+# 3/6/2023 2:42:21 PM: get ./Setup.sh to run: end
 RUN ./Setup.sh 
 RUN ./GenerateProjectFiles.sh 
 RUN make
-RUN cd ~/UnrealEngine_4.26/Engine/Binaries/Linux && ./UE4Editor
+# 3/4/2023 9:15:55 PM: debug cd into /root: start
+# RUN whoami
+# RUN echo $HOME
+# RUN pwd
+# RUN ls $HOME
+# 3/4/2023 9:15:55 PM: debug cd into /root: end
+# RUN cd $HOME/UnrealEngine_4.26/Engine/Binaries/Linux 
+# 3/4/2023 9:29:20 PM: find UE4Editor file: start
+# RUN find /UnrealEngine_4.26 -name "cpp.hint"
+# RUN find /UnrealEngine_4.26 -name "UE4Editor"
+# RUN pwd && echo ""
+# RUN ls -lh
+# RUN ls -lh $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/
+# 3/4/2023 9:29:20 PM: find UE4Editor file: end
+# 3/7/2023 12:35:25 PM: debug running UE4Editor: start
+RUN whoami
+USER nsambhu
+RUN whoami
+# 3/7/2023 12:35:25 PM: debug running UE4Editor: end
+RUN $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor
 
 # RUN apt-key adv --fetch-keys "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub" \
 #     && apt-get update \

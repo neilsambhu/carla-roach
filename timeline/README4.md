@@ -5402,3 +5402,4 @@ LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform
 LogUnixPlatformFile: Warning: create dir('/home/nsambhu/UnrealEngine_4.26/Engine/Saved/Logs/UE4.log') failed: errno=13 (Permission denied)
 LogUnixPlatformFile: Warning: create dir('/home/nsambhu/UnrealEngine_4.26/Engine/Saved/Logs/UE4.log') failed: errno=13 (Permission denied)
 ```
+3/7/2023 9:45:18 AM: disk space full 

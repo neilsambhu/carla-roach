@@ -5404,3 +5404,10 @@ LogUnixPlatformFile: Warning: create dir('/home/nsambhu/UnrealEngine_4.26/Engine
 ```
 3/7/2023 9:45:18 AM: disk space full  
 3/7/2023 11:35:22 AM: chmod following https://forums.unrealengine.com/t/error-compiling-ue4-on-fedora-24/70267/2  
+3/7/2023 12:33:43 PM: refusing to run with root privileges
+```
+STEP 44/44: RUN $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor
+Refusing to run with the root privileges.
+Error: error building at STEP "RUN $HOME/UnrealEngine_4.26/Engine/Binaries/Linux/UE4Editor": error while running runtime: exit status 1
+52b82b5b3b60242aa8b565e4e64a8868ed1614e6a0f047c28fd54f2a1599b4aa
+```

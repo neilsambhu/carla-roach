@@ -5984,3 +5984,4 @@ https://github.com/carla-simulator/carla/issues/199
 ```
 sudo apt-get install python-dev
 ```
+3/8/2023 2:08 PM: error persists

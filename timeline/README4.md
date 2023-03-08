@@ -5979,3 +5979,8 @@ git clone --depth 1 -b carla git@github.com:CarlaUnreal/UnrealEngine.git ~/Unrea
 ```
 3/8/2023 12:58:30 PM: Unreal Engine complete  
 3/8/2023 1:27:56 PM: clone carla repository complete  
+3/8/2023 2:05 PM: error: 'pyconfig.h' file not found
+https://github.com/carla-simulator/carla/issues/199
+```
+sudo apt-get install python-dev
+```

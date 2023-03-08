@@ -1,0 +1,26 @@
+STEP 1/7: FROM nvidia/vulkan:1.1.121-cuda-10.1--ubuntu18.04
+STEP 2/7: ARG DEBIAN_FRONTEND=noninteractive
+--> Using cache 2f05e6de87ecc5c5f86fb41604c3303e23e555029215bc89fe76585b6dab2df7
+--> 2f05e6de87e
+STEP 3/7: RUN apt-key adv --fetch-keys "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub"     && apt update && apt upgrade -y     && apt-get install -y --no-install-recommends software-properties-common build-essential clang-8      lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip      libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git      libomp5 libsdl2-2.0 xserver-xorg vulkan-utils     && update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180     && update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180     && rm -rf /var/lib/apt/lists/*
+--> Using cache 60ee8881e6535028e9447872b63e485defe46fd6cdf599d6ac0f91bcd5a8184d
+--> 60ee8881e65
+STEP 4/7: RUN pip3 install --upgrade pip     && pip install --upgrade pip     && pip install setuptools     && pip3 install -Iv setuptools==47.3.1     && pip install distro     && pip3 install distro     && pip install wheel     && pip3 install wheel auditwheel
+--> Using cache 7a6093947d4476f7ab83809ff5742a676e7cae7a46c6cbc1a5fbbd20a54ccae6
+--> 7a6093947d4
+STEP 5/7: COPY UnrealEngine-carla.zip /usr/src/install/UnrealEngine-carla.zip
+--> Using cache d0806b63e2c7fce0d4336f1f2d491505ccf7642f765ce60230cf361d2b348943
+--> d0806b63e2c
+STEP 6/7: COPY script.sh /usr/src/install/script.sh
+--> Using cache bd1b5e67081eb9914ed3f8183030b545b57e25a7643c827ff30b73455d539308
+--> bd1b5e67081
+STEP 7/7: WORKDIR /usr/src/app
+--> Using cache c44e6b402e1b7b728be56279c461401751f5611f25e4778dda6b815e8472a7e5
+COMMIT usf_nsambhu_carla_source
+--> c44e6b402e1
+Successfully tagged localhost/usf_nsambhu_carla_source:latest
+c44e6b402e1b7b728be56279c461401751f5611f25e4778dda6b815e8472a7e5
+]0;root@744f4dac4bd0: /usr/src/approot@744f4dac4bd0:/usr/src/app# s whoami
+root
+]0;root@744f4dac4bd0: /usr/src/approot@744f4dac4bd0:/usr/src/app# xit   exit
+exit

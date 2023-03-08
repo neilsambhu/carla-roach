@@ -5984,4 +5984,5 @@ https://github.com/carla-simulator/carla/issues/199
 ```
 sudo apt-get install python-dev
 ```
-3/8/2023 2:08 PM: error persists
+3/8/2023 2:08 PM: error persists  
+3/8/2023 2:09 PM: comment anaconda in ~/.bashrc following https://github.com/carla-simulator/carla/issues/199#issuecomment-363036459  

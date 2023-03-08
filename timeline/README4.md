@@ -5987,3 +5987,12 @@ sudo apt-get install python-dev
 3/8/2023 2:08 PM: error persists  
 3/8/2023 2:09 PM: comment anaconda in ~/.bashrc following https://github.com/carla-simulator/carla/issues/199#issuecomment-363036459  
 3/8/2023 2:16 PM: try reboot  
+3/8/2023 2:30 PM: 
+```
+Connecting to ftp.cixug.es (ftp.cixug.es)|193.144.61.75|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-03-08 14:22:44 ERROR 404: Not Found.
+
+Util/BuildTools/Linux.mk:137: recipe for target 'setup' failed
+make: *** [setup] Error 8
+```

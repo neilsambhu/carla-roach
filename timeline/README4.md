@@ -5977,3 +5977,4 @@ TODO: get git authentication working for UnrealEngine_4.26 directory
 ```
 git clone --depth 1 -b carla git@github.com:CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
 ```
+3/8/2023 12:58:30 PM: Unreal Engine complete  

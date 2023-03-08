@@ -5972,4 +5972,8 @@ CommonUnixCrashHandler: Signal=6
 Segmentation fault (core dumped)
 ```
 TODO: get git authentication working for UnrealEngine_4.26 directory  
-3/8/2023 11:12:19 AM: do TODO of git authentication on UnrealEngine_4.26
+3/8/2023 11:12:19 AM: do TODO of git authentication on UnrealEngine_4.26  
+3/8/2023 12:23:19 PM: git command to clone
+```
+git clone --depth 1 -b carla git@github.com:CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
+```

@@ -21,7 +21,10 @@ RUN pip3 install --upgrade pip \
     && pip install wheel \
     && pip3 install wheel auditwheel
 
-COPY UnrealEngine-carla.zip /usr/src/install/UnrealEngine-carla.zip
-COPY script.sh /usr/src/install/script.sh
+COPY UnrealEngine.zip /usr/src/install/UnrealEngine.zip
+COPY install.sh /usr/src/install/install.sh
 
 WORKDIR /usr/src/app
+
+RUN groupadd -g 1000 nsambhu
+RUN useradd -s /bin/bash -m nsambhu -u 1000 -g 1000

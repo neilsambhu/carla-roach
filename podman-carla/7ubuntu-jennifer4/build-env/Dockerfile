@@ -7,7 +7,7 @@ RUN apt-key adv --fetch-keys "https://developer.download.nvidia.com/compute/cuda
     && apt-get install -y --no-install-recommends software-properties-common build-essential clang-8 \
      lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip \ 
      libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git \
-     libomp5 libsdl2-2.0 xserver-xorg vulkan-utils aria2 \
+     libomp5 libsdl2-2.0 xserver-xorg vulkan-utils aria2 wget autotools-dev automake\
     && update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 \
     && update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180 \
     && rm -rf /var/lib/apt/lists/*

@@ -5998,3 +5998,5 @@ make: *** [setup] Error 8
 ```
 3/8/2023 2:33 PM: TODO: install system python packages.  
 3/8/2023 2:33 PM: TODO: install system python 3.7.  
+# Ubuntu CARLA build from source (reinstall)
+3/13/2023 2:30:20 PM: Ubuntu installed, cuda toolkit installed, anaconda installed. 

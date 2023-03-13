@@ -6002,3 +6002,4 @@ make: *** [setup] Error 8
 3/13/2023 2:30:20 PM: Ubuntu installed, cuda toolkit installed, anaconda installed.  
 3/13/2023 3:40 PM: need to use system python: https://github.com/carla-simulator/carla/issues/199  
 3/13/2023 3:56 PM: configure system python3.6: https://askubuntu.com/a/1157104  
+3/13/2023 4:20 PM: get carla make to work: https://github.com/carla-simulator/carla/issues/199#issuecomment-573385818  

@@ -1,18 +1,18 @@
 # /bin/bash
 
-# rm -rfv /usr/src/app/UnrealEngine
-# cd /usr/src/app/
-# unzip /usr/src/install/UnrealEngine.zip
+rm -rfv /usr/src/app/UnrealEngine
+cd /usr/src/app/
+unzip /usr/src/install/UnrealEngine.zip
 
-# cd UnrealEngine
-# echo [exe] Setup.sh
-# ./Setup.sh
-# echo [exe] GenerateProjectFiles.sh
-# ./GenerateProjectFiles.sh
-# echo [exe] make -j 48
-# make -j 48
-# echo [exe] chmod -Rv 777 /usr/src/app/UnrealEngine
-# chmod -Rv 777 /usr/src/app/UnrealEngine
+cd UnrealEngine
+echo [exe] Setup.sh
+./Setup.sh
+echo [exe] GenerateProjectFiles.sh
+./GenerateProjectFiles.sh
+echo [exe] make -j 48
+make -j 48
+echo [exe] chmod -Rv 777 /usr/src/app/UnrealEngine
+chmod -Rv 777 /usr/src/app/UnrealEngine
 
 rm -rfv /usr/src/app/carla
 cd /usr/src/app/

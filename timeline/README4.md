@@ -6021,3 +6021,41 @@ Util/BuildTools/Linux.mk:137: recipe for target 'setup' failed
 make: *** [setup] Error 8
 ```
 3/14/2023 12:04 PM: implement solution https://github.com/carla-simulator/carla/issues/5846#issue-1413301411  
+3/14/2023 12:16 PM: make launch failed
+```
+nsambhu@SAMBHU19:~/github/carla$ make launch
+Setup.sh: llvm-8.0 already installed.
+Setup.sh: boost-1.72.0-c8 already installed.
+Setup.sh: rpclib-v2.2.1_c5-c8 already installed.
+Setup.sh: gtest-1.8.1-c8 already installed.
+Setup.sh: recast-0b13b0-c8 already installed.
+Setup.sh: Libpng already installed.
+Setup.sh: Xerces-c already installed.
+cp: cannot create regular file '/home/nsambhu/github/carla/PythonAPI/carla/dependencies/lib/libxerces-c.a': Permission denied
+Util/BuildTools/Linux.mk:137: recipe for target 'setup' failed
+make: *** [setup] Error 1
+```
+```
+nsambhu@SAMBHU19:~/github/carla$ sudo make launch
+Setup.sh: llvm-8.0 already installed.
+Setup.sh: boost-1.72.0-c8 already installed.
+Setup.sh: rpclib-v2.2.1_c5-c8 already installed.
+Setup.sh: gtest-1.8.1-c8 already installed.
+Setup.sh: recast-0b13b0-c8 already installed.
+Setup.sh: Libpng already installed.
+Setup.sh: Xerces-c already installed.
+Setup.sh: Sqlite already installed.
+Setup.sh: PROJ already installed.
+Setup.sh: Patchelf already installed.
+Setup.sh: CARLA version 0.9.13-2-g99e3a78f7-dirty.
+Setup.sh: Generating CMake configuration files.
+Setup.sh: Success!
+BuildLibCarla.sh: Building LibCarla "Server.Release" configuration.
+ninja: no work to do.
+[0/1] Install the project...
+-- Install configuration: "Server"
+BuildLibCarla.sh: Success!
+BuildCarlaUE4.sh: ERROR: UE4_ROOT is not defined, or points to a non-existant directory, please set this environment variable.
+Util/BuildTools/Linux.mk:7: recipe for target 'launch' failed
+make: *** [launch] Error 2
+```

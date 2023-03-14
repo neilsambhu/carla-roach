@@ -6003,8 +6003,8 @@ make: *** [setup] Error 8
 3/13/2023 3:40 PM: need to use system python: https://github.com/carla-simulator/carla/issues/199  
 3/13/2023 3:56 PM: configure system python3.6: https://askubuntu.com/a/1157104  
 3/13/2023 4:20 PM: get carla make to work: https://github.com/carla-simulator/carla/issues/199#issuecomment-573385818  
-3/13/2023 11:54 AM: carla make PythonAPI solution to pyconfig.h: https://stackoverflow.com/a/57244837  
-3/13/2023 11:55 AM: 
+3/14/2023 11:54 AM: carla make PythonAPI solution to pyconfig.h: https://stackoverflow.com/a/57244837  
+3/14/2023 11:55 AM: 
 ```
 Setup.sh: rpclib-v2.2.1_c5-c8 already installed.
 Setup.sh: gtest-1.8.1-c8 already installed.
@@ -6020,3 +6020,4 @@ HTTP request sent, awaiting response... 404 Not Found
 Util/BuildTools/Linux.mk:137: recipe for target 'setup' failed
 make: *** [setup] Error 8
 ```
+3/14/2023 12:04 PM: implement solution https://github.com/carla-simulator/carla/issues/5846#issue-1413301411  

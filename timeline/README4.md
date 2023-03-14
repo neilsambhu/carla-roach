@@ -6063,3 +6063,15 @@ make: *** [launch] Error 2
 ```
 nsambhu@SAMBHU19:~/github$ sudo chmod -R 777 carla
 ```
+3/14/2023 1:53 PM: carla add vehicle https://carla.readthedocs.io/en/0.9.13/tuto_A_add_vehicle/  
+install Maya on Ubuntu:  https://www.autodesk.com/support/technical/article/caas/tsarticles/ts/653FjR7SuamMJ5Y4v9XkXg.html  
+```
+nsambhu@SAMBHU19:~/github/carla$ sudo add-apt-repository ppa:zeehio/libxp
+Traceback (most recent call last):
+  File "/usr/bin/add-apt-repository", line 12, in <module>
+    from softwareproperties.SoftwareProperties import SoftwareProperties, shortcut_handler
+  File "/usr/lib/python3/dist-packages/softwareproperties/SoftwareProperties.py", line 28, in <module>
+    import apt_pkg
+ModuleNotFoundError: No module named 'apt_pkg'
+```
+solution: https://stackoverflow.com/questions/13708180/python-dev-installation-error-importerror-no-module-named-apt-pkg  

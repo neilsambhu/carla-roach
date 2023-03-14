@@ -6076,3 +6076,15 @@ ModuleNotFoundError: No module named 'apt_pkg'
 ```
 solution: https://stackoverflow.com/questions/13708180/python-dev-installation-error-importerror-no-module-named-apt-pkg  
 "On Ubuntu 18.04, use this $ cd /usr/lib/python3/dist-packages $ sudo cp apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.so"  
+3/14/2023 2:03 PM:
+```
+nsambhu@SAMBHU19:/usr/lib/python3/dist-packages$ sudo add-apt-repository ppa:zeehio/libxp
+Traceback (most recent call last):
+  File "/usr/bin/add-apt-repository", line 12, in <module>
+    from softwareproperties.SoftwareProperties import SoftwareProperties, shortcut_handler
+  File "/usr/lib/python3/dist-packages/softwareproperties/SoftwareProperties.py", line 67, in <module>
+    from gi.repository import Gio
+  File "/usr/lib/python3/dist-packages/gi/__init__.py", line 42, in <module>
+    from . import _gi
+ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/gi/__init__.py)
+```

@@ -6075,3 +6075,4 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'apt_pkg'
 ```
 solution: https://stackoverflow.com/questions/13708180/python-dev-installation-error-importerror-no-module-named-apt-pkg  
+"On Ubuntu 18.04, use this $ cd /usr/lib/python3/dist-packages $ sudo cp apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.so"  

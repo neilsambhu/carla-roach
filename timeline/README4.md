@@ -6088,3 +6088,4 @@ Traceback (most recent call last):
     from . import _gi
 ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/gi/__init__.py)
 ```
+3/14/2023 2:08 PM: solution: https://stackoverflow.com/a/62672285  

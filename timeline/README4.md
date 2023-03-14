@@ -6004,3 +6004,19 @@ make: *** [setup] Error 8
 3/13/2023 3:56 PM: configure system python3.6: https://askubuntu.com/a/1157104  
 3/13/2023 4:20 PM: get carla make to work: https://github.com/carla-simulator/carla/issues/199#issuecomment-573385818  
 3/13/2023 11:54 AM: carla make PythonAPI solution to pyconfig.h: https://stackoverflow.com/a/57244837  
+3/13/2023 11:55 AM: 
+```
+Setup.sh: rpclib-v2.2.1_c5-c8 already installed.
+Setup.sh: gtest-1.8.1-c8 already installed.
+Setup.sh: recast-0b13b0-c8 already installed.
+Setup.sh: Libpng already installed.
+Setup.sh: Retrieving xerces-c.
+--2023-03-14 11:53:29--  https://ftp.cixug.es/apache//xerces/c/3/sources/xerces-c-3.2.3.tar.gz
+Resolving ftp.cixug.es (ftp.cixug.es)... 193.144.61.75
+Connecting to ftp.cixug.es (ftp.cixug.es)|193.144.61.75|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-03-14 11:53:30 ERROR 404: Not Found.
+
+Util/BuildTools/Linux.mk:137: recipe for target 'setup' failed
+make: *** [setup] Error 8
+```

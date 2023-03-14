@@ -6059,3 +6059,7 @@ BuildCarlaUE4.sh: ERROR: UE4_ROOT is not defined, or points to a non-existant di
 Util/BuildTools/Linux.mk:7: recipe for target 'launch' failed
 make: *** [launch] Error 2
 ```
+3/14/2023 12:25 PM: change permissions
+```
+nsambhu@SAMBHU19:~/github$ sudo chmod -R 777 carla
+```

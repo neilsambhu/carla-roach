@@ -6089,3 +6089,5 @@ Traceback (most recent call last):
 ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/gi/__init__.py)
 ```
 3/14/2023 2:08 PM: solution: https://stackoverflow.com/a/62672285  
+## Blender (Maya alternative)
+3/15/2023 12:58 PM: https://www.blender.org/download/  

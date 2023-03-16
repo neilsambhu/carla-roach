@@ -6094,4 +6094,4 @@ ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/
 3/15/2023 2:20 PM: TODO: get vehicle mesh  
 3/16/2023 11:48 PM: add vehicle in CARLA: https://youtu.be/0F3ugwkISGk  
 3/16/2023 12:33 PM: tutorial of mesh export from Unreal to Blender: https://youtu.be/iDz7X2RZDvM?t=314  
-~3/16/2023 12:55:32 PM: tutorial on Carla Unreal and Blender: https://www.youtube.com/watch?v=ISOSVlrmVq4 ~  
+~3/16/2023 12:55:32 PM: tutorial on Carla Unreal and Blender: https://www.youtube.com/watch?v=ISOSVlrmVq4~  

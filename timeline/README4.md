@@ -6097,4 +6097,4 @@ ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/
 ~3/16/2023 12:55:32 PM: tutorial on Carla Unreal and Blender: https://www.youtube.com/watch?v=ISOSVlrmVq4~  
 3/16/2023 1:10:12 PM: export FBX: https://www.youtube.com/watch?v=fDmxIRV-j5g (source: https://bitbucket.org/yankagan/carla-content/wiki/Home )  
 3/16/2023 1:35:54 PM: TODO: bind bones following https://carla.readthedocs.io/en/0.9.13/tuto_A_add_vehicle/  
-3/16/2023 1:48:13 PM: TODO: blender bind bones  
+3/16/2023 1:48:13 PM: TODO: blender bind bones understanding following https://www.youtube.com/watch?v=cRlb9tncJok  

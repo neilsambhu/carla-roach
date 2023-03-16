@@ -6092,3 +6092,4 @@ ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/
 ## Blender (Maya alternative)
 3/15/2023 12:58 PM: https://www.blender.org/download/  
 3/15/2023 2:20 PM: TODO: get vehicle mesh  
+3/16/2023 11:48 PM: add vehicle in CARLA: https://youtu.be/0F3ugwkISGk  

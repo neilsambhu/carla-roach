@@ -6099,3 +6099,4 @@ ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/
 3/16/2023 1:35:54 PM: TODO: bind bones following https://carla.readthedocs.io/en/0.9.13/tuto_A_add_vehicle/  
 3/16/2023 1:48:13 PM: TODO: blender bind bones understanding following https://www.youtube.com/watch?v=cRlb9tncJok  
 3/16/2023 2:06:21 PM: follow carla tutorial on making a vehicle: https://carla.readthedocs.io/en/latest/tuto_content_authoring_vehicles/  
+3/16/2023 4:05 PM: Blender to Unreal tutorial: https://www.youtube.com/watch?v=t9Y7YCexaGU  

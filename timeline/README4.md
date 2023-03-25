@@ -6107,3 +6107,10 @@ ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/
 ```
 git clone --depth 1 -b carla git@github.com:CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
 ```
+3/25/2023 4:05:20 PM: redownload carla
+```
+git clone https://github.com/carla-simulator/carla
+```
+```
+git checkout 0.9.13
+```

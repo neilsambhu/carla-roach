@@ -6102,3 +6102,8 @@ ImportError: cannot import name '_gi' from 'gi' (/usr/lib/python3/dist-packages/
 3/16/2023 4:05 PM: Blender to Unreal tutorial: https://www.youtube.com/watch?v=t9Y7YCexaGU  
 3/23/2023 2:07 PM: find different methods of exporting vehicle from Unreal Engine. Goal: import vehicle model with availability to select wheels.  
 3/23/2023 4:23:44 PM: material customization documentation: https://carla.readthedocs.io/en/0.9.13/tuto_A_material_customization/  
+# Reinstall Unreal Engine
+3/25/2023 3:29:59 PM: git clone command
+```
+git clone --depth 1 -b carla git@github.com:CarlaUnreal/UnrealEngine.git ~/UnrealEngine_4.26
+```

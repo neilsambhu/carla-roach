@@ -6117,3 +6117,7 @@ git checkout 0.9.13
 # CARLA from neilsambhu github
 3/25/2023 6:45:37 PM: install carla from https://github.com/neilsambhu/carla  
 3/25/2023 6:46:12 PM: TODO: get 1 vehicle to spawn consistently  
+3/25/2023 7:27:23 PM: ambulance vehicle.id is "vehicle.ford.ambulance"  
+```
+python3 generate_traffic.py --filterv "vehicle.ford.ambulance"
+```

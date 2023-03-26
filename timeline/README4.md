@@ -6121,3 +6121,5 @@ git checkout 0.9.13
 ```
 python3 generate_traffic.py --filterv "vehicle.ford.ambulance"
 ```
+# Blender
+3/26/2023 7:53:18 PM: https://youtu.be/iBSJKeMYICA?t=184 bookmark for painting car in Blender.  

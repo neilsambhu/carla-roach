@@ -6123,3 +6123,9 @@ python3 generate_traffic.py --filterv "vehicle.ford.ambulance"
 ```
 # Blender
 3/26/2023 7:53:18 PM: https://youtu.be/iBSJKeMYICA?t=184 bookmark for painting car in Blender.  
+
+# CARLA ChatGPT
+4/4/2023 7:47:52 PM: query: 
+```
+Write code for CARLA Simulator 0.9.13 for the pre-existing vehicle identified by "vehicle.ford.ambulance". Spawn 10 ambulance vehicles. Modify the texture of the pre-existing vehicle identified by "vehicle.ford.ambulance" using an image 'colorful_cat.jpeg'.
+```

@@ -6151,5 +6151,5 @@ Write code for CARLA Simulator 0.9.13 to spawn 10 pre-existing ambulance vehicle
 ```
 4/5/2023 6:45:37 PM: 
 ```
-Using input image "colorful_cat.jpeg" how do I apply the input image to the vehicle surface? 
+Using input image "colorful_cat.jpeg" how do I apply the input image to the ambulance vehicle surface? 
 ```

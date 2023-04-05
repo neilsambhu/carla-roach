@@ -6135,3 +6135,4 @@ Traceback (most recent call last):
     ambulance_actor.set_attribute('role_name', 'ambulance{}'.format(i))
 AttributeError: 'Vehicle' object has no attribute 'set_attribute'
 ```
+4/4/2023 8:41:28 PM: tell ChatGPT the error. 

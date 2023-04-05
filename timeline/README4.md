@@ -6149,3 +6149,7 @@ TODO: new query to ChatGPT
 ```
 Write code for CARLA Simulator 0.9.13 to spawn 10 pre-existing ambulance vehicles identified by "vehicle.ford.ambulance".
 ```
+4/5/2023 6:45:37 PM: 
+```
+Using input image "colorful_cat.jpeg" how do I apply the input image to the vehicle surface? 
+```

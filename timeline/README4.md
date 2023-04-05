@@ -6145,3 +6145,7 @@ AttributeError: 'Vehicle' object has no attribute 'set_attribute'
 ```
 TODO: new query to ChatGPT  
 4/4/2023 8:55:46 PM: query a smaller query to ChatGPT: spawn 10 ambulances.  
+4/5/2023 6:27:34 PM: 
+```
+Write code for CARLA Simulator 0.9.13 to spawn 10 pre-existing ambulance vehicles identified by "vehicle.ford.ambulance".
+```

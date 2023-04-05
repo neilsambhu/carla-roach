@@ -6135,4 +6135,12 @@ Traceback (most recent call last):
     ambulance_actor.set_attribute('role_name', 'ambulance{}'.format(i))
 AttributeError: 'Vehicle' object has no attribute 'set_attribute'
 ```
-4/4/2023 8:41:28 PM: tell ChatGPT the error. 
+4/4/2023 8:41:28 PM: tell ChatGPT the error.  
+4/4/2023 8:49:13 PM: revised code still contains error
+```
+Traceback (most recent call last):
+  File "ambulance_texture2.py", line 37, in <module>
+    ambulance_actor.set_attribute('role_name', 'ambulance{}'.format(i))
+AttributeError: 'Vehicle' object has no attribute 'set_attribute'
+```
+TODO: new query to ChatGPT

@@ -6186,3 +6186,7 @@ Write code for CARLA Simulator 0.9.13 to apply a texture to a vehicle using the 
 ```
 Write code for CARLA Simulator 0.9.13 that uses the TextureColor function.
 ```
+4/6/2023 7:18:57 PM: new query to ChatGPT
+```
+Write code for CARLA Simulator 0.9.13 to spawn 1 vehicle.
+```

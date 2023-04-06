@@ -6166,3 +6166,7 @@ Using input image "colorful_cat.jpeg" write code to apply the input image to the
 Write code for CARLA Simulator 0.9.13. Using input image "colorful_cat.jpeg" modify the appearance of all vehicles in the simulation. 
 ```
 4/5/2023 8:16:02 PM: TODO: find documentation on CARLA Texture.  
+4/5/2023 9:23:33 PM: Bing AI
+```
+Write code for CARLA Simulator 0.9.13. Using input image "colorful_cat.jpeg" modify the appearance of all vehicles in the simulation. 
+```

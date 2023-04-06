@@ -6161,3 +6161,7 @@ Using input image "colorful_cat.jpeg" how do I apply the input image to the ambu
 ```
 Using input image "colorful_cat.jpeg" write code to apply the input image to the ambulance vehicle in CARLA 0.9.13.
 ```
+4/5/2023 8:03:08 PM: 
+```
+Write code for CARLA Simulator 0.9.13. Using input image "colorful_cat.jpeg" modify the appearance of all vehicles in the simulation. 
+```

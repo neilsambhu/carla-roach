@@ -6170,3 +6170,7 @@ Write code for CARLA Simulator 0.9.13. Using input image "colorful_cat.jpeg" mod
 ```
 Write code for CARLA Simulator 0.9.13. Using input image "colorful_cat.jpeg" modify the appearance of all vehicles in the simulation. 
 ```
+4/5/2023 9:26:41 PM: new query to ChatGPT
+```
+Write code for CARLA Simulator 0.9.13 to spawn 10 white cars.
+```

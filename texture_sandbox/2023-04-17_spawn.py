@@ -15,16 +15,15 @@ cmd = f'xhost local:root && podman run --privileged --net=host -e DISPLAY=$DISPL
 server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
 time.sleep(10)
 # 4/1/2023 7:57:17 PM: launch simulator: end
-
 # Connect to the CARLA simulator
 client = carla.Client('localhost', 2000)
 client.set_timeout(10.0)
 
 # Get the world object
-# world = client.get_world()
+world = client.get_world()
 # Load layered map for Town 01 with minimum layout plus buildings and parked vehicles
 # world = client.load_world('Town01_Opt', carla.MapLayer.Buildings | carla.MapLayer.ParkedVehicles)
-world = client.load_world('Town04_Opt', carla.MapLayer.Buildings | carla.MapLayer.ParkedVehicles)
+# world = client.load_world('Town04_Opt', carla.MapLayer.Buildings | carla.MapLayer.ParkedVehicles)
 # world = client.load_world('Town10HD_Opt', carla.MapLayer.Buildings | carla.MapLayer.ParkedVehicles)
 # Toggle all buildings off
 # world.unload_map_layer(carla.MapLayer.Buildings)
@@ -50,7 +49,7 @@ blueprint_library = world.get_blueprint_library()
 vehicle_bp = blueprint_library.find('vehicle.ford.ambulance')
 
 # Spawn the vehicle
-for i, spawn_point in enumerate(spawn_points[0:100]):
+for i, spawn_point in enumerate(spawn_points[0:1]):
     vehicle = world.spawn_actor(vehicle_bp, spawn_point)
 
     # Wait for a few seconds to let the vehicle spawn properly
@@ -58,7 +57,6 @@ for i, spawn_point in enumerate(spawn_points[0:100]):
 
     # Do something with the vehicle
     print(f'Spawned vehicle {vehicle.id}')
-
 all_objects = list(world.get_names_of_all_objects())
 # print(all_objects)
 ambulances = [k for k in all_objects if 'BP_Ambulance' in k]
@@ -68,7 +66,7 @@ print(ambulances)
 # Load image texture
 from PIL import Image
 # Load the modified texture
-image = Image.open('Unreal_TGA_files/ambulance/T_Bodywork_Ambulance_d.TGA')
+image = Image.open('Unreal_TGA_files/ambulance/T_Details02_Ambulance_d_custom.TGA')
 height = image.size[1]
 width = image.size[0]
 

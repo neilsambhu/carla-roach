@@ -22,12 +22,16 @@ from PIL import Image
 client = carla.Client('127.0.0.1', 2000)
 client.set_timeout(2.0)
 
+# Get the world object
+world = client.get_world()
+
 # Filter world objects for those with 'Apartment' in the name
-print(list(filter(lambda k: 'Apartment' in k, world.get_names_of_all_objects())))
+#print(list(filter(lambda k: 'Apartment' in k, world.get_names_of_all_objects())))
 
 # Load the modified texture
 #image = Image.open('BP_Apartment04_v05_modified.tga')
-image = Image.open('Unreal_TGA_files/T_Apartment04_D_Opt.TGA')
+image = Image.open('Unreal_TGA_files/T_Apartment04_D_Opt_custom.TGA')
+print(image)
 height = image.size[1]
 width = image.size[0]
 

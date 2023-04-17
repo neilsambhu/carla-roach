@@ -6194,3 +6194,6 @@ Write code for CARLA Simulator 0.9.13 to spawn 1 vehicle.
 ```
 Write code for CARLA Simulator 0.9.13 to change the color of a vehicle.
 ```
+# Texture from Unreal to CARLA API
+4/17/2023 3:52:01 PM: try T_Bodywork_Ambulance_d.TGA without modification to texture.  
+4/17/2023 3:54:50 PM: no change to ambulance from T_Bodywork_Ambulance_d.TGA. Try T_Bodywork_Ambulance_RDirt.TGA.  

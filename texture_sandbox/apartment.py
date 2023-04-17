@@ -30,7 +30,7 @@ world = client.get_world()
 
 # Load the modified texture
 #image = Image.open('BP_Apartment04_v05_modified.tga')
-image = Image.open('Unreal_TGA_files/T_Apartment04_D_Opt_custom.TGA')
+image = Image.open('Unreal_TGA_files/ambulance/T_Bodywork_Ambulance_d.TGA')
 print(image)
 height = image.size[1]
 width = image.size[0]

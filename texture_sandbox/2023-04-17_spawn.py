@@ -66,7 +66,7 @@ print(ambulances)
 # Load image texture
 from PIL import Image
 # Load the modified texture
-image = Image.open('Unreal_TGA_files/ambulance/T_Details02_Ambulance_d_custom.TGA')
+image = Image.open('Unreal_TGA_files/ambulance/T_Details02_Ambulance_ORM_custom.TGA')
 height = image.size[1]
 width = image.size[0]
 

@@ -8,6 +8,7 @@ def kill_carla_podman():
     kill_process = subprocess.Popen('podman container cleanup --all --rm', shell=True)
     kill_process.wait()
     time.sleep(1)
+'''
 kill_carla_podman()
 
 # 4/1/2023 7:57:17 PM: launch simulator: start
@@ -15,6 +16,8 @@ cmd = f'xhost local:root && podman run --privileged --net=host -e DISPLAY=$DISPL
 server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
 time.sleep(10)
 # 4/1/2023 7:57:17 PM: launch simulator: end
+'''
+
 # Connect to the CARLA simulator
 client = carla.Client('localhost', 2000)
 client.set_timeout(10.0)
@@ -62,7 +65,7 @@ all_objects = list(world.get_names_of_all_objects())
 ambulances = [k for k in all_objects if 'BP_Ambulance' in k]
 # parked_vehicles = [k for k in all_objects if 'Vh_Car_' in k]
 print(ambulances)
-
+'''
 # Load image texture
 from PIL import Image
 # Load the modified texture
@@ -97,5 +100,5 @@ for ambulance in tqdm(ambulances):
 #     new_color = carla.Color(255,0,0)
 #     # vehicle.set_color(new_color)
 #     vehicle.set_attribute('color', new_color.rgba)
-
+'''
 print('done')

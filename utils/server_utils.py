@@ -52,11 +52,11 @@ class CarlaServerManager():
                     port += 5
 
     def start(self):
-        # kill_carla()
+        kill_carla()
         # kill_carla_docker()
-        kill_carla_podman()
+        # kill_carla_podman()
         for cfg in self.env_configs:
-            cmd = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
+            cmd0 = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
                 f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]}'
             #     f'-fps=10 -carla-server -opengl -carla-rpc-port={cfg["port"]}'
             # 06/28/2022: Neil added: start
@@ -99,12 +99,12 @@ class CarlaServerManager():
             # 11/29/2022 5:44:04 PM: Neil added podman GUI: start
             # cmd = f'xhost local:root&&podman run --privileged --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]}'
             # 11/29/2022 5:44:04 PM: Neil added podman GUI: end
-            log.info(cmd)
+            log.info(cmd0)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdout=open(log_file, "w"))
             if bVerbose:
                 frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
-            server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid) # 8/9/2022 4:51:00 PM: comment out 
+            server_process = subprocess.Popen(cmd0, shell=True, preexec_fn=os.setsid) # 8/9/2022 4:51:00 PM: comment out 
             # 8/9/2022: Dan added (for docker): start
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdin=subprocess.PIPE, encoding="utf8")
             # sudo_out = server_process.communicate('q\n', timeout=1)

@@ -6202,3 +6202,4 @@ Write code for CARLA Simulator 0.9.13 to change the color of a vehicle.
 5/10/2023 3:20 PM: TODO: put adversarial texture on ambulance.  
 5/10/2023 5:15 PM: to modify TGA file: copy texture onto TGA file; move texture to appropriate location; select anchor; hide alpha channel; erase texture; export TGA file to Unreal.  
 5/10/2023 5:17 PM: to export custom CARLA, `make package`.  
+5/10/2023 5:27 PM: TODO: set all vehicles in CARLA to ambulance.  

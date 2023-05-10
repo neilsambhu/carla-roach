@@ -6200,3 +6200,5 @@ Write code for CARLA Simulator 0.9.13 to change the color of a vehicle.
 4/17/2023 4:20:53 PM: no success with T_Details02_Ambulance_d_custom.TGA.  
 # DAS Attack Texture in Unreal
 5/10/2023 3:20 PM: TODO: put adversarial texture on ambulance.  
+5/10/2023 5:15 PM: to modify TGA file: copy texture onto TGA file; move texture to appropriate location; select anchor; hide alpha channel; erase texture; export TGA file to Unreal.  
+5/10/2023 5:17 PM: to export custom CARLA, `make package`.  

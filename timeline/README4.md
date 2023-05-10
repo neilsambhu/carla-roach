@@ -6199,4 +6199,4 @@ Write code for CARLA Simulator 0.9.13 to change the color of a vehicle.
 4/17/2023 3:54:50 PM: no change to ambulance from T_Bodywork_Ambulance_d.TGA. Try T_Bodywork_Ambulance_RDirt.TGA.  
 4/17/2023 4:20:53 PM: no success with T_Details02_Ambulance_d_custom.TGA.  
 # DAS Attack Texture in Unreal
-5/10/2023 3:05:09 PM: 
+5/10/2023 3:20 PM: TODO: put adversarial texture on ambulance.  

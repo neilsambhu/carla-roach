@@ -6203,3 +6203,14 @@ Write code for CARLA Simulator 0.9.13 to change the color of a vehicle.
 5/10/2023 5:15 PM: to modify TGA file: copy texture onto TGA file; move texture to appropriate location; select anchor; hide alpha channel; erase texture; export TGA file to Unreal.  
 5/10/2023 5:17 PM: to export custom CARLA, `make package`.  
 5/10/2023 5:27 PM: TODO: set all vehicles in CARLA to ambulance.  
+5/10/2023 6:31 PM: TODO: setup carla-roach conda environment:  
+```
+(base) nsambhu@SAMBHU19:~/github/carla-roach$ conda env create -f environment.yml
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+ResolvePackageNotFound: 
+  - torchvision==0.5.0=py37_cu101
+  - pytorch==1.4.0=py3.7_cuda10.1.243_cudnn7.6.3_0
+```
+5/10/2023 6:32 PM: TODO: try commenting out the 2 lines and installing the packages manually.  

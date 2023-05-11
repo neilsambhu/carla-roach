@@ -6214,3 +6214,4 @@ ResolvePackageNotFound:
   - pytorch==1.4.0=py3.7_cuda10.1.243_cudnn7.6.3_0
 ```
 5/10/2023 6:32 PM: TODO: try commenting out the 2 lines and installing the packages manually.  
+5/10/2023 10:43:25 PM: TODO: create environment of python3.7 and update environment using environment.yml.  

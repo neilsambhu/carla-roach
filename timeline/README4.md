@@ -6219,3 +6219,13 @@ ResolvePackageNotFound:
 conda env update --file environment.yml
 ```
 5/11/2023 10:54:30 AM: continue TODO of create environment of python3.7 and update packages manually.  
+5/11/2023 10:59:23 AM: error messages list:
+```
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 1, in <module>
+    import gym
+ModuleNotFoundError: No module named 'gym'
+```
+```
+pip install gym==0.7.4
+```

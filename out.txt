@@ -1,7 +1,27 @@
-Collecting package metadata (repodata.json): ...working... done
-Solving environment: ...working... failed
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 4, in <module>
+    import wandb
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/wandb/__init__.py", line 37, in <module>
+    from wandb import sdk as wandb_sdk
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/wandb/sdk/__init__.py", line 12, in <module>
+    from .wandb_init import init  # noqa: F401
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 28, in <module>
+    from .backend.backend import Backend
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 14, in <module>
+    from ..interface import interface
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 18, in <module>
+    from wandb.proto import wandb_internal_pb2  # type: ignore
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/wandb/proto/wandb_internal_pb2.py", line 37, in <module>
+    type=None),
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/google/protobuf/descriptor.py", line 796, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+TypeError: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
 
-ResolvePackageNotFound: 
-  - pytorch==1.4.0=py3.7_cuda10.1.243_cudnn7.6.3_0
-  - torchvision==0.5.0=py37_cu101
-
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+dictBenchmarkConfigurations: {'PPO_exp_NCd_tt': <__main__.BenchmarkConfiguration object at 0x7fb37adda2d0>}
+benchmark configuration: PPO+exp nocrash_dense_tt-2021
+ppo cmd: python -u benchmark_NeilBranch0.py resume=true log_video=true wb_project=iccv21-roach-benchmark agent=ppo actors.hero.agent=ppo agent.ppo.wb_run_path=iccv21-roach/trained-models/10pscpih wb_group="PPO+exp" wb_notes="Benchmark PPO+exp on NoCrash-dense-tt." test_suites=nocrash_dense_tt seed=2021 +wb_sub_group=nocrash_dense_tt-2021 no_rendering=true

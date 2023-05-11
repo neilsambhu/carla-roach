@@ -6229,3 +6229,17 @@ ModuleNotFoundError: No module named 'gym'
 ```
 pip install gym==0.7.4
 ```
+5/11/2023 11:08:41 AM:
+```
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 1, in <module>
+    import gym
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/gym/__init__.py", line 45, in <module>
+    sanity_check_dependencies()
+  File "/home/nsambhu/anaconda3/envs/carla-roach-custom/lib/python3.7/site-packages/gym/__init__.py", line 19, in sanity_check_dependencies
+    if distutils.version.LooseVersion(numpy.__version__) < distutils.version.LooseVersion('1.10.4'):
+AttributeError: module 'distutils' has no attribute 'version'
+```
+```
+pip install setuptools==59.5.0
+```

@@ -6218,3 +6218,4 @@ ResolvePackageNotFound:
 ```
 conda env update --file environment.yml
 ```
+5/11/2023 10:54:30 AM: continue TODO of create environment of python3.7 and update packages manually.  

@@ -111,7 +111,7 @@ class CarlaMultiAgentEnv(gym.Env):
         logger.debug("_om_handler reset done!!")
         
         # 12/5/2022 4:59:47 PM: Neil added adversarial textures: start
-        self.adversarial_textures(bVerbose)
+        # self.adversarial_textures(bVerbose)
         # 12/5/2022 4:59:47 PM: Neil added adversarial textures: end
 
         self._world.tick()

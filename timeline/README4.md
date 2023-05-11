@@ -6243,3 +6243,13 @@ AttributeError: module 'distutils' has no attribute 'version'
 ```
 pip install setuptools==59.5.0
 ```
+5/11/2023 11:09:53 AM:
+```
+Traceback (most recent call last):
+  File "benchmark_NeilBranch0.py", line 4, in <module>
+    import wandb
+ModuleNotFoundError: No module named 'wandb'
+```
+```
+pip install wandb==0.10.12
+```

@@ -6215,3 +6215,6 @@ ResolvePackageNotFound:
 ```
 5/10/2023 6:32 PM: TODO: try commenting out the 2 lines and installing the packages manually.  
 5/10/2023 10:43:25 PM: TODO: create environment of python3.7 and update environment using environment.yml.  
+```
+conda env update --file environment.yml
+```

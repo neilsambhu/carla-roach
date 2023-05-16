@@ -6255,3 +6255,8 @@ pip install wandb==0.10.12
 ```
 # Modify Podman CARLA to include ambulance files
 5/11/2023 3:07 PM: TODO: make Dockerfile from carla.  
+# Modify Audi
+5/16/2023 2:29:14 PM: Audi spawn command
+```
+python3 generate_traffic.py --filterv "vehicle.audi.etron"
+```

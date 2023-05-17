@@ -6260,3 +6260,7 @@ pip install wandb==0.10.12
 ```
 python3 generate_traffic.py --filterv "vehicle.audi.etron"
 ```
+5/16/2023 6:27:20 PM single Audi
+```
+python3 generate_traffic.py --filterv "vehicle.audi.etron" -n 1 -w 0
+```

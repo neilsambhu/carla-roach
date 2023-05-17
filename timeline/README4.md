@@ -6259,3 +6259,13 @@ pip install wandb==0.10.12
 ```
 python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
 ```
+=======
+# Modify Audi
+5/16/2023 2:29:14 PM: Audi spawn command
+```
+python3 generate_traffic.py --filterv "vehicle.audi.etron"
+```
+5/16/2023 6:27:20 PM single Audi
+```
+python3 generate_traffic.py --filterv "vehicle.audi.etron" -n 1 -w 0
+```

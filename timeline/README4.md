@@ -6269,3 +6269,7 @@ python3 generate_traffic.py --filterv "vehicle.audi.etron"
 ```
 python3 generate_traffic.py --filterv "vehicle.audi.etron" -n 1 -w 0
 ```
+5/17/2023 1:47 PM: better Audi spawn command
+```
+python3 manual_control.py --filter "vehicle.audi.etron" -n 1 -w 0
+```

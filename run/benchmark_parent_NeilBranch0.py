@@ -139,7 +139,7 @@ class BenchmarkConfiguration:
                 # import manual_control
                 # manual_control.main()
                 # 12/3/2022 10:08:37 PM: Neil add call to visualize ego vehicle: end
-                benchmarkProcess.wait();import sys;sys.exit();
+                benchmarkProcess.wait();#import sys;sys.exit();
                 if CheckScoreFilesExist():
                     with open("score_composed.txt","r") as f:
                         self.score_composed.append(float(f.read()))

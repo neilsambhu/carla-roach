@@ -6255,3 +6255,7 @@ pip install wandb==0.10.12
 ```
 # Modify Podman CARLA to include ambulance files
 5/11/2023 3:07 PM: TODO: make Dockerfile from carla.  
+5/11/2023 4:10 PM: run inference with modified ambulances.  
+```
+python -u run/benchmark_parent_NeilBranch0.py |& tee out.txt
+```

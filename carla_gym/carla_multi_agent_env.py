@@ -15,7 +15,7 @@ from stable_baselines3.common.utils import set_random_seed
 logger = logging.getLogger(__name__)
 
 from inspect import currentframe, getframeinfo
-bVerbose = True
+bVerbose = False
 
 class CarlaMultiAgentEnv(gym.Env):
     def __init__(self, carla_map, host, port, seed, no_rendering,
@@ -111,7 +111,7 @@ class CarlaMultiAgentEnv(gym.Env):
         logger.debug("_om_handler reset done!!")
         
         # 12/5/2022 4:59:47 PM: Neil added adversarial textures: start
-        self.adversarial_textures(bVerbose)
+        # self.adversarial_textures(bVerbose)
         # 12/5/2022 4:59:47 PM: Neil added adversarial textures: end
 
         self._world.tick()

@@ -36,7 +36,7 @@ def run_single(run_name, env, agents_dict, agents_log_dir, log_video, max_step=N
     import subprocess
     # import os; print(f'os.getcwd(): {os.getcwd()}')
     cmd = f'python -u ../../../run/manual_control.py'
-    processEgoVehicleView = subprocess.Popen([cmd],shell=True)
+    # processEgoVehicleView = subprocess.Popen([cmd],shell=True)
     # processEgoVehicleView.wait()
     import time;time.sleep(1)
     # 12/3/2022 10:40:58 PM: Neil add call to visualize ego vehicle: end

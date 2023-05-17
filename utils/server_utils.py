@@ -52,9 +52,9 @@ class CarlaServerManager():
                     port += 5
 
     def start(self):
-        kill_carla()
+        # kill_carla()
         # kill_carla_docker()
-        # kill_carla_podman()
+        kill_carla_podman()
         for cfg in self.env_configs:
             cmd0 = f'CUDA_VISIBLE_DEVICES={cfg["gpu"]} bash {self._carla_sh_str} ' \
                 f'-fps=10 -quality-level=Epic -carla-rpc-port={cfg["port"]}'
@@ -99,12 +99,18 @@ class CarlaServerManager():
             # 11/29/2022 5:44:04 PM: Neil added podman GUI: start
             # cmd = f'xhost local:root&&podman run --privileged --net=host -e DISPLAY=$DISPLAY carlasim/carla:0.9.13 /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]}'
             # 11/29/2022 5:44:04 PM: Neil added podman GUI: end
-            log.info(cmd0)
+            # 5/11/2023 3:41:02 PM: podman ambulance GUI: start
+            # cmd = f'xhost local:root&&podman run --privileged --net=host -e DISPLAY=$DISPLAY localhost/carla:0.9.13-ambulance /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]}'
+            # 5/11/2023 3:41:02 PM: podman ambulance GUI: end
+            # 5/11/2023 3:58:21 PM: podman ambulance: start
+            # cmd = f'podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES={cfg["gpu"]} --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw localhost/carla:0.9.13-ambulance /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            # 5/11/2023 3:58:21 PM: podman ambulance: end
+            log.info(cmd)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdout=open(log_file, "w"))
             if bVerbose:
                 frameinfo = getframeinfo(currentframe());print(f"Neil {frameinfo.filename}:{frameinfo.lineno}")
-            server_process = subprocess.Popen(cmd0, shell=True, preexec_fn=os.setsid) # 8/9/2022 4:51:00 PM: comment out 
+            server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid) # 8/9/2022 4:51:00 PM: comment out 
             # 8/9/2022: Dan added (for docker): start
             # server_process = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid, stdin=subprocess.PIPE, encoding="utf8")
             # sudo_out = server_process.communicate('q\n', timeout=1)

@@ -37,6 +37,9 @@ class ZombieVehicleHandler(object):
     def _spawn_vehicles(self, spawn_transforms):
         zombie_vehicle_ids = []
         blueprints = self._world.get_blueprint_library().filter("vehicle.*")
+        # 5/11/2023 3:46:27 PM: ambulance spawning only: start
+        blueprints = self._world.get_blueprint_library().filter("vehicle.ford.ambulance")
+        # 5/11/2023 3:46:27 PM: ambulance spawning only: end
         # 12/14/2022 6:59:56 PM: Neil debug: start
         # print(f'blueprints: {blueprints}');quit()
         # 12/14/2022 6:59:56 PM: Neil debug: end

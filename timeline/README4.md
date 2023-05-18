@@ -6275,5 +6275,5 @@ python3 manual_control.py --filter "vehicle.audi.etron"
 ```
 5/18/2023 3:02:01 PM: run IL agent code to get RGB images.  
 ```
-python -u run/train_il.sh |& tee out.txt
+run/train_il.sh |& tee out.txt
 ```

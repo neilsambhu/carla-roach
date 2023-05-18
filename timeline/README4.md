@@ -6273,3 +6273,7 @@ python3 generate_traffic.py --filterv "vehicle.audi.etron" -n 1 -w 0
 ```
 python3 manual_control.py --filter "vehicle.audi.etron"
 ```
+5/18/2023 3:02:01 PM: run IL agent code to get RGB images.  
+```
+python -u run/train_il.sh |& tee out.txt
+```

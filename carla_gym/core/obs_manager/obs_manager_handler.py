@@ -1,6 +1,8 @@
 from importlib import import_module
 from gym import spaces
 
+bVerbose = True
+
 class ObsManagerHandler(object):
 
     def __init__(self, obs_configs):
@@ -10,6 +12,9 @@ class ObsManagerHandler(object):
 
     def get_observation(self, timestamp):
         obs_dict = {}
+        if bVerbose:
+            pass
+            # print(f'self._obs_managers.items(): {self._obs_managers.items()}');quit();
         for ev_id, om_dict in self._obs_managers.items():
             obs_dict[ev_id] = {}
             for obs_id, om in om_dict.items():

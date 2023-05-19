@@ -7,6 +7,7 @@ from gym import spaces
 
 from carla_gym.core.obs_manager.obs_manager import ObsManagerBase
 
+bVerbose = False
 
 class ObsManager(ObsManagerBase):
     """
@@ -108,6 +109,10 @@ class ObsManager(ObsManagerBase):
 
         np_img = copy.deepcopy(np_img)
 
+        if bVerbose:
+            pass
+            print(f'type(np_img): {type(np_img)}')
+            quit()
         np_img = np.reshape(np_img, (carla_image.height, carla_image.width, 4))
         np_img = np_img[:, :, :3]
         np_img = np_img[:, :, ::-1]

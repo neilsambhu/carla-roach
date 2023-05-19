@@ -9,6 +9,7 @@ import h5py
 from carla_gym.core.obs_manager.obs_manager import ObsManagerBase
 from carla_gym.utils.traffic_light import TrafficLightHandler
 
+bVerbose = True
 
 COLOR_BLACK = (0, 0, 0)
 COLOR_RED = (255, 0, 0)
@@ -208,6 +209,36 @@ class ObsManager(ObsManagerBase):
 
         self._parent_actor.collision_px = np.any(ev_mask_col & walker_masks[-1])
 
+        if bVerbose:
+            pass
+            # print(f'obs_dict: {obs_dict}')
+            print(f'type(obs_dict["rendered"]): {type(obs_dict["rendered"])}')
+            print(f'np.shape(obs_dict["rendered"]): {np.shape(obs_dict["rendered"])}')
+            print(f'type(obs_dict["masks"]): {type(obs_dict["masks"])}')
+            print(f'np.shape(obs_dict["masks"]): {np.shape(obs_dict["masks"])}')
+            import os
+            print(f'os.getcwd(): {os.getcwd()}')
+            # np.save('obs_dict_rendered.png',obs_dict["rendered"])
+            # np.save('obs_dict_masks.png',obs_dict["masks"])
+            from PIL import Image
+            img = Image.fromarray(obs_dict["rendered"])
+            img.save("../../../obs_dict_rendered.png")
+            # for i in range(15):
+            #     img = Image.fromarray(obs_dict["masks"][i])
+            #     img.save("../../../obs_dict_masks_{i}.png")
+            for i, mask in enumerate([c_road, c_route, c_lane, *c_vehicle_history, *c_walker_history, *c_tl_history]):
+                print(f'type(mask): {type(mask)}')
+                print(f'np.shape(mask): {np.shape(mask)} {mask.dtype}')
+                mask1 = np.expand_dims(mask, axis=2)
+                print(f'np.shape(mask1): {np.shape(mask1)} {mask1.dtype}')
+                mask2 = mask1.astype(np.uint8)
+                # from matplotlib import pyplot as plt
+                img = Image.fromarray(mask2)
+                img.save("../../../obs_dict_masks_{i}.png")
+            print('done')
+            import time
+            time.sleep(5)
+            quit()
         return obs_dict
 
     def _get_history_masks(self, M_warp):

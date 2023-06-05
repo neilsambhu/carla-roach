@@ -9,7 +9,7 @@ import h5py
 from carla_gym.core.obs_manager.obs_manager import ObsManagerBase
 from carla_gym.utils.traffic_light import TrafficLightHandler
 
-bVerbose = True
+bVerbose = False
 
 COLOR_BLACK = (0, 0, 0)
 COLOR_RED = (255, 0, 0)

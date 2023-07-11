@@ -7,7 +7,7 @@ from gym import spaces
 
 from carla_gym.core.obs_manager.obs_manager import ObsManagerBase
 
-bVerbose = False
+bVerbose = True
 
 class ObsManager(ObsManagerBase):
     """
@@ -111,11 +111,34 @@ class ObsManager(ObsManagerBase):
 
         if bVerbose:
             pass
-            print(f'type(np_img): {type(np_img)}')
-            quit()
+            # print(f'type(np_img): {type(np_img)}')
+            # from PIL import Image
+            # from datetime import datetime
+            # timestamp = datetime.now().strftime("%Y%m%d%H%M%S%f")[:-3]  # Nanoseconds without the last 3 digits
+            # image = Image.fromarray(np_img)
+            # image.save(f"np_img_{timestamp}.png")
+            # quit()
         np_img = np.reshape(np_img, (carla_image.height, carla_image.width, 4))
         np_img = np_img[:, :, :3]
         np_img = np_img[:, :, ::-1]
+
+        if bVerbose:
+            pass
+            print(f'type(np_img): {type(np_img)}')
+            from PIL import Image
+            from datetime import datetime
+            timestamp = datetime.now().strftime("%Y%m%d%H%M%S%f")[:-3]  # Nanoseconds without the last 3 digits
+            image = Image.fromarray(np_img)
+            image.save(f"np_img_{timestamp}.png")
+            # import traceback
+            # def error_function():
+            #     raise Exception("Error occurred")
+            # try:
+            #     error_function()
+            # except Exception as e:
+            #     traceback.print_exc()
+            print(x)
+
 
         # np_img = np.moveaxis(np_img, -1, 0)
         # image = cv2.resize(image, (self._res_x, self._res_y), interpolation=cv2.INTER_AREA)

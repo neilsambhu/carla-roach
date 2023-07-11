@@ -248,37 +248,37 @@ def GenerateBenchmarkConfigurations0():
     return benchmarkConfigurations
 def GenerateBenchmarkConfigurations():
     benchmarkConfigurations = {}
-    for environment in ["tt","tn","nt","nn"]:
-    # for environment in ["tt"]:
-        # PPO+exp: NCd
-        PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
-        benchmarkConfigurations[str(f'PPO_exp_NCd_{environment}')] = PPO_exp_NCd
-        # '''
-        # PPO+beta: NCd
-        PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
-        benchmarkConfigurations[str(f'PPO_beta_NCd_{environment}')] = PPO_beta_NCd
-        # Roach: NCd
-        Roach_NCd = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0")
-        benchmarkConfigurations[str(f'Roach_NCd_{environment}')] = Roach_NCd
-        # Autopilot: NCd
-        Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
-        benchmarkConfigurations[str(f'Autopilot_NCd_{environment}')] = Autopilot_NCd
-        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
-        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
-        benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
-        L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
-        benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
-        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
-        pass
-    # 10/23/2022 11:09:27 AM: Neil added LB-all: start
-    PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih",bLB_all=True)
-    benchmarkConfigurations[str('PPO_exp_LB_all')] = PPO_exp_LB_all
-    PPO_beta_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76",bLB_all=True)
-    benchmarkConfigurations[str('PPO_beta_LB_all')] = PPO_beta_LB_all
-    Roach_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0",bLB_all=True)
-    benchmarkConfigurations[str('Roach_LB_all')] = Roach_LB_all
-    Autopilot_LB_all = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on LeaderBoard-all.',test_suites=f'cc_test',bLB_all=True)
-    benchmarkConfigurations[str('Autopilot_LB_all')] = Autopilot_LB_all
+    # for environment in ["tt","tn","nt","nn"]:
+    # # for environment in ["tt"]:
+    #     # PPO+exp: NCd
+    #     PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
+    #     benchmarkConfigurations[str(f'PPO_exp_NCd_{environment}')] = PPO_exp_NCd
+    #     # '''
+    #     # PPO+beta: NCd
+    #     PPO_beta_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76")
+    #     benchmarkConfigurations[str(f'PPO_beta_NCd_{environment}')] = PPO_beta_NCd
+    #     # Roach: NCd
+    #     Roach_NCd = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0")
+    #     benchmarkConfigurations[str(f'Roach_NCd_{environment}')] = Roach_NCd
+    #     # Autopilot: NCd
+    #     Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
+    #     benchmarkConfigurations[str(f'Autopilot_NCd_{environment}')] = Autopilot_NCd
+    #     # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
+    #     L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+    #     benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
+    #     L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
+    #     benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
+    #     # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
+    #     pass
+    # # 10/23/2022 11:09:27 AM: Neil added LB-all: start
+    # PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih",bLB_all=True)
+    # benchmarkConfigurations[str('PPO_exp_LB_all')] = PPO_exp_LB_all
+    # PPO_beta_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+beta",wb_notes=f'Benchmark PPO+beta on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1ch63m76",bLB_all=True)
+    # benchmarkConfigurations[str('PPO_beta_LB_all')] = PPO_beta_LB_all
+    # Roach_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="Roach",wb_notes=f'Benchmark Roach on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1929isj0",bLB_all=True)
+    # benchmarkConfigurations[str('Roach_LB_all')] = Roach_LB_all
+    # Autopilot_LB_all = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on LeaderBoard-all.',test_suites=f'cc_test',bLB_all=True)
+    # benchmarkConfigurations[str('Autopilot_LB_all')] = Autopilot_LB_all
     L_A_AP_LB_all = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on LeaderBoard benchmark on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/1myvm4mw",bLB_all=True)
     benchmarkConfigurations[str('L_A_AP_LB_all')] = L_A_AP_LB_all
     L_K_L_F_c_LB_all = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on LeaderBoard benchmark on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/zwadqx9z",bLB_all=True)

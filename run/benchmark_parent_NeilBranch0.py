@@ -248,7 +248,7 @@ def GenerateBenchmarkConfigurations0():
     return benchmarkConfigurations
 def GenerateBenchmarkConfigurations():
     benchmarkConfigurations = {}
-    # for environment in ["tt","tn","nt","nn"]:
+    for environment in ["tt","tn","nt","nn"]:
     # # for environment in ["tt"]:
     #     # PPO+exp: NCd
     #     PPO_exp_NCd = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih")
@@ -263,12 +263,12 @@ def GenerateBenchmarkConfigurations():
     #     # Autopilot: NCd
     #     Autopilot_NCd = BenchmarkConfiguration(agent="roaming",wb_group="Autopilot",wb_notes=f'Benchmark Autopilot on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}')
     #     benchmarkConfigurations[str(f'Autopilot_NCd_{environment}')] = Autopilot_NCd
-    #     # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
-    #     L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
-    #     benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
-    #     L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
-    #     benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
-    #     # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
+        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: start
+        L_A_AP_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_A(AP)",wb_notes=f'Benchmark L_A(AP) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/39o1h862")
+        benchmarkConfigurations[str(f'L_A_AP_NCd_{environment}')] = L_A_AP_NCd
+        L_K_L_F_c_NCd = BenchmarkConfiguration(agent="cilrs",wb_group="L_K+L_F(c)",wb_notes=f'Benchmark L_K+L_F(c) trained on NoCrash benchmark on NoCrash-dense-{environment}.',test_suites=f'nocrash_dense_{environment}',agent_ppo_wb_run_path="iccv21-roach/trained-models/31u9tki7")
+        benchmarkConfigurations[str(f'L_K_L_F_c_NCd_{environment}')] = L_K_L_F_c_NCd
+        # 10/5/2022 10:27:13 PM: IL agents trained on NoCrash benchmark: end
     #     pass
     # # 10/23/2022 11:09:27 AM: Neil added LB-all: start
     # PPO_exp_LB_all = BenchmarkConfiguration(agent="ppo",wb_group="PPO+exp",wb_notes=f'Benchmark PPO+exp on LeaderBoard-all.',test_suites=f'cc_test',agent_ppo_wb_run_path="iccv21-roach/trained-models/10pscpih",bLB_all=True)
@@ -414,6 +414,53 @@ def ResultsLatex(dictBenchmarkConfigurations=None):
         L_K_L_F_c_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].standardDeviation_score_composed()*100),
         )
     return output
+def ResultsLatexIL(dictBenchmarkConfigurations=None):
+    output = '\\begin{{table*}}[!t]\n\\begin{{center}}\n\\begin{{tabular}}{{ |c|c|c|c|c|c| }}\n \hline\n Suc. Rate \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_successRate} \pm {L_A_AP_NCd_tt_successRate_standardDeviation}$ & ${L_A_AP_NCd_tn_successRate} \pm {L_A_AP_NCd_tn_successRate_standardDeviation}$ & ${L_A_AP_NCd_nt_successRate} \pm {L_A_AP_NCd_nt_successRate_standardDeviation}$ & ${L_A_AP_NCd_nn_successRate} \pm {L_A_AP_NCd_nn_successRate_standardDeviation}$ & ${L_A_AP_LB_all_successRate} \pm {L_A_AP_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & ${L_K_L_F_c_NCd_tt_successRate} \pm {L_K_L_F_c_NCd_tt_successRate_standardDeviation}$ & ${L_K_L_F_c_NCd_tn_successRate} \pm {L_K_L_F_c_NCd_tn_successRate_standardDeviation}$ & ${L_K_L_F_c_NCd_nt_successRate} \pm {L_K_L_F_c_NCd_nt_successRate_standardDeviation}$ & ${L_K_L_F_c_NCd_nn_successRate} \pm {L_K_L_F_c_NCd_nn_successRate_standardDeviation}$ & ${L_K_L_F_c_LB_all_successRate} \pm {L_K_L_F_c_LB_all_successRate_standardDeviation}$ \\\ \n \hline\n \hline\n Dri. Score \% & NCd-tt & NCd-tn & NCd-nt & NCd-nn & LB-all \\\ \n \hline\n carla-roach baseline, $L_A(AP)$ & ${L_A_AP_NCd_tt_drivingScore} \pm {L_A_AP_NCd_tt_drivingScore_standardDeviation}$ & ${L_A_AP_NCd_tn_drivingScore} \pm {L_A_AP_NCd_tn_drivingScore_standardDeviation}$ & ${L_A_AP_NCd_nt_drivingScore} \pm {L_A_AP_NCd_nt_drivingScore_standardDeviation}$ & ${L_A_AP_NCd_nn_drivingScore} \pm {L_A_AP_NCd_nn_drivingScore_standardDeviation}$ & ${L_A_AP_LB_all_drivingScore} \pm {L_A_AP_LB_all_drivingScore_standardDeviation}$ \\\ \n \hline\n carla-roach best, $L_K + L_F(c)$ & ${L_K_L_F_c_NCd_tt_drivingScore} \pm {L_K_L_F_c_NCd_tt_drivingScore_standardDeviation}$ & ${L_K_L_F_c_NCd_tn_drivingScore} \pm {L_K_L_F_c_NCd_tn_drivingScore_standardDeviation}$ & ${L_K_L_F_c_NCd_nt_drivingScore} \pm {L_K_L_F_c_NCd_nt_drivingScore_standardDeviation}$ & ${L_K_L_F_c_NCd_nn_drivingScore} \pm {L_K_L_F_c_NCd_nn_drivingScore_standardDeviation}$ & ${L_K_L_F_c_LB_all_drivingScore} \pm {L_K_L_F_c_LB_all_drivingScore_standardDeviation}$ \\\ \n \hline\n\end{{tabular}}\n\end{{center}}\n\end{{table*}}'.format(
+        # success rate below
+        L_A_AP_NCd_tt_successRate=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].average_score_route()*100),
+        L_A_AP_NCd_tt_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].standardDeviation_score_route()*100),
+        L_K_L_F_c_NCd_tt_successRate=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tt'].average_score_route()*100),
+        L_K_L_F_c_NCd_tt_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tt'].standardDeviation_score_route()*100),
+        L_A_AP_NCd_tn_successRate=round(dictBenchmarkConfigurations['L_A_AP_NCd_tn'].average_score_route()*100),
+        L_A_AP_NCd_tn_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tn'].standardDeviation_score_route()*100),
+        L_K_L_F_c_NCd_tn_successRate=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tn'].average_score_route()*100),
+        L_K_L_F_c_NCd_tn_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tn'].standardDeviation_score_route()*100),
+        L_A_AP_NCd_nt_successRate=round(dictBenchmarkConfigurations['L_A_AP_NCd_nt'].average_score_route()*100),
+        L_A_AP_NCd_nt_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_nt'].standardDeviation_score_route()*100),
+        L_K_L_F_c_NCd_nt_successRate=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nt'].average_score_route()*100),
+        L_K_L_F_c_NCd_nt_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nt'].standardDeviation_score_route()*100),
+        L_A_AP_NCd_nn_successRate=round(dictBenchmarkConfigurations['L_A_AP_NCd_nn'].average_score_route()*100),
+        L_A_AP_NCd_nn_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_nn'].standardDeviation_score_route()*100),
+        L_K_L_F_c_NCd_nn_successRate=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nn'].average_score_route()*100),
+        L_K_L_F_c_NCd_nn_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nn'].standardDeviation_score_route()*100),
+        L_A_AP_LB_all_successRate=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].average_score_route()*100),
+        L_A_AP_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].standardDeviation_score_route()*100),
+        L_K_L_F_c_LB_all_successRate=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].average_score_route()*100),
+        L_K_L_F_c_LB_all_successRate_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].standardDeviation_score_route()*100),
+
+        # driving score below
+        L_A_AP_NCd_tt_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].average_score_composed()*100),
+        L_A_AP_NCd_tt_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tt'].standardDeviation_score_composed()*100),
+        L_K_L_F_c_NCd_tt_drivingScore=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tt'].average_score_composed()*100),
+        L_K_L_F_c_NCd_tt_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tt'].standardDeviation_score_composed()*100),
+        L_A_AP_NCd_tn_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_NCd_tn'].average_score_composed()*100),
+        L_A_AP_NCd_tn_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_tn'].standardDeviation_score_composed()*100),
+        L_K_L_F_c_NCd_tn_drivingScore=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tn'].average_score_composed()*100),
+        L_K_L_F_c_NCd_tn_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_tn'].standardDeviation_score_composed()*100),        
+        L_A_AP_NCd_nt_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_NCd_nt'].average_score_composed()*100),
+        L_A_AP_NCd_nt_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_nt'].standardDeviation_score_composed()*100),
+        L_K_L_F_c_NCd_nt_drivingScore=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nt'].average_score_composed()*100),
+        L_K_L_F_c_NCd_nt_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nt'].standardDeviation_score_composed()*100),
+        L_A_AP_NCd_nn_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_NCd_nn'].average_score_composed()*100),
+        L_A_AP_NCd_nn_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_NCd_nn'].standardDeviation_score_composed()*100),
+        L_K_L_F_c_NCd_nn_drivingScore=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nn'].average_score_composed()*100),
+        L_K_L_F_c_NCd_nn_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_NCd_nn'].standardDeviation_score_composed()*100),
+        L_A_AP_LB_all_drivingScore=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].average_score_composed()*100),
+        L_A_AP_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_A_AP_LB_all'].standardDeviation_score_composed()*100),
+        L_K_L_F_c_LB_all_drivingScore=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].average_score_composed()*100),
+        L_K_L_F_c_LB_all_drivingScore_standardDeviation=round(dictBenchmarkConfigurations['L_K_L_F_c_LB_all'].standardDeviation_score_composed()*100),
+        )
+    return output
 if __name__ == '__main__':
     DeleteResultsFile()
     Delete_outputs_DirectoryContents()
@@ -422,4 +469,5 @@ if __name__ == '__main__':
     for keyBenchmarkConfiguration in dictBenchmarkConfigurations:
         dictBenchmarkConfigurations[keyBenchmarkConfiguration].Benchmark()
         print(f'results from {keyBenchmarkConfiguration}: success rate {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_route()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_route()}, driving score {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_composed()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_composed()}')
-    print(f'LaTeX-formatted results:\n{ResultsLatex(dictBenchmarkConfigurations)}')
+    # print(f'LaTeX-formatted results:\n{ResultsLatex(dictBenchmarkConfigurations)}')
+    print(f'LaTeX-formatted results:\n{ResultsLatexIL(dictBenchmarkConfigurations)}')

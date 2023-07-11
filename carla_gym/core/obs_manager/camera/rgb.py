@@ -7,7 +7,7 @@ from gym import spaces
 
 from carla_gym.core.obs_manager.obs_manager import ObsManagerBase
 
-bVerbose = True
+bVerbose = False
 
 class ObsManager(ObsManagerBase):
     """
@@ -130,14 +130,7 @@ class ObsManager(ObsManagerBase):
             timestamp = datetime.now().strftime("%Y%m%d%H%M%S%f")[:-3]  # Nanoseconds without the last 3 digits
             image = Image.fromarray(np_img)
             image.save(f"np_img_{timestamp}.png")
-            # import traceback
-            # def error_function():
-            #     raise Exception("Error occurred")
-            # try:
-            #     error_function()
-            # except Exception as e:
-            #     traceback.print_exc()
-            print(x)
+            # print(x)
 
 
         # np_img = np.moveaxis(np_img, -1, 0)

@@ -462,11 +462,11 @@ def ResultsLatexIL(dictBenchmarkConfigurations=None):
         )
     return output
 if __name__ == '__main__':
-    DeleteResultsFile()
-    Delete_outputs_DirectoryContents()
     dictBenchmarkConfigurations = GenerateBenchmarkConfigurations()
     print(f'dictBenchmarkConfigurations: {dictBenchmarkConfigurations}')
     for keyBenchmarkConfiguration in dictBenchmarkConfigurations:
+        DeleteResultsFile()
+        Delete_outputs_DirectoryContents()
         dictBenchmarkConfigurations[keyBenchmarkConfiguration].Benchmark()
         print(f'results from {keyBenchmarkConfiguration}: success rate {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_route()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_route()}, driving score {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_composed()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_composed()}')
     # print(f'LaTeX-formatted results:\n{ResultsLatex(dictBenchmarkConfigurations)}')

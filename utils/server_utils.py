@@ -103,7 +103,7 @@ class CarlaServerManager():
             # cmd = f'xhost local:root&&podman run --privileged --net=host -e DISPLAY=$DISPLAY localhost/carla:0.9.13-ambulance /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]}'
             # 5/11/2023 3:41:02 PM: podman ambulance GUI: end
             # 5/11/2023 3:58:21 PM: podman ambulance: start
-            cmd = f'podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES={cfg["gpu"]} --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw localhost/carla:0.9.13-ambulance /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
+            # cmd = f'podman run -it --privileged -e NVIDIA_VISIBLE_DEVICES={cfg["gpu"]} --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw localhost/carla:0.9.13-ambulance /bin/bash ./CarlaUE4.sh -carla-rpc-port={cfg["port"]} -RenderOffScreen'
             # 5/11/2023 3:58:21 PM: podman ambulance: end
             log.info(cmd)
             # log_file = self._root_save_dir / f'server_{cfg["port"]}.log'

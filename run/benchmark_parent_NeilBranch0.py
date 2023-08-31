@@ -214,6 +214,7 @@ def Delete_outputs_DirectoryContents():
     folder = 'outputs/'
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
+        print(file_path)
         try:
             if os.path.isfile(file_path) or os.path.islink(file_path):
                 os.unlink(file_path)
@@ -467,6 +468,7 @@ if __name__ == '__main__':
     for keyBenchmarkConfiguration in dictBenchmarkConfigurations:
         DeleteResultsFile()
         Delete_outputs_DirectoryContents()
+        time.sleep(5)
         dictBenchmarkConfigurations[keyBenchmarkConfiguration].Benchmark()
         print(f'results from {keyBenchmarkConfiguration}: success rate {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_route()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_route()}, driving score {dictBenchmarkConfigurations[keyBenchmarkConfiguration].average_score_composed()} +/- {dictBenchmarkConfigurations[keyBenchmarkConfiguration].standardDeviation_score_composed()}')
     # print(f'LaTeX-formatted results:\n{ResultsLatex(dictBenchmarkConfigurations)}')

@@ -6280,3 +6280,6 @@ run/train_il.sh |& tee out.txt
 
 # CARLA compiled from source: connect to simulator
 8/3/2023 9:08:07 PM: check `~/.bashrc` for how $CARLA_ROOT is defined, referenced in the addition to $PYTHON_PATH. $CARLA_ROOT should be the `~/github/carla/` directory.  
+9/22/2023 3:36:38 PM: grep blueprint
+```
+```

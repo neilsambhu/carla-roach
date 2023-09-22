@@ -6282,5 +6282,5 @@ run/train_il.sh |& tee out.txt
 8/3/2023 9:08:07 PM: check `~/.bashrc` for how $CARLA_ROOT is defined, referenced in the addition to $PYTHON_PATH. $CARLA_ROOT should be the `~/github/carla/` directory.  
 9/22/2023 3:36:38 PM: grep blueprint
 ```
-grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "blueprint">outgrep.txt
+grep -r --exclude-dir=outputs --exclude *README1.md --exclude *README2.md --exclude *README3.md --exclude *README4.md --exclude out.txt --exclude outgrep.txt --exclude *.log --exclude *.wandb -e "blueprint" |& tee outgrep.txt
 ```
